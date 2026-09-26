@@ -299,7 +299,7 @@ def main():
                 img = urllib.request.urlopen(urllib.request.Request(it["cover"].replace("cover200", "cover500"), headers={"User-Agent": "Mozilla/5.0"}), timeout=30).read()
                 name = "covers/" + hashlib.md5(norm(t).encode()).hexdigest()[:10] + ".jpg"
                 open(os.path.join(SITE, name), "wb").write(img)
-                b.update(cover=name, author=b.get("author") or re.sub(r"\s*\([^)]*\)", "", it.get("author", "")).split(",")[0].strip(), publisher=it.get("publisher", ""), aladin=it.get("link", ""))
+                b.update(cover=name, author=b.get("author") or re.sub(r"\s*\([^)]*\)", "", it.get("author", "")).split(",")[0].strip(), publisher=it.get("publisher", ""), aladin=html.unescape(it.get("link", "")))
                 print("표지", t)
         except Exception as e:
             print("표지 실패", t, e)
