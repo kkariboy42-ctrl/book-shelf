@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>책호스터이프로 책장</title>
+<meta name="description" content="인스타그램 @kkariboy42 에 올린 추리·미스터리 게시물을 책별로 모아 둔 곳">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f2ea; --surface:#fffdf8; --ink:#1d1a16; --muted:#6e665b; --line:#e3dccf;
+  --accent:#8c2f23; --accent-soft:#f3e3dc; --spoil:#2b2622; --spoil-ink:#f1e9dc;
+  --shadow:0 1px 2px rgba(40,30,20,.06),0 6px 18px rgba(40,30,20,.07);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#15130f; --surface:#1f1c17; --ink:#efe8dc; --muted:#a39a8c; --line:#342f28;
+  --accent:#e0826f; --accent-soft:#3a241f; --spoil:#0e0d0b; --spoil-ink:#efe8dc;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.35);
+}}
+:root[data-theme="dark"]{
+  --bg:#15130f; --surface:#1f1c17; --ink:#efe8dc; --muted:#a39a8c; --line:#342f28;
+  --accent:#e0826f; --accent-soft:#3a241f; --spoil:#0e0d0b; --spoil-ink:#efe8dc;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 Pretendard,system-ui,sans-serif;word-break:keep-all;overflow-wrap:anywhere}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header{padding:40px 0 20px;border-bottom:1px solid var(--line)}
+.brand{font:800 clamp(26px,5vw,40px)/1.15 'Noto Serif KR',serif;letter-spacing:-.02em;margin:0;text-decoration:none;display:inline-block}
+.brand small{display:block;font:600 13px/1.4 Pretendard,sans-serif;color:var(--muted);letter-spacing:.08em;margin-bottom:6px}
+.sub{color:var(--muted);margin:8px 0 18px;font-size:15px}
+.search{width:100%;max-width:420px;padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
+.search:focus{outline:2px solid var(--accent);outline-offset:1px}
+main{padding:28px 0 64px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:28px 20px}
+.book{text-decoration:none;display:block}
+.cover{aspect-ratio:500/734;border-radius:4px 8px 8px 4px;background:var(--surface);box-shadow:var(--shadow);overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.cover .ph{font:800 18px/1.3 'Noto Serif KR',serif;padding:14px;text-align:center}
+.book:hover .cover{transform:translateY(-3px)}
+.cover{transition:transform .15s}
+.book h3{font:600 15px/1.35 Pretendard,sans-serif;margin:10px 0 2px}
+.meta{color:var(--muted);font-size:13px}
+.empty{color:var(--muted);padding:40px 0}
+.back{display:inline-block;margin-bottom:20px;color:var(--muted);text-decoration:none;font-size:14px}
+.back:hover{color:var(--ink)}
+.bookhead{display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:end;margin-bottom:32px}
+.bookhead h2{font:800 clamp(24px,4.5vw,36px)/1.2 'Noto Serif KR',serif;margin:0 0 6px}
+.bookhead .links a{font-size:14px;color:var(--accent)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.col h3{font:600 15px/1 Pretendard,sans-serif;margin:0 0 14px;display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:#3d8b5a}
+.col.spoil .dot{background:var(--accent)}
+.col h3 .n{color:var(--muted);font-weight:400}
+.gate{background:var(--spoil);color:var(--spoil-ink);border-radius:12px;padding:22px;text-align:center}
+.gate p{margin:0 0 14px;font-size:15px}
+.gate button{font:600 14px Pretendard,sans-serif;padding:10px 18px;border-radius:999px;border:1px solid currentColor;background:transparent;color:inherit;cursor:pointer}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:18px}
+.post .top{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:6px}
+.chip{background:var(--accent-soft);color:var(--accent);font-weight:600;padding:2px 8px;border-radius:999px}
+.post .hook{font-size:15px;margin:0 0 10px}
+.embed{min-height:120px}
+.embed .instagram-media{margin:0 auto!important;min-width:0!important;width:100%!important}
+.none{color:var(--muted);font-size:14px;border:1px dashed var(--line);border-radius:12px;padding:20px;text-align:center}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:13px}
+@media (max-width:720px){
+  .cols{grid-template-columns:1fr}
+  .bookhead{grid-template-columns:96px 1fr;gap:16px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:22px 14px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="#/"><small>@kkariboy42</small>책호스터이프로 책장</a>
+  <p class="sub">인스타그램에 올린 추리·미스터리 게시물을 책별로 모았어요.</p>
+  <input class="search" id="q" type="search" placeholder="책 제목이나 작가로 찾기" aria-label="책 찾기">
+</div></header>
+<main><div class="wrap" id="app"></div></main>
+<footer><div class="wrap" id="foot"></div></footer>
+<script src="data.js"></script>
+<script>
+const D = window.SHELF, app = document.getElementById('app'), q = document.getElementById('q');
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm = s => String(s).replace(/\s/g,'').toLowerCase();
+const byBook = {};
+for (const p of D.posts) (byBook[p.book] ||= []).push(p);
+const books = Object.keys(byBook).map(t => ({title:t, ...D.books[t], posts:byBook[t], last:byBook[t][0].date}))
+  .sort((a,b) => b.last.localeCompare(a.last));
+document.getElementById('foot').textContent = `책 ${books.length}권 · 게시물 ${D.posts.length}개 · ${D.updated} 갱신`;
+
+const coverHtml = b => b.cover ? `<img src="${esc(b.cover)}" alt="" loading="lazy">` : `<span class="ph">${esc(b.title)}</span>`;
+
+function home() {
+  const k = norm(q.value);
+  const list = books.filter(b => !k || norm(b.title + (b.author||'')).includes(k));
+  app.innerHTML = list.length ? `<div class="grid">${list.map(b => `
+    <a class="book" href="#/book/${encodeURIComponent(b.title)}">
+      <div class="cover">${coverHtml(b)}</div>
+      <h3>${esc(b.title)}</h3>
+      <div class="meta">${esc(b.author||'')}${b.author?' · ':''}게시물 ${b.posts.length}</div>
+    </a>`).join('')}</div>` : `<p class="empty">「${esc(q.value)}」에 맞는 책이 없어요.</p>`;
+}
+
+function postHtml(p) {
+  const url = `https://www.instagram.com/${p.video?'reel':'p'}/${p.code}/`;
+  return `<article class="post">
+    <div class="top"><span class="chip">${esc(p.kind)}</span><time>${p.date.replaceAll('-','.')}</time></div>
+    <p class="hook">${esc(p.hook)}</p>
+    <div class="embed" data-url="${url}"><a href="${url}" target="_blank" rel="noopener">인스타그램에서 보기 ↗</a></div>
+  </article>`;
+}
+
+function book(title) {
+  const b = books.find(x => x.title === title);
+  if (!b) { app.innerHTML = `<a class="back" href="#/">← 책장으로</a><p class="empty">그 책은 아직 없어요.</p>`; return; }
+  const safe = b.posts.filter(p => !p.spoiler), spoil = b.posts.filter(p => p.spoiler);
+  app.innerHTML = `<a class="back" href="#/">← 책장으로</a>
+    <div class="bookhead"><div class="cover">${coverHtml(b)}</div><div>
+      <h2>${esc(b.title)}</h2>
+      <div class="meta">${esc([b.author, b.publisher].filter(Boolean).join(' · '))}</div>
+      ${b.aladin ? `<div class="links"><a href="${esc(b.aladin)}" target="_blank" rel="noopener">알라딘에서 보기 ↗</a></div>` : ''}
+    </div></div>
+    <div class="cols">
+      <section class="col"><h3><span class="dot"></span>스포 없음 <span class="n">${safe.length}</span></h3>
+        ${safe.length ? safe.map(postHtml).join('') : '<p class="none">아직 없어요.</p>'}</section>
+      <section class="col spoil"><h3><span class="dot"></span>스포 있음 <span class="n">${spoil.length}</span></h3>
+        ${spoil.length ? `<div class="gate" id="gate"><p>책을 다 읽은 분만 펼쳐 주세요.</p><button type="button">펼치기</button></div><div id="spoilList" hidden>${spoil.map(postHtml).join('')}</div>`
+          : '<p class="none">아직 없어요.</p>'}</section>
+    </div>`;
+  const g = document.getElementById('gate');
+  if (g) g.querySelector('button').onclick = () => { g.remove(); const l = document.getElementById('spoilList'); l.hidden = false; watch(l); };
+  watch(app.querySelector('.col'));
+  window.scrollTo(0, 0);
+}
+
+// 인스타 임베드는 화면에 가까워질 때 붙인다 — 한 번에 수십 개를 띄우면 무겁다
+let io;
+function watch(root) {
+  io ||= new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    io.unobserve(e.target);
+    const u = e.target.dataset.url;
+    e.target.innerHTML = `<blockquote class="instagram-media" data-instgrm-permalink="${u}" data-instgrm-version="14"><a href="${u}" target="_blank" rel="noopener">인스타그램에서 보기 ↗</a></blockquote>`;
+    loadEmbed();
+  }), {rootMargin:'600px'});
+  root.querySelectorAll('.embed').forEach(el => io.observe(el));
+}
+let embedJs;
+function loadEmbed() {
+  if (window.instgrm) return window.instgrm.Embeds.process();
+  if (embedJs) return;
+  embedJs = document.createElement('script');
+  embedJs.src = 'https://www.instagram.com/embed.js'; embedJs.async = true;
+  embedJs.onload = () => window.instgrm && window.instgrm.Embeds.process();
+  document.body.appendChild(embedJs);
+}
+
+function route() {
+  const m = location.hash.match(/^#\/book\/(.+)$/);
+  if (m) { q.parentElement.style.display = ''; book(decodeURIComponent(m[1])); }
+  else home();
+}
+q.addEventListener('input', () => { if (location.hash.startsWith('#/book/')) location.hash = '#/'; else home(); });
+addEventListener('hashchange', route);
+route();
+</script>
+</body>
+</html>

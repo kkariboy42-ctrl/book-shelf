@@ -1,0 +1,5 @@
+cache/
+collect.log
+.claude/
+__pycache__/
+.omc/

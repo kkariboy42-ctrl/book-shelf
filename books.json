@@ -1,0 +1,65 @@
+{
+ "이상한 지도": {
+  "author": "우케쓰",
+  "publisher": "리드비",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400658253&amp;partner=openAPI&amp;start=api",
+  "cover": "covers/0f86a0185c.jpg"
+ },
+ "인수세공": {
+  "author": "고바야시 야스미",
+  "publisher": "시공사",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=402781368&amp;partner=openAPI&amp;start=api",
+  "cover": "covers/157fb98cf7.jpg"
+ },
+ "미미소기": {
+  "author": "미쓰다 신조"
+ },
+ "한국사 이상현상 연구원": {
+  "author": "최인서",
+  "publisher": "다이브",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400909759&amp;partner=openAPI&amp;start=api",
+  "cover": "covers/4931ab91d2.jpg"
+ },
+ "폐놀이공원의 살인": {
+  "author": "샤센도 유키",
+  "publisher": "더블샷",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398008509&amp;partner=openAPI&amp;start=api",
+  "cover": "covers/ab7be08dab.jpg"
+ },
+ "천 년의 후더닛": {
+  "author": "아사네 주지",
+  "publisher": "내친구의서재",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400545644&amp;partner=openAPI&amp;start=api",
+  "cover": "covers/2abc74dcb9.jpg"
+ },
+ "투명한 나선": {
+  "author": "히가시노 게이고",
+  "cover": "covers/2fecd2c839.jpg",
+  "publisher": "북다",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398021172&amp;partner=openAPI&amp;start=api"
+ },
+ "십각관의 살인": {
+  "author": "아야츠지 유키토",
+  "cover": "covers/892d979a78.jpg",
+  "publisher": "한즈미디어(한스미디어)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=572109&amp;partner=openAPI&amp;start=api"
+ },
+ "방주": {
+  "author": "유키 하루오",
+  "cover": "covers/92a58ece19.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310624125&amp;partner=openAPI&amp;start=api"
+ },
+ "위층의 아내": {
+  "author": "프리다 맥파든",
+  "cover": "covers/85ac8612dc.jpg",
+  "publisher": "북플라자",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382701800&amp;partner=openAPI&amp;start=api"
+ },
+ "입에 대한 앙케트": {
+  "author": "세스지",
+  "cover": "covers/58c875a68b.jpg",
+  "publisher": "반타",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358092518&amp;partner=openAPI&amp;start=api"
+ }
+}
