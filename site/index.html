@@ -50,6 +50,15 @@ main{padding:28px 0 64px}
 .tabs button span{font-weight:400;margin-left:2px}
 .tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .deep{display:inline-block;font-size:11px;font-weight:600;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 6px;margin:0 0 3px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:8px 16px;flex-wrap:wrap;margin:0 0 22px}
+.bar .tabs{margin:0}
+.tabs.sort button{font-size:13px;padding:6px 12px}
+.stars{color:#d4a017;font-size:13px;letter-spacing:1px;line-height:1.2;margin:2px 0}
+.stars.big{font-size:18px;margin:0 0 6px}.stars.big span{font-size:14px;color:var(--muted);letter-spacing:0;margin-left:4px}
+.rgroup{margin-bottom:40px}
+.rh{font:800 20px/1.3 'Noto Serif KR',serif;margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.rh .st{color:#d4a017;letter-spacing:2px;font-size:18px}
+.rh .n{font:400 14px Pretendard,sans-serif;color:var(--muted)}
 .empty{color:var(--muted);padding:40px 0}
 .back{display:inline-block;margin-bottom:20px;color:var(--muted);text-decoration:none;font-size:14px}
 .back:hover{color:var(--ink)}
@@ -141,21 +150,33 @@ document.getElementById('foot').textContent = `책 ${books.length}권 · 게시�
 
 const coverHtml = b => b.cover ? `<img src="${esc(b.cover)}" alt="" loading="lazy">` : `<span class="ph">${esc(b.title)}</span>`;
 
-let only = 'all';
+const stars = r => r == null ? '' : '★'.repeat(Math.round(r)) + '☆'.repeat(5 - Math.round(r));
+let only = 'all', order = 'rating';
+function cardHtml(b) {
+  return `<a class="book" href="#/book/${encodeURIComponent(b.title)}">
+      <div class="cover">${coverHtml(b)}</div>
+      <h3>${esc(b.title)}</h3>${b.rating != null ? `<div class="stars" aria-label="별점 ${b.rating}개">${stars(b.rating)}</div>` : ''}${b.deep ? '<span class="deep">원고분석</span>' : ''}
+      <div class="meta">${esc(b.author||'')}${b.author?' · ':''}게시물 ${b.posts.length}</div>
+    </a>`;
+}
 function home() {
   const k = norm(q.value);
   const nDeep = books.filter(b => b.deep).length;
   const list = books.filter(b => (only === 'all' || b.deep) && (!k || norm(b.title + (b.author||'')).includes(k)));
-  const tabs = `<div class="tabs" role="tablist">
-    <button role="tab" aria-selected="${only==='all'}" data-v="all">전체 <span>${books.length}</span></button>
-    <button role="tab" aria-selected="${only==='deep'}" data-v="deep">원고분석한 책 <span>${nDeep}</span></button></div>`;
-  app.innerHTML = tabs + (list.length ? `<div class="grid">${list.map(b => `
-    <a class="book" href="#/book/${encodeURIComponent(b.title)}">
-      <div class="cover">${coverHtml(b)}</div>
-      <h3>${esc(b.title)}</h3>${b.deep ? '<span class="deep">원고분석</span>' : ''}
-      <div class="meta">${esc(b.author||'')}${b.author?' · ':''}게시물 ${b.posts.length}</div>
-    </a>`).join('')}</div>` : `<p class="empty">「${esc(q.value)}」에 맞는 책이 없어요.</p>`);
-  app.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { only = b.dataset.v; home(); });
+  const tab = (group, v, label, n) => `<button role="tab" aria-selected="${(group==='only'?only:order)===v}" data-g="${group}" data-v="${v}">${label}${n!=null?` <span>${n}</span>`:''}</button>`;
+  const tabs = `<div class="bar"><div class="tabs" role="tablist">${tab('only','all','전체',books.length)}${tab('only','deep','원고분석한 책',nDeep)}</div>
+    <div class="tabs sort" role="tablist" aria-label="정렬">${tab('order','rating','별점순')}${tab('order','recent','최근순')}</div></div>`;
+  let body;
+  if (!list.length) body = `<p class="empty">「${esc(q.value)}」에 맞는 책이 없어요.</p>`;
+  else if (order === 'recent') body = `<div class="grid">${list.map(cardHtml).join('')}</div>`;
+  else {
+    // 별점 높은 순으로 묶고, 같은 별점 안에서는 최근 게시순
+    const groups = [5, 4, 3, 2, 1, null].map(r => ({r, items: list.filter(b => (b.rating == null ? null : Math.round(b.rating)) === r)})).filter(g => g.items.length);
+    body = groups.map(g => `<section class="rgroup"><h2 class="rh">${g.r == null ? '별점 없음' : `<span class="st">${stars(g.r)}</span> 별 ${g.r}개`} <span class="n">${g.items.length}권</span></h2>
+      <div class="grid">${g.items.map(cardHtml).join('')}</div></section>`).join('');
+  }
+  app.innerHTML = tabs + body;
+  app.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { if (b.dataset.g === 'only') only = b.dataset.v; else order = b.dataset.v; home(); });
 }
 
 function postHtml(p) {
@@ -198,7 +219,7 @@ function book(title) {
   const nSpoil = spoilPosts.length + notes.length;
   app.innerHTML = `<a class="back" href="#/">← 책장으로</a>
     <div class="bookhead"><div class="cover">${coverHtml(b)}</div><div>
-      <h2>${esc(b.title)}</h2>
+      <h2>${esc(b.title)}</h2>${b.rating != null ? `<div class="stars big" aria-label="별점 ${b.rating}개">${stars(b.rating)} <span>별 ${b.rating}개</span></div>` : ''}
       <div class="meta">${esc([b.author, b.publisher].filter(Boolean).join(' · '))}</div>
       ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${esc(b.store || '알라딘')}에서 보기 ↗</a></div>` : ''}
     </div></div>

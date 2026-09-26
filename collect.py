@@ -275,6 +275,25 @@ def main():
         except Exception as e:
             print("표지 실패", t, e)
 
+    # 별점: 서평 캡션의 「#이프로별N개」(# 빠진 것·「N+」 포함). 한 책에 값이 갈리면 ratings.json 으로 정한다.
+    rp = os.path.join(HERE, "ratings.json")
+    rfix = {k: v for k, v in (json.load(open(rp, encoding="utf-8")) if os.path.exists(rp) else {}).items() if not k.startswith("_")}
+    got = {}
+    for p in out:
+        cap = by_code[p["code"]]["caption"] if p["code"] in by_code else ""
+        for m in re.finditer(r"이프로별\s*(\d(?:\.\d)?)\s*(?:개|\+)", cap):
+            got.setdefault(p["book"], set()).add(float(m.group(1)))
+    for t in shelf_books:
+        if t in rfix:
+            r = rfix[t]
+        elif len(got.get(t, ())) == 1:
+            r = next(iter(got[t]))
+        else:
+            r = None
+            if len(got.get(t, ())) > 1:
+                print("  별점이 갈림 → ratings.json 에 적을 것:", t, sorted(got[t]))
+        books.setdefault(t, {})["rating"] = r
+
     for b in books.values():  # 알라딘 표기 「이름 (지은이), 번역자 (옮긴이)」 → 이름
         b["author"] = re.sub(r"\s*\([^)]*\)", "", b.get("author", "")).split(",")[0].strip()
     json.dump(books, open(books_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

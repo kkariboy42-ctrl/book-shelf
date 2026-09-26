@@ -1,5 +1,5 @@
 window.SHELF = {
- "updated": "2026-09-26",
+ "updated": "2026-09-27",
  "posts": [
   {
    "code": "DdvUBrDzkKx",
@@ -4559,6 +4559,7 @@ window.SHELF = {
    "publisher": "리드비",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400658253&amp;partner=openAPI&amp;start=api",
    "cover": "covers/0f86a0185c.jpg",
+   "rating": 5.0,
    "deep": true
   },
   "인수세공": {
@@ -4566,6 +4567,7 @@ window.SHELF = {
    "publisher": "시공사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=402781368&amp;partner=openAPI&amp;start=api",
    "cover": "covers/157fb98cf7.jpg",
+   "rating": null,
    "deep": true
   },
   "미미소기": {
@@ -4574,6 +4576,7 @@ window.SHELF = {
    "publisher": "북로드",
    "link": "https://www.yes24.com/product/goods/196020372",
    "store": "예스24",
+   "rating": null,
    "deep": true
   },
   "한국사 이상현상 연구원": {
@@ -4581,6 +4584,7 @@ window.SHELF = {
    "publisher": "다이브",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400909759&amp;partner=openAPI&amp;start=api",
    "cover": "covers/4931ab91d2.jpg",
+   "rating": null,
    "deep": false
   },
   "폐놀이공원의 살인": {
@@ -4588,6 +4592,7 @@ window.SHELF = {
    "publisher": "더블샷",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398008509&amp;partner=openAPI&amp;start=api",
    "cover": "covers/ab7be08dab.jpg",
+   "rating": 4.0,
    "deep": true
   },
   "천 년의 후더닛": {
@@ -4595,6 +4600,7 @@ window.SHELF = {
    "publisher": "내친구의서재",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400545644&amp;partner=openAPI&amp;start=api",
    "cover": "covers/2abc74dcb9.jpg",
+   "rating": 4.0,
    "deep": true
   },
   "투명한 나선": {
@@ -4602,6 +4608,7 @@ window.SHELF = {
    "cover": "covers/2fecd2c839.jpg",
    "publisher": "북다",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398021172&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": true
   },
   "십각관의 살인": {
@@ -4609,6 +4616,7 @@ window.SHELF = {
    "cover": "covers/892d979a78.jpg",
    "publisher": "한즈미디어(한스미디어)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=572109&amp;partner=openAPI&amp;start=api",
+   "rating": null,
    "deep": false
   },
   "방주": {
@@ -4616,6 +4624,7 @@ window.SHELF = {
    "cover": "covers/92a58ece19.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310624125&amp;partner=openAPI&amp;start=api",
+   "rating": null,
    "deep": false
   },
   "위층의 아내": {
@@ -4623,6 +4632,7 @@ window.SHELF = {
    "cover": "covers/85ac8612dc.jpg",
    "publisher": "북플라자",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382701800&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "인버트": {
@@ -4630,6 +4640,7 @@ window.SHELF = {
    "cover": "covers/744b08bd8c.jpg",
    "publisher": "비채",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=348797377&amp;partner=openAPI&amp;start=api",
+   "rating": 5,
    "deep": false
   },
   "아이는 무서운 꿈을 꾼다": {
@@ -4637,6 +4648,7 @@ window.SHELF = {
    "cover": "covers/d16fdddcf1.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=349426790&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "은달이 뜨는 밤 죽기로 했다": {
@@ -4644,6 +4656,7 @@ window.SHELF = {
    "cover": "covers/dccbbfb3b6.jpg",
    "publisher": "마티스블루",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=348140283&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "가연물": {
@@ -4651,6 +4664,7 @@ window.SHELF = {
    "cover": "covers/921b8bf90f.jpg",
    "publisher": "리드비",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345451457&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "죽음에 이르는 꽃": {
@@ -4658,6 +4672,7 @@ window.SHELF = {
    "cover": "covers/af38cf116a.jpg",
    "publisher": "알에이치코리아(RHK)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=350992678&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "이별은 모차르트": {
@@ -4665,6 +4680,7 @@ window.SHELF = {
    "cover": "covers/2ea7e1e4c0.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358024806&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "아침과 저녁의 범죄": {
@@ -4673,6 +4689,7 @@ window.SHELF = {
    "cover": "covers/12d66397df.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=346126841&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "박스": {
@@ -4681,6 +4698,7 @@ window.SHELF = {
    "cover": "covers/b58447339e.jpg",
    "publisher": "어느날갑자기",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351860580&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "아리아드네의 목소리": {
@@ -4688,6 +4706,7 @@ window.SHELF = {
    "cover": "covers/5dee78d54c.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=354098746&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "밤이 끝나는 곳": {
@@ -4695,6 +4714,7 @@ window.SHELF = {
    "cover": "covers/cc02e3fe01.jpg",
    "publisher": "시공사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=352232391&amp;partner=openAPI&amp;start=api",
+   "rating": 2,
    "deep": false
   },
   "둔색환시행": {
@@ -4702,6 +4722,7 @@ window.SHELF = {
    "cover": "covers/def5271b84.jpg",
    "publisher": "시공사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=352233379&amp;partner=openAPI&amp;start=api",
+   "rating": 4,
    "deep": false
   },
   "그리고 누군가 없어졌다": {
@@ -4709,6 +4730,7 @@ window.SHELF = {
    "cover": "covers/a1e9a9724a.jpg",
    "publisher": "엘릭시르",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=53173520&amp;partner=openAPI&amp;start=api",
+   "rating": 4,
    "deep": false
   },
   "붉은 손가락": {
@@ -4716,6 +4738,7 @@ window.SHELF = {
    "cover": "covers/4f706700bb.jpg",
    "publisher": "현대문학",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=198223012&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "기암관의 살인": {
@@ -4723,6 +4746,7 @@ window.SHELF = {
    "cover": "covers/ef955d64b9.jpg",
    "publisher": "허밍북스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345307841&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "파선": {
@@ -4730,6 +4754,7 @@ window.SHELF = {
    "cover": "covers/1f844e49ad.jpg",
    "publisher": "북로드",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355504676&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   },
   "닥터 데스의 유산": {
@@ -4737,6 +4762,7 @@ window.SHELF = {
    "cover": "covers/c9389cdd25.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=305013072&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "변호 측 증인": {
@@ -4744,6 +4770,7 @@ window.SHELF = {
    "cover": "covers/a85f19abb4.jpg",
    "publisher": "검은숲",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=13608033&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "최애의 살인": {
@@ -4751,6 +4778,7 @@ window.SHELF = {
    "cover": "covers/576d46cf91.jpg",
    "publisher": "반타",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=357751929&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   },
   "이상한 집 2": {
@@ -4758,6 +4786,7 @@ window.SHELF = {
    "cover": "covers/23aed28117.jpg",
    "publisher": "리드비",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358522227&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "시계 도둑과 악인들": {
@@ -4765,6 +4794,7 @@ window.SHELF = {
    "cover": "covers/dd28dbe0be.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360423038&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "밤의 이정표": {
@@ -4772,6 +4802,7 @@ window.SHELF = {
    "cover": "covers/2321472d28.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355865138&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   },
   "부러진 용골": {
@@ -4779,6 +4810,7 @@ window.SHELF = {
    "cover": "covers/304969032d.jpg",
    "publisher": "엘릭시르",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361347963&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "젠더 크라임": {
@@ -4786,6 +4818,7 @@ window.SHELF = {
    "cover": "covers/c91031e559.jpg",
    "publisher": "북스피어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=357222711&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "수상탑의 살인": {
@@ -4793,6 +4826,7 @@ window.SHELF = {
    "cover": "covers/ce25f9d594.jpg",
    "publisher": "아프로스미디어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360197290&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "흉가": {
@@ -4800,6 +4834,7 @@ window.SHELF = {
    "cover": "covers/8cc2b137e3.jpg",
    "publisher": "북로드",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362089025&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "범선 군함의 살인": {
@@ -4807,6 +4842,7 @@ window.SHELF = {
    "cover": "covers/2fc774707c.jpg",
    "publisher": "톰캣",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361966213&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "긴키 지방의 어느 장소에 대하여": {
@@ -4814,6 +4850,7 @@ window.SHELF = {
    "cover": "covers/e386838e49.jpg",
    "publisher": "반타",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361603044&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "고독한 용의자": {
@@ -4821,6 +4858,7 @@ window.SHELF = {
    "cover": "covers/400d49eec0.jpg",
    "publisher": "위즈덤하우스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362413157&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   },
   "네버 라이": {
@@ -4828,6 +4866,7 @@ window.SHELF = {
    "cover": "covers/c159971cdd.jpg",
    "publisher": "밝은세상",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361415277&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "4일간의 가족": {
@@ -4835,6 +4874,7 @@ window.SHELF = {
    "cover": "covers/ae645687e5.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347737775&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   },
   "더 코워커": {
@@ -4842,6 +4882,7 @@ window.SHELF = {
    "cover": "covers/8e174a85c2.jpg",
    "publisher": "해피북스투유",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364028338&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "핸디맨": {
@@ -4849,6 +4890,7 @@ window.SHELF = {
    "cover": "covers/c286e46a03.jpg",
    "publisher": "북플라자",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310033424&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "긴나미 상점가의 사건 노트": {
@@ -4856,6 +4898,7 @@ window.SHELF = {
    "cover": "covers/55e244dbb8.jpg",
    "publisher": "북스피어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364235125&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "공감각 아름다운 밤에": {
@@ -4863,6 +4906,7 @@ window.SHELF = {
    "cover": "covers/c0de73cf12.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364433096&amp;partner=openAPI&amp;start=api",
+   "rating": null,
    "deep": false
   },
   "지뢰 글리코": {
@@ -4870,6 +4914,7 @@ window.SHELF = {
    "cover": "covers/b3044a0e61.jpg",
    "publisher": "리드비",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=365887031&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "사건은 끝났다": {
@@ -4877,6 +4922,7 @@ window.SHELF = {
    "cover": "covers/6a21243db8.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366126559&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "재벌집 막내아들": {
@@ -4884,6 +4930,7 @@ window.SHELF = {
    "cover": "covers/c462532fb3.jpg",
    "publisher": "테라코타",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=304352624&amp;partner=openAPI&amp;start=api",
+   "rating": null,
    "deep": false
   },
   "라자로의 미궁": {
@@ -4891,6 +4938,7 @@ window.SHELF = {
    "cover": "covers/2a4e5a6ac8.jpg",
    "publisher": "하빌리스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366595568&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "죽은 자에게 입이 있다": {
@@ -4898,6 +4946,7 @@ window.SHELF = {
    "cover": "covers/c1370186bd.jpg",
    "publisher": "황금가지",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=365829686&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "잘자요 엄마": {
@@ -4905,6 +4954,7 @@ window.SHELF = {
    "cover": "covers/80ac2637ae.jpg",
    "publisher": "엘릭시르",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=170131178&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   },
   "소년 농성": {
@@ -4912,6 +4962,7 @@ window.SHELF = {
    "cover": "covers/a9ae498d9e.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=368462978&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "화차": {
@@ -4919,6 +4970,7 @@ window.SHELF = {
    "cover": "covers/70c1f0be57.jpg",
    "publisher": "문학동네",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=14979358&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "모든 비밀에는 이름이 있다": {
@@ -4926,6 +4978,7 @@ window.SHELF = {
    "cover": "covers/3dd6dfb5e6.jpg",
    "publisher": "엘릭시르",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=267222496&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   },
   "디스펠": {
@@ -4933,6 +4986,7 @@ window.SHELF = {
    "cover": "covers/dfce7a5867.jpg",
    "publisher": "내친구의서재",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370284589&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "패자의 고백": {
@@ -4940,6 +4994,7 @@ window.SHELF = {
    "cover": "covers/e2b1159953.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370148604&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "언덕 위의 빨간 지붕": {
@@ -4947,6 +5002,7 @@ window.SHELF = {
    "cover": "covers/ad399a44f2.jpg",
    "publisher": "나무옆의자",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366645823&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "13계단": {
@@ -4954,6 +5010,7 @@ window.SHELF = {
    "cover": "covers/7d35849bc3.jpg",
    "publisher": "황금가지",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=365826287&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "밀실수집가": {
@@ -4961,6 +5018,7 @@ window.SHELF = {
    "cover": "covers/b6d9819c1f.jpg",
    "publisher": "리드비",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370352581&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   },
   "동트기 힘든 긴 밤": {
@@ -4968,6 +5026,7 @@ window.SHELF = {
    "cover": "covers/a8e4e99eae.jpg",
    "publisher": "한즈미디어(한스미디어)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=171904187&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "바스커빌관의 살인": {
@@ -4975,6 +5034,7 @@ window.SHELF = {
    "cover": "covers/554dd6fe77.jpg",
    "publisher": "허밍북스",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370765303&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "우리의 노래를 불러라": {
@@ -4982,6 +5042,7 @@ window.SHELF = {
    "cover": "covers/0352318aef.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362505980&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   },
   "우먼 인 캐빈 10": {
@@ -4989,6 +5050,7 @@ window.SHELF = {
    "cover": "covers/42a57e20e7.jpg",
    "publisher": "필름(Feelm)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=371125658&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "일곱 번째는 내가 아니다": {
@@ -4996,6 +5058,7 @@ window.SHELF = {
    "cover": "covers/8b93b10c84.jpg",
    "publisher": "서삼독",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372260462&amp;partner=openAPI&amp;start=api",
+   "rating": 2.0,
    "deep": false
   },
   "피안장의 유령": {
@@ -5003,6 +5066,7 @@ window.SHELF = {
    "cover": "covers/1f96dce030.jpg",
    "publisher": "알에이치코리아(RHK)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372973056&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "용신 연못의 작은 시체": {
@@ -5010,6 +5074,7 @@ window.SHELF = {
    "cover": "covers/d5d17295e3.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374467867&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "나는 괴이 너는 괴물": {
@@ -5017,6 +5082,7 @@ window.SHELF = {
    "cover": "covers/5558987a13.jpg",
    "publisher": "내친구의서재",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374259650&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "미친 성장": {
@@ -5024,6 +5090,7 @@ window.SHELF = {
    "cover": "covers/1a4e972343.jpg",
    "publisher": "푸른숲",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=373250519&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "신 게임": {
@@ -5031,6 +5098,7 @@ window.SHELF = {
    "cover": "covers/e8a1f6f5fb.jpg",
    "publisher": "내친구의서재",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375684650&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "여름비 이야기": {
@@ -5038,6 +5106,7 @@ window.SHELF = {
    "cover": "covers/bb0e7b506e.jpg",
    "publisher": "비채",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372723605&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "나오미와 가나코": {
@@ -5045,6 +5114,7 @@ window.SHELF = {
    "cover": "covers/806ecc1ee6.jpg",
    "publisher": "예담",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59420804&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "규칙 없음": {
@@ -5052,6 +5122,7 @@ window.SHELF = {
    "cover": "covers/4eb626e4da.jpg",
    "publisher": "알에이치코리아(RHK)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=247906056&amp;partner=openAPI&amp;start=api",
+   "rating": null,
    "deep": false
   },
   "꿈 전달": {
@@ -5059,6 +5130,7 @@ window.SHELF = {
    "cover": "covers/a1c6b2939e.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=376782757&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "더럽혀진 성지 순례에 대하여": {
@@ -5066,6 +5138,7 @@ window.SHELF = {
    "cover": "covers/8f2e8e2a7c.jpg",
    "publisher": "반타",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=378954480&amp;partner=openAPI&amp;start=api",
+   "rating": 2.0,
    "deep": false
   },
   "재소자": {
@@ -5073,6 +5146,7 @@ window.SHELF = {
    "cover": "covers/c2411b2efa.jpg",
    "publisher": "북플라자",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=378831590&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "아사토호": {
@@ -5080,6 +5154,7 @@ window.SHELF = {
    "cover": "covers/9742ed707b.jpg",
    "publisher": "북로드",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379696916&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "내가 아는 루민": {
@@ -5087,6 +5162,7 @@ window.SHELF = {
    "cover": "covers/6fba6b3454.jpg",
    "publisher": "리드비",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379966945&amp;partner=openAPI&amp;start=api",
+   "rating": 2.0,
    "deep": false
   },
   "차일드 호더": {
@@ -5094,6 +5170,7 @@ window.SHELF = {
    "cover": "covers/5f25e612a0.jpg",
    "publisher": "밝은세상",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379458544&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "8번 출구": {
@@ -5101,6 +5178,7 @@ window.SHELF = {
    "cover": "covers/01fed5f8cb.jpg",
    "publisher": "㈜소미미디어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374520365&amp;partner=openAPI&amp;start=api",
+   "rating": 1.0,
    "deep": false
   },
   "책의 등뼈가 마지막에 남는다": {
@@ -5108,6 +5186,7 @@ window.SHELF = {
    "cover": "covers/bda9d3590a.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382406886&amp;partner=openAPI&amp;start=api",
+   "rating": null,
    "deep": false
   },
   "방과후": {
@@ -5115,6 +5194,7 @@ window.SHELF = {
    "cover": "covers/4c77e0283c.jpg",
    "publisher": "㈜소미미디어",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=195328919&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "마녀는 되살아난다": {
@@ -5122,6 +5202,7 @@ window.SHELF = {
    "cover": "covers/c1a1d8bbd9.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=384595985&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "마녀재판의 변호인": {
@@ -5129,6 +5210,7 @@ window.SHELF = {
    "cover": "covers/0426709e29.jpg",
    "publisher": "톰캣",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385451546&amp;partner=openAPI&amp;start=api",
+   "rating": null,
    "deep": false
   },
   "최소불행사회": {
@@ -5136,6 +5218,7 @@ window.SHELF = {
    "cover": "covers/226d3d6bb8.jpg",
    "publisher": "모티브",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=383636740&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "한 치 앞의 어둠": {
@@ -5143,6 +5226,7 @@ window.SHELF = {
    "cover": "covers/a769758acc.jpg",
    "publisher": "폴라북스(현대문학)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=384960218&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "대리모": {
@@ -5150,6 +5234,7 @@ window.SHELF = {
    "cover": "covers/6d0cfe2836.jpg",
    "publisher": "북플라자",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=386952835&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "독이 든 화형 법정": {
@@ -5157,6 +5242,7 @@ window.SHELF = {
    "cover": "covers/adb0f02d5c.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=386454828&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   },
   "금기의 아이": {
@@ -5164,6 +5250,7 @@ window.SHELF = {
    "cover": "covers/a0644e5053.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393520580&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "어려운 문제가 가득한 레스토랑": {
@@ -5171,6 +5258,7 @@ window.SHELF = {
    "cover": "covers/f1c891455d.jpg",
    "publisher": "북다",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=387883052&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "잃어버린 얼굴": {
@@ -5178,6 +5266,7 @@ window.SHELF = {
    "cover": "covers/6da1ab3252.jpg",
    "publisher": "반타",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385789874&amp;partner=openAPI&amp;start=api",
+   "rating": 4.0,
    "deep": false
   },
   "심연의 텔레패스": {
@@ -5185,6 +5274,7 @@ window.SHELF = {
    "cover": "covers/0f7ce4dabe.jpg",
    "publisher": "북다",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=388438662&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   },
   "살로메의 단두대": {
@@ -5193,6 +5283,7 @@ window.SHELF = {
    "cover": "covers/9216603301.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=390779928&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "속죄": {
@@ -5200,6 +5291,7 @@ window.SHELF = {
    "cover": "covers/22b1ccdb7d.jpg",
    "publisher": "북홀릭(bookholic)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=268376015&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "스와이프 엄금": {
@@ -5207,6 +5299,7 @@ window.SHELF = {
    "cover": "covers/d89a026448.jpg",
    "publisher": "북다",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=392626367&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   },
   "안녕 신": {
@@ -5214,6 +5307,7 @@ window.SHELF = {
    "cover": "covers/9d33156473.jpg",
    "publisher": "내친구의서재",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393491223&amp;partner=openAPI&amp;start=api",
+   "rating": null,
    "deep": false
   },
   "명탐정의 제물": {
@@ -5221,6 +5315,7 @@ window.SHELF = {
    "cover": "covers/bebe58d294.jpg",
    "publisher": "내친구의서재",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=319351333&amp;partner=openAPI&amp;start=api",
+   "rating": null,
    "deep": false
   },
   "GOTH 리스트 컷 사건": {
@@ -5228,6 +5323,7 @@ window.SHELF = {
    "cover": "covers/58c43f0858.jpg",
    "publisher": "학산문화사(단행본)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2189118&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "밀실 황금시대의 살인": {
@@ -5235,6 +5331,7 @@ window.SHELF = {
    "cover": "covers/1cbd2a9d6c.jpg",
    "publisher": "리드비",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364655651&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "셜록 홈스의 개선": {
@@ -5242,6 +5339,7 @@ window.SHELF = {
    "cover": "covers/6899f0203b.jpg",
    "publisher": "내친구의서재",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366588184&amp;partner=openAPI&amp;start=api",
+   "rating": 2.0,
    "deep": false
   },
   "시체로 놀지 마 어른들아": {
@@ -5249,6 +5347,7 @@ window.SHELF = {
    "cover": "covers/d64a33ad56.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372497505&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "인간 표본": {
@@ -5256,6 +5355,7 @@ window.SHELF = {
    "cover": "covers/439d3de1bf.jpg",
    "publisher": "북다",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375522100&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "하우스메이드": {
@@ -5263,6 +5363,7 @@ window.SHELF = {
    "cover": "covers/82c300271b.jpg",
    "publisher": "북플라자",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=314273779&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "하우스메이드 2": {
@@ -5270,6 +5371,7 @@ window.SHELF = {
    "cover": "covers/76eea0cdc1.jpg",
    "publisher": "북플라자",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361675990&amp;partner=openAPI&amp;start=api",
+   "rating": 5.0,
    "deep": false
   },
   "하우스메이드 3": {
@@ -5277,6 +5379,7 @@ window.SHELF = {
    "cover": "covers/dca36137ac.jpg",
    "publisher": "북플라자",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=371995721&amp;partner=openAPI&amp;start=api",
+   "rating": 3.0,
    "deep": false
   }
  }
