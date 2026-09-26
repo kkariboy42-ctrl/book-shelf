@@ -58,6 +58,35 @@ def excluded(cap):
     return len(re.findall(r"(?m)^\s*\d+\s*[.)위]", cap)) >= 5
 
 
+DIARY = "G:/내 드라이브/03. 인스타그램/@독서일기.xlsx"
+
+
+def dkey(t):
+    """독서일기 제목 대조용 — 괄호·부제(「 - 」「:」 뒤)를 떼고 띄어쓰기 무시."""
+    t = re.sub(r"\([^)]*\)", "", str(t))
+    return norm(re.split(r"\s+-\s+|:", t)[0])
+
+
+def read_diary():
+    """@독서일기.xlsx 연도 시트 → {dkey(제목): {rating, plus, gajebon}}. 같은 책이면 나중 기록."""
+    if not os.path.exists(DIARY):
+        print("  독서일기 없음:", DIARY)
+        return {}
+    import openpyxl
+    wb = openpyxl.load_workbook(DIARY, read_only=True, data_only=True)
+    res = {}
+    for ws in wb.worksheets:
+        if not re.match(r"20\d\d년$", ws.title) or ws.title < "2021년":
+            continue
+        for row in ws.iter_rows(min_row=5, values_only=True):
+            if len(row) < 14 or not row[2] or not isinstance(row[13], (int, float)):
+                continue
+            title = str(row[2])
+            res[dkey(title)] = {"rating": row[13], "plus": len(row) > 15 and str(row[15] or "").strip() == "+",
+                                "gajebon": "가제본" in title}
+    return res
+
+
 MONTHS = {m: i for i, m in enumerate("January February March April May June July August September October November December".split(), 1)}
 
 
@@ -275,24 +304,42 @@ def main():
         except Exception as e:
             print("표지 실패", t, e)
 
-    # 별점: 서평 캡션의 「#이프로별N개」(# 빠진 것·「N+」 포함). 한 책에 값이 갈리면 ratings.json 으로 정한다.
+    # 별점: 가제본(별점 없음) > ratings.json 「직접」 > 독서일기(N열, P열 「+」=5+) > 서평 캡션 「#이프로별N개」
     rp = os.path.join(HERE, "ratings.json")
-    rfix = {k: v for k, v in (json.load(open(rp, encoding="utf-8")) if os.path.exists(rp) else {}).items() if not k.startswith("_")}
+    rcfg = json.load(open(rp, encoding="utf-8")) if os.path.exists(rp) else {}
+    manual = {k: v for k, v in rcfg.get("직접", {}).items() if not k.startswith("_")}
+    alias = {k: v for k, v in rcfg.get("_일기표기", {}).items() if not k.startswith("_")}
+    diary = read_diary()
     got = {}
+    gajebon = set()
     for p in out:
         cap = by_code[p["code"]]["caption"] if p["code"] in by_code else ""
+        if p["kind"] == "서평" and "가제본" in cap:
+            gajebon.add(p["book"])
         for m in re.finditer(r"이프로별\s*(\d(?:\.\d)?)\s*(?:개|\+)", cap):
             got.setdefault(p["book"], set()).add(float(m.group(1)))
+    src_count = {}
     for t in shelf_books:
-        if t in rfix:
-            r = rfix[t]
+        d = diary.get(dkey(alias.get(t, t)))
+        if t in gajebon or (d and d["gajebon"]):
+            r, plus, src = None, False, "가제본"
+        elif t in manual:
+            v = manual[t]
+            r, plus, src = (5, True, "직접") if v == "5+" else (v, False, "직접")
+        elif d:
+            r, plus, src = d["rating"], d["plus"], "독서일기"
+            cap_r = got.get(t)
+            if cap_r and float(r) not in cap_r:
+                print("  캡션과 독서일기가 다름(독서일기를 씀):", t, sorted(cap_r), "→", r)
         elif len(got.get(t, ())) == 1:
-            r = next(iter(got[t]))
+            r, plus, src = next(iter(got[t])), False, "캡션"
         else:
-            r = None
+            r, plus, src = None, False, "없음"
             if len(got.get(t, ())) > 1:
-                print("  별점이 갈림 → ratings.json 에 적을 것:", t, sorted(got[t]))
-        books.setdefault(t, {})["rating"] = r
+                print("  별점이 갈림 → ratings.json 「직접」에 적을 것:", t, sorted(got[t]))
+        books.setdefault(t, {}).update(rating=r, plus=plus, gajebon=src == "가제본")
+        src_count[src] = src_count.get(src, 0) + 1
+    print("  별점 출처:", src_count)
 
     for b in books.values():  # 알라딘 표기 「이름 (지은이), 번역자 (옮긴이)」 → 이름
         b["author"] = re.sub(r"\s*\([^)]*\)", "", b.get("author", "")).split(",")[0].strip()

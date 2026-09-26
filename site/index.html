@@ -59,6 +59,9 @@ main{padding:28px 0 64px}
 .rh{font:800 20px/1.3 'Noto Serif KR',serif;margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .rh .st{color:#d4a017;letter-spacing:2px;font-size:18px}
 .rh .n{font:400 14px Pretendard,sans-serif;color:var(--muted)}
+.plus{color:var(--accent);font-weight:800;margin-left:1px}
+.deep.gj{color:var(--muted);border-color:var(--line);margin-right:4px}
+.rh .sub{font:400 13px Pretendard,sans-serif;color:var(--muted)}
 .empty{color:var(--muted);padding:40px 0}
 .back{display:inline-block;margin-bottom:20px;color:var(--muted);text-decoration:none;font-size:14px}
 .back:hover{color:var(--ink)}
@@ -150,12 +153,13 @@ document.getElementById('foot').textContent = `책 ${books.length}권 · 게시�
 
 const coverHtml = b => b.cover ? `<img src="${esc(b.cover)}" alt="" loading="lazy">` : `<span class="ph">${esc(b.title)}</span>`;
 
-const stars = r => r == null ? '' : '★'.repeat(Math.round(r)) + '☆'.repeat(5 - Math.round(r));
+const stars = (r, plus) => r == null ? '' : '★'.repeat(Math.round(r)) + '☆'.repeat(5 - Math.round(r)) + (plus ? '<b class="plus">+</b>' : '');
+const grade = b => b.rating == null ? null : (b.plus ? '5+' : Math.round(b.rating));
 let only = 'all', order = 'rating';
 function cardHtml(b) {
   return `<a class="book" href="#/book/${encodeURIComponent(b.title)}">
       <div class="cover">${coverHtml(b)}</div>
-      <h3>${esc(b.title)}</h3>${b.rating != null ? `<div class="stars" aria-label="별점 ${b.rating}개">${stars(b.rating)}</div>` : ''}${b.deep ? '<span class="deep">원고분석</span>' : ''}
+      <h3>${esc(b.title)}</h3>${b.rating != null ? `<div class="stars" aria-label="별점 ${grade(b)}">${stars(b.rating, b.plus)}</div>` : ''}${b.gajebon ? '<span class="deep gj">가제본</span>' : ''}${b.deep ? '<span class="deep">원고분석</span>' : ''}
       <div class="meta">${esc(b.author||'')}${b.author?' · ':''}게시물 ${b.posts.length}</div>
     </a>`;
 }
@@ -171,8 +175,8 @@ function home() {
   else if (order === 'recent') body = `<div class="grid">${list.map(cardHtml).join('')}</div>`;
   else {
     // 별점 높은 순으로 묶고, 같은 별점 안에서는 최근 게시순
-    const groups = [5, 4, 3, 2, 1, null].map(r => ({r, items: list.filter(b => (b.rating == null ? null : Math.round(b.rating)) === r)})).filter(g => g.items.length);
-    body = groups.map(g => `<section class="rgroup"><h2 class="rh">${g.r == null ? '별점 없음' : `<span class="st">${stars(g.r)}</span> 별 ${g.r}개`} <span class="n">${g.items.length}권</span></h2>
+    const groups = ['5+', 5, 4, 3, 2, 1, null].map(r => ({r, items: list.filter(b => grade(b) === r)})).filter(g => g.items.length);
+    body = groups.map(g => `<section class="rgroup"><h2 class="rh">${g.r == null ? '별점 없음 <span class="sub">가제본·별점을 안 준 책</span>' : g.r === '5+' ? `<span class="st">${stars(5, true)}</span> 별 5+ <span class="sub">5점을 넘은 책</span>` : `<span class="st">${stars(g.r)}</span> 별 ${g.r}개`} <span class="n">${g.items.length}권</span></h2>
       <div class="grid">${g.items.map(cardHtml).join('')}</div></section>`).join('');
   }
   app.innerHTML = tabs + body;
@@ -219,7 +223,7 @@ function book(title) {
   const nSpoil = spoilPosts.length + notes.length;
   app.innerHTML = `<a class="back" href="#/">← 책장으로</a>
     <div class="bookhead"><div class="cover">${coverHtml(b)}</div><div>
-      <h2>${esc(b.title)}</h2>${b.rating != null ? `<div class="stars big" aria-label="별점 ${b.rating}개">${stars(b.rating)} <span>별 ${b.rating}개</span></div>` : ''}
+      <h2>${esc(b.title)}</h2>${b.rating != null ? `<div class="stars big" aria-label="별점 ${grade(b)}">${stars(b.rating, b.plus)} <span>별 ${grade(b)}${b.plus ? '' : '개'}</span></div>` : b.gajebon ? '<div class="stars big"><span>가제본으로 읽어 별점 없음</span></div>' : ''}
       <div class="meta">${esc([b.author, b.publisher].filter(Boolean).join(' · '))}</div>
       ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${esc(b.store || '알라딘')}에서 보기 ↗</a></div>` : ''}
     </div></div>
