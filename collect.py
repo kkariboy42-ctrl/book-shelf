@@ -233,7 +233,17 @@ def main():
     json.dump(books, open(books_path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     out.sort(key=lambda x: x["date"], reverse=True)
     used = {p["book"] for p in out}
-    data = {"updated": time.strftime("%Y-%m-%d"), "posts": out,
+    # 사이트 전용 스포 게시물(spoilers/<책>.json) — 인스타엔 없고 여기에만 있다
+    notes = {}
+    sp_dir = os.path.join(HERE, "spoilers")
+    for fn in sorted(os.listdir(sp_dir)) if os.path.isdir(sp_dir) else []:
+        if fn.endswith(".json"):
+            sp = json.load(open(os.path.join(sp_dir, fn), encoding="utf-8"))
+            if sp["book"] in used:
+                notes[sp["book"]] = sp["posts"]
+            else:
+                print("  스포 글의 책이 책장에 없음:", sp["book"])
+    data = {"updated": time.strftime("%Y-%m-%d"), "posts": out, "notes": notes,
             "books": {t: b for t, b in books.items() if t in used}}
     with open(os.path.join(SITE, "data.js"), "w", encoding="utf-8") as fh:
         fh.write("window.SHELF = " + json.dumps(data, ensure_ascii=False, indent=1) + ";\n")
