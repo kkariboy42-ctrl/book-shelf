@@ -2569,7 +2569,11 @@ window.SHELF = {
    "cover": "covers/157fb98cf7.jpg"
   },
   "미미소기": {
-   "author": "미쓰다 신조"
+   "author": "미쓰다 신조",
+   "cover": "covers/mimisogi_yes24.jpg",
+   "publisher": "북로드",
+   "link": "https://www.yes24.com/product/goods/196020372",
+   "store": "예스24"
   },
   "한국사 이상현상 연구원": {
    "author": "최인서",

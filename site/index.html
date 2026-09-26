@@ -189,7 +189,7 @@ function book(title) {
     <div class="bookhead"><div class="cover">${coverHtml(b)}</div><div>
       <h2>${esc(b.title)}</h2>
       <div class="meta">${esc([b.author, b.publisher].filter(Boolean).join(' · '))}</div>
-      ${b.aladin ? `<div class="links"><a href="${esc(b.aladin)}" target="_blank" rel="noopener">알라딘에서 보기 ↗</a></div>` : ''}
+      ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${esc(b.store || '알라딘')}에서 보기 ↗</a></div>` : ''}
     </div></div>
     <div class="cols">
       <section class="col"><h3><span class="dot"></span>스포 없음 <span class="n">${safe.length}</span></h3>
