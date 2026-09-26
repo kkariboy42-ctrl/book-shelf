@@ -45,6 +45,11 @@ main{padding:28px 0 64px}
 .cover{transition:transform .15s}
 .book h3{font:600 15px/1.35 Pretendard,sans-serif;margin:10px 0 2px}
 .meta{color:var(--muted);font-size:13px}
+.tabs{display:flex;gap:8px;margin:0 0 22px;flex-wrap:wrap}
+.tabs button{font:600 14px Pretendard,sans-serif;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer}
+.tabs button span{font-weight:400;margin-left:2px}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.deep{display:inline-block;font-size:11px;font-weight:600;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:0 6px;margin:0 0 3px}
 .empty{color:var(--muted);padding:40px 0}
 .back{display:inline-block;margin-bottom:20px;color:var(--muted);text-decoration:none;font-size:14px}
 .back:hover{color:var(--ink)}
@@ -136,15 +141,21 @@ document.getElementById('foot').textContent = `책 ${books.length}권 · 게시�
 
 const coverHtml = b => b.cover ? `<img src="${esc(b.cover)}" alt="" loading="lazy">` : `<span class="ph">${esc(b.title)}</span>`;
 
+let only = 'all';
 function home() {
   const k = norm(q.value);
-  const list = books.filter(b => !k || norm(b.title + (b.author||'')).includes(k));
-  app.innerHTML = list.length ? `<div class="grid">${list.map(b => `
+  const nDeep = books.filter(b => b.deep).length;
+  const list = books.filter(b => (only === 'all' || b.deep) && (!k || norm(b.title + (b.author||'')).includes(k)));
+  const tabs = `<div class="tabs" role="tablist">
+    <button role="tab" aria-selected="${only==='all'}" data-v="all">전체 <span>${books.length}</span></button>
+    <button role="tab" aria-selected="${only==='deep'}" data-v="deep">원고분석한 책 <span>${nDeep}</span></button></div>`;
+  app.innerHTML = tabs + (list.length ? `<div class="grid">${list.map(b => `
     <a class="book" href="#/book/${encodeURIComponent(b.title)}">
       <div class="cover">${coverHtml(b)}</div>
-      <h3>${esc(b.title)}</h3>
+      <h3>${esc(b.title)}</h3>${b.deep ? '<span class="deep">원고분석</span>' : ''}
       <div class="meta">${esc(b.author||'')}${b.author?' · ':''}게시물 ${b.posts.length}</div>
-    </a>`).join('')}</div>` : `<p class="empty">「${esc(q.value)}」에 맞는 책이 없어요.</p>`;
+    </a>`).join('')}</div>` : `<p class="empty">「${esc(q.value)}」에 맞는 책이 없어요.</p>`);
+  app.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { only = b.dataset.v; home(); });
 }
 
 function postHtml(p) {

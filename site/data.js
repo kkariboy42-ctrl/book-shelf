@@ -371,6 +371,15 @@ window.SHELF = {
    "hook": "알라딘 미스터리 특집 '마니아 추천'에 제 추천글이 실렸습니다. 그것도 두 권이나."
   },
   {
+   "code": "DbvQmeRJITw",
+   "date": "2026-08-07",
+   "book": "긴키 지방의 어느 장소에 대하여",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "숲에서 목소리를 들은 여학생 서른 명이 한꺼번에 말을 잃었습니다. "
+  },
+  {
    "code": "DblGNTPpAU_",
    "date": "2026-08-03",
    "book": "투명한 나선",
@@ -378,6 +387,15 @@ window.SHELF = {
    "kind": "게시물",
    "spoiler": false,
    "hook": "히가시노 게이고의 갈릴레오 시리즈의 최신작 투명한 나선이 알라딘 종합 1위를 차지하고 있습니다."
+  },
+  {
+   "code": "DbfB51ZJppY",
+   "date": "2026-07-31",
+   "book": "명탐정의 제물",
+   "video": true,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "#명탐정의제물 #시라이도모유키 "
   },
   {
    "code": "DbcIiVFiRGi",
@@ -398,6 +416,24 @@ window.SHELF = {
    "hook": "20년 전 멈춘 유원지가, 하룻밤 사이 살인 현장이 됐어."
   },
   {
+   "code": "Dao2VFHpyxt",
+   "date": "2026-07-10",
+   "book": "긴키 지방의 어느 장소에 대하여",
+   "video": false,
+   "kind": "서평",
+   "spoiler": true,
+   "hook": "긴키 지방의 어느장소에 대하여 두번째 기록 // 세스지 // 반타 // 26년 6월"
+  },
+  {
+   "code": "DaCWqQDJiDV",
+   "date": "2026-06-25",
+   "book": "긴키 지방의 어느 장소에 대하여",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "실종된 친구가 마지막으로 남긴 말은 『긴키 지방의 어느 장소에 가보겠다』는 한마디였습니다. "
+  },
+  {
    "code": "DZ_PcyuziUk",
    "date": "2026-06-24",
    "book": "폐놀이공원의 살인",
@@ -407,6 +443,42 @@ window.SHELF = {
    "hook": "일본 미스터리 전문 출판사가 탄생했습니다."
   },
   {
+   "code": "DZ7ZZyLpCoK",
+   "date": "2026-06-23",
+   "book": "안녕 신",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "내 가장 친한 친구가 학교 시청각실에서 시체로 발견됐다. 그리고 우리 반에는, 모든 걸 알고 있는 『신』이 있다."
+  },
+  {
+   "code": "DZzNcVIpaG5",
+   "date": "2026-06-20",
+   "book": "안녕 신",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "안녕 신 📖 // 마야 유타카 ✍️ // 내친구의 서재 📚 // 2026년 6월 20일 🗓️"
+  },
+  {
+   "code": "DZr_OEmCS8j",
+   "date": "2026-06-17",
+   "book": "안녕 신",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "마야 유타카의 안녕 신을 읽었습니다."
+  },
+  {
+   "code": "DZMMNf6JBLx",
+   "date": "2026-06-04",
+   "book": "살로메의 단두대",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 살로메의 단두대 유키 하루오 / 블루홀6 / 2026년 4월"
+  },
+  {
    "code": "DZIHi-OJzTm",
    "date": "2026-06-03",
    "book": "방주",
@@ -414,6 +486,186 @@ window.SHELF = {
    "kind": "영상",
    "spoiler": false,
    "hook": "이것저것 시도중.."
+  },
+  {
+   "code": "DZHfajQiRkU",
+   "date": "2026-06-03",
+   "book": "살로메의 단두대",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "🖼️ 내 인생 최고의 역작이 도난당했다! 그런데... 범인을 찾다 마주친 건 기괴한 연쇄 살인?! 😱🩸"
+  },
+  {
+   "code": "DZKHz2_iVJr",
+   "date": "2026-06-03",
+   "book": "살로메의 단두대",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "🩸 살로메의 은쟁반이 마침내 준비되었다...잔혹한 최후의 심판! ⚖️🪓"
+  },
+  {
+   "code": "DZABi-YpW02",
+   "date": "2026-05-31",
+   "book": "금기의 아이",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 금기의 아이 야마구치 미오 / 블루홀6 / 2026년 05월"
+  },
+  {
+   "code": "DYjmvqriWLX",
+   "date": "2026-05-20",
+   "book": "금기의 아이",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "🏥 \"매일 아침 거울로 보던 내 얼굴이, 차가운 영안실 침대 위에 누워있다면?\""
+  },
+  {
+   "code": "DYgNn5niYmF",
+   "date": "2026-05-18",
+   "book": "안녕 신",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "이야 신게임의 충격을 이어갈수 있겠군요."
+  },
+  {
+   "code": "DYb4YdSiQGh",
+   "date": "2026-05-17",
+   "book": "스와이프 엄금",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "🚨 경고: 절대 이 게시물을 끝까지 스와이프하지 마시오. 🚨"
+  },
+  {
+   "code": "DYbmAw9JMb-",
+   "date": "2026-05-17",
+   "book": "스와이프 엄금",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 스와이프 엄금 치넨 미키토 / 북다 / 2026년 5월"
+  },
+  {
+   "code": "DXtTRM6CcrC",
+   "date": "2026-04-29",
+   "book": "살로메의 단두대",
+   "video": false,
+   "kind": "표지",
+   "spoiler": false,
+   "hook": "🎨 원본 일러스트 표지가 현실로 튀어나왔습니다!"
+  },
+  {
+   "code": "DXmB20BCeoP",
+   "date": "2026-04-26",
+   "book": "속죄",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 속죄 미나토 가나에 / 북홀릭 / 21년 3월 (개정판) "
+  },
+  {
+   "code": "DXWqmwWieqL",
+   "date": "2026-04-20",
+   "book": "대리모",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 대리모 프리다 맥파든 / 북플라자 / 26년 02월"
+  },
+  {
+   "code": "DXJE_duCY4Q",
+   "date": "2026-04-14",
+   "book": "살로메의 단두대",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "유키하루오의 다이쇼 본격 미스터리 3탄!"
+  },
+  {
+   "code": "DWvvCQkif0E",
+   "date": "2026-04-05",
+   "book": "대리모",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "나에게 아이를 안겨준 천사 같던 비서가, 내 남편과 내 인생을 통째로 훔치려 한다. 🩸"
+  },
+  {
+   "code": "DWgEiJNCYnS",
+   "date": "2026-03-29",
+   "book": "동트기 힘든 긴 밤",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "\"지하철역 압사 직전의 인파 속, 캐리어에 폭탄이 들었다고 소리친 남자! 💼💣"
+  },
+  {
+   "code": "DWqXpipiWsa",
+   "date": "2026-03-29",
+   "book": "밀실 황금시대의 살인",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "\"살인 현장이 밀실이면 무조건 무죄가 된다고?\" 😱"
+  },
+  {
+   "code": "DWshEQhia5Z",
+   "date": "2026-03-29",
+   "book": "하우스메이드",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "내 방 자물쇠가 바깥쪽에 달려 있다면? 😱"
+  },
+  {
+   "code": "DWRLyFtCSrq",
+   "date": "2026-03-24",
+   "book": "심연의 텔레패스",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 심연의 텔레패스 가미조 가즈키 / 북다 / 2026년 3월"
+  },
+  {
+   "code": "DWTu0gPCctr",
+   "date": "2026-03-24",
+   "book": "어려운 문제가 가득한 레스토랑",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 어려운 문제가 가득한 레스토랑 유키 신이치로 / 북다 / 2026년 2월"
+  },
+  {
+   "code": "DWL4dt1iWuV",
+   "date": "2026-03-22",
+   "book": "어려운 문제가 가득한 레스토랑",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "아내 모르게 잘려 나간 남편의 두 손가락."
+  },
+  {
+   "code": "DWMBAvTiWw9",
+   "date": "2026-03-22",
+   "book": "신 게임",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "마야 유타카의 신게임"
+  },
+  {
+   "code": "DWNFrZIkjiQ",
+   "date": "2026-03-22",
+   "book": "심연의 텔레패스",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "가미조 가즈키의 심연의 텔레패스를 읽고 있습니딘."
   },
   {
    "code": "DWa69KLCRH6",
@@ -452,6 +704,114 @@ window.SHELF = {
    "hook": "\"살고 싶어? 그럼 9명 중 가장 쓸모없는 1명을 버려.\" 🩸"
   },
   {
+   "code": "DWGxadciVXq",
+   "date": "2026-03-20",
+   "book": "잃어버린 얼굴",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 잃어버린 얼굴 / 사쿠라다 도모야 / 반타 / 2026년 2월"
+  },
+  {
+   "code": "DWIwgbCiQ0U",
+   "date": "2026-03-20",
+   "book": "어려운 문제가 가득한 레스토랑",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "유키신이치로의 어려운 문제가 가득한 레스토랑을 읽고 있습니다."
+  },
+  {
+   "code": "DV8VwtGCdSv",
+   "date": "2026-03-16",
+   "book": "잃어버린 얼굴",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "사쿠라다 도모야의 잃어버린 얼굴을 읽고 있습니다."
+  },
+  {
+   "code": "DWGUhNlCeVR",
+   "date": "2026-03-15",
+   "book": "재소자",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "\"내가 감옥에 처넣은 전남친이 내 직장 수감자라고...? 😨\""
+  },
+  {
+   "code": "DWIrnWriSc4",
+   "date": "2026-03-15",
+   "book": "피안장의 유령",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "\"살아서 나올 수 없는 저택이 있다면, 당신은 가시겠습니까?\" 🩸"
+  },
+  {
+   "code": "DV-mxtbiReK",
+   "date": "2026-03-14",
+   "book": "독이 든 화형 법정",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "#독이든화형법정 #사카기바야시메이 #일본미스터리 #카드뉴스 #책호스터이프로"
+  },
+  {
+   "code": "DV46mX-CWk0",
+   "date": "2026-03-14",
+   "book": "독이 든 화형 법정",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 독이 든 화형 법정 사카키바야시 메이 / 블루홀6 / 2026년 2월"
+  },
+  {
+   "code": "DV4_WLBibS7",
+   "date": "2026-03-14",
+   "book": "방과후",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "히가시노 게이고의 방과후"
+  },
+  {
+   "code": "DWBK84UiSnN",
+   "date": "2026-03-14",
+   "book": "방과후",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "가장 안전해야 할 학교"
+  },
+  {
+   "code": "DWDvvQBicJj",
+   "date": "2026-03-14",
+   "book": "나오미와 가나코",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "**넷플릭스 \"당신이 죽였다\" 의 원작 소설"
+  },
+  {
+   "code": "DWDxgCQCZ6-",
+   "date": "2026-03-14",
+   "book": "신 게임",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "\"신이 범인을 알려주면, 추리는 왜 필요한 걸까?\""
+  },
+  {
+   "code": "DVqH2MNCQCU",
+   "date": "2026-03-09",
+   "book": "어려운 문제가 가득한 레스토랑",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "진상을 말씀드립니다의 유키 신이치로의 신작이군요."
+  },
+  {
    "code": "DVsrcOYCTQ7",
    "date": "2026-03-08",
    "book": "십각관의 살인",
@@ -470,6 +830,159 @@ window.SHELF = {
    "hook": "**윌라오디오북 완듣(?) 기념!**"
   },
   {
+   "code": "DVk9IwkiaN9",
+   "date": "2026-03-05",
+   "book": "금기의 아이",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "곧 블루홀식스에서 출간 예정입니다"
+  },
+  {
+   "code": "DVdfxaZCRs5",
+   "date": "2026-03-04",
+   "book": "시체로 놀지 마 어른들아",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "남자의 시체에 여자의 팔이 꿰매져 있었다... 🩸"
+  },
+  {
+   "code": "DVdSjWViU1G",
+   "date": "2026-03-04",
+   "book": "내가 아는 루민",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "당신을 구원해 준 완벽한 멘토가, 사실 당신의 영혼을 갉아먹는 악마라면? 🩸"
+  },
+  {
+   "code": "DVfzi0tCfc2",
+   "date": "2026-03-04",
+   "book": "GOTH 리스트 컷 사건",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "살인마의 표적이 된 소녀, 그리고 그 살인마보다 더 지독한 '진짜 괴물'의 등장 🩸"
+  },
+  {
+   "code": "DValEFHCb5T",
+   "date": "2026-03-03",
+   "book": "마녀는 되살아난다",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "나카야마 시치리가 선사하는 압도적인 긴장감과 소름 돋는 반전!"
+  },
+  {
+   "code": "DVYdfzmif9i",
+   "date": "2026-03-02",
+   "book": "마녀재판의 변호인",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "끔찍한 연쇄 살인과 몸에 새겨진 악마의 표식. 모든 증거가 한 소녀를 마녀로 지목하고 있습니다."
+  },
+  {
+   "code": "DVYT1EIiawS",
+   "date": "2026-03-02",
+   "book": "위층의 아내",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "#북플라자 #프리다맥파든 #위층의아내 #책호스터이프로"
+  },
+  {
+   "code": "DVX6QmEiQzc",
+   "date": "2026-03-01",
+   "book": "위층의 아내",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 위층의 아내 프리다 맥파든 / 북플라자 / 2026년 01월"
+  },
+  {
+   "code": "DVNPnpjCcpb",
+   "date": "2026-02-25",
+   "book": "마녀재판의 변호인",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 마녀재판의 변호인 기미노 아라타 / 톰캣 / 2026년 2월"
+  },
+  {
+   "code": "DVKviBWCcXn",
+   "date": "2026-02-24",
+   "book": "독이 든 화형 법정",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "사카키바야시 메이의 독이 든 화형 법정!"
+  },
+  {
+   "code": "DVFy2c_iacW",
+   "date": "2026-02-22",
+   "book": "대리모",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "또나와 맥파든 신작 대리모!"
+  },
+  {
+   "code": "DU9cQvjEpAy",
+   "date": "2026-02-19",
+   "book": "최소불행사회",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 최소불행사회 홍선기 / 모티브 / 2026년 1월"
+  },
+  {
+   "code": "DUqA01UiQ-k",
+   "date": "2026-02-12",
+   "book": "한 치 앞의 어둠",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 한치 앞의 어둠 사와무라 이치 / 폴라북스 / 2026년 1월"
+  },
+  {
+   "code": "DUnxiePCc05",
+   "date": "2026-02-11",
+   "book": "마녀재판의 변호인",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "톰캣 에서 서평단 활동으로 받은 기미노 아라타의 마녀 재판의 변호인입니다."
+  },
+  {
+   "code": "DUf4xPsiRhM",
+   "date": "2026-02-08",
+   "book": "한 치 앞의 어둠",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "사와무라 이치의 《한 치 앞의 어둠》 수록작중 \"무제\""
+  },
+  {
+   "code": "DUUOgO8EmrU",
+   "date": "2026-02-03",
+   "book": "최소불행사회",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "서평단 활동으로 최소불행사회 책 받았습니다."
+  },
+  {
+   "code": "DUP_naxiduq",
+   "date": "2026-02-02",
+   "book": "마녀재판의 변호인",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": true,
+   "hook": "굉장히 흥미로워 보이는 책이 톰캣에서 출간예정이고 서평단도 현재 모집중입니다."
+  },
+  {
    "code": "DUO35m2k7Es",
    "date": "2026-02-01",
    "book": "십각관의 살인",
@@ -477,6 +990,1491 @@ window.SHELF = {
    "kind": "게시물",
    "spoiler": false,
    "hook": "윌라오디오북에서 아야츠지 유키토의 십각관의 살인이 출간되었습니다."
+  },
+  {
+   "code": "DUNjS_NCTIU",
+   "date": "2026-02-01",
+   "book": "밀실수집가",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 밀실수집가 오야마 세이이치로 / 리드비 / 25년 8월"
+  },
+  {
+   "code": "DUM6X-piQyu",
+   "date": "2026-01-31",
+   "book": "마녀는 되살아난다",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 마녀는 되살아 난다 나카야마 시치리 / 블루홀6 / 26년 1월"
+  },
+  {
+   "code": "DUKdyOxCZWb",
+   "date": "2026-01-30",
+   "book": "마녀는 되살아난다",
+   "video": true,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "와! 이거죠! 이게 나카야마 시치리의 작품이죠!"
+  },
+  {
+   "code": "DUAZadFCexg",
+   "date": "2026-01-26",
+   "book": "방과후",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 방과후 히가시노 게이고 / 소미미디어 / 2019년 7월 (원작 1985년)"
+  },
+  {
+   "code": "DT2x9ZmCZcq",
+   "date": "2026-01-23",
+   "book": "방과후",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "히가시노 게이고의 방과후 시작합니다"
+  },
+  {
+   "code": "DT3mQ3JE-qE",
+   "date": "2026-01-23",
+   "book": "책의 등뼈가 마지막에 남는다",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 책의 등뼈가 마지막에 남는다"
+  },
+  {
+   "code": "DTzDaO_iUNc",
+   "date": "2026-01-21",
+   "book": "더럽혀진 성지 순례에 대하여",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "와..엄청납니다."
+  },
+  {
+   "code": "DTm_rTrCYGE",
+   "date": "2026-01-17",
+   "book": "책의 등뼈가 마지막에 남는다",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "요즘 책을 거의 못읽었군요😅😅"
+  },
+  {
+   "code": "DTgW89CE_Rh",
+   "date": "2026-01-14",
+   "book": "8번 출구",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 8번 출구"
+  },
+  {
+   "code": "DTSH9btCa34",
+   "date": "2026-01-09",
+   "book": "GOTH 리스트 컷 사건",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "오츠이치의 GOTH "
+  },
+  {
+   "code": "DTUdZc6CX3S",
+   "date": "2026-01-09",
+   "book": "8번 출구",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "가와무라 겐키의 8번 출구를 읽는 중입니다."
+  },
+  {
+   "code": "DTUQ3xFie6n",
+   "date": "2026-01-09",
+   "book": "GOTH 리스트 컷 사건",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 고쓰-리스트 컷 사건"
+  },
+  {
+   "code": "DTUZ1pmCTKy",
+   "date": "2026-01-09",
+   "book": "차일드 호더",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 차일드 호더"
+  },
+  {
+   "code": "DTITthNifXv",
+   "date": "2026-01-05",
+   "book": "차일드 호더",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "프리다 맥파든의 차일드 호더 시작합니다."
+  },
+  {
+   "code": "DTE9DNFiQrQ",
+   "date": "2026-01-03",
+   "book": "내가 아는 루민",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 내가 아는 루민"
+  },
+  {
+   "code": "DS1-PhCicw0",
+   "date": "2025-12-29",
+   "book": "GOTH 리스트 컷 사건",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "@buin.kim 님의 지목(?)으로 오츠이치의 GOTH 시작합니다"
+  },
+  {
+   "code": "DS4OIL_iUxX",
+   "date": "2025-12-29",
+   "book": "위층의 아내",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "프리다 맥파든의 신작이 또 나오는군요."
+  },
+  {
+   "code": "DS1MVCOCVUG",
+   "date": "2025-12-28",
+   "book": "아사토호",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 아사토호"
+  },
+  {
+   "code": "DSxMDXZCc3O",
+   "date": "2025-12-27",
+   "book": "내가 아는 루민",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "내가 아는 루민 시작합니다."
+  },
+  {
+   "code": "DStxUytiYue",
+   "date": "2025-12-25",
+   "book": "재소자",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 재소자"
+  },
+  {
+   "code": "DSemTGDCesf",
+   "date": "2025-12-20",
+   "book": "아사토호",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "아사토호 시~~~작"
+  },
+  {
+   "code": "DScTZqCCTKc",
+   "date": "2025-12-19",
+   "book": "아사토호",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "@happiness_jury 서평단 당첨으로 북로드에서 출간된 니이나 사토시의 아사토호를 받았습니다."
+  },
+  {
+   "code": "DSd--2FCXCS",
+   "date": "2025-12-19",
+   "book": "시체로 놀지 마 어른들아",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 시체로 놀지마 어른들아"
+  },
+  {
+   "code": "DSTXFgoErj3",
+   "date": "2025-12-15",
+   "book": "시체로 놀지 마 어른들아",
+   "video": true,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "블루홀 6에서 출간된 구라치준의 \"어른들아 시체로 놀지마\" 를 읽었습니다. 와 단편 4가지 모두 독특하고 신선한 이야기입니다. 물론 재미도 상당"
+  },
+  {
+   "code": "DSPQ62liaBM",
+   "date": "2025-12-14",
+   "book": "재소자",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "프라다 맥파든의 신작 재소자입니다."
+  },
+  {
+   "code": "DSM76xRCXLv",
+   "date": "2025-12-13",
+   "book": "셜록 홈스의 개선",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 셜록 홈즈의 개선"
+  },
+  {
+   "code": "DR_9TWvCYmB",
+   "date": "2025-12-08",
+   "book": "나오미와 가나코",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 나오미와 가나코"
+  },
+  {
+   "code": "DSAFAVuCTCA",
+   "date": "2025-12-08",
+   "book": "셜록 홈스의 개선",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "셜록 홈스의 개선"
+  },
+  {
+   "code": "DSCjKGBiYn_",
+   "date": "2025-12-08",
+   "book": "바스커빌관의 살인",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 바스커빌관의 살인"
+  },
+  {
+   "code": "DR9l9GciZOg",
+   "date": "2025-12-07",
+   "book": "바스커빌관의 살인",
+   "video": true,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "바스커빌관의 살인..."
+  },
+  {
+   "code": "DR4k8wNCUCg",
+   "date": "2025-12-05",
+   "book": "바스커빌관의 살인",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "허밍북스에서 출간된 다카노 유시의 바스커빌관의 살인.."
+  },
+  {
+   "code": "DR174atCQ9i",
+   "date": "2025-12-04",
+   "book": "신 게임",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 신 게임"
+  },
+  {
+   "code": "DR4K0XxCSul",
+   "date": "2025-12-04",
+   "book": "더럽혀진 성지 순례에 대하여",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 더럽혀진 성지 순례에 대하여"
+  },
+  {
+   "code": "DR1imG_EmYw",
+   "date": "2025-12-03",
+   "book": "신 게임",
+   "video": true,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "읽는 내내 “이게 뭐지…?” 하다가 마지막에 멘탈 털렸습니다. 마야 유타카 신작, 각오하고 들어와야 합니다 😏"
+  },
+  {
+   "code": "DRrwjQDiWtx",
+   "date": "2025-11-30",
+   "book": "피안장의 유령",
+   "video": true,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 피안장의 유령 · 아야사카 미쓰키"
+  },
+  {
+   "code": "DRqaxyliWnr",
+   "date": "2025-11-29",
+   "book": "인간 표본",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 인간표본"
+  },
+  {
+   "code": "DRrS3-cCc0B",
+   "date": "2025-11-29",
+   "book": "피안장의 유령",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 피안장의 유령"
+  },
+  {
+   "code": "DRuA1WkCatZ",
+   "date": "2025-11-29",
+   "book": "인간 표본",
+   "video": true,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "“기괴하고 기묘한데… 미친 듯이 완성도 높다.”"
+  },
+  {
+   "code": "DRmFe69CeQv",
+   "date": "2025-11-28",
+   "book": "피안장의 유령",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "아야사카 미쓰키의 피안장의 유령을 보고 있습니다."
+  },
+  {
+   "code": "DRjWzYXiXrY",
+   "date": "2025-11-27",
+   "book": "더럽혀진 성지 순례에 대하여",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "세스지의 최신작 더럽혀진 성지 순례에 대하여가 12월 3일에 출간되는군요."
+  },
+  {
+   "code": "DRhIm4PiSjt",
+   "date": "2025-11-26",
+   "book": "꿈 전달",
+   "video": false,
+   "kind": "서평",
+   "spoiler": true,
+   "hook": "📖 꿈 전달"
+  },
+  {
+   "code": "DRjloG4CUFi",
+   "date": "2025-11-26",
+   "book": "꿈 전달",
+   "video": true,
+   "kind": "표지",
+   "spoiler": false,
+   "hook": "제이나이 굉장히 재미있군요."
+  },
+  {
+   "code": "DReWhUyCR-q",
+   "date": "2025-11-25",
+   "book": "인간 표본",
+   "video": true,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "미나토 가나에의 인간 표본을 읽고 있습니다."
+  },
+  {
+   "code": "DRY48aACfF7",
+   "date": "2025-11-22",
+   "book": "규칙 없음",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📘 규칙 없음 (No Rules Rules)"
+  },
+  {
+   "code": "DREgbp1CTEb",
+   "date": "2025-11-15",
+   "book": "용신 연못의 작은 시체",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "🐉 용신 연못의 작은 시체"
+  },
+  {
+   "code": "DREhJGkCefj",
+   "date": "2025-11-15",
+   "book": "나오미와 가나코",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "알라딘 일본 추리 미스터리 순위에서 갑자기 역주행 중이라. 이유가 뭔가 했는데 넷플릭스 당신이 죽였다의 원적 소설이군요."
+  },
+  {
+   "code": "DREAgezCRwM",
+   "date": "2025-11-14",
+   "book": "여름비 이야기",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "🌧️ 여름비 이야기"
+  },
+  {
+   "code": "DQkzt5cEohA",
+   "date": "2025-11-02",
+   "book": "신 게임",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "드디어 마야 유타카의 신게임이 알라딘에서 북펀딩을 진행합니다."
+  },
+  {
+   "code": "DQeBR6zCTnA",
+   "date": "2025-10-30",
+   "book": "미친 성장",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "💼 미친 성장"
+  },
+  {
+   "code": "DQYhizdD2RC",
+   "date": "2025-10-28",
+   "book": "인간 표본",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "미나토 가나에님의 신작입니다!"
+  },
+  {
+   "code": "DQTzUMJCQax",
+   "date": "2025-10-26",
+   "book": "나는 괴이 너는 괴물",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 나는 괴이 너는 괴물"
+  },
+  {
+   "code": "DQBnchbiR0K",
+   "date": "2025-10-19",
+   "book": "일곱 번째는 내가 아니다",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 일곱 번째는 내가 아니다"
+  },
+  {
+   "code": "DPv0ZrzCSGO",
+   "date": "2025-10-13",
+   "book": "용신 연못의 작은 시체",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "자 말이 필요없는 책입니다."
+  },
+  {
+   "code": "DPntuT9CZxH",
+   "date": "2025-10-10",
+   "book": "피안장의 유령",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "아야사카 미츠키의 피안장의 유령...이 책이 추리, 미스터리 장르가 아니였나요???"
+  },
+  {
+   "code": "DPoY1RfCYvz",
+   "date": "2025-10-10",
+   "book": "우먼 인 캐빈 10",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "🚢 우먼 인 캐빈 10 | 루스 웨어 | 필름 | 2025년 09월"
+  },
+  {
+   "code": "DPXZKn9j_NM",
+   "date": "2025-10-03",
+   "book": "일곱 번째는 내가 아니다",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "이번 추석 연휴 첫번째 책!"
+  },
+  {
+   "code": "DPQHdUriTdf",
+   "date": "2025-09-30",
+   "book": "우먼 인 캐빈 10",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "아..우먼 인 캐빈 10 이 시리즈 중 10번째를 뜻하는게 아니였구나..."
+  },
+  {
+   "code": "DPIZfQRCRXl",
+   "date": "2025-09-27",
+   "book": "하우스메이드 3",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "🧹 하우스 메이드 3 | 프리다 맥파든 | 북플라자 | 2025년 9월"
+  },
+  {
+   "code": "DOx2e4dCVwK",
+   "date": "2025-09-19",
+   "book": "시체로 놀지 마 어른들아",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "내용이 어떨지 감도안오는 구라치준의 신작 시체로 놀지마 어른들아의 서평단을 블루홀식스에서 모집중입니다"
+  },
+  {
+   "code": "DOuq5Caifbm",
+   "date": "2025-09-17",
+   "book": "우리의 노래를 불러라",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "🎶 우리의 노래를 불러라 1·2 | 오승호 | 블루홀6 | 2025년 4월"
+  },
+  {
+   "code": "DOrgHsJEpGO",
+   "date": "2025-09-16",
+   "book": "하우스메이드 3",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "프라다 맥파든의 하우스 메이드 3편!! 하우스 메이드의 집이 예약 구매 시작하자 마자 눌러서 오늘 받았습니다."
+  },
+  {
+   "code": "DOTLUTYCWhi",
+   "date": "2025-09-07",
+   "book": "패자의 고백",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 패자의 고백 | 미키 아키코 | 블루홀6 | 2025년 8월"
+  },
+  {
+   "code": "DOD1_9NCfh9",
+   "date": "2025-09-01",
+   "book": "바스커빌관의 살인",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "다카노 유시의 기암관의 살인 후속작인 바스커빌 관의 살인입니다."
+  },
+  {
+   "code": "DOC2rn9iafR",
+   "date": "2025-08-31",
+   "book": "디스펠",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "👻 디스펠 | 이마무라 마사히로 | 내 친구의 서재 | 2025년 8월"
+  },
+  {
+   "code": "DN8B3wWCUzR",
+   "date": "2025-08-29",
+   "book": "패자의 고백",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "미키 아키코의 패자의 고백!"
+  },
+  {
+   "code": "DN5UfIoibWh",
+   "date": "2025-08-28",
+   "book": "동트기 힘든 긴 밤",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "🌒 동트기 힘든 긴 밤 / 쯔진천 / 한스미디어 / 18년 11월"
+  },
+  {
+   "code": "DNuywGc6pRW",
+   "date": "2025-08-24",
+   "book": "동트기 힘든 긴 밤",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "와...이 작품뭐죠.."
+  },
+  {
+   "code": "DNpwmH7p8ky",
+   "date": "2025-08-22",
+   "book": "13계단",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "⛓️ 13계단 / 다카노 가즈아키 / 황금가지 / 25년 06월 (개정판)"
+  },
+  {
+   "code": "DNpxDC2JwoH",
+   "date": "2025-08-22",
+   "book": "밀실수집가",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "와 요즘 신작들..다 너무 관심이 가는 책들뿐이군요."
+  },
+  {
+   "code": "DNrmafh0rYm",
+   "date": "2025-08-22",
+   "book": "디스펠",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "이마무라 마사히로의 디스펠 받았습니다."
+  },
+  {
+   "code": "DNnG8uIpH0T",
+   "date": "2025-08-21",
+   "book": "언덕 위의 빨간 지붕",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "🏚️ “사랑, 살인, 그리고 거짓의 미궁… 언덕 위의 빨간 지붕은 피로 물든다.” 🩸"
+  },
+  {
+   "code": "DNkScHeJ6p9",
+   "date": "2025-08-19",
+   "book": "디스펠",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "와 이마무라 마사히로의 신작 디스펠이 예구가 떴군요."
+  },
+  {
+   "code": "DNkSCM2JJrG",
+   "date": "2025-08-19",
+   "book": "패자의 고백",
+   "video": false,
+   "kind": "표지",
+   "spoiler": false,
+   "hook": "미키 아키코의 신작 패자의 고백입니다."
+  },
+  {
+   "code": "DNKIsg_pCsc",
+   "date": "2025-08-09",
+   "book": "소년 농성",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 소년 농성 | 구시키 리우 | 블루홀6 | 25년 07월"
+  },
+  {
+   "code": "DNKZk4gJ2Qm",
+   "date": "2025-08-09",
+   "book": "화차",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "🚨 사라진 그녀를 쫓다… 나를 집어삼킨 건 사건이 아니라 감정이었다 🕵️‍♂️💥"
+  },
+  {
+   "code": "DMzEVb7Jb0Z",
+   "date": "2025-07-31",
+   "book": "소년 농성",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "블루홀식스 서평단으로 받은 소년 농성입니다."
+  },
+  {
+   "code": "DMuQA6gpBl6",
+   "date": "2025-07-29",
+   "book": "모든 비밀에는 이름이 있다",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 모든 비밀에는 이름이 있다 | 서미애 | 엘릭시르 | 21년 03월"
+  },
+  {
+   "code": "DMrILVhpePQ",
+   "date": "2025-07-28",
+   "book": "화차",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "출장 기차에서는 화차죠!"
+  },
+  {
+   "code": "DMfAcMIJMH0",
+   "date": "2025-07-24",
+   "book": "소년 농성",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "구시키 리우의 신작입니다."
+  },
+  {
+   "code": "DMc5IVPpAZ_",
+   "date": "2025-07-23",
+   "book": "잘자요 엄마",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 잘자요 엄마 | 서미애 | 엘릭시르 | 2018년 10월"
+  },
+  {
+   "code": "DMSgHw3JXCV",
+   "date": "2025-07-19",
+   "book": "죽은 자에게 입이 있다",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 죽은 자에게 입이 있다 | 다카노 가즈아키 | 황금가지 | 25년 06월"
+  },
+  {
+   "code": "DMMcDnpJVW5",
+   "date": "2025-07-16",
+   "book": "라자로의 미궁",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 『라자로의 미궁』"
+  },
+  {
+   "code": "DL9lGlVp0ek",
+   "date": "2025-07-11",
+   "book": "재벌집 막내아들",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "요즘...이 책에 푹빠져있습니다.."
+  },
+  {
+   "code": "DL6ahYtJA7V",
+   "date": "2025-07-09",
+   "book": "사건은 끝났다",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 『사건은 끝났다』"
+  },
+  {
+   "code": "DLh_slYpOoJ",
+   "date": "2025-06-30",
+   "book": "밀실 황금시대의 살인",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 『밀실 황금 시대의 살인』"
+  },
+  {
+   "code": "DLd41b9pE3n",
+   "date": "2025-06-28",
+   "book": "지뢰 글리코",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 『지뢰 글리코』"
+  },
+  {
+   "code": "DLMw1xKpfyF",
+   "date": "2025-06-22",
+   "book": "공감각 아름다운 밤에",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 『공감각 아름다운 밤에』"
+  },
+  {
+   "code": "DKo1fzzpRy8",
+   "date": "2025-06-08",
+   "book": "긴나미 상점가의 사건 노트",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 『긴나미 상점가의 사건 노트 – 형제편, 자매편』"
+  },
+  {
+   "code": "DKi3hixpyJQ",
+   "date": "2025-06-05",
+   "book": "핸디맨",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📘 『핸디맨』"
+  },
+  {
+   "code": "DKOOuM9pNQZ",
+   "date": "2025-05-28",
+   "book": "더 코워커",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📘 《더 코워커》"
+  },
+  {
+   "code": "DKHkjnbphLE",
+   "date": "2025-05-26",
+   "book": "하우스메이드 2",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 하우스 메이드2"
+  },
+  {
+   "code": "DJysZ5Zpa15",
+   "date": "2025-05-18",
+   "book": "하우스메이드",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 하우스 메이드"
+  },
+  {
+   "code": "DJvUUtBpnGG",
+   "date": "2025-05-16",
+   "book": "하우스메이드",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "프리다 맥파든의 하우스 메이드를 전자책으로 읽고있습니다."
+  },
+  {
+   "code": "DJsvNHHJ9jV",
+   "date": "2025-05-15",
+   "book": "4일간의 가족",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 4일간의 가족"
+  },
+  {
+   "code": "DJaugy3J4kg",
+   "date": "2025-05-08",
+   "book": "고독한 용의자",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 고독한 용의자"
+  },
+  {
+   "code": "DJNTd3iT35d",
+   "date": "2025-05-03",
+   "book": "4일간의 가족",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "이번 연휴에 픽한(?) 책은 가와세 나나오의 4일간의 가족입니다."
+  },
+  {
+   "code": "DI-ZwW9Jt5e",
+   "date": "2025-04-27",
+   "book": "네버 라이",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 네버 라이"
+  },
+  {
+   "code": "DI0Hf4zp5rO",
+   "date": "2025-04-23",
+   "book": "범선 군함의 살인",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 범선 군함의 살인"
+  },
+  {
+   "code": "DIytPj4SPKa",
+   "date": "2025-04-23",
+   "book": "고독한 용의자",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "찬호께이의 고독한 용의자 책을 받았습니다."
+  },
+  {
+   "code": "DInsCCwJHCA",
+   "date": "2025-04-18",
+   "book": "흉가",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "웅크린 뱀 모양 산, ,"
+  },
+  {
+   "code": "DIkp_pnJd52",
+   "date": "2025-04-17",
+   "book": "긴키 지방의 어느 장소에 대하여",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 긴키 지방의 어느 장소에 대하여"
+  },
+  {
+   "code": "DIgM1MvJ73Z",
+   "date": "2025-04-16",
+   "book": "범선 군함의 살인",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "서평단 활동으로 오카모토 요시키의 범선 군함의 살인을 받았습니다."
+  },
+  {
+   "code": "DIcVWCrzrwh",
+   "date": "2025-04-14",
+   "book": "흉가",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 흉가 / 미쓰다 신조 / 북로드 / 2025년 개정판"
+  },
+  {
+   "code": "DIWFnFkpP3L",
+   "date": "2025-04-12",
+   "book": "흉가",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "서평단 활동으로 받은 미쓰다신조의 흉가입니다."
+  },
+  {
+   "code": "DIX0JmkJ8Qk",
+   "date": "2025-04-12",
+   "book": "흉가",
+   "video": false,
+   "kind": "표지",
+   "spoiler": false,
+   "hook": "미쓰다신조의 흉가 표지 변주(?)입니다."
+  },
+  {
+   "code": "DIVgmosJoEt",
+   "date": "2025-04-11",
+   "book": "부러진 용골",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 『부러진 용골』 리뷰"
+  },
+  {
+   "code": "DIIZTrLpVWl",
+   "date": "2025-04-06",
+   "book": "시계 도둑과 악인들",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "“비밀 모임 ‘흑조회’, "
+  },
+  {
+   "code": "DIF7RqLJ5RJ",
+   "date": "2025-04-05",
+   "book": "수상탑의 살인",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "폭우 속 바다 위 ‘수상탑’. "
+  },
+  {
+   "code": "DIFkwEIpJCE",
+   "date": "2025-04-05",
+   "book": "부러진 용골",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "요네자와 호노부의 부러진 용골을 읽고 있습니다."
+  },
+  {
+   "code": "DIC5_C9SKOT",
+   "date": "2025-04-04",
+   "book": "흉가",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "쥬리님이 미쓰다신조의 흉가 개정판 서평단 모집중입니다"
+  },
+  {
+   "code": "DIDEFw3pAiw",
+   "date": "2025-04-04",
+   "book": "시계 도둑과 악인들",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 시계 도둑과 악인들"
+  },
+  {
+   "code": "DHx1dySpVHl",
+   "date": "2025-03-29",
+   "book": "수상탑의 살인",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "와 이제 우리의 상상을 표현하기 너무 좋아졌군요!"
+  },
+  {
+   "code": "DHxywSWJ1Bc",
+   "date": "2025-03-29",
+   "book": "젠더 크라임",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "남성 피해자 살해 사건."
+  },
+  {
+   "code": "DHp82InpdAD",
+   "date": "2025-03-26",
+   "book": "수상탑의 살인",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 수상탑의 살인"
+  },
+  {
+   "code": "DHol6tzhtuq",
+   "date": "2025-03-25",
+   "book": "수상탑의 살인",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "김영민님의 수상탑의 살인.."
+  },
+  {
+   "code": "DHkSlH4pHTU",
+   "date": "2025-03-23",
+   "book": "젠더 크라임",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 젠더 크라임"
+  },
+  {
+   "code": "DHalSLaJNcY",
+   "date": "2025-03-20",
+   "book": "부러진 용골",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "우와 부러진 용골이다!"
+  },
+  {
+   "code": "DHNBf2jJJxh",
+   "date": "2025-03-14",
+   "book": "밤의 이정표",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 밤의 이정표"
+  },
+  {
+   "code": "DHA0rJNJB4Z",
+   "date": "2025-03-10",
+   "book": "시계 도둑과 악인들",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "유키하루오라니!"
+  },
+  {
+   "code": "DG7wUYPpvQe",
+   "date": "2025-03-08",
+   "book": "이상한 집 2",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 이상한 집 2"
+  },
+  {
+   "code": "DG8DzgWpXTd",
+   "date": "2025-03-08",
+   "book": "이상한 집 2",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "🏚️ 끝이 막힌 복도, 이 집에는 뭔가 이상하다!"
+  },
+  {
+   "code": "DG5dumopSR2",
+   "date": "2025-03-07",
+   "book": "이별은 모차르트",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 이별은 모차르트"
+  },
+  {
+   "code": "DG5q7KRJy2-",
+   "date": "2025-03-07",
+   "book": "이별은 모차르트",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "🎼 모차르트의 선율이 흐르는 무대, 그 뒤에서 벌어진 살인사건!"
+  },
+  {
+   "code": "DGtpPZxzfW3",
+   "date": "2025-03-02",
+   "book": "최애의 살인",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "🔥 빛나는 무대 뒤, 치명적 비밀을 감춘 아이돌들! 🔥"
+  },
+  {
+   "code": "DGtxG78BkzV",
+   "date": "2025-03-02",
+   "book": "이별은 모차르트",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "📖 정말 너무나 좋습니다! 🎶✨"
+  },
+  {
+   "code": "DGhW9QEJl_m",
+   "date": "2025-02-25",
+   "book": "최애의 살인",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 최애의 살인"
+  },
+  {
+   "code": "DGcGKL5JiC-",
+   "date": "2025-02-23",
+   "book": "변호 측 증인",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "과거 스트립 댄서 ‘미미’가 재벌가에 입성?"
+  },
+  {
+   "code": "DGXl0ttpAex",
+   "date": "2025-02-22",
+   "book": "최애의 살인",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "📖 『최애의 살인』 읽는 중! 🔍✨"
+  },
+  {
+   "code": "DGXP2Z2JCEm",
+   "date": "2025-02-21",
+   "book": "변호 측 증인",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 변호 측 증인"
+  },
+  {
+   "code": "DGF8MIAJnIy",
+   "date": "2025-02-15",
+   "book": "닥터 데스의 유산",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 닥터 데스의 유산"
+  },
+  {
+   "code": "DGHU880TOrl",
+   "date": "2025-02-15",
+   "book": "닥터 데스의 유산",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "초등학생의 한 통의 전화,"
+  },
+  {
+   "code": "DFrwSDrJlt3",
+   "date": "2025-02-04",
+   "book": "아이는 무서운 꿈을 꾼다",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "어린 시절 강가로 사라진 여동생,"
+  },
+  {
+   "code": "DFhrykcJ_kt",
+   "date": "2025-02-01",
+   "book": "닥터 데스의 유산",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "📚 연휴 막바지, 독서 달리는 중! 🚀"
+  },
+  {
+   "code": "DFfHAi4p2yz",
+   "date": "2025-01-31",
+   "book": "파선",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 파선"
+  },
+  {
+   "code": "DFfI4WEpb8b",
+   "date": "2025-01-31",
+   "book": "파선",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "매 겨울, 난파된 ‘뱃님’을 기다리는 어촌 마을."
+  },
+  {
+   "code": "DFgnd7zhFOL",
+   "date": "2025-01-31",
+   "book": "붉은 손가락",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "중학생 아들의 살인, 그리고 감춰진 시신…"
+  },
+  {
+   "code": "DFjpSqspw0l",
+   "date": "2025-01-31",
+   "book": "기암관의 살인",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "외딴섬 저택 ‘기암관’에서 벌어지는 살인 추리 게임,"
+  },
+  {
+   "code": "DFmY38wJskq",
+   "date": "2025-01-31",
+   "book": "그리고 누군가 없어졌다",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "바다 한가운데,"
+  },
+  {
+   "code": "DFbt-iwyI4X",
+   "date": "2025-01-29",
+   "book": "붉은 손가락",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 붉은 손가락"
+  },
+  {
+   "code": "DFEJCUkTSwK",
+   "date": "2025-01-20",
+   "book": "기암관의 살인",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 기암관의 살인"
+  },
+  {
+   "code": "DE9tk45JKQA",
+   "date": "2025-01-18",
+   "book": "붉은 손가락",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "#히가시노게이고의 가가 형사 시리즈인 #붉은손가락 시작합니다."
+  },
+  {
+   "code": "DE7TfE6pH6A",
+   "date": "2025-01-17",
+   "book": "그리고 누군가 없어졌다",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 그리고 누군가 없어졌다"
+  },
+  {
+   "code": "DExBTzhJQcZ",
+   "date": "2025-01-13",
+   "book": "둔색환시행",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 둔색환시행"
+  },
+  {
+   "code": "DEW8VADJIoA",
+   "date": "2025-01-03",
+   "book": "아리아드네의 목소리",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 아리아드네의 목소리"
+  },
+  {
+   "code": "DEM1-onJjIt",
+   "date": "2024-12-30",
+   "book": "아리아드네의 목소리",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "#블루홀식스 에서 출간된 #이노우에마기 의 신작 #아리아드네의목소리 를 받았습니다."
+  },
+  {
+   "code": "DEO34oOJUOS",
+   "date": "2024-12-30",
+   "book": "밤이 끝나는 곳",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "🌙 \"밤이 끝나는 곳\" - 온다 리쿠"
+  },
+  {
+   "code": "DEJ3QlvpveK",
+   "date": "2024-12-28",
+   "book": "박스",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "🎩 \"박스 1, 2, 3\" - 카밀라 레크베리 & 헨리크 펙세우스"
+  },
+  {
+   "code": "DDxiDFkz5Qz",
+   "date": "2024-12-19",
+   "book": "아리아드네의 목소리",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "이노우에 마기의 새로운 작품 #아리아드네의목소리"
+  },
+  {
+   "code": "DDF8rZITw1c",
+   "date": "2024-12-02",
+   "book": "박스",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "박스 1권..굉장히 재미있군요!"
+  },
+  {
+   "code": "DC_TyglTfT1",
+   "date": "2024-11-30",
+   "book": "아침과 저녁의 범죄",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "Chat GPT 모델로 만들어본 이침과 저녁의 범죄 이야기의 한 장면입니다. "
+  },
+  {
+   "code": "DDAnEyCzv4O",
+   "date": "2024-11-30",
+   "book": "박스",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "오늘부터 사작합니다."
+  },
+  {
+   "code": "DC-n2WvTmJh",
+   "date": "2024-11-29",
+   "book": "아침과 저녁의 범죄",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📖 아침과 저녁의 범죄 / ✍️ 후루타덴 / 블루홀6 / 2024년 9월 출간"
+  },
+  {
+   "code": "DCjTuz1zGFP",
+   "date": "2024-11-19",
+   "book": "죽음에 이르는 꽃",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "🌸 죽음에 이르는 꽃 / 로카고엔 / 알에이치코리아 / 24년 11월 🌸"
+  },
+  {
+   "code": "DCT5XkPzRGq",
+   "date": "2024-11-13",
+   "book": "이별은 모차르트",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "#나카야마시치리 작가님의 시리즈중 제가 가장좋아하는 #미사키요스케 시리즈의 신작인 #이별은모차르트 가 출간예정입니다."
+  },
+  {
+   "code": "DCJMXObTeD4",
+   "date": "2024-11-09",
+   "book": "은달이 뜨는 밤 죽기로 했다",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "은달이 뜨는 밤 🌙 죽기로 했다 / 조영주 📚 / 마티스 블루 💙 / 24년 10월"
+  },
+  {
+   "code": "DCJQN-nvH3p",
+   "date": "2024-11-09",
+   "book": "은달이 뜨는 밤 죽기로 했다",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "#조영주 님의 소설 #은달이뜨는밤죽기로했다 를 #미드저니 로 만들어보았습니다."
+  },
+  {
+   "code": "DB6GVpSz1dI",
+   "date": "2024-11-03",
+   "book": "죽음에 이르는 꽃",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "#알에이치코리아 에서 #로카고엔 의 #죽음에이르는꽃 을 보내주셨습니다."
+  },
+  {
+   "code": "DB4wIjTz56S",
+   "date": "2024-11-02",
+   "book": "아이는 무서운 꿈을 꾼다",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "아이는 무서운 꿈을 꾼다 🌙 / 우사미 마코토 📚 / 블루홀6 🌊 / 2024년 10월 📅"
+  },
+  {
+   "code": "DBkCMVhzSqw",
+   "date": "2024-10-25",
+   "book": "가연물",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚✨ 가연물 / 요네자와 호노부 / 리드비 / 24년 08월"
+  },
+  {
+   "code": "DBSjQRJPpwL",
+   "date": "2024-10-18",
+   "book": "아이는 무서운 꿈을 꾼다",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "요즘 유행하는 Pika art 를 만들어 보았습니다."
+  },
+  {
+   "code": "DBMDcF1ToZi",
+   "date": "2024-10-16",
+   "book": "은달이 뜨는 밤 죽기로 했다",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "조영주 작가님의 신작인 #은달이뜨는밤죽기로했다 가 #마티스블루 에서 출간되었습니다."
+  },
+  {
+   "code": "DA-Ly4pztnk",
+   "date": "2024-10-10",
+   "book": "아이는 무서운 꿈을 꾼다",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "#우사미마코토 의 #아이는무서운꿈을꾼다 예구했습니다. 구매는 점심때 했는데..1등인가요?"
+  },
+  {
+   "code": "DA8TGMozUgH",
+   "date": "2024-10-10",
+   "book": "아이는 무서운 꿈을 꾼다",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "제가 정말 좋아하는 작가인 우사미 마코토님의 신작이 곧 출간 예정입니다."
+  },
+  {
+   "code": "DA2SMijTqRX",
+   "date": "2024-10-07",
+   "book": "인버트",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "📚 인버트 / 아이자와 사코 / 비채 / 2024년 10월"
+  },
+  {
+   "code": "DAvCUMizTXP",
+   "date": "2024-10-05",
+   "book": "인버트",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "#아이자와사코 의 #영매탐정조즈카 의 후속작인 #인버트 를 받았습니다."
   }
  ],
  "notes": {
@@ -2560,56 +4558,726 @@ window.SHELF = {
    "author": "우케쓰",
    "publisher": "리드비",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400658253&amp;partner=openAPI&amp;start=api",
-   "cover": "covers/0f86a0185c.jpg"
+   "cover": "covers/0f86a0185c.jpg",
+   "deep": true
   },
   "인수세공": {
    "author": "고바야시 야스미",
    "publisher": "시공사",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=402781368&amp;partner=openAPI&amp;start=api",
-   "cover": "covers/157fb98cf7.jpg"
+   "cover": "covers/157fb98cf7.jpg",
+   "deep": true
   },
   "미미소기": {
    "author": "미쓰다 신조",
    "cover": "covers/mimisogi_yes24.jpg",
    "publisher": "북로드",
    "link": "https://www.yes24.com/product/goods/196020372",
-   "store": "예스24"
+   "store": "예스24",
+   "deep": true
   },
   "한국사 이상현상 연구원": {
    "author": "최인서",
    "publisher": "다이브",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400909759&amp;partner=openAPI&amp;start=api",
-   "cover": "covers/4931ab91d2.jpg"
+   "cover": "covers/4931ab91d2.jpg",
+   "deep": false
   },
   "폐놀이공원의 살인": {
    "author": "샤센도 유키",
    "publisher": "더블샷",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398008509&amp;partner=openAPI&amp;start=api",
-   "cover": "covers/ab7be08dab.jpg"
+   "cover": "covers/ab7be08dab.jpg",
+   "deep": true
   },
   "천 년의 후더닛": {
    "author": "아사네 주지",
    "publisher": "내친구의서재",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400545644&amp;partner=openAPI&amp;start=api",
-   "cover": "covers/2abc74dcb9.jpg"
+   "cover": "covers/2abc74dcb9.jpg",
+   "deep": true
   },
   "투명한 나선": {
    "author": "히가시노 게이고",
    "cover": "covers/2fecd2c839.jpg",
    "publisher": "북다",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398021172&amp;partner=openAPI&amp;start=api"
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398021172&amp;partner=openAPI&amp;start=api",
+   "deep": true
   },
   "십각관의 살인": {
    "author": "아야츠지 유키토",
    "cover": "covers/892d979a78.jpg",
    "publisher": "한즈미디어(한스미디어)",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=572109&amp;partner=openAPI&amp;start=api"
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=572109&amp;partner=openAPI&amp;start=api",
+   "deep": false
   },
   "방주": {
    "author": "유키 하루오",
    "cover": "covers/92a58ece19.jpg",
    "publisher": "블루홀식스(블루홀6)",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310624125&amp;partner=openAPI&amp;start=api"
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310624125&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "위층의 아내": {
+   "author": "프리다 맥파든",
+   "cover": "covers/85ac8612dc.jpg",
+   "publisher": "북플라자",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382701800&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "인버트": {
+   "author": "아이자와 사코",
+   "cover": "covers/744b08bd8c.jpg",
+   "publisher": "비채",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=348797377&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "아이는 무서운 꿈을 꾼다": {
+   "author": "우사미 마코토",
+   "cover": "covers/d16fdddcf1.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=349426790&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "은달이 뜨는 밤 죽기로 했다": {
+   "author": "조영주",
+   "cover": "covers/dccbbfb3b6.jpg",
+   "publisher": "마티스블루",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=348140283&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "가연물": {
+   "author": "요네자와 호노부",
+   "cover": "covers/921b8bf90f.jpg",
+   "publisher": "리드비",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345451457&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "죽음에 이르는 꽃": {
+   "author": "로카고엔",
+   "cover": "covers/af38cf116a.jpg",
+   "publisher": "알에이치코리아(RHK)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=350992678&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "이별은 모차르트": {
+   "author": "나카야마 시치리",
+   "cover": "covers/2ea7e1e4c0.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358024806&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "아침과 저녁의 범죄": {
+   "author": "후루타 덴",
+   "aladin_q": "아침과 저녁의 범죄",
+   "cover": "covers/12d66397df.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=346126841&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "박스": {
+   "author": "카밀라 레크베리",
+   "aladin_q": "박스 카밀라 레크베리",
+   "cover": "covers/b58447339e.jpg",
+   "publisher": "어느날갑자기",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351860580&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "아리아드네의 목소리": {
+   "author": "이노우에 마기",
+   "cover": "covers/5dee78d54c.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=354098746&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "밤이 끝나는 곳": {
+   "author": "온다 리쿠",
+   "cover": "covers/cc02e3fe01.jpg",
+   "publisher": "시공사",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=352232391&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "둔색환시행": {
+   "author": "온다 리쿠",
+   "cover": "covers/def5271b84.jpg",
+   "publisher": "시공사",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=352233379&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "그리고 누군가 없어졌다": {
+   "author": "나쓰키 시즈코",
+   "cover": "covers/a1e9a9724a.jpg",
+   "publisher": "엘릭시르",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=53173520&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "붉은 손가락": {
+   "author": "히가시노 게이고",
+   "cover": "covers/4f706700bb.jpg",
+   "publisher": "현대문학",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=198223012&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "기암관의 살인": {
+   "author": "다카노 유시",
+   "cover": "covers/ef955d64b9.jpg",
+   "publisher": "허밍북스",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345307841&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "파선": {
+   "author": "요시무라 아키라",
+   "cover": "covers/1f844e49ad.jpg",
+   "publisher": "북로드",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355504676&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "닥터 데스의 유산": {
+   "author": "나카야마 시치리",
+   "cover": "covers/c9389cdd25.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=305013072&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "변호 측 증인": {
+   "author": "고이즈미 기미코",
+   "cover": "covers/a85f19abb4.jpg",
+   "publisher": "검은숲",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=13608033&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "최애의 살인": {
+   "author": "엔도 가타루",
+   "cover": "covers/576d46cf91.jpg",
+   "publisher": "반타",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=357751929&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "이상한 집 2": {
+   "author": "우케쓰",
+   "cover": "covers/23aed28117.jpg",
+   "publisher": "리드비",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358522227&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "시계 도둑과 악인들": {
+   "author": "유키 하루오",
+   "cover": "covers/dd28dbe0be.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360423038&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "밤의 이정표": {
+   "author": "아시자와 요",
+   "cover": "covers/2321472d28.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355865138&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "부러진 용골": {
+   "author": "요네자와 호노부",
+   "cover": "covers/304969032d.jpg",
+   "publisher": "엘릭시르",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361347963&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "젠더 크라임": {
+   "author": "덴도 아라타",
+   "cover": "covers/c91031e559.jpg",
+   "publisher": "북스피어",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=357222711&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "수상탑의 살인": {
+   "author": "김영민",
+   "cover": "covers/ce25f9d594.jpg",
+   "publisher": "아프로스미디어",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360197290&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "흉가": {
+   "author": "미쓰다 신조",
+   "cover": "covers/8cc2b137e3.jpg",
+   "publisher": "북로드",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362089025&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "범선 군함의 살인": {
+   "author": "오카모토 요시키",
+   "cover": "covers/2fc774707c.jpg",
+   "publisher": "톰캣",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361966213&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "긴키 지방의 어느 장소에 대하여": {
+   "author": "세스지",
+   "cover": "covers/e386838e49.jpg",
+   "publisher": "반타",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361603044&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "고독한 용의자": {
+   "author": "찬호께이",
+   "cover": "covers/400d49eec0.jpg",
+   "publisher": "위즈덤하우스",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362413157&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "네버 라이": {
+   "author": "프리다 맥파든",
+   "cover": "covers/c159971cdd.jpg",
+   "publisher": "밝은세상",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361415277&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "4일간의 가족": {
+   "author": "가와세 나나오",
+   "cover": "covers/ae645687e5.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347737775&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "더 코워커": {
+   "author": "프리다 맥파든",
+   "cover": "covers/8e174a85c2.jpg",
+   "publisher": "해피북스투유",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364028338&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "핸디맨": {
+   "author": "프리다 맥파든",
+   "cover": "covers/c286e46a03.jpg",
+   "publisher": "북플라자",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310033424&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "긴나미 상점가의 사건 노트": {
+   "author": "이노우에 마기",
+   "cover": "covers/55e244dbb8.jpg",
+   "publisher": "북스피어",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364235125&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "공감각 아름다운 밤에": {
+   "author": "아마네 료",
+   "cover": "covers/c0de73cf12.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364433096&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "지뢰 글리코": {
+   "author": "아오사키 유고",
+   "cover": "covers/b3044a0e61.jpg",
+   "publisher": "리드비",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=365887031&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "사건은 끝났다": {
+   "author": "후루타 덴",
+   "cover": "covers/6a21243db8.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366126559&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "재벌집 막내아들": {
+   "author": "산경",
+   "cover": "covers/c462532fb3.jpg",
+   "publisher": "테라코타",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=304352624&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "라자로의 미궁": {
+   "author": "가미나가 마나부",
+   "cover": "covers/2a4e5a6ac8.jpg",
+   "publisher": "하빌리스",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366595568&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "죽은 자에게 입이 있다": {
+   "author": "다카노 가즈아키",
+   "cover": "covers/c1370186bd.jpg",
+   "publisher": "황금가지",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=365829686&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "잘자요 엄마": {
+   "author": "서미애",
+   "cover": "covers/80ac2637ae.jpg",
+   "publisher": "엘릭시르",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=170131178&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "소년 농성": {
+   "author": "구시키 리우",
+   "cover": "covers/a9ae498d9e.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=368462978&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "화차": {
+   "author": "미야베 미유키",
+   "cover": "covers/70c1f0be57.jpg",
+   "publisher": "문학동네",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=14979358&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "모든 비밀에는 이름이 있다": {
+   "author": "서미애",
+   "cover": "covers/3dd6dfb5e6.jpg",
+   "publisher": "엘릭시르",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=267222496&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "디스펠": {
+   "author": "이마무라 마사히로",
+   "cover": "covers/dfce7a5867.jpg",
+   "publisher": "내친구의서재",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370284589&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "패자의 고백": {
+   "author": "미키 아키코",
+   "cover": "covers/e2b1159953.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370148604&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "언덕 위의 빨간 지붕": {
+   "author": "마리 유키코",
+   "cover": "covers/ad399a44f2.jpg",
+   "publisher": "나무옆의자",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366645823&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "13계단": {
+   "author": "다카노 가즈아키",
+   "cover": "covers/7d35849bc3.jpg",
+   "publisher": "황금가지",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=365826287&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "밀실수집가": {
+   "author": "오야마 세이이치로",
+   "cover": "covers/b6d9819c1f.jpg",
+   "publisher": "리드비",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370352581&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "동트기 힘든 긴 밤": {
+   "author": "쯔진천",
+   "cover": "covers/a8e4e99eae.jpg",
+   "publisher": "한즈미디어(한스미디어)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=171904187&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "바스커빌관의 살인": {
+   "author": "다카노 유시",
+   "cover": "covers/554dd6fe77.jpg",
+   "publisher": "허밍북스",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370765303&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "우리의 노래를 불러라": {
+   "author": "오승호",
+   "cover": "covers/0352318aef.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362505980&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "우먼 인 캐빈 10": {
+   "author": "루스 웨어",
+   "cover": "covers/42a57e20e7.jpg",
+   "publisher": "필름(Feelm)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=371125658&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "일곱 번째는 내가 아니다": {
+   "author": "폴 클리브",
+   "cover": "covers/8b93b10c84.jpg",
+   "publisher": "서삼독",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372260462&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "피안장의 유령": {
+   "author": "아야사카 미츠키",
+   "cover": "covers/1f96dce030.jpg",
+   "publisher": "알에이치코리아(RHK)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372973056&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "용신 연못의 작은 시체": {
+   "author": "가지 다쓰오",
+   "cover": "covers/d5d17295e3.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374467867&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "나는 괴이 너는 괴물": {
+   "author": "시라이 도모유키",
+   "cover": "covers/5558987a13.jpg",
+   "publisher": "내친구의서재",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374259650&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "미친 성장": {
+   "author": "김형진",
+   "cover": "covers/1a4e972343.jpg",
+   "publisher": "푸른숲",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=373250519&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "신 게임": {
+   "author": "마야 유타카",
+   "cover": "covers/e8a1f6f5fb.jpg",
+   "publisher": "내친구의서재",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375684650&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "여름비 이야기": {
+   "author": "기시 유스케",
+   "cover": "covers/bb0e7b506e.jpg",
+   "publisher": "비채",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372723605&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "나오미와 가나코": {
+   "author": "오쿠다 히데오",
+   "cover": "covers/806ecc1ee6.jpg",
+   "publisher": "예담",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59420804&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "규칙 없음": {
+   "author": "리드 헤이스팅스",
+   "cover": "covers/4eb626e4da.jpg",
+   "publisher": "알에이치코리아(RHK)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=247906056&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "꿈 전달": {
+   "author": "우사미 마코토",
+   "cover": "covers/a1c6b2939e.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=376782757&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "더럽혀진 성지 순례에 대하여": {
+   "author": "세스지",
+   "cover": "covers/8f2e8e2a7c.jpg",
+   "publisher": "반타",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=378954480&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "재소자": {
+   "author": "프리다 맥파든",
+   "cover": "covers/c2411b2efa.jpg",
+   "publisher": "북플라자",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=378831590&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "아사토호": {
+   "author": "니이나 사토시",
+   "cover": "covers/9742ed707b.jpg",
+   "publisher": "북로드",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379696916&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "내가 아는 루민": {
+   "author": "오카베 에쓰",
+   "cover": "covers/6fba6b3454.jpg",
+   "publisher": "리드비",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379966945&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "차일드 호더": {
+   "author": "프리다 맥파든",
+   "cover": "covers/5f25e612a0.jpg",
+   "publisher": "밝은세상",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379458544&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "8번 출구": {
+   "author": "가와무라 겐키",
+   "cover": "covers/01fed5f8cb.jpg",
+   "publisher": "㈜소미미디어",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374520365&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "책의 등뼈가 마지막에 남는다": {
+   "author": "샤센도 유키",
+   "cover": "covers/bda9d3590a.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382406886&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "방과후": {
+   "author": "히가시노 게이고",
+   "cover": "covers/4c77e0283c.jpg",
+   "publisher": "㈜소미미디어",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=195328919&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "마녀는 되살아난다": {
+   "author": "나카야마 시치리",
+   "cover": "covers/c1a1d8bbd9.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=384595985&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "마녀재판의 변호인": {
+   "author": "기미노 아라타",
+   "cover": "covers/0426709e29.jpg",
+   "publisher": "톰캣",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385451546&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "최소불행사회": {
+   "author": "홍선기",
+   "cover": "covers/226d3d6bb8.jpg",
+   "publisher": "모티브",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=383636740&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "한 치 앞의 어둠": {
+   "author": "사와무라 이치",
+   "cover": "covers/a769758acc.jpg",
+   "publisher": "폴라북스(현대문학)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=384960218&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "대리모": {
+   "author": "프리다 맥파든",
+   "cover": "covers/6d0cfe2836.jpg",
+   "publisher": "북플라자",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=386952835&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "독이 든 화형 법정": {
+   "author": "사카키바야시 메이",
+   "cover": "covers/adb0f02d5c.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=386454828&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "금기의 아이": {
+   "author": "야마구치 미오",
+   "cover": "covers/a0644e5053.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393520580&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "어려운 문제가 가득한 레스토랑": {
+   "author": "유키 신이치로",
+   "cover": "covers/f1c891455d.jpg",
+   "publisher": "북다",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=387883052&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "잃어버린 얼굴": {
+   "author": "사쿠라다 도모야",
+   "cover": "covers/6da1ab3252.jpg",
+   "publisher": "반타",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385789874&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "심연의 텔레패스": {
+   "author": "가미조 가즈키",
+   "cover": "covers/0f7ce4dabe.jpg",
+   "publisher": "북다",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=388438662&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "살로메의 단두대": {
+   "author": "유키 하루오",
+   "aladin_q": "살로메의 단두대 유키 하루오",
+   "cover": "covers/9216603301.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=390779928&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "속죄": {
+   "author": "미나토 가나에",
+   "cover": "covers/22b1ccdb7d.jpg",
+   "publisher": "북홀릭(bookholic)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=268376015&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "스와이프 엄금": {
+   "author": "치넨 미키토",
+   "cover": "covers/d89a026448.jpg",
+   "publisher": "북다",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=392626367&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "안녕 신": {
+   "author": "마야 유타카",
+   "cover": "covers/9d33156473.jpg",
+   "publisher": "내친구의서재",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393491223&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "명탐정의 제물": {
+   "author": "시라이 도모유키",
+   "cover": "covers/bebe58d294.jpg",
+   "publisher": "내친구의서재",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=319351333&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "GOTH 리스트 컷 사건": {
+   "author": "오츠이치",
+   "cover": "covers/58c43f0858.jpg",
+   "publisher": "학산문화사(단행본)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2189118&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "밀실 황금시대의 살인": {
+   "author": "가모사키 단로",
+   "cover": "covers/1cbd2a9d6c.jpg",
+   "publisher": "리드비",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364655651&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "셜록 홈스의 개선": {
+   "author": "모리미 도미히코",
+   "cover": "covers/6899f0203b.jpg",
+   "publisher": "내친구의서재",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366588184&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "시체로 놀지 마 어른들아": {
+   "author": "구라치 준",
+   "cover": "covers/d64a33ad56.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372497505&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "인간 표본": {
+   "author": "미나토 가나에",
+   "cover": "covers/439d3de1bf.jpg",
+   "publisher": "북다",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375522100&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "하우스메이드": {
+   "author": "프리다 맥파든",
+   "cover": "covers/82c300271b.jpg",
+   "publisher": "북플라자",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=314273779&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "하우스메이드 2": {
+   "author": "프리다 맥파든",
+   "cover": "covers/76eea0cdc1.jpg",
+   "publisher": "북플라자",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361675990&amp;partner=openAPI&amp;start=api",
+   "deep": false
+  },
+  "하우스메이드 3": {
+   "author": "프리다 맥파든",
+   "cover": "covers/dca36137ac.jpg",
+   "publisher": "북플라자",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=371995721&amp;partner=openAPI&amp;start=api",
+   "deep": false
   }
  }
 };

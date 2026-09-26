@@ -3,3 +3,4 @@ collect.log
 .claude/
 __pycache__/
 .omc/
+classify/in_*.json

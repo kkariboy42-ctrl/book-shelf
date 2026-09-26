@@ -13,7 +13,7 @@
 스포 : 캡션에 스포가 있다고 쓴 경우만 「스포 있음」. 나머지는 전부 「스포 없음」. 애매하면 overrides 로.
 제외 : 알라딘 주간 순위처럼 책 한 권 게시물이 아닌 것(EXCLUDE_PREFIX).
 """
-import hashlib, html, json, os, re, sys, time, urllib.request
+import glob, hashlib, html, json, os, re, sys, time, urllib.request
 
 try:
     sys.stdout.reconfigure(encoding="utf-8")
@@ -35,6 +35,17 @@ KINDS = (  # 먼저 걸리는 것
     ("작법", "작법"), ("표기", "표기"), ("복선", "복선"), ("카드뉴스", "카드뉴스"), ("ELI5", "쉽게 풀기"),
     ("구조", "구조"), ("표지", "표지"), ("명장면", "영상"), ("영상", "영상"),
 )
+# 원고 전문을 분석한 책(「@ 원고분석」 폴더가 있는 책). 첫 화면 「원고분석한 책」 거르기에 쓴다.
+ATLAS = "G:/내 드라이브/03. 인스타그램/@ 원고분석"
+DEEP_EXTRA = ("천 년의 후더닛", "미미소기", "인수세공", "입에 대한 앙케트")  # 폴더 이름이 제목과 다른 책
+
+
+def _deep():
+    names = [re.sub(r"^\d+\.\s*", "", d) for d in (os.listdir(ATLAS) if os.path.isdir(ATLAS) else [])]
+    return {re.sub(r"[\s·:,.!?'\"「」『』]", "", n) for n in list(names) + list(DEEP_EXTRA)}
+
+
+DEEP = _deep()
 CORE_SINCE = "2026-08-20"  # 원고분석을 시작한 날. 이 뒤 게시물이 책 목록을 정한다
 
 
@@ -211,14 +222,50 @@ def main():
                 "hook": re.sub(r"\s+", " ", cap.strip().splitlines()[0])[:80],
             })
 
+    # 서평 책: classify/out_*.json(게시물마다 서평/책/기타·제목·작가 판정)에서 서평을 올린 책을 더한다.
+    # 그 책을 다룬 다른 게시물(소식·카드뉴스 등)도 같이 붙인다. 원고분석 책에도 빠진 게시물이 있으면 붙인다.
+    tp = os.path.join(HERE, "titles.json")
+    fix = {norm(k): v for k, v in (json.load(open(tp, encoding="utf-8")) if os.path.exists(tp) else {}).items() if not k.startswith("_")}
+    cls = {}
+    for f in sorted(glob.glob(os.path.join(HERE, "classify", "out_*.json"))):
+        for r in json.load(open(f, encoding="utf-8")):
+            if r.get("title"):
+                r["title"] = fix.get(norm(r["title"]), r["title"])
+            if r.get("title") and r.get("type") in ("서평", "책"):
+                cls[r["code"]] = r
+    canon = {norm(t): t for t in core_books}
+    for r in cls.values():
+        if r["type"] == "서평":
+            canon.setdefault(norm(r["title"]), r["title"])
+    have = {p["code"] for p in out}
+    by_code = {p["code"]: p for p in posts}
+    for code, r in cls.items():
+        t = canon.get(norm(r["title"]))
+        p = by_code.get(code)
+        o = overrides.get(code, {})
+        if not t or not p or code in have or o.get("hide"):
+            continue
+        t = o.get("book") or t
+        b = books.setdefault(t, {"author": ""})
+        if not b.get("author") and r.get("author"):
+            b["author"] = r["author"]
+        cap = p["caption"]
+        out.append({
+            "code": code, "date": p["date"], "book": t, "video": p["video"] or code in reels,
+            "kind": o.get("kind") or ("서평" if r["type"] == "서평" else kind_of(p, code in reels)),
+            "spoiler": o["spoiler"] if "spoiler" in o else spoiler_of(cap),
+            "hook": re.sub(r"\s+", " ", cap.strip().splitlines()[0])[:80],
+        })
+    shelf_books = {p["book"] for p in out}
+
     # 표지: 알라딘 API(책 소개 용도). 한 번 받으면 다시 안 받는다.
     for t, b in books.items():
-        if t not in core_books:
+        if t not in shelf_books:
             continue
         if b.get("cover") and os.path.exists(os.path.join(SITE, b["cover"])):
             continue
         try:
-            it = aladin(t, b.get("author", ""))
+            it = aladin(b.get("aladin_q") or t, "" if b.get("aladin_q") else b.get("author", ""))
             if it:
                 img = urllib.request.urlopen(urllib.request.Request(it["cover"].replace("cover200", "cover500"), headers={"User-Agent": "Mozilla/5.0"}), timeout=30).read()
                 name = "covers/" + hashlib.md5(norm(t).encode()).hexdigest()[:10] + ".jpg"
@@ -244,7 +291,7 @@ def main():
             else:
                 print("  스포 글의 책이 책장에 없음:", sp["book"])
     data = {"updated": time.strftime("%Y-%m-%d"), "posts": out, "notes": notes,
-            "books": {t: b for t, b in books.items() if t in used}}
+            "books": {t: dict(b, deep=norm(t) in DEEP) for t, b in books.items() if t in used}}
     with open(os.path.join(SITE, "data.js"), "w", encoding="utf-8") as fh:
         fh.write("window.SHELF = " + json.dumps(data, ensure_ascii=False, indent=1) + ";\n")
 
