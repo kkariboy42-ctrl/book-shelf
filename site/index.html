@@ -378,7 +378,7 @@ route();
   const day = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10).replaceAll('-', '');
   let seen = false;
   try { seen = localStorage.getItem('visited') === day; } catch (e) {}
-  if (!location.hostname.endsWith('github.io')) seen = true;  // 로컬 미리보기는 세지 않고 읽기만
+  if (!/(^|\.)bookhoster\.co\.kr$|github\.io$/.test(location.hostname)) seen = true;  // 로컬 미리보기는 세지 않고 읽기만
   const call = async key => {
     const r = await fetch(`${API}/${seen ? 'get' : 'hit'}/${NS}/${key}`);
     if (!r.ok) return null;  // 오늘 첫 방문 전 get 은 404 → 0 으로

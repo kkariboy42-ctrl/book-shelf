@@ -25,7 +25,7 @@ CACHE = os.path.join(HERE, "cache")
 SITE = os.path.join(HERE, "site")
 COVERS = os.path.join(SITE, "covers")
 UA = {"User-Agent": "facebookexternalhit/1.1", "Accept-Language": "ko"}
-ALADIN_ENV = r"C:\Users\kkari\.config\eungye\.env"
+SHARED = r"C:\Claude\shared"  # aladin_web.py — 알라딘 API 종료(2026-10-30) 뒤 키 없는 웹 검색
 
 EXCLUDE_PREFIX = ("알라딘 일본 추리·미스터리 주간 순위",)
 SPOIL_YES = ("스포 있", "스포일러 있", "스포 포함", "스포일러 포함", "결말 포함", "결말까지", "다 읽은 분만", "읽은 분만", "스포 주의", "스포일러 주의")
@@ -159,20 +159,20 @@ def spoiler_of(cap):
     return any(k in cap for k in SPOIL_YES)
 
 
-def aladin(title, author):
-    if not os.path.exists(ALADIN_ENV):
+def aladin(title, author, match=None):
+    """알라딘 검색 웹페이지에서 제목(match, 없으면 title)이 맞는 첫 결과.
+    모듈이 없거나 알라딘이 막히거나 제목이 맞는 책이 없으면 None → 표지 없이(기존 표지 유지) 간다."""
+    title_ = match or title
+    try:
+        if SHARED not in sys.path:
+            sys.path.insert(0, SHARED)
+        import aladin_web
+    except Exception as e:
+        print("표지 건너뜀 (aladin_web 없음:", e, ")")
         return None
-    env = dict(l.split("=", 1) for l in open(ALADIN_ENV, encoding="utf-8").read().splitlines() if "=" in l)
-    key = env.get("ALADIN_TTB_KEY", "").strip()
-    if not key:
-        return None
-    import urllib.parse
-    q = urllib.parse.urlencode(dict(ttbkey=key, Query=f"{title} {author}".strip(), QueryType="Keyword", MaxResults=5,
-                                    start=1, SearchTarget="Book", Cover="Big", output="js", Version="20131101"))
-    raw = urllib.request.urlopen("http://www.aladin.co.kr/ttb/api/ItemSearch.aspx?" + q, timeout=25).read().decode("utf-8", "replace")
-    items = json.loads(raw.rstrip().rstrip(";")).get("item", [])
-    items = [i for i in items if norm(title) in norm(i.get("title", ""))] or items
-    return items[0] if items else None
+    # 제목이 안 맞으면 표지 없이 — books.json 의 aladin_q(검색어)로 잡는다
+    return (aladin_web.find(f"{title} {author}".strip(), title=title_, strict=True)
+            or aladin_web.find(title, title=title_, strict=True))
 
 
 def main():
@@ -287,19 +287,21 @@ def main():
         })
     shelf_books = {p["book"] for p in out}
 
-    # 표지: 알라딘 API(책 소개 용도). 한 번 받으면 다시 안 받는다.
+    # 표지: 알라딘 상품 표지(책 소개 용도). 한 번 받으면 다시 안 받는다.
     for t, b in books.items():
         if t not in shelf_books:
             continue
         if b.get("cover") and os.path.exists(os.path.join(SITE, b["cover"])):
             continue
         try:
-            it = aladin(b.get("aladin_q") or t, "" if b.get("aladin_q") else b.get("author", ""))
+            it = aladin(b.get("aladin_q") or t, "" if b.get("aladin_q") else b.get("author", ""), match=t)
             if it:
-                img = urllib.request.urlopen(urllib.request.Request(it["cover"].replace("cover200", "cover500"), headers={"User-Agent": "Mozilla/5.0"}), timeout=30).read()
+                img = urllib.request.urlopen(urllib.request.Request(it["cover"], headers={"User-Agent": "Mozilla/5.0"}), timeout=30).read()
+                if not (img[:3] == b"\xff\xd8\xff" or img[:4] == b"\x89PNG"):
+                    raise ValueError("이미지가 아닌 응답")
                 name = "covers/" + hashlib.md5(norm(t).encode()).hexdigest()[:10] + ".jpg"
                 open(os.path.join(SITE, name), "wb").write(img)
-                b.update(cover=name, author=b.get("author") or re.sub(r"\s*\([^)]*\)", "", it.get("author", "")).split(",")[0].strip(), publisher=it.get("publisher", ""), aladin=html.unescape(it.get("link", "")))
+                b.update(cover=name, author=b.get("author") or it["author"], publisher=it["publisher"], aladin=it["link"])
                 print("표지", t)
         except Exception as e:
             print("표지 실패", t, e)
