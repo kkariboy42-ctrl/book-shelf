@@ -94,7 +94,10 @@
   "author": "세스지",
   "cover": "covers/58c875a68b.jpg",
   "publisher": "반타",
-  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358092518&partner=openAPI&start=api"
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358092518&partner=openAPI&start=api",
+  "rating": null,
+  "plus": false,
+  "gajebon": false
  },
  "인버트": {
   "author": "아이자와 사코",

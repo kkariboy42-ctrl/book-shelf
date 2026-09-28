@@ -166,6 +166,13 @@ dialog.warn p{margin:0 0 10px;font-size:15px;color:var(--ink-2)}
 .wb .go{background:var(--accent);border-color:var(--accent);color:#fff}
 
 .disc{font-size:12px;color:var(--muted);margin:8px 0 0}
+.excerpt{margin:-12px 0 40px;padding:26px 28px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:0 14px 14px 0}
+.ex-label{font:700 12px/1 var(--sans);letter-spacing:.12em;color:var(--accent);margin:0 0 12px}
+.excerpt blockquote{margin:0;font:400 16px/1.85 var(--sans);color:var(--ink-2)}
+.ex-src{margin:12px 0 0;font-size:13px;color:var(--muted)}
+.static h1{font:900 34px/1.2 var(--serif);margin:0 0 8px}
+.static h2{font:800 18px var(--serif);margin:28px 0 10px}
+.static li{margin-bottom:8px}
 /* 푸터 */
 footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--muted);font-size:13px;background:var(--surface-2)}
 .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
@@ -195,7 +202,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--muted);f
 </head>
 <body>
 <header class="topbar"><div class="wrap">
-  <a class="brand" href="#/" aria-label="책장 처음으로"><span class="mark" aria-hidden="true">책</span><span class="wordmark">책호스터이프로 책장<small>@kkariboy42</small></span></a>
+  <a class="brand" href="/" aria-label="책장 처음으로"><span class="mark" aria-hidden="true">책</span><span class="wordmark">책호스터이프로 책장<small>@kkariboy42</small></span></a>
   <a class="navlink" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">Instagram ↗</a>
 </div></header>
 <section class="hero" id="hero"><div class="wrap">
@@ -211,15 +218,16 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--muted);f
   <div><h4>책호스터이프로 책장</h4>
     <p>추리·미스터리·호러를 읽고 쓰는 인스타그램 @kkariboy42 의 서평 아카이브예요. 게시물은 인스타그램 원본을 그대로 불러와 보여 줍니다.</p></div>
   <div><h4>둘러보기</h4>
-    <p><a href="#/">책장 처음으로</a></p>
+    <p><a href="/">책장 처음으로</a></p>
+    <p><a href="/about.html">책장 소개</a></p>
     <p><a href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">인스타그램 ↗</a></p>
-    <p><a href="privacy.html">개인정보처리방침</a></p></div>
+    <p><a href="/privacy.html">개인정보처리방침</a></p></div>
   <div><h4>기록</h4>
     <p id="foot"></p>
     <p>책 페이지의 알라딘 링크는 제휴 링크예요. 그 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있어요.</p>
     <p class="visits">오늘 방문 <b data-visit="today">–</b> · 전체 방문 <b data-visit="total">–</b></p></div>
 </div></footer>
-<script src="data.js"></script>
+<script src="/data.js"></script>
 <script>
 const D = window.SHELF, app = document.getElementById('app'), q = document.getElementById('q');
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -235,13 +243,13 @@ document.getElementById('stats').innerHTML = [
   ['<span data-visit="today">–</span>', '오늘 방문', 'visit'], ['<span data-visit="total">–</span>', '전체 방문', 'visit'],
 ].map(([v, l, c]) => `<div class="stat ${c||''}"><b>${v}</b><span>${l}</span></div>`).join('');
 
-const coverHtml = b => b.cover ? `<img src="${esc(b.cover)}" alt="" loading="lazy">` : `<span class="ph">${esc(b.title)}</span>`;
+const coverHtml = b => b.cover ? `<img src="/${esc(b.cover)}" alt="${esc(b.title)} 표지" loading="lazy">` : `<span class="ph">${esc(b.title)}</span>`;
 
 const stars = (r, plus) => r == null ? '' : '★'.repeat(Math.round(r)) + '☆'.repeat(5 - Math.round(r)) + (plus ? '<b class="plus">+</b>' : '');
 const grade = b => b.rating == null ? null : (b.plus ? '5+' : Math.round(b.rating));
 let only = 'all', order = 'rating';
 function cardHtml(b) {
-  return `<a class="book" href="#/book/${encodeURIComponent(b.title)}">
+  return `<a class="book" href="/book/${encodeURIComponent(b.slug)}/">
       <div class="cover">${coverHtml(b)}</div>
       <h3>${esc(b.title)}</h3>${b.rating != null ? `<div class="stars" aria-label="별점 ${grade(b)}">${stars(b.rating, b.plus)}</div>` : ''}${b.gajebon ? '<span class="deep gj">가제본</span>' : ''}${b.deep ? '<span class="deep">원고분석</span>' : ''}
       <div class="meta">${esc(b.author||'')}${b.author?' · ':''}게시물 ${b.posts.length}</div>
@@ -301,16 +309,17 @@ function noteHtml(n) {
 
 function book(title) {
   const b = books.find(x => x.title === title);
-  if (!b) { app.innerHTML = `<a class="back" href="#/">← 책장으로</a><p class="empty">그 책은 아직 없어요.</p>`; return; }
+  if (!b) { app.innerHTML = `<a class="back" href="/">← 책장으로</a><p class="empty">그 책은 아직 없어요.</p>`; return; }
   const safe = b.posts.filter(p => !p.spoiler), spoilPosts = b.posts.filter(p => p.spoiler);
   const notes = (D.notes && D.notes[b.title]) || [];
   const nSpoil = spoilPosts.length + notes.length;
-  app.innerHTML = `<a class="back" href="#/">← 책장으로</a>
+  app.innerHTML = `<a class="back" href="/">← 책장으로</a>
     <div class="bookhead"><div class="cover">${coverHtml(b)}</div><div>
       <h2>${esc(b.title)}</h2>${b.rating != null ? `<div class="stars big" aria-label="별점 ${grade(b)}">${stars(b.rating, b.plus)} <span>별 ${grade(b)}${b.plus ? '' : '개'}</span></div>` : b.gajebon ? '<div class="stars big"><span>가제본으로 읽어 별점 없음</span></div>' : ''}
       <div class="meta">${esc([b.author, b.publisher].filter(Boolean).join(' · '))}</div>
       ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${esc(b.store || '알라딘')}에서 보기 ↗</a>${!b.link ? '<p class="disc">알라딘 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있어요.</p>' : ''}</div>` : ''}
     </div></div>
+    ${b.excerpt ? `<section class="excerpt"><p class="ex-label">서평 한 토막</p><blockquote>${esc(b.excerpt)}</blockquote><p class="ex-src">— 이프로의 인스타그램 서평에서</p></section>` : ''}
     <div class="cols">
       <section class="col"><h3><span class="dot"></span>스포 없음 <span class="n">${safe.length}</span></h3>
         ${safe.length ? safe.map(postHtml).join('') : '<p class="none">아직 없어요.</p>'}</section>
@@ -373,12 +382,15 @@ function loadEmbed() {
 
 function route() {
   const m = location.hash.match(/^#\/book\/(.+)$/);
-  document.getElementById('hero').hidden = !!m;
-  if (m) { book(decodeURIComponent(m[1])); }
-  else home();
+  if (m) {
+    const b = books.find(x => x.title === decodeURIComponent(m[1]));
+    location.replace(b ? `/book/${encodeURIComponent(b.slug)}/` : '/');
+    return;
+  }
+  document.getElementById('hero').hidden = !!window.BOOK;
+  if (window.BOOK) book(window.BOOK); else home();
 }
-q.addEventListener('input', () => { if (location.hash.startsWith('#/book/')) location.hash = '#/'; else home(); });
-addEventListener('hashchange', route);
+q.addEventListener('input', () => home());
 route();
 
 // 방문자 수 — 무료 카운터(abacus). 같은 브라우저는 하루에 한 번만 센다(새로고침으로 부풀지 않게).

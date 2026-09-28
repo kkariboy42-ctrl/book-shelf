@@ -144,7 +144,7 @@ def author_of(cap, title):
 def kind_of(post, reel=False):
     cap = post["caption"]
     first = cap.strip().splitlines()[0]
-    if len(first.split(" / ")) >= 3:
+    if len(first.split(" / ")) >= 3 or len(re.split(r"\s*//\s*", first)) >= 3:
         return "서평"
     head = " ".join(cap.strip().splitlines()[:2]) + " " + " ".join(re.findall(r"#\S+", cap))
     for k, label in KINDS:
@@ -358,10 +358,21 @@ def main():
                 notes[sp["book"]] = sp["posts"]
             else:
                 print("  스포 글의 책이 책장에 없음:", sp["book"])
+    import static_pages as SP
+    extra = {}
+    for t in used:  # 책 페이지 주소와 「서평 한 토막」(가장 최근 서평 캡션에서 계정 주인이 쓴 문장)
+        mine = [p for p in out if p["book"] == t and p["code"] in by_code]
+        # 서평 캡션에서만 — 카드뉴스·영상 문구는 결말 장면을 담기도 해서(방주) 검색 미리보기에 쓰면 안 된다
+        revs = [p for p in mine if p["kind"] == "서평"]
+        extra[t] = {"slug": SP.slugify(t),
+                    "excerpt": SP.excerpt_of(by_code[revs[0]["code"]]["caption"], t) if revs else ""}
+    slugs = [x["slug"] for x in extra.values()]
+    assert len(slugs) == len(set(slugs)), "책 주소가 겹친다: " + str([s for s in slugs if slugs.count(s) > 1])
     data = {"updated": time.strftime("%Y-%m-%d"), "posts": out, "notes": notes,
-            "books": {t: dict(b, deep=norm(t) in DEEP) for t, b in books.items() if t in used}}
+            "books": {t: dict(b, deep=norm(t) in DEEP, **extra[t]) for t, b in books.items() if t in used}}
     with open(os.path.join(SITE, "data.js"), "w", encoding="utf-8") as fh:
         fh.write("window.SHELF = " + json.dumps(data, ensure_ascii=False, indent=1) + ";\n")
+    print("  책 페이지", SP.build(data, SITE), "개 · sitemap.xml · robots.txt")
 
     print(f"\n게시물 {len(out)} · 책 {len(used)} · 제외 {len(skipped)} · 실패 {len(fails)}")
     for s in skipped:
