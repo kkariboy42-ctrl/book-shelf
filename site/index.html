@@ -164,6 +164,7 @@ dialog.warn p{margin:0 0 10px;font-size:15px;color:var(--ink-2)}
 .wb button{font:700 14px var(--sans);padding:11px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
 .wb .go{background:var(--accent);border-color:var(--accent);color:#fff}
 
+.disc{font-size:12px;color:var(--muted);margin:8px 0 0}
 /* 푸터 */
 footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--muted);font-size:13px;background:var(--surface-2)}
 .foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}
@@ -213,6 +214,7 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--muted);f
     <p><a href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">인스타그램 ↗</a></p></div>
   <div><h4>기록</h4>
     <p id="foot"></p>
+    <p>책 페이지의 알라딘 링크는 제휴 링크예요. 그 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있어요.</p>
     <p class="visits">오늘 방문 <b data-visit="today">–</b> · 전체 방문 <b data-visit="total">–</b></p></div>
 </div></footer>
 <script src="data.js"></script>
@@ -305,7 +307,7 @@ function book(title) {
     <div class="bookhead"><div class="cover">${coverHtml(b)}</div><div>
       <h2>${esc(b.title)}</h2>${b.rating != null ? `<div class="stars big" aria-label="별점 ${grade(b)}">${stars(b.rating, b.plus)} <span>별 ${grade(b)}${b.plus ? '' : '개'}</span></div>` : b.gajebon ? '<div class="stars big"><span>가제본으로 읽어 별점 없음</span></div>' : ''}
       <div class="meta">${esc([b.author, b.publisher].filter(Boolean).join(' · '))}</div>
-      ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${esc(b.store || '알라딘')}에서 보기 ↗</a></div>` : ''}
+      ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${esc(b.store || '알라딘')}에서 보기 ↗</a>${!b.link ? '<p class="disc">알라딘 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있어요.</p>' : ''}</div>` : ''}
     </div></div>
     <div class="cols">
       <section class="col"><h3><span class="dot"></span>스포 없음 <span class="n">${safe.length}</span></h3>
