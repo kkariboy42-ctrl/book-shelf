@@ -588,6 +588,8 @@ function route() {
   if (window.BOOK) book(window.BOOK); else home();
 }
 q.addEventListener('input', () => home());
+// ?q=히가시노 처럼 주소로 검색어를 넘기면 바로 찾아 준다(공유용 링크)
+try { const q0 = new URLSearchParams(location.search).get('q'); if (q0) q.value = q0; } catch (e) {}
 route();
 
 // 방문자 수 — 무료 카운터(abacus). 같은 브라우저는 하루에 한 번만 센다(새로고침으로 부풀지 않게).
