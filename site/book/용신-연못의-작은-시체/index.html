@@ -130,7 +130,7 @@ main{padding:32px 0 72px}
 .none{color:var(--muted);font-size:14px;border:1px dashed var(--line);border-radius:14px;padding:24px;text-align:center}
 
 /* 스포 칸 */
-.gate{background:var(--spoil);color:var(--spoil-ink);border-radius:14px;padding:28px 22px;text-align:center;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 10px,transparent 10px 20px)}
+.gate{background:var(--spoil);color:var(--spoil-ink);border-radius:14px;padding:28px 22px;text-align:center}
 .gate[hidden]{display:none}
 .gate p{margin:0 0 14px;font-size:14px;opacity:.85}
 .gate .gt{font:800 17px/1.4 var(--serif);opacity:1;margin-bottom:4px}
@@ -338,6 +338,43 @@ footer{background:var(--band);color:var(--band-muted);border-top:0}
   .rh .num{font-size:68px}
   .bookhead{grid-template-columns:120px 1fr;gap:20px;margin:0 -16px 40px;padding:26px 16px}
 }
+
+/* ─── impeccable polish (2026-09-29) — 정체성 유지, 마감만 ─── */
+/* 브라우저 기본 요소도 사이트 색으로 */
+::selection{background:var(--accent);color:#fff}
+html{scrollbar-color:var(--muted) var(--bg);accent-color:var(--accent)}
+a{text-underline-offset:.22em;text-decoration-thickness:1px}
+.stat b,.pg,.post time,.foot .visits b{font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.hero :focus-visible{outline-color:#e08a74}
+
+/* 자간 하한 -0.04em */
+.hero h1,.bookhead h2,.rh .num{letter-spacing:-.04em}
+.hero h1{text-wrap:balance}
+
+/* 아이콘(SVG) — 글자 기호 대신 */
+.ico{width:.95em;height:.95em;vertical-align:-.12em;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.back .ico{margin-right:2px}
+
+/* 서평 인용: 굵은 왼쪽 선 대신 1px + 큰 따옴표 */
+.excerpt{border-left:1px solid var(--line);padding:4px 0 4px 28px;position:relative}
+.excerpt::before{content:"\201C";position:absolute;left:-12px;top:-30px;padding:0 3px;background:var(--bg);font:500 72px/.9 var(--serif);color:var(--accent)}
+
+/* 스포 칸: 줄무늬 빼고 단색 + 위쪽 강조선 */
+.gate{background-image:none;border-top:2px solid var(--accent)}
+
+/* 푸터 제목(h2로 바뀜) 모양은 그대로 */
+.foot h2{font:500 16px var(--serif);color:var(--band-ink);margin:0 0 8px}
+
+/* 누르기 쉬운 크기 */
+.tabs button{min-height:40px}
+.sec a{min-height:32px;display:inline-flex;align-items:center}
+
+@media (max-width:720px){
+  .rh{row-gap:6px}
+  .rh .sub{display:none}
+  .rh .num{margin-right:0}
+}
 @media (prefers-reduced-motion:reduce){.cover,dialog.warn[open]{transition:none;animation:none}}
 @media (max-width:720px){
   .hero{padding:48px 0 30px}
@@ -351,26 +388,25 @@ footer{background:var(--band);color:var(--band-muted);border-top:0}
 <header class="topbar"><div class="wrap">
   <a class="brand" href="/" aria-label="책장 처음으로"><span class="mark" aria-hidden="true">책</span><span class="wordmark">책호스터이프로 책장<small>@kkariboy42</small></span></a>
   <nav class="navr"><div class="sec" role="navigation" aria-label="책장 구분"><a href="/" data-sec="fiction">소설</a><a href="/nonfiction/" data-sec="nonfiction">비소설</a></div>
-  <a class="navlink" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">Instagram ↗</a></nav>
+  <a class="navlink" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">Instagram <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></nav>
 </div></header>
 <section class="hero" id="hero"><div class="wrap">
-  <p class="eyebrow" id="h-eye">Mystery · Thriller · Horror</p>
   <h1 id="h-title">추리·미스터리 서평을 책장처럼</h1>
   <p class="sub" id="h-sub">인스타그램에 흩어진 서평·카드뉴스·릴스를 책별로 모았어요. 별점순으로 고르고, 다 읽은 책은 결말 해설까지.</p>
   <div class="searchbox"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
     <input class="search" id="q" type="search" placeholder="책 제목이나 작가로 찾기" aria-label="책 찾기"></div>
   <div class="stats" id="stats"></div>
 </div></section>
-<main><div class="wrap" id="app"><article class="static"><a class="back" href="/">← 책장으로</a><h1>용신 연못의 작은 시체</h1><p class="meta">가지 다쓰오 · 블루홀식스(블루홀6) · 별점 5</p><h2>서평 한 토막</h2><p>“전설로만 전해오던 복선 회수의 신화, 그 전설이 다시 깨어났다.” 미스터리 독자라면 반드시 읽어야 할 복선 교본. 📚 책 정보 약 480쪽 / 총 5개의 장으로 구성 1️⃣ 굶주린 무리 2️⃣ 용의 산 제물 3️⃣ C=16 배합법 4️⃣ 살의의 순간 5️⃣ 균열, 파국 주인공은 공학 교수 ‘도모이치’, 어릴 적 동생을 잃고, 얼마 전 어머니마저 세상을 떠난 인물입니다. 그녀는 죽기 직전, “슈지는 살해당했다” 는 말을 남깁니다. 도모이치는 그 말을 끝내 잊지 못하고, 동생이 사고로 죽었다는 용신 연못이 있는 다에미가가 있는 마을로 향합니다.</p><h2>인스타그램 게시물</h2><ul><li><time>2025-11-15</time> · 서평 — 🐉 용신 연못의 작은 시체 <a href="https://www.instagram.com/p/DREgbp1CTEb/">인스타그램에서 보기</a></li><li><time>2025-10-13</time> · 게시물 — 자 말이 필요없는 책입니다. <a href="https://www.instagram.com/p/DPv0ZrzCSGO/">인스타그램에서 보기</a></li></ul></article></div></main>
+<main><div class="wrap" id="app"><article class="static"><a class="back" href="/">책장으로</a><h1>용신 연못의 작은 시체</h1><p class="meta">가지 다쓰오 · 블루홀식스(블루홀6) · 별점 5</p><h2>서평 한 토막</h2><p>“전설로만 전해오던 복선 회수의 신화, 그 전설이 다시 깨어났다.” 미스터리 독자라면 반드시 읽어야 할 복선 교본. 📚 책 정보 약 480쪽 / 총 5개의 장으로 구성 1️⃣ 굶주린 무리 2️⃣ 용의 산 제물 3️⃣ C=16 배합법 4️⃣ 살의의 순간 5️⃣ 균열, 파국 주인공은 공학 교수 ‘도모이치’, 어릴 적 동생을 잃고, 얼마 전 어머니마저 세상을 떠난 인물입니다. 그녀는 죽기 직전, “슈지는 살해당했다” 는 말을 남깁니다. 도모이치는 그 말을 끝내 잊지 못하고, 동생이 사고로 죽었다는 용신 연못이 있는 다에미가가 있는 마을로 향합니다.</p><h2>인스타그램 게시물</h2><ul><li><time>2025-11-15</time> · 서평 — 🐉 용신 연못의 작은 시체 <a href="https://www.instagram.com/p/DREgbp1CTEb/">인스타그램에서 보기</a></li><li><time>2025-10-13</time> · 게시물 — 자 말이 필요없는 책입니다. <a href="https://www.instagram.com/p/DPv0ZrzCSGO/">인스타그램에서 보기</a></li></ul></article></div></main>
 <footer><div class="wrap foot">
-  <div><h4>책호스터이프로 책장</h4>
+  <div><h2>책호스터이프로 책장</h2>
     <p>추리·미스터리·호러를 읽고 쓰는 인스타그램 @kkariboy42 의 서평 아카이브예요. 게시물은 인스타그램 원본을 그대로 불러와 보여 줍니다.</p></div>
-  <div><h4>둘러보기</h4>
+  <div><h2>둘러보기</h2>
     <p><a href="/">책장 처음으로</a></p>
     <p><a href="/about.html">책장 소개</a></p>
-    <p><a href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">인스타그램 ↗</a></p>
+    <p><a href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">인스타그램 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></p>
     <p><a href="/privacy.html">개인정보처리방침</a></p></div>
-  <div><h4>기록</h4>
+  <div><h2>기록</h2>
     <p id="foot"></p>
     <p>책 페이지의 알라딘 링크는 제휴 링크예요. 그 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있어요.</p>
     <p class="visits">오늘 방문 <b data-visit="today">–</b> · 전체 방문 <b data-visit="total">–</b></p></div>
@@ -393,7 +429,6 @@ const shelf = books.filter(b => (b.genre || '소설') === GENRE);
 const HOME = SECTION === 'nonfiction' ? '/nonfiction/' : '/';
 document.querySelectorAll('.sec a').forEach(a => a.classList.toggle('on', a.dataset.sec === SECTION));
 if (SECTION === 'nonfiction') {
-  document.getElementById('h-eye').textContent = 'Non-fiction';
   document.getElementById('h-title').textContent = '비소설 서평';
   document.getElementById('h-sub').textContent = '추리·미스터리 말고도 읽은 책들 — 경영·사회·역사 같은 비소설 서평을 따로 모았어요.';
 }
@@ -442,7 +477,7 @@ function postHtml(p) {
   return `<article class="post">
     <div class="top"><span class="chip">${esc(p.kind)}</span><time>${p.date.replaceAll('-','.')}</time></div>
     <p class="hook">${esc(p.hook)}</p>
-    <div class="embed" data-url="${url}"><a href="${url}" target="_blank" rel="noopener">인스타그램에서 보기 ↗</a></div>
+    <div class="embed" data-url="${url}"><a href="${url}" target="_blank" rel="noopener">인스타그램에서 보기 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>
   </article>`;
 }
 
@@ -471,15 +506,15 @@ function noteHtml(n) {
 
 function book(title) {
   const b = books.find(x => x.title === title);
-  if (!b) { app.innerHTML = `<a class="back" href="${HOME}">← 책장으로</a><p class="empty">그 책은 아직 없어요.</p>`; return; }
+  if (!b) { app.innerHTML = `<a class="back" href="${HOME}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>책장으로</a><p class="empty">그 책은 아직 없어요.</p>`; return; }
   const safe = b.posts.filter(p => !p.spoiler), spoilPosts = b.posts.filter(p => p.spoiler);
   const notes = (D.notes && D.notes[b.title]) || [];
   const nSpoil = spoilPosts.length + notes.length;
-  app.innerHTML = `<a class="back" href="${HOME}">← ${SECTION === 'nonfiction' ? '비소설 ' : ''}책장으로</a>
+  app.innerHTML = `<a class="back" href="${HOME}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>${SECTION === 'nonfiction' ? '비소설 ' : ''}책장으로</a>
     <div class="bookhead"><div class="cover">${coverHtml(b)}</div><div>
       <h2>${esc(b.title)}</h2>${b.rating != null ? `<div class="stars big" aria-label="별점 ${grade(b)}">${stars(b.rating, b.plus)} <span>별 ${grade(b)}${b.plus ? '' : '개'}</span></div>` : b.gajebon ? '<div class="stars big"><span>가제본으로 읽어 별점 없음</span></div>' : ''}
       <div class="meta">${esc([b.author, b.publisher].filter(Boolean).join(' · '))}</div>
-      ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${esc(b.store || '알라딘')}에서 보기 ↗</a>${!b.link ? '<p class="disc">알라딘 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있어요.</p>' : ''}</div>` : ''}
+      ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${esc(b.store || '알라딘')}에서 보기 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>${!b.link ? '<p class="disc">알라딘 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있어요.</p>' : ''}</div>` : ''}
     </div></div>
     ${b.excerpt ? `<section class="excerpt"><p class="ex-label">서평 한 토막</p><blockquote>${esc(b.excerpt)}</blockquote><p class="ex-src">— 이프로의 인스타그램 서평에서</p></section>` : ''}
     <div class="cols">
@@ -527,7 +562,7 @@ function watch(root) {
     if (!e.isIntersecting) return;
     io.unobserve(e.target);
     const u = e.target.dataset.url;
-    e.target.innerHTML = `<blockquote class="instagram-media" data-instgrm-permalink="${u}" data-instgrm-version="14"><a href="${u}" target="_blank" rel="noopener">인스타그램에서 보기 ↗</a></blockquote>`;
+    e.target.innerHTML = `<blockquote class="instagram-media" data-instgrm-permalink="${u}" data-instgrm-version="14"><a href="${u}" target="_blank" rel="noopener">인스타그램에서 보기 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></blockquote>`;
     loadEmbed();
   }), {rootMargin:'600px'});
   root.querySelectorAll('.embed').forEach(el => io.observe(el));

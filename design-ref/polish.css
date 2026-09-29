@@ -1,0 +1,37 @@
+
+/* ─── impeccable polish (2026-09-29) — 정체성 유지, 마감만 ─── */
+/* 브라우저 기본 요소도 사이트 색으로 */
+::selection{background:var(--accent);color:#fff}
+html{scrollbar-color:var(--muted) var(--bg);accent-color:var(--accent)}
+a{text-underline-offset:.22em;text-decoration-thickness:1px}
+.stat b,.pg,.post time,.foot .visits b{font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.hero :focus-visible{outline-color:#e08a74}
+
+/* 자간 하한 -0.04em */
+.hero h1,.bookhead h2,.rh .num{letter-spacing:-.04em}
+.hero h1{text-wrap:balance}
+
+/* 아이콘(SVG) — 글자 기호 대신 */
+.ico{width:.95em;height:.95em;vertical-align:-.12em;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.back .ico{margin-right:2px}
+
+/* 서평 인용: 굵은 왼쪽 선 대신 1px + 큰 따옴표 */
+.excerpt{border-left:1px solid var(--line);padding:4px 0 4px 28px;position:relative}
+.excerpt::before{content:"\201C";position:absolute;left:-6px;top:-22px;font:500 72px/1 var(--serif);color:var(--accent)}
+
+/* 스포 칸: 줄무늬 빼고 단색 + 위쪽 강조선 */
+.gate{background-image:none;border-top:2px solid var(--accent)}
+
+/* 푸터 제목(h2로 바뀜) 모양은 그대로 */
+.foot h2{font:500 16px var(--serif);color:var(--band-ink);margin:0 0 8px}
+
+/* 누르기 쉬운 크기 */
+.tabs button{min-height:40px}
+.sec a{min-height:32px;display:inline-flex;align-items:center}
+
+@media (max-width:720px){
+  .rh{row-gap:6px}
+  .rh .sub{display:none}
+  .rh .num{margin-right:0}
+}

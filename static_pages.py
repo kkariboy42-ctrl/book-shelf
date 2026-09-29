@@ -79,7 +79,7 @@ def build(data, site_dir):
             f'<li><time>{e(p["date"])}</time> · {e(p["kind"])} — {e(p["hook"])} '
             f'<a href="https://www.instagram.com/{"reel" if p["video"] else "p"}/{e(p["code"])}/">인스타그램에서 보기</a></li>'
             for p in ps)
-        body = (f'<article class="static"><a class="back" href="/">← 책장으로</a><h1>{e(t)}</h1><p class="meta">{e(meta)}</p>'
+        body = (f'<article class="static"><a class="back" href="/">책장으로</a><h1>{e(t)}</h1><p class="meta">{e(meta)}</p>'
                 + (f'<h2>서평 한 토막</h2><p>{e(b["excerpt"])}</p>' if b.get("excerpt") else "")
                 + f'<h2>인스타그램 게시물</h2><ul>{items}</ul></article>')
         title = f"{t} — {b.get('author', '')} 서평·별점 | 책호스터이프로 책장".replace(" —  서평", " — 서평")
