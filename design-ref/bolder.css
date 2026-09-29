@@ -1,0 +1,42 @@
+
+/* ─── 과감하게(bolder) — 대비를 세게, 미스터리 분위기 ─── */
+/* 첫 화면 머리: 짙은 띠 + 큰 세리프 */
+.hero{background:var(--band);color:var(--band-ink);padding:88px 0 0;border-bottom:0}
+.hero .eyebrow{color:#e08a74}
+.hero h1{font:500 clamp(44px,9vw,104px)/.98 var(--serif);letter-spacing:-.045em;max-width:12ch;margin-bottom:22px}
+.hero .sub{color:var(--band-muted);font-size:18px;max-width:40ch}
+.hero .search{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:var(--band-ink)}
+.hero .search::placeholder{color:var(--band-muted)}
+.hero .searchbox svg{color:var(--band-muted)}
+.hero .stats{margin-top:64px;border-top:1px solid rgba(255,255,255,.22);border-bottom:0}
+.hero .stat{border-left-color:rgba(255,255,255,.12);padding:22px 20px 26px}
+.hero .stat b{font-size:44px;color:var(--band-ink)}
+.hero .stat.visit b{color:#e08a74}
+.hero .stat span{color:var(--band-muted)}
+.hero::after{content:"";display:block;height:6px;background:var(--accent)}
+
+/* 별점 묶음: 큰 숫자를 구역 표지로 */
+.rh{align-items:flex-end;gap:18px}
+.rh .num{font:500 clamp(64px,10vw,120px)/.8 var(--serif);letter-spacing:-.06em;color:var(--ink);margin-right:4px}
+.rgroup.plus .rh .num{color:#e08a74}
+.rh .st{font-size:15px}
+.rgroup{margin-bottom:88px}
+.rgroup.plus{padding-top:64px;padding-bottom:72px}
+
+/* 책 카드 제목 조금 크게 */
+.book h3{font-size:16px}
+
+/* 책 페이지 머리: 짙은 띠, 표지 크게 */
+.bookhead{background:var(--band);color:var(--band-ink);grid-template-columns:220px 1fr;gap:40px;padding:44px;border-radius:0;margin:0 calc(50% - 50vw) 56px;padding-left:calc(50vw - 50% + 44px);padding-right:calc(50vw - 50% + 44px)}
+.bookhead h2{font-size:clamp(34px,6vw,64px);line-height:1.02;letter-spacing:-.045em;color:var(--band-ink)}
+.bookhead .meta{color:var(--band-muted)}
+.bookhead .stars.big span{color:var(--band-muted)}
+.bookhead .links a{background:var(--band-ink);color:var(--band)}
+.bookhead .disc{color:var(--band-muted)}
+.back{margin-bottom:28px}
+@media (max-width:720px){
+  .hero{padding-top:56px}
+  .hero .stat b{font-size:32px}
+  .rh .num{font-size:68px}
+  .bookhead{grid-template-columns:120px 1fr;gap:20px;margin:0 -16px 40px;padding:26px 16px}
+}

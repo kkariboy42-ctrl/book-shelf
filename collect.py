@@ -68,7 +68,8 @@ def dkey(t):
 
 
 def read_diary():
-    """@독서일기.xlsx 연도 시트 → {dkey(제목): {rating, plus, gajebon}}. 같은 책이면 나중 기록."""
+    """@독서일기.xlsx 연도 시트 → {dkey(제목): {rating, plus, gajebon, genre}}. 같은 책이면 나중 기록.
+    N열 별점(없으면 None) · P열 「+」=5+ · O열 「소설/비소설」."""
     if not os.path.exists(DIARY):
         print("  독서일기 없음:", DIARY)
         return {}
@@ -79,11 +80,15 @@ def read_diary():
         if not re.match(r"20\d\d년$", ws.title) or ws.title < "2021년":
             continue
         for row in ws.iter_rows(min_row=5, values_only=True):
-            if len(row) < 14 or not row[2] or not isinstance(row[13], (int, float)):
+            if len(row) < 14 or not row[2]:
+                continue
+            rating = row[13] if isinstance(row[13], (int, float)) else None
+            genre = row[14] if len(row) > 14 and row[14] in ("소설", "비소설") else None
+            if rating is None and genre is None:
                 continue
             title = str(row[2])
-            res[dkey(title)] = {"rating": row[13], "plus": len(row) > 15 and str(row[15] or "").strip() == "+",
-                                "gajebon": "가제본" in title}
+            res[dkey(title)] = {"rating": rating, "plus": len(row) > 15 and str(row[15] or "").strip() == "+",
+                                "gajebon": "가제본" in title, "genre": genre}
     return res
 
 
@@ -266,6 +271,13 @@ def main():
     for r in cls.values():
         if r["type"] == "서평":
             canon.setdefault(norm(r["title"]), r["title"])
+    # 분류 에이전트가 적은 소설/비소설(독서일기에 없는 옛 책의 대체값) — 책마다 다수결
+    cls_genre_votes = {}
+    for r in cls.values():
+        if r.get("genre") in ("소설", "비소설"):
+            t0 = canon.get(norm(r["title"]), r["title"])
+            cls_genre_votes.setdefault(t0, []).append(r["genre"])
+    cls_genre = {t0: max(set(v), key=v.count) for t0, v in cls_genre_votes.items()}
     have = {p["code"] for p in out}
     by_code = {p["code"]: p for p in posts}
     for code, r in cls.items():
@@ -328,7 +340,7 @@ def main():
         elif t in manual:
             v = manual[t]
             r, plus, src = (5, True, "직접") if v == "5+" else (v, False, "직접")
-        elif d:
+        elif d and d["rating"] is not None:
             r, plus, src = d["rating"], d["plus"], "독서일기"
             cap_r = got.get(t)
             if cap_r and float(r) not in cap_r:
@@ -340,6 +352,11 @@ def main():
             if len(got.get(t, ())) > 1:
                 print("  별점이 갈림 → ratings.json 「직접」에 적을 것:", t, sorted(got[t]))
         books.setdefault(t, {}).update(rating=r, plus=plus, gajebon=src == "가제본")
+        # 소설/비소설: books.json 의 genre(직접 지정) > 독서일기 O열 > 소설
+        if books[t].get("genre_fixed"):
+            books[t]["genre"] = books[t]["genre_fixed"]
+        else:
+            books[t]["genre"] = (d or {}).get("genre") or cls_genre.get(t) or "소설"
         src_count[src] = src_count.get(src, 0) + 1
     print("  별점 출처:", src_count)
 

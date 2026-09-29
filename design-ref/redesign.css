@@ -1,0 +1,99 @@
+
+/* ─── 2026-09-29 디자인 다듬기 ───────────────────────────────
+   참고: awesome-design-md 의 에디토리얼 원칙(Claude·WIRED DESIGN.md) — 브랜드는 베끼지 않고 원칙만.
+   · 세리프 제목은 굵게 하지 않는다(400~500) + 자간을 좁힌다
+   · 강조색은 아낀다 — 버튼·5+ 표시에만
+   · 그림자 대신 얇은 선, 구역마다 바탕을 번갈아(크림 → 짙은 띠)
+   · 움직임은 스프링 한 가지(kinetics.colorion.co 방식의 linear() 스프링)
+*/
+:root{
+  --bg:#faf8f3; --surface:#fffefb; --surface-2:#f3eee5; --ink:#141413; --ink-2:#3d3a36; --muted:#6f6a62; --line:#e6dfd5;
+  --accent:#9b2c1f; --accent-soft:#f4e7e2; --gold:#b8862b; --band:#1c1a17; --band-ink:#f4efe6; --band-muted:#a9a296;
+  --shadow:0 1px 0 rgba(20,18,16,.04); --shadow-lg:0 14px 34px -12px rgba(20,18,16,.28);
+  --spring:linear(0, .009, .035 2.1%, .141 4.4%, .723 12.9%, .938 16.7%, 1.017 19.4%, 1.067, 1.089 26.9%, 1.079, 1.049 36.4%, .994 50.5%, .991 58.4%, 1.001 77.8%, 1);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12110f; --surface:#191815; --surface-2:#1f1d1a; --ink:#f2ede4; --ink-2:#d4cdc1; --muted:#9a938a; --line:#2e2a25;
+  --accent:#e08a74; --accent-soft:#33211c; --gold:#d9a94e; --band:#0b0a09; --band-ink:#f2ede4; --band-muted:#8f887d;
+  --shadow:0 1px 0 rgba(0,0,0,.3); --shadow-lg:0 14px 34px -12px rgba(0,0,0,.7);
+}}
+:root[data-theme="dark"]{
+  --bg:#12110f; --surface:#191815; --surface-2:#1f1d1a; --ink:#f2ede4; --ink-2:#d4cdc1; --muted:#9a938a; --line:#2e2a25;
+  --accent:#e08a74; --accent-soft:#33211c; --gold:#d9a94e; --band:#0b0a09; --band-ink:#f2ede4; --band-muted:#8f887d;
+  --shadow:0 1px 0 rgba(0,0,0,.3); --shadow-lg:0 14px 34px -12px rgba(0,0,0,.7);
+}
+body{line-height:1.7;letter-spacing:-.003em}
+
+/* 상단 바 — 선 하나로만 구분 */
+.topbar{background:color-mix(in srgb,var(--bg) 92%,transparent)}
+.mark{border-radius:5px;font:600 16px/1 var(--serif)}
+.wordmark{font:600 16px/1.2 var(--serif);letter-spacing:-.02em}
+.navlink{border-radius:8px;background:transparent}
+.sec{border-radius:8px}.sec a{border-radius:6px}
+
+/* 첫 화면 머리 — 가벼운 세리프, 장식 없는 바탕 */
+.hero{background:none;padding:72px 0 44px}
+.eyebrow{font:600 11px/1 var(--sans);letter-spacing:.22em;color:var(--muted)}
+.hero h1{font:500 clamp(34px,6vw,60px)/1.08 var(--serif);letter-spacing:-.035em;max-width:16ch}
+.hero .sub{font-size:17px;color:var(--ink-2)}
+.search{border-radius:10px;box-shadow:none;background:var(--surface)}
+.stats{border-radius:0;border:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);background:transparent;margin-top:44px}
+.stat{padding:16px 18px 14px;border-left:1px solid var(--line)}
+.stat b{font:500 30px/1.05 var(--serif);letter-spacing:-.03em}
+.stat span{font-size:12px;letter-spacing:.04em}
+
+/* 거르기·정렬 — 알약 대신 밑줄 탭 */
+.tabs{background:transparent;border:0;padding:0;gap:18px;border-radius:0}
+.tabs button{padding:6px 0;border-radius:0;font-size:14px;border-bottom:2px solid transparent}
+.tabs button[aria-selected="true"]{background:transparent;box-shadow:none;border-bottom-color:var(--ink)}
+.tabs.sort button{font-size:13px;padding:6px 0}
+.bar{border-bottom:1px solid var(--line);margin-bottom:40px}
+
+/* 별점 묶음 머리 */
+.rgroup{margin-bottom:72px}
+.rh{font:500 26px/1.2 var(--serif);letter-spacing:-.025em;border-bottom:0;padding-bottom:0;margin-bottom:26px}
+.rh .n{background:transparent;border:0;padding:0;font-weight:500}
+/* 별 5+ 묶음은 짙은 띠로 — 화면 폭 끝까지 */
+.rgroup.plus{background:var(--band);color:var(--band-ink);margin:0 calc(50% - 50vw) 72px;padding:56px calc(50vw - 50%) 60px}
+.rgroup.plus .rh{color:var(--band-ink)}
+.rgroup.plus .rh .sub,.rgroup.plus .rh .n,.rgroup.plus .meta{color:var(--band-muted)}
+.rgroup.plus .book h3{color:var(--band-ink)}
+.rgroup.plus .plus{color:#e9a08c}
+
+/* 책 카드 — 그림자는 떠오를 때만, 스프링으로 */
+.grid{gap:40px 24px}
+.cover{border-radius:2px 4px 4px 2px;box-shadow:0 1px 2px rgba(0,0,0,.08),0 6px 14px -8px rgba(0,0,0,.25);transition:transform .7s var(--spring),box-shadow .35s ease}
+.book:hover .cover{transform:translateY(-6px) rotate(-.6deg)}
+.book h3{font:600 15px/1.4 var(--sans);letter-spacing:-.01em}
+.deep{border-radius:3px;background:transparent;border:1px solid currentColor;padding:0 5px}
+.deep.gj{border-color:var(--line)}
+
+/* 책 페이지 */
+.bookhead{box-shadow:none;border-radius:4px;background:var(--surface-2);border:0;padding:36px}
+.bookhead h2{font:500 clamp(28px,5vw,44px)/1.12 var(--serif);letter-spacing:-.03em}
+.bookhead .links a{border-radius:8px}
+.excerpt{border-radius:0;background:transparent;border-left:2px solid var(--ink);padding:6px 0 6px 24px;margin:0 0 56px}
+.excerpt blockquote{font:400 18px/1.85 var(--serif);letter-spacing:-.01em;color:var(--ink)}
+.col h3{font:500 20px/1 var(--serif);letter-spacing:-.02em}
+.post{border-radius:8px;box-shadow:none}
+.note h4{font:500 21px/1.35 var(--serif);letter-spacing:-.02em}
+.gate{border-radius:8px}
+.gate .gt{font:500 19px/1.4 var(--serif)}
+dialog.warn{border-radius:12px}
+dialog.warn[open]{animation:pop .6s var(--spring)}
+@keyframes pop{from{transform:scale(.94);opacity:0}to{transform:none;opacity:1}}
+dialog.warn h3{font:500 23px/1.3 var(--serif);letter-spacing:-.02em}
+.wb button{border-radius:8px}
+
+/* 푸터 — 짙은 띠 */
+footer{background:var(--band);color:var(--band-muted);border-top:0}
+.foot h4{color:var(--band-ink);font:500 16px var(--serif)}
+.foot a,.foot .visits b{color:var(--band-ink)}
+
+@media (prefers-reduced-motion:reduce){.cover,dialog.warn[open]{transition:none;animation:none}}
+@media (max-width:720px){
+  .hero{padding:48px 0 30px}
+  .rgroup.plus{padding:40px 16px 44px;margin:0 -16px 56px}
+  .bookhead{padding:20px}
+  .stat b{font-size:24px}
+}

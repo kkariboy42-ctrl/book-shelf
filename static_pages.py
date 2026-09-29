@@ -90,6 +90,20 @@ def build(data, site_dir):
         last = max((p["date"] for p in ps), default=data["updated"])
         urls.append((f"{SITE_URL}/book/{slug}/", last))
 
+    # 비소설 책장: 첫 화면과 같은 틀, window.SECTION 으로 비소설만 보여 준다
+    nf = [t for t, b in books.items() if b.get("genre") == "비소설"]
+    page = _page(template, "비소설 서평 | 책호스터이프로 책장",
+                 "책호스터이프로가 읽은 비소설 — 경영·사회·역사 서평과 별점 모음",
+                 f"{SITE_URL}/nonfiction/",
+                 "<h1>비소설 서평</h1><ul>" + "".join(
+                     f'<li><a href="/book/{e(books[t]["slug"])}/">{e(t)}</a></li>' for t in nf) + "</ul>")
+    page = page.replace('<script src="/data.js"></script>',
+                        '<script>window.SECTION = "nonfiction";</script>\n<script src="/data.js"></script>', 1)
+    d = os.path.join(site_dir, "nonfiction")
+    os.makedirs(d, exist_ok=True)
+    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(page)
+    urls.insert(1, (f"{SITE_URL}/nonfiction/", data["updated"]))
+
     from urllib.parse import quote
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, lm in urls:

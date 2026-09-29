@@ -6,7 +6,8 @@
   "cover": "covers/0f86a0185c.jpg",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "인수세공": {
   "author": "고바야시 야스미",
@@ -15,7 +16,8 @@
   "cover": "covers/157fb98cf7.jpg",
   "rating": null,
   "plus": false,
-  "gajebon": true
+  "gajebon": true,
+  "genre": "소설"
  },
  "미미소기": {
   "author": "미쓰다 신조",
@@ -25,7 +27,8 @@
   "store": "예스24",
   "rating": null,
   "plus": false,
-  "gajebon": true
+  "gajebon": true,
+  "genre": "소설"
  },
  "한국사 이상현상 연구원": {
   "author": "최인서",
@@ -34,7 +37,8 @@
   "cover": "covers/4931ab91d2.jpg",
   "rating": null,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "폐놀이공원의 살인": {
   "author": "샤센도 유키",
@@ -43,7 +47,8 @@
   "cover": "covers/ab7be08dab.jpg",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "천 년의 후더닛": {
   "author": "아사네 주지",
@@ -52,7 +57,8 @@
   "cover": "covers/2abc74dcb9.jpg",
   "rating": 4.0,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "투명한 나선": {
   "author": "히가시노 게이고",
@@ -61,7 +67,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398021172&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "십각관의 살인": {
   "author": "아야츠지 유키토",
@@ -70,7 +77,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=572109&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "방주": {
   "author": "유키 하루오",
@@ -79,7 +87,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310624125&partner=openAPI&start=api",
   "rating": 5,
   "plus": true,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "위층의 아내": {
   "author": "프리다 맥파든",
@@ -88,7 +97,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382701800&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "입에 대한 앙케트": {
   "author": "세스지",
@@ -97,7 +107,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358092518&partner=openAPI&start=api",
   "rating": null,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "인버트": {
   "author": "아이자와 사코",
@@ -106,7 +117,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=348797377&partner=openAPI&start=api",
   "rating": 5,
   "plus": true,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "아이는 무서운 꿈을 꾼다": {
   "author": "우사미 마코토",
@@ -115,7 +127,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=349426790&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "은달이 뜨는 밤 죽기로 했다": {
   "author": "조영주",
@@ -124,7 +137,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=348140283&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "가연물": {
   "author": "요네자와 호노부",
@@ -133,7 +147,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345451457&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "죽음에 이르는 꽃": {
   "author": "로카고엔",
@@ -142,7 +157,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=350992678&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "이별은 모차르트": {
   "author": "나카야마 시치리",
@@ -151,7 +167,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358024806&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "아침과 저녁의 범죄": {
   "author": "후루타 덴",
@@ -161,7 +178,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=346126841&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "박스": {
   "author": "카밀라 레크베리",
@@ -171,7 +189,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351860580&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "아리아드네의 목소리": {
   "author": "이노우에 마기",
@@ -180,7 +199,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=354098746&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "밤이 끝나는 곳": {
   "author": "온다 리쿠",
@@ -189,7 +209,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=352232391&partner=openAPI&start=api",
   "rating": 2,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "둔색환시행": {
   "author": "온다 리쿠",
@@ -198,7 +219,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=352233379&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "그리고 누군가 없어졌다": {
   "author": "나쓰키 시즈코",
@@ -207,7 +229,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=53173520&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "붉은 손가락": {
   "author": "히가시노 게이고",
@@ -216,7 +239,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=198223012&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "기암관의 살인": {
   "author": "다카노 유시",
@@ -225,7 +249,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=345307841&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "파선": {
   "author": "요시무라 아키라",
@@ -234,7 +259,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355504676&partner=openAPI&start=api",
   "rating": 3,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "닥터 데스의 유산": {
   "author": "나카야마 시치리",
@@ -243,7 +269,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=305013072&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "변호 측 증인": {
   "author": "고이즈미 기미코",
@@ -252,7 +279,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=13608033&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "최애의 살인": {
   "author": "엔도 가타루",
@@ -261,7 +289,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=357751929&partner=openAPI&start=api",
   "rating": 3,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "이상한 집 2": {
   "author": "우케쓰",
@@ -270,7 +299,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358522227&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "시계 도둑과 악인들": {
   "author": "유키 하루오",
@@ -279,7 +309,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360423038&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "밤의 이정표": {
   "author": "아시자와 요",
@@ -288,7 +319,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=355865138&partner=openAPI&start=api",
   "rating": 3,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "부러진 용골": {
   "author": "요네자와 호노부",
@@ -297,7 +329,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361347963&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "젠더 크라임": {
   "author": "덴도 아라타",
@@ -306,7 +339,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=357222711&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "수상탑의 살인": {
   "author": "김영민",
@@ -315,7 +349,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360197290&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "흉가": {
   "author": "미쓰다 신조",
@@ -324,7 +359,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362089025&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "범선 군함의 살인": {
   "author": "오카모토 요시키",
@@ -333,7 +369,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361966213&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "긴키 지방의 어느 장소에 대하여": {
   "author": "세스지",
@@ -342,7 +379,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361603044&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "고독한 용의자": {
   "author": "찬호께이",
@@ -351,7 +389,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362413157&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "네버 라이": {
   "author": "프리다 맥파든",
@@ -360,7 +399,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361415277&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "4일간의 가족": {
   "author": "가와세 나나오",
@@ -369,7 +409,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=347737775&partner=openAPI&start=api",
   "rating": 3,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "더 코워커": {
   "author": "프리다 맥파든",
@@ -378,7 +419,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364028338&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "핸디맨": {
   "author": "프리다 맥파든",
@@ -387,7 +429,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=310033424&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "긴나미 상점가의 사건 노트": {
   "author": "이노우에 마기",
@@ -396,7 +439,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364235125&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "공감각 아름다운 밤에": {
   "author": "아마네 료",
@@ -405,7 +449,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364433096&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "지뢰 글리코": {
   "author": "아오사키 유고",
@@ -414,7 +459,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=365887031&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "사건은 끝났다": {
   "author": "후루타 덴",
@@ -423,7 +469,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366126559&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "재벌집 막내아들": {
   "author": "산경",
@@ -432,7 +479,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=304352624&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "라자로의 미궁": {
   "author": "가미나가 마나부",
@@ -441,7 +489,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366595568&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "죽은 자에게 입이 있다": {
   "author": "다카노 가즈아키",
@@ -450,7 +499,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=365829686&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "잘자요 엄마": {
   "author": "서미애",
@@ -459,7 +509,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=170131178&partner=openAPI&start=api",
   "rating": 3,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "소년 농성": {
   "author": "구시키 리우",
@@ -468,7 +519,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=368462978&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "화차": {
   "author": "미야베 미유키",
@@ -477,7 +529,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=14979358&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "모든 비밀에는 이름이 있다": {
   "author": "서미애",
@@ -486,7 +539,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=267222496&partner=openAPI&start=api",
   "rating": 3,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "디스펠": {
   "author": "이마무라 마사히로",
@@ -495,7 +549,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370284589&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "패자의 고백": {
   "author": "미키 아키코",
@@ -504,7 +559,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370148604&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "언덕 위의 빨간 지붕": {
   "author": "마리 유키코",
@@ -513,7 +569,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366645823&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "13계단": {
   "author": "다카노 가즈아키",
@@ -522,7 +579,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=365826287&partner=openAPI&start=api",
   "rating": 5,
   "plus": true,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "밀실수집가": {
   "author": "오야마 세이이치로",
@@ -531,7 +589,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370352581&partner=openAPI&start=api",
   "rating": 3,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "동트기 힘든 긴 밤": {
   "author": "쯔진천",
@@ -540,7 +599,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=171904187&partner=openAPI&start=api",
   "rating": 5,
   "plus": true,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "바스커빌관의 살인": {
   "author": "다카노 유시",
@@ -549,7 +609,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370765303&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "우리의 노래를 불러라": {
   "author": "오승호",
@@ -558,7 +619,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=362505980&partner=openAPI&start=api",
   "rating": 3,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "우먼 인 캐빈 10": {
   "author": "루스 웨어",
@@ -567,7 +629,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=371125658&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "일곱 번째는 내가 아니다": {
   "author": "폴 클리브",
@@ -576,7 +639,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372260462&partner=openAPI&start=api",
   "rating": 2,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "피안장의 유령": {
   "author": "아야사카 미츠키",
@@ -585,7 +649,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372973056&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "용신 연못의 작은 시체": {
   "author": "가지 다쓰오",
@@ -594,7 +659,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374467867&partner=openAPI&start=api",
   "rating": 5.0,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "나는 괴이 너는 괴물": {
   "author": "시라이 도모유키",
@@ -603,7 +669,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374259650&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "미친 성장": {
   "author": "김형진",
@@ -612,7 +679,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=373250519&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "비소설"
  },
  "신 게임": {
   "author": "마야 유타카",
@@ -621,7 +689,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375684650&partner=openAPI&start=api",
   "rating": 5,
   "plus": true,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "여름비 이야기": {
   "author": "기시 유스케",
@@ -630,7 +699,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372723605&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "나오미와 가나코": {
   "author": "오쿠다 히데오",
@@ -639,7 +709,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=59420804&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "규칙 없음": {
   "author": "리드 헤이스팅스",
@@ -648,7 +719,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=247906056&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "비소설"
  },
  "꿈 전달": {
   "author": "우사미 마코토",
@@ -657,7 +729,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=376782757&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "더럽혀진 성지 순례에 대하여": {
   "author": "세스지",
@@ -666,7 +739,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=378954480&partner=openAPI&start=api",
   "rating": 2,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "재소자": {
   "author": "프리다 맥파든",
@@ -675,7 +749,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=378831590&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "아사토호": {
   "author": "니이나 사토시",
@@ -684,7 +759,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379696916&partner=openAPI&start=api",
   "rating": 4.0,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "내가 아는 루민": {
   "author": "오카베 에쓰",
@@ -693,7 +769,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379966945&partner=openAPI&start=api",
   "rating": 2,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "차일드 호더": {
   "author": "프리다 맥파든",
@@ -702,7 +779,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379458544&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "8번 출구": {
   "author": "가와무라 겐키",
@@ -711,7 +789,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=374520365&partner=openAPI&start=api",
   "rating": 1,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "책의 등뼈가 마지막에 남는다": {
   "author": "샤센도 유키",
@@ -720,7 +799,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=382406886&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "방과후": {
   "author": "히가시노 게이고",
@@ -729,7 +809,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=195328919&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "마녀는 되살아난다": {
   "author": "나카야마 시치리",
@@ -738,7 +819,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=384595985&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "마녀재판의 변호인": {
   "author": "기미노 아라타",
@@ -747,7 +829,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385451546&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "최소불행사회": {
   "author": "홍선기",
@@ -756,7 +839,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=383636740&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "비소설"
  },
  "한 치 앞의 어둠": {
   "author": "사와무라 이치",
@@ -765,7 +849,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=384960218&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "대리모": {
   "author": "프리다 맥파든",
@@ -774,7 +859,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=386952835&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "독이 든 화형 법정": {
   "author": "사카키바야시 메이",
@@ -783,7 +869,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=386454828&partner=openAPI&start=api",
   "rating": 3,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "금기의 아이": {
   "author": "야마구치 미오",
@@ -792,7 +879,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393520580&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "어려운 문제가 가득한 레스토랑": {
   "author": "유키 신이치로",
@@ -801,7 +889,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=387883052&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "잃어버린 얼굴": {
   "author": "사쿠라다 도모야",
@@ -810,7 +899,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=385789874&partner=openAPI&start=api",
   "rating": 4,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "심연의 텔레패스": {
   "author": "가미조 가즈키",
@@ -819,7 +909,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=388438662&partner=openAPI&start=api",
   "rating": 3,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "살로메의 단두대": {
   "author": "유키 하루오",
@@ -829,7 +920,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=390779928&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "속죄": {
   "author": "미나토 가나에",
@@ -838,7 +930,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=268376015&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "스와이프 엄금": {
   "author": "치넨 미키토",
@@ -847,7 +940,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=392626367&partner=openAPI&start=api",
   "rating": 3,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "안녕 신": {
   "author": "마야 유타카",
@@ -856,7 +950,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=393491223&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "명탐정의 제물": {
   "author": "시라이 도모유키",
@@ -865,7 +960,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=319351333&partner=openAPI&start=api",
   "rating": 5,
   "plus": true,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "GOTH 리스트 컷 사건": {
   "author": "오츠이치",
@@ -874,7 +970,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2189118&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "밀실 황금시대의 살인": {
   "author": "가모사키 단로",
@@ -883,7 +980,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=364655651&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "셜록 홈스의 개선": {
   "author": "모리미 도미히코",
@@ -892,7 +990,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366588184&partner=openAPI&start=api",
   "rating": 2,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "시체로 놀지 마 어른들아": {
   "author": "구라치 준",
@@ -901,7 +1000,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=372497505&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "인간 표본": {
   "author": "미나토 가나에",
@@ -910,7 +1010,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=375522100&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "하우스메이드": {
   "author": "프리다 맥파든",
@@ -919,7 +1020,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=314273779&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "하우스메이드 2": {
   "author": "프리다 맥파든",
@@ -928,7 +1030,8 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=361675990&partner=openAPI&start=api",
   "rating": 5,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
  },
  "하우스메이드 3": {
   "author": "프리다 맥파든",
@@ -937,6 +1040,582 @@
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=371995721&partner=openAPI&start=api",
   "rating": 3,
   "plus": false,
-  "gajebon": false
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "엘리펀트 헤드": {
+  "author": "시라이 도모유키",
+  "rating": null,
+  "plus": false,
+  "gajebon": true,
+  "genre": "소설",
+  "aladin_q": "엘리펀트 헤드 시라이 도모유키",
+  "cover": "covers/elephant_head_yes24.jpg",
+  "publisher": "내친구의서재",
+  "link": "https://www.yes24.com/product/goods/134857890",
+  "store": "예스24"
+ },
+ "백설공주에게 죽음을": {
+  "author": "넬레 노이하우스",
+  "cover": "covers/9b96b3c171.jpg",
+  "publisher": "북로드",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339766541",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "당신이 누군가를 죽였다": {
+  "author": "히가시노 게이고",
+  "cover": "covers/f6f6d9a0bd.jpg",
+  "publisher": "북다",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=366279927",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "고비키초의 복수": {
+  "author": "나가이 사야코",
+  "cover": "covers/d2998fdeaa.jpg",
+  "publisher": "은행나무",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339744235",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "세뇌살인": {
+  "author": "혼다 데쓰야",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설",
+  "aladin_q": "세뇌 살인 혼다 데쓰야",
+  "cover": "covers/senoe_yes24.jpg",
+  "publisher": "북로드",
+  "link": "https://www.yes24.com/product/goods/130535085",
+  "store": "예스24"
+ },
+ "십계": {
+  "author": "유키 하루오",
+  "cover": "covers/c758d76b75.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=342393713",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "법정유희": {
+  "author": "이가라시 리쓰토",
+  "cover": "covers/ed5e8a5e61.jpg",
+  "publisher": "리드비",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336202251",
+  "rating": 3,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "미로관의 살인": {
+  "author": "아야츠지 유키토",
+  "cover": "covers/930fc7d358.jpg",
+  "publisher": "한즈미디어(한스미디어)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=8721084",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "폭탄": {
+  "author": "오승호",
+  "cover": "covers/e98b18cee7.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317082756",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "키리고에 저택 살인사건": {
+  "author": "아야츠지 유키토",
+  "cover": "covers/dd630e2b3f.jpg",
+  "publisher": "시공사",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=2879139",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "나도라키의 머리": {
+  "author": "사와무라 이치",
+  "cover": "covers/0aaa29f7fb.jpg",
+  "publisher": "arte(아르테)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318918490",
+  "rating": 2,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "모성": {
+  "author": "미나토 가나에",
+  "cover": "covers/04f37d5c10.jpg",
+  "publisher": "알토북스",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=384368001",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "이리하여 아무도 없었다": {
+  "author": "아리스가와 아리스",
+  "cover": "covers/1233a4543a.jpg",
+  "publisher": "현대문학",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=317268847",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "더 케이지": {
+  "author": "보니 키스틀러",
+  "cover": "covers/bc0ea44005.jpg",
+  "publisher": "한즈미디어(한스미디어)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318850648",
+  "rating": 3,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "마당이 있는 집": {
+  "author": "김진영",
+  "cover": "covers/b365dba420.jpg",
+  "publisher": "엘릭시르",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=143317836",
+  "rating": 3,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "건널목의 유령": {
+  "author": "다카노 가즈아키",
+  "cover": "covers/c1d819f9e4.jpg",
+  "publisher": "황금가지",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320896623",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "신의 숨겨진 얼굴": {
+  "author": "후지사키 쇼",
+  "cover": "covers/c7f95ffc0f.jpg",
+  "publisher": "엘릭시르",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=318686223",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "악의 사냥": {
+  "author": "크리스 카터",
+  "cover": "covers/dfca70a6dd.jpg",
+  "publisher": "북로드",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=321415754",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "가시의 집": {
+  "author": "나카야마 시치리",
+  "cover": "covers/0b04c64e85.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320923415",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "이상한 그림": {
+  "author": "우케쓰",
+  "cover": "covers/cd412cd7c8.jpg",
+  "publisher": "북다",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=321111945",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "누군가 이 마을에서": {
+  "author": "사노 히로미",
+  "cover": "covers/b09d3599cd.jpg",
+  "publisher": "문예춘추사",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320919810",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "우리가 운명이라고 불렀던 것들": {
+  "author": "슈테판 클라인",
+  "cover": "covers/82f7cb2f62.jpg",
+  "publisher": "포레스트북스",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=311324268",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "비소설"
+ },
+ "악어의 눈물": {
+  "author": "시즈쿠이 슈스케",
+  "cover": "covers/9b8ba3fca9.jpg",
+  "publisher": "빈페이지",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=321295748",
+  "rating": 3,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "푸른 수염의 방": {
+  "author": "홍선주",
+  "cover": "covers/50deb84e67.jpg",
+  "publisher": "나비클럽",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=315235253",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "눈에 갇힌 외딴 산장에서": {
+  "author": "히가시노 게이고",
+  "cover": "covers/ab4c8aa3fa.jpg",
+  "publisher": "재인",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320896726",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "너의 퀴즈": {
+  "author": "오가와 사토시",
+  "cover": "covers/87b1af411a.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=323101180",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "하쿠바 산장 살인사건": {
+  "author": "히가시노 게이고",
+  "cover": "covers/0518332848.jpg",
+  "publisher": "알에이치코리아(RHK)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=238629446",
+  "rating": 3,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "저택섬": {
+  "author": "히가시가와 도쿠야",
+  "cover": "covers/221648cdca.jpg",
+  "publisher": "폴라북스(현대문학)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=11331086",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "꿰뚫는 한국사": {
+  "author": "김재원",
+  "cover": "covers/8c07bfe8cc.jpg",
+  "publisher": "날리지",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=334131327",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "비소설"
+ },
+ "I의 비극": {
+  "author": "요네자와 호노부",
+  "cover": "covers/495ee7a523.jpg",
+  "publisher": "내친구의서재",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336431851",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "속임수의 섬": {
+  "author": "히가시가와 도쿠야",
+  "cover": "covers/07123a52c0.jpg",
+  "publisher": "북다",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332928061",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "덧없는 양들의 축연": {
+  "author": "요네자와 호노부",
+  "cover": "covers/9fad1a9d1a.jpg",
+  "publisher": "엘릭시르",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336268721",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "귀축의 집": {
+  "author": "미키 아키코",
+  "cover": "covers/b34eeda53a.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=339681958",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "살인자는 천국에 있다": {
+  "author": "고조 노리오",
+  "cover": "covers/600262d9ca.jpg",
+  "publisher": "하빌리스",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=340087145",
+  "rating": 3,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "세상 끝의 살인": {
+  "author": "아라키 아카네",
+  "cover": "covers/80c65d7db4.jpg",
+  "publisher": "북스피어",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330059743",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "인형관의 살인": {
+  "author": "아야츠지 유키토",
+  "cover": "covers/a6cc3ae181.jpg",
+  "publisher": "한즈미디어(한스미디어)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=21707252",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "7인 1역": {
+  "author": "렌조 미키히코",
+  "cover": "covers/db36bf46d8.jpg",
+  "publisher": "모모",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329583629",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "소녀 동지여 적을 쏴라": {
+  "author": "아이사카 토미",
+  "cover": "covers/6752c6aab1.jpg",
+  "publisher": "다산책방",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=323551559",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "젠슈의 발소리": {
+  "author": "사와무라 이치",
+  "cover": "covers/900339a015.jpg",
+  "publisher": "arte(아르테)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=324278530",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "붉은 박물관": {
+  "author": "오야마 세이이치로",
+  "cover": "covers/632eb3dfab.jpg",
+  "publisher": "리드비",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=324496482",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "명탐정으로 있어줘": {
+  "author": "고니시 마사테루",
+  "cover": "covers/edbd90d9d6.jpg",
+  "publisher": "망고",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=324525976",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "녹색의 나의 집": {
+  "author": "오노 후유미",
+  "cover": "covers/f664e84038.jpg",
+  "publisher": "북플라자",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=324445687",
+  "rating": 3,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "흉인저의 살인": {
+  "author": "이마무라 마사히로",
+  "cover": "covers/1a64bac9a8.jpg",
+  "publisher": "엘릭시르",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=326519267",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "살려 마땅한 사람들": {
+  "author": "피터 스완슨",
+  "cover": "covers/b79f22d1d2.jpg",
+  "publisher": "푸른숲",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=326922745",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "폭포의 밤": {
+  "author": "미치오 슈스케",
+  "cover": "covers/25b1bde78b.jpg",
+  "publisher": "청미래",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=327913299",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "당신에게 보내는 도전장": {
+  "author": "아쓰카와 다쓰미",
+  "cover": "covers/8b2bce94ab.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=327639570",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "1961 도쿄 하우스": {
+  "author": "마리 유키코",
+  "cover": "covers/b8a1581022.jpg",
+  "publisher": "하빌리스",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=326988764",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "레몬과 살인귀": {
+  "author": "구와가키 아유",
+  "cover": "covers/c24aa46087.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=328765428",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "일이란 무엇인가": {
+  "author": "고동진",
+  "cover": "covers/623bb86edd.jpg",
+  "publisher": "민음사",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320463369",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "비소설"
+ },
+ "용의자 X의 헌신": {
+  "author": "히가시노 게이고",
+  "cover": "covers/64049a3da0.jpg",
+  "publisher": "재인",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=116498287",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "캐릭터": {
+  "author": "나가사키 타카시",
+  "cover": "covers/d466209242.jpg",
+  "publisher": "학산문화사(만화)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=329329337",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "폭발물 처리반이 조우한 스핀": {
+  "author": "사토 기와무",
+  "cover": "covers/4b6652cf91.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330251218",
+  "rating": 3,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "일곱 명의 술래잡기": {
+  "author": "미쓰다 신조",
+  "cover": "covers/82bdc4027b.jpg",
+  "publisher": "북로드",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330632346",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "묵시록 살인사건": {
+  "author": "니시무라 교타로",
+  "cover": "covers/32339abd8c.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=331809313",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "명탐정의 창자": {
+  "author": "시라이 도모유키",
+  "cover": "covers/eab82890fe.jpg",
+  "publisher": "내친구의서재",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332785269",
+  "rating": 5,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "마트료시카의 밤": {
+  "author": "아쓰카와 다쓰미",
+  "cover": "covers/8d2ef66b4a.jpg",
+  "publisher": "리드비",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=331133882",
+  "rating": 4,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "늑대와 토끼의 게임": {
+  "aladin_q": "늑대와 토끼의 게임 아비코 다케마루",
+  "author": "아비코 다케마루",
+  "cover": "covers/d50049100e.jpg",
+  "publisher": "시공사",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=341090009",
+  "rating": 2,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
  }
 }

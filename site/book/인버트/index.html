@@ -14,7 +14,7 @@
 <meta property="og:locale" content="ko_KR">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4603053849596220" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
 <style>
 :root{
@@ -52,6 +52,11 @@ button{font-family:var(--sans)}
 .navlink{font-size:13px;font-weight:600;text-decoration:none;color:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:6px 12px;white-space:nowrap;background:var(--surface)}
 .navlink:hover{border-color:var(--ink)}
 
+.navr{display:flex;align-items:center;gap:10px}
+.sec{display:inline-flex;gap:2px;padding:3px;background:var(--surface-2);border:1px solid var(--line);border-radius:999px}
+.sec a{font:700 13px var(--sans);text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:999px}
+.sec a.on{background:var(--ink);color:var(--bg)}
+@media (max-width:520px){.navr .navlink{display:none}}
 /* 첫 화면 머리 */
 .hero{padding:56px 0 34px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 300px at 85% -40%,var(--accent-soft),transparent 70%)}
 .hero[hidden]{display:none}
@@ -199,22 +204,164 @@ footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--muted);f
   .wordmark small{display:none}
   .stat b{font-size:20px}
 }
+
+/* ─── 2026-09-29 디자인 다듬기 ───────────────────────────────
+   참고: awesome-design-md 의 에디토리얼 원칙(Claude·WIRED DESIGN.md) — 브랜드는 베끼지 않고 원칙만.
+   · 세리프 제목은 굵게 하지 않는다(400~500) + 자간을 좁힌다
+   · 강조색은 아낀다 — 버튼·5+ 표시에만
+   · 그림자 대신 얇은 선, 구역마다 바탕을 번갈아(크림 → 짙은 띠)
+   · 움직임은 스프링 한 가지(kinetics.colorion.co 방식의 linear() 스프링)
+*/
+:root{
+  --bg:#faf8f3; --surface:#fffefb; --surface-2:#f3eee5; --ink:#141413; --ink-2:#3d3a36; --muted:#6f6a62; --line:#e6dfd5;
+  --accent:#9b2c1f; --accent-soft:#f4e7e2; --gold:#b8862b; --band:#1c1a17; --band-ink:#f4efe6; --band-muted:#a9a296;
+  --shadow:0 1px 0 rgba(20,18,16,.04); --shadow-lg:0 14px 34px -12px rgba(20,18,16,.28);
+  --spring:linear(0, .009, .035 2.1%, .141 4.4%, .723 12.9%, .938 16.7%, 1.017 19.4%, 1.067, 1.089 26.9%, 1.079, 1.049 36.4%, .994 50.5%, .991 58.4%, 1.001 77.8%, 1);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12110f; --surface:#191815; --surface-2:#1f1d1a; --ink:#f2ede4; --ink-2:#d4cdc1; --muted:#9a938a; --line:#2e2a25;
+  --accent:#e08a74; --accent-soft:#33211c; --gold:#d9a94e; --band:#0b0a09; --band-ink:#f2ede4; --band-muted:#8f887d;
+  --shadow:0 1px 0 rgba(0,0,0,.3); --shadow-lg:0 14px 34px -12px rgba(0,0,0,.7);
+}}
+:root[data-theme="dark"]{
+  --bg:#12110f; --surface:#191815; --surface-2:#1f1d1a; --ink:#f2ede4; --ink-2:#d4cdc1; --muted:#9a938a; --line:#2e2a25;
+  --accent:#e08a74; --accent-soft:#33211c; --gold:#d9a94e; --band:#0b0a09; --band-ink:#f2ede4; --band-muted:#8f887d;
+  --shadow:0 1px 0 rgba(0,0,0,.3); --shadow-lg:0 14px 34px -12px rgba(0,0,0,.7);
+}
+body{line-height:1.7;letter-spacing:-.003em}
+
+/* 상단 바 — 선 하나로만 구분 */
+.topbar{background:color-mix(in srgb,var(--bg) 92%,transparent)}
+.mark{border-radius:5px;font:600 16px/1 var(--serif)}
+.wordmark{font:600 16px/1.2 var(--serif);letter-spacing:-.02em}
+.navlink{border-radius:8px;background:transparent}
+.sec{border-radius:8px}.sec a{border-radius:6px}
+
+/* 첫 화면 머리 — 가벼운 세리프, 장식 없는 바탕 */
+.hero{background:none;padding:72px 0 44px}
+.eyebrow{font:600 11px/1 var(--sans);letter-spacing:.22em;color:var(--muted)}
+.hero h1{font:500 clamp(34px,6vw,60px)/1.08 var(--serif);letter-spacing:-.035em;max-width:16ch}
+.hero .sub{font-size:17px;color:var(--ink-2)}
+.search{border-radius:10px;box-shadow:none;background:var(--surface)}
+.stats{border-radius:0;border:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);background:transparent;margin-top:44px}
+.stat{padding:16px 18px 14px;border-left:1px solid var(--line)}
+.stat b{font:500 30px/1.05 var(--serif);letter-spacing:-.03em}
+.stat span{font-size:12px;letter-spacing:.04em}
+
+/* 거르기·정렬 — 알약 대신 밑줄 탭 */
+.tabs{background:transparent;border:0;padding:0;gap:18px;border-radius:0}
+.tabs button{padding:6px 0;border-radius:0;font-size:14px;border-bottom:2px solid transparent}
+.tabs button[aria-selected="true"]{background:transparent;box-shadow:none;border-bottom-color:var(--ink)}
+.tabs.sort button{font-size:13px;padding:6px 0}
+.bar{border-bottom:1px solid var(--line);margin-bottom:40px}
+
+/* 별점 묶음 머리 */
+.rgroup{margin-bottom:72px}
+.rh{font:500 26px/1.2 var(--serif);letter-spacing:-.025em;border-bottom:0;padding-bottom:0;margin-bottom:26px}
+.rh .n{background:transparent;border:0;padding:0;font-weight:500}
+/* 별 5+ 묶음은 짙은 띠로 — 화면 폭 끝까지 */
+.rgroup.plus{background:var(--band);color:var(--band-ink);margin:0 calc(50% - 50vw) 72px;padding:56px calc(50vw - 50%) 60px}
+.rgroup.plus .rh{color:var(--band-ink)}
+.rgroup.plus .rh .sub,.rgroup.plus .rh .n,.rgroup.plus .meta{color:var(--band-muted)}
+.rgroup.plus .book h3{color:var(--band-ink)}
+.rgroup.plus .plus{color:#e9a08c}
+
+/* 책 카드 — 그림자는 떠오를 때만, 스프링으로 */
+.grid{gap:40px 24px}
+.cover{border-radius:2px 4px 4px 2px;box-shadow:0 1px 2px rgba(0,0,0,.08),0 6px 14px -8px rgba(0,0,0,.25);transition:transform .7s var(--spring),box-shadow .35s ease}
+.book:hover .cover{transform:translateY(-6px) rotate(-.6deg)}
+.book h3{font:600 15px/1.4 var(--sans);letter-spacing:-.01em}
+.deep{border-radius:3px;background:transparent;border:1px solid currentColor;padding:0 5px}
+.deep.gj{border-color:var(--line)}
+
+/* 책 페이지 */
+.bookhead{box-shadow:none;border-radius:4px;background:var(--surface-2);border:0;padding:36px}
+.bookhead h2{font:500 clamp(28px,5vw,44px)/1.12 var(--serif);letter-spacing:-.03em}
+.bookhead .links a{border-radius:8px}
+.excerpt{border-radius:0;background:transparent;border-left:2px solid var(--ink);padding:6px 0 6px 24px;margin:0 0 56px}
+.excerpt blockquote{font:400 18px/1.85 var(--serif);letter-spacing:-.01em;color:var(--ink)}
+.col h3{font:500 20px/1 var(--serif);letter-spacing:-.02em}
+.post{border-radius:8px;box-shadow:none}
+.note h4{font:500 21px/1.35 var(--serif);letter-spacing:-.02em}
+.gate{border-radius:8px}
+.gate .gt{font:500 19px/1.4 var(--serif)}
+dialog.warn{border-radius:12px}
+dialog.warn[open]{animation:pop .6s var(--spring)}
+@keyframes pop{from{transform:scale(.94);opacity:0}to{transform:none;opacity:1}}
+dialog.warn h3{font:500 23px/1.3 var(--serif);letter-spacing:-.02em}
+.wb button{border-radius:8px}
+
+/* 푸터 — 짙은 띠 */
+footer{background:var(--band);color:var(--band-muted);border-top:0}
+.foot h4{color:var(--band-ink);font:500 16px var(--serif)}
+.foot a,.foot .visits b{color:var(--band-ink)}
+
+
+/* ─── 과감하게(bolder) — 대비를 세게, 미스터리 분위기 ─── */
+/* 첫 화면 머리: 짙은 띠 + 큰 세리프 */
+.hero{background:var(--band);color:var(--band-ink);padding:88px 0 0;border-bottom:0}
+.hero .eyebrow{color:#e08a74}
+.hero h1{font:500 clamp(44px,9vw,104px)/.98 var(--serif);letter-spacing:-.045em;max-width:12ch;margin-bottom:22px}
+.hero .sub{color:var(--band-muted);font-size:18px;max-width:40ch}
+.hero .search{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:var(--band-ink)}
+.hero .search::placeholder{color:var(--band-muted)}
+.hero .searchbox svg{color:var(--band-muted)}
+.hero .stats{margin-top:64px;border-top:1px solid rgba(255,255,255,.22);border-bottom:0}
+.hero .stat{border-left-color:rgba(255,255,255,.12);padding:22px 20px 26px}
+.hero .stat b{font-size:44px;color:var(--band-ink)}
+.hero .stat.visit b{color:#e08a74}
+.hero .stat span{color:var(--band-muted)}
+.hero::after{content:"";display:block;height:6px;background:var(--accent)}
+
+/* 별점 묶음: 큰 숫자를 구역 표지로 */
+.rh{align-items:flex-end;gap:18px}
+.rh .num{font:500 clamp(64px,10vw,120px)/.8 var(--serif);letter-spacing:-.06em;color:var(--ink);margin-right:4px}
+.rgroup.plus .rh .num{color:#e08a74}
+.rh .st{font-size:15px}
+.rgroup{margin-bottom:88px}
+.rgroup.plus{padding-top:64px;padding-bottom:72px}
+
+/* 책 카드 제목 조금 크게 */
+.book h3{font-size:16px}
+
+/* 책 페이지 머리: 짙은 띠, 표지 크게 */
+.bookhead{background:var(--band);color:var(--band-ink);grid-template-columns:220px 1fr;gap:40px;padding:44px;border-radius:0;margin:0 calc(50% - 50vw) 56px;padding-left:calc(50vw - 50% + 44px);padding-right:calc(50vw - 50% + 44px)}
+.bookhead h2{font-size:clamp(34px,6vw,64px);line-height:1.02;letter-spacing:-.045em;color:var(--band-ink)}
+.bookhead .meta{color:var(--band-muted)}
+.bookhead .stars.big span{color:var(--band-muted)}
+.bookhead .links a{background:var(--band-ink);color:var(--band)}
+.bookhead .disc{color:var(--band-muted)}
+.back{margin-bottom:28px}
+@media (max-width:720px){
+  .hero{padding-top:56px}
+  .hero .stat b{font-size:32px}
+  .rh .num{font-size:68px}
+  .bookhead{grid-template-columns:120px 1fr;gap:20px;margin:0 -16px 40px;padding:26px 16px}
+}
+@media (prefers-reduced-motion:reduce){.cover,dialog.warn[open]{transition:none;animation:none}}
+@media (max-width:720px){
+  .hero{padding:48px 0 30px}
+  .rgroup.plus{padding:40px 16px 44px;margin:0 -16px 56px}
+  .bookhead{padding:20px}
+  .stat b{font-size:24px}
+}
 </style>
 </head>
 <body>
 <header class="topbar"><div class="wrap">
   <a class="brand" href="/" aria-label="책장 처음으로"><span class="mark" aria-hidden="true">책</span><span class="wordmark">책호스터이프로 책장<small>@kkariboy42</small></span></a>
-  <a class="navlink" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">Instagram ↗</a>
+  <nav class="navr"><div class="sec" role="navigation" aria-label="책장 구분"><a href="/" data-sec="fiction">소설</a><a href="/nonfiction/" data-sec="nonfiction">비소설</a></div>
+  <a class="navlink" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">Instagram ↗</a></nav>
 </div></header>
 <section class="hero" id="hero"><div class="wrap">
-  <p class="eyebrow">Mystery · Thriller · Horror</p>
-  <h1>추리·미스터리 서평을 책장처럼</h1>
-  <p class="sub">인스타그램에 흩어진 서평·카드뉴스·릴스를 책별로 모았어요. 별점순으로 고르고, 다 읽은 책은 결말 해설까지.</p>
+  <p class="eyebrow" id="h-eye">Mystery · Thriller · Horror</p>
+  <h1 id="h-title">추리·미스터리 서평을 책장처럼</h1>
+  <p class="sub" id="h-sub">인스타그램에 흩어진 서평·카드뉴스·릴스를 책별로 모았어요. 별점순으로 고르고, 다 읽은 책은 결말 해설까지.</p>
   <div class="searchbox"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
     <input class="search" id="q" type="search" placeholder="책 제목이나 작가로 찾기" aria-label="책 찾기"></div>
   <div class="stats" id="stats"></div>
 </div></section>
-<main><div class="wrap" id="app"><article class="static"><a class="back" href="/">← 책장으로</a><h1>인버트</h1><p class="meta">아이자와 사코 · 비채 · 별점 5+</p><h2>서평 한 토막</h2><p>영매탐정 조즈카의 후속작입니다. 🎉 사실 지난 작품에서 마지막에 너무 큰 걸 터트려서 후속작이 나오기 어려울 꺼라 생각했는데… 굉장한 작품이 나왔습니다. 😍 책은 약 480페이지 3가지 중단편으로 구성되어 있습니다. 1. 구름 위의 맑은 하늘 ☁️ 2. 포말의 심판 ⚖️ 3. 신용할 수 없는 목격자 👀 3가지 이야기가 모두 좋으며, 3번째 이야기는 특히 더 압도적으로 좋았습니다. 💯 이번 작품에서 주인공 조즈카의 캐릭터가 확실하게 자리 잡은 것으로 생각됩니다. 그리고 굉장히 매력적으로 묘사됩니다. ✨ 글인데도 캐릭터가 이렇게 매력적으로 눈에 보일 듯하게 묘사되는 건 독자의 입장에서는 정말 놀라운 경험입니다. 🤩 이야기는 이렇습니다.</p><h2>인스타그램 게시물</h2><ul><li><time>2024-10-07</time> · 서평 — 📚 인버트 / 아이자와 사코 / 비채 / 2024년 10월 <a href="https://www.instagram.com/p/DA2SMijTqRX/">인스타그램에서 보기</a></li><li><time>2024-10-05</time> · 게시물 — #아이자와사코 의 #영매탐정조즈카 의 후속작인 #인버트 를 받았습니다. <a href="https://www.instagram.com/p/DAvCUMizTXP/">인스타그램에서 보기</a></li></ul></article></div></main>
+<main><div class="wrap" id="app"><article class="static"><a class="back" href="/">← 책장으로</a><h1>인버트</h1><p class="meta">아이자와 사코 · 비채 · 별점 5+</p><h2>서평 한 토막</h2><p>영매탐정 조즈카의 후속작입니다. 🎉 사실 지난 작품에서 마지막에 너무 큰 걸 터트려서 후속작이 나오기 어려울 꺼라 생각했는데… 굉장한 작품이 나왔습니다. 😍 책은 약 480페이지 3가지 중단편으로 구성되어 있습니다. 1. 구름 위의 맑은 하늘 ☁️ 2. 포말의 심판 ⚖️ 3. 신용할 수 없는 목격자 👀 3가지 이야기가 모두 좋으며, 3번째 이야기는 특히 더 압도적으로 좋았습니다. 💯 이번 작품에서 주인공 조즈카의 캐릭터가 확실하게 자리 잡은 것으로 생각됩니다. 그리고 굉장히 매력적으로 묘사됩니다. ✨ 글인데도 캐릭터가 이렇게 매력적으로 눈에 보일 듯하게 묘사되는 건 독자의 입장에서는 정말 놀라운 경험입니다. 🤩 이야기는 이렇습니다.</p><h2>인스타그램 게시물</h2><ul><li><time>2024-10-07</time> · 서평 — 📚 인버트 / 아이자와 사코 / 비채 / 2024년 10월 <a href="https://www.instagram.com/p/DA2SMijTqRX/">인스타그램에서 보기</a></li><li><time>2024-10-05</time> · 게시물 — #아이자와사코 의 #영매탐정조즈카 의 후속작인 #인버트 를 받았습니다. <a href="https://www.instagram.com/p/DAvCUMizTXP/">인스타그램에서 보기</a></li><li><time>2024-09-24</time> · 게시물 — 정말 오래 기다렸었습니다. <a href="https://www.instagram.com/p/DATHpgCz3l7/">인스타그램에서 보기</a></li></ul></article></div></main>
 <footer><div class="wrap foot">
   <div><h4>책호스터이프로 책장</h4>
     <p>추리·미스터리·호러를 읽고 쓰는 인스타그램 @kkariboy42 의 서평 아카이브예요. 게시물은 인스타그램 원본을 그대로 불러와 보여 줍니다.</p></div>
@@ -238,10 +385,23 @@ const byBook = {};
 for (const p of D.posts) (byBook[p.book] ||= []).push(p);
 const books = Object.keys(byBook).map(t => ({title:t, ...D.books[t], posts:byBook[t], last:byBook[t][0].date}))
   .sort((a,b) => b.last.localeCompare(a.last));
+// 소설 책장(/)과 비소설 책장(/nonfiction/) — 책 페이지는 그 책의 구분을 따른다
+const bookNow = window.BOOK && books.find(x => x.title === window.BOOK);
+const SECTION = window.SECTION || (bookNow && bookNow.genre === '비소설' ? 'nonfiction' : 'fiction');
+const GENRE = SECTION === 'nonfiction' ? '비소설' : '소설';
+const shelf = books.filter(b => (b.genre || '소설') === GENRE);
+const HOME = SECTION === 'nonfiction' ? '/nonfiction/' : '/';
+document.querySelectorAll('.sec a').forEach(a => a.classList.toggle('on', a.dataset.sec === SECTION));
+if (SECTION === 'nonfiction') {
+  document.getElementById('h-eye').textContent = 'Non-fiction';
+  document.getElementById('h-title').textContent = '비소설 서평';
+  document.getElementById('h-sub').textContent = '추리·미스터리 말고도 읽은 책들 — 경영·사회·역사 같은 비소설 서평을 따로 모았어요.';
+}
+const nShelfPosts = shelf.reduce((n, b) => n + b.posts.length, 0);
 document.getElementById('foot').textContent = `책 ${books.length}권 · 게시물 ${D.posts.length}개 · ${D.updated} 갱신`;
-const nPlus = books.filter(b => b.plus).length;
+const nPlus = shelf.filter(b => b.plus).length;
 document.getElementById('stats').innerHTML = [
-  [books.length.toLocaleString('ko-KR'), '권의 책'], [D.posts.length.toLocaleString('ko-KR'), '개의 게시물'], [nPlus, '권의 별 5+'],
+  [shelf.length.toLocaleString('ko-KR'), '권의 책'], [nShelfPosts.toLocaleString('ko-KR'), '개의 게시물'], [nPlus, '권의 별 5+'],
   ['<span data-visit="today">–</span>', '오늘 방문', 'visit'], ['<span data-visit="total">–</span>', '전체 방문', 'visit'],
 ].map(([v, l, c]) => `<div class="stat ${c||''}"><b>${v}</b><span>${l}</span></div>`).join('');
 
@@ -259,10 +419,10 @@ function cardHtml(b) {
 }
 function home() {
   const k = norm(q.value);
-  const nDeep = books.filter(b => b.deep).length;
-  const list = books.filter(b => (only === 'all' || b.deep) && (!k || norm(b.title + (b.author||'')).includes(k)));
+  const nDeep = shelf.filter(b => b.deep).length;
+  const list = shelf.filter(b => (only === 'all' || b.deep) && (!k || norm(b.title + (b.author||'')).includes(k)));
   const tab = (group, v, label, n) => `<button role="tab" aria-selected="${(group==='only'?only:order)===v}" data-g="${group}" data-v="${v}">${label}${n!=null?` <span>${n}</span>`:''}</button>`;
-  const tabs = `<div class="bar"><div class="tabs" role="tablist">${tab('only','all','전체',books.length)}${tab('only','deep','원고분석한 책',nDeep)}</div>
+  const tabs = `<div class="bar"><div class="tabs" role="tablist">${tab('only','all','전체',shelf.length)}${nDeep ? tab('only','deep','원고분석한 책',nDeep) : ''}</div>
     <div class="tabs sort" role="tablist" aria-label="정렬">${tab('order','rating','별점순')}${tab('order','recent','최근순')}</div></div>`;
   let body;
   if (!list.length) body = `<p class="empty">「${esc(q.value)}」에 맞는 책이 없어요.</p>`;
@@ -270,7 +430,7 @@ function home() {
   else {
     // 별점 높은 순으로 묶고, 같은 별점 안에서는 최근 게시순
     const groups = ['5+', 5, 4, 3, 2, 1, null].map(r => ({r, items: list.filter(b => grade(b) === r)})).filter(g => g.items.length);
-    body = groups.map(g => `<section class="rgroup"><h2 class="rh">${g.r == null ? '별점 없음 <span class="sub">가제본·별점을 안 준 책</span>' : g.r === '5+' ? `<span class="st">${stars(5, true)}</span> 별 5+ <span class="sub">5점을 넘은 책</span>` : `<span class="st">${stars(g.r)}</span> 별 ${g.r}개`} <span class="n">${g.items.length}권</span></h2>
+    body = groups.map(g => `<section class="rgroup${g.r === '5+' ? ' plus' : ''}"><h2 class="rh"><span class="num" aria-hidden="true">${g.r == null ? '–' : g.r}</span>${g.r == null ? '별점 없음 <span class="sub">가제본·별점을 안 준 책</span>' : g.r === '5+' ? `<span class="st">${stars(5, true)}</span> 별 5+ <span class="sub">5점을 넘은 책</span>` : `<span class="st">${stars(g.r)}</span> 별 ${g.r}개`} <span class="n">${g.items.length}권</span></h2>
       <div class="grid">${g.items.map(cardHtml).join('')}</div></section>`).join('');
   }
   app.innerHTML = tabs + body;
@@ -311,11 +471,11 @@ function noteHtml(n) {
 
 function book(title) {
   const b = books.find(x => x.title === title);
-  if (!b) { app.innerHTML = `<a class="back" href="/">← 책장으로</a><p class="empty">그 책은 아직 없어요.</p>`; return; }
+  if (!b) { app.innerHTML = `<a class="back" href="${HOME}">← 책장으로</a><p class="empty">그 책은 아직 없어요.</p>`; return; }
   const safe = b.posts.filter(p => !p.spoiler), spoilPosts = b.posts.filter(p => p.spoiler);
   const notes = (D.notes && D.notes[b.title]) || [];
   const nSpoil = spoilPosts.length + notes.length;
-  app.innerHTML = `<a class="back" href="/">← 책장으로</a>
+  app.innerHTML = `<a class="back" href="${HOME}">← ${SECTION === 'nonfiction' ? '비소설 ' : ''}책장으로</a>
     <div class="bookhead"><div class="cover">${coverHtml(b)}</div><div>
       <h2>${esc(b.title)}</h2>${b.rating != null ? `<div class="stars big" aria-label="별점 ${grade(b)}">${stars(b.rating, b.plus)} <span>별 ${grade(b)}${b.plus ? '' : '개'}</span></div>` : b.gajebon ? '<div class="stars big"><span>가제본으로 읽어 별점 없음</span></div>' : ''}
       <div class="meta">${esc([b.author, b.publisher].filter(Boolean).join(' · '))}</div>
