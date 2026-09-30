@@ -382,6 +382,20 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
   .bookhead{padding:20px}
   .stat b{font-size:24px}
 }
+
+/* 원고분석 맛보기 — 첫 화면 머리 바로 아래, 스포 없는 복선 한 토막 */
+.proof{border-bottom:1px solid var(--line)}
+.proof .wrap{display:grid;grid-template-columns:auto 1fr;gap:12px 48px;align-items:center;padding-top:40px;padding-bottom:40px}
+.proof .pl{grid-column:1/-1;margin:0;font:600 12px/1 var(--sans);letter-spacing:.08em;color:var(--accent)}
+.proof .pp{margin:0;font:500 clamp(40px,7vw,72px)/1 var(--serif);letter-spacing:-.04em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.proof .pp svg{width:.5em;height:.5em;margin:0 .14em;vertical-align:.12em;fill:none;stroke:var(--muted);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.proof .pt{margin:0;color:var(--ink-2);font-size:16px;max-width:44ch}
+.proof .pt b{font-weight:600;color:var(--ink)}
+.proof .pa{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:600;font-size:14px;color:var(--accent);text-decoration:none}
+.proof .pa:hover{text-decoration:underline}
+.proof[hidden]{display:none}
+.nw{white-space:nowrap}
+@media (max-width:640px){.proof .wrap{grid-template-columns:1fr;gap:10px;padding-top:32px;padding-bottom:32px}}
 </style>
 </head>
 <body>
@@ -391,8 +405,8 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
   <a class="navlink" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">Instagram <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></nav>
 </div></header>
 <section class="hero" id="hero"><div class="wrap">
-  <h1 id="h-title">추리·미스터리 서평을 책장처럼</h1>
-  <p class="sub" id="h-sub">인스타그램에 흩어진 서평·카드뉴스·릴스를 책별로 모았어요. 별점순으로 고르고, 다 읽은 책은 결말 해설까지.</p>
+  <h1 id="h-title"><span class="nw">고를 때는 별점,</span> <span class="nw">다 읽고 나면</span> <span class="nw">결말 해설</span></h1>
+  <p class="sub" id="h-sub">인스타그램 @kkariboy42에 올린 <span class="nw">추리·미스터리·호러</span> 서평을 책별로 모았습니다. <span class="nw">결말 해설은</span> 접어 두었으니 안심하셔도 됩니다.</p>
   <div class="searchbox"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
     <input class="search" id="q" type="search" placeholder="책 제목이나 작가로 찾기" aria-label="책 찾기"></div>
   <div class="stats" id="stats"></div>
@@ -400,7 +414,7 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
 <main><div class="wrap" id="app"><article class="static"><a class="back" href="/">책장으로</a><h1>고독한 용의자</h1><p class="meta">찬호께이 · 위즈덤하우스 · 별점 4</p><h2>서평 한 토막</h2><p>✍️ 찬호께이 ｜ 🏢 위즈덤하우스 ｜ 📅 2025년 4월 출간 🧠 “은둔자의 방, 옷장 속 시체… 그리고 미완성 소설이 밝혀낸 진실” 💥 찬호께이 작가가 돌아왔다! 🧩 ‘망자의 고백’과 ‘미완성 소설’이 교차하는 정교한 구조 🕵️‍♂️ 탐정은 소설가? 형사? 믿을 수 없는 진실의 퍼즐 📚 구성 &amp; 전개 총 530페이지 🗂️ 프롤로그/에필로그 포함, 9개의 장 + ✒️ [망자의 고백] / 📖 [소설 &lt;&lt;제목미정&gt;&gt; 발췌]로 교차 구성! 이야기는 형사 쉬유이 👮‍♀️ 와 인기 소설가 칸즈위안 ✍️ 이 각기 다른 방식으로 사건을 파헤치며 ‘이야기의 주도권’이 중반부터 바뀌는 흥미로운 구조입니다.</p><h2>인스타그램 게시물</h2><ul><li><time>2025-05-08</time> · 서평 — 📖 고독한 용의자 <a href="https://www.instagram.com/p/DJaugy3J4kg/">인스타그램에서 보기</a></li><li><time>2025-04-23</time> · 게시물 — 찬호께이의 고독한 용의자 책을 받았습니다. <a href="https://www.instagram.com/p/DIytPj4SPKa/">인스타그램에서 보기</a></li></ul></article></div></main>
 <footer><div class="wrap foot">
   <div><h2>책호스터이프로 책장</h2>
-    <p>추리·미스터리·호러를 읽고 쓰는 인스타그램 @kkariboy42 의 서평 아카이브예요. 게시물은 인스타그램 원본을 그대로 불러와 보여 줍니다.</p></div>
+    <p>추리·미스터리·호러를 읽고 쓰는 인스타그램 @kkariboy42 의 서평 아카이브입니다. 게시물은 인스타그램 원본을 그대로 불러와 보여 줍니다.</p></div>
   <div><h2>둘러보기</h2>
     <p><a href="/">책장 처음으로</a></p>
     <p><a href="/about.html">책장 소개</a></p>
@@ -408,7 +422,7 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
     <p><a href="/privacy.html">개인정보처리방침</a></p></div>
   <div><h2>기록</h2>
     <p id="foot"></p>
-    <p>책 페이지의 알라딘 링크는 제휴 링크예요. 그 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있어요.</p>
+    <p>책 페이지의 알라딘 링크는 제휴 링크입니다. 그 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있습니다.</p>
     <p class="visits">오늘 방문 <b data-visit="today">–</b> · 전체 방문 <b data-visit="total">–</b></p></div>
 </div></footer>
 <script>window.BOOK = "고독한 용의자";</script>
@@ -430,7 +444,7 @@ const HOME = SECTION === 'nonfiction' ? '/nonfiction/' : '/';
 document.querySelectorAll('.sec a').forEach(a => a.classList.toggle('on', a.dataset.sec === SECTION));
 if (SECTION === 'nonfiction') {
   document.getElementById('h-title').textContent = '비소설 서평';
-  document.getElementById('h-sub').textContent = '추리·미스터리 말고도 읽은 책들 — 경영·사회·역사 같은 비소설 서평을 따로 모았어요.';
+  document.getElementById('h-sub').textContent = '추리·미스터리 말고도 읽은 책들 — 경영·사회·역사 같은 비소설 서평을 따로 모았습니다.';
 }
 const nShelfPosts = shelf.reduce((n, b) => n + b.posts.length, 0);
 document.getElementById('foot').textContent = `책 ${books.length}권 · 게시물 ${D.posts.length}개 · ${D.updated} 갱신`;
@@ -460,7 +474,7 @@ function home() {
   const tabs = `<div class="bar"><div class="tabs" role="tablist">${tab('only','all','전체',shelf.length)}${nDeep ? tab('only','deep','원고분석한 책',nDeep) : ''}</div>
     <div class="tabs sort" role="tablist" aria-label="정렬">${tab('order','rating','별점순')}${tab('order','recent','최근순')}</div></div>`;
   let body;
-  if (!list.length) body = `<p class="empty">「${esc(q.value)}」에 맞는 책이 없어요.</p>`;
+  if (!list.length) body = `<p class="empty">「${esc(q.value)}」에 맞는 책이 없습니다.</p>`;
   else if (order === 'recent') body = `<div class="grid">${list.map(cardHtml).join('')}</div>`;
   else {
     // 별점 높은 순으로 묶고, 같은 별점 안에서는 최근 게시순
@@ -506,7 +520,7 @@ function noteHtml(n) {
 
 function book(title) {
   const b = books.find(x => x.title === title);
-  if (!b) { app.innerHTML = `<a class="back" href="${HOME}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>책장으로</a><p class="empty">그 책은 아직 없어요.</p>`; return; }
+  if (!b) { app.innerHTML = `<a class="back" href="${HOME}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>책장으로</a><p class="empty">그 책은 아직 없습니다.</p>`; return; }
   const safe = b.posts.filter(p => !p.spoiler), spoilPosts = b.posts.filter(p => p.spoiler);
   const notes = (D.notes && D.notes[b.title]) || [];
   const nSpoil = spoilPosts.length + notes.length;
@@ -514,18 +528,18 @@ function book(title) {
     <div class="bookhead"><div class="cover">${coverHtml(b)}</div><div>
       <h2>${esc(b.title)}</h2>${b.rating != null ? `<div class="stars big" aria-label="별점 ${grade(b)}">${stars(b.rating, b.plus)} <span>별 ${grade(b)}${b.plus ? '' : '개'}</span></div>` : b.gajebon ? '<div class="stars big"><span>가제본으로 읽어 별점 없음</span></div>' : ''}
       <div class="meta">${esc([b.author, b.publisher].filter(Boolean).join(' · '))}</div>
-      ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${esc(b.store || '알라딘')}에서 보기 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>${!b.link ? '<p class="disc">알라딘 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있어요.</p>' : ''}</div>` : ''}
+      ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${esc(b.store || '알라딘')}에서 보기 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>${!b.link ? '<p class="disc">알라딘 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있습니다.</p>' : ''}</div>` : ''}
     </div></div>
     ${b.excerpt ? `<section class="excerpt"><p class="ex-label">서평 한 토막</p><blockquote>${esc(b.excerpt)}</blockquote><p class="ex-src">— 이프로의 인스타그램 서평에서</p></section>` : ''}
     <div class="cols">
       <section class="col"><h3><span class="dot"></span>스포 없음 <span class="n">${safe.length}</span></h3>
-        ${safe.length ? safe.map(postHtml).join('') : '<p class="none">아직 없어요.</p>'}</section>
+        ${safe.length ? safe.map(postHtml).join('') : '<p class="none">아직 없습니다.</p>'}</section>
       <section class="col spoil"><h3><span class="dot"></span>스포 있음 <span class="n">${nSpoil}</span></h3>
-        ${nSpoil ? `<div class="gate" id="gate"><p class="gt">결말·범인·트릭이 그대로 적혀 있어요</p>
-            <p>책을 다 읽은 분만 펼쳐 주세요.</p><button type="button">펼치기</button></div>
+        ${nSpoil ? `<div class="gate" id="gate"><p class="gt">결말·범인·트릭이 그대로 적혀 있습니다</p>
+            <p>책을 다 읽은 뒤에 펼치시길 권합니다.</p><button type="button">펼치기</button></div>
           <div id="spoilList" hidden>${notes.map(noteHtml).join('')}${spoilPosts.map(postHtml).join('')}
             <button type="button" class="fold" id="fold">다시 접기</button></div>`
-          : '<p class="none">아직 없어요.</p>'}</section>
+          : '<p class="none">아직 없습니다.</p>'}</section>
     </div>`;
   const g = document.getElementById('gate');
   if (g) {
@@ -542,9 +556,9 @@ function warn(title, ok) {
   const d = document.createElement('dialog');
   d.className = 'warn';
   d.innerHTML = `<p class="wi" aria-hidden="true">!</p><h3>결말까지 나옵니다</h3>
-    <p>『${esc(title)}』의 범인, 트릭, 마지막 반전이 그대로 적혀 있어요. 한 번 보면 되돌릴 수 없어요.</p>
+    <p>『${esc(title)}』의 범인, 트릭, 마지막 반전이 그대로 적혀 있습니다. 한 번 보면 되돌릴 수 없습니다.</p>
     <p>책을 끝까지 읽으셨나요?</p>
-    <div class="wb"><button type="button" value="no" autofocus>아직이에요</button><button type="button" value="yes" class="go">다 읽었어요, 펼치기</button></div>`;
+    <div class="wb"><button type="button" value="no" autofocus>아직 안 읽었습니다</button><button type="button" value="yes" class="go">다 읽었습니다, 펼치기</button></div>`;
   document.body.appendChild(d);
   d.addEventListener('click', e => {
     const v = e.target.value;
@@ -585,6 +599,7 @@ function route() {
     return;
   }
   document.getElementById('hero').hidden = !!window.BOOK;
+  document.getElementById('proof').hidden = !!window.BOOK || SECTION === 'nonfiction';
   if (window.BOOK) book(window.BOOK); else home();
 }
 q.addEventListener('input', () => home());

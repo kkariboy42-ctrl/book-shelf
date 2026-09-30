@@ -53,6 +53,8 @@ def _page(template, title, desc, canonical, body_html, book_title=None):
         t = t.replace('<script src="/data.js"></script>',
                       f'<script>window.BOOK = {json.dumps(book_title, ensure_ascii=False)};</script>\n<script src="/data.js"></script>', 1)
     t = t.replace('<div class="wrap" id="app"></div>', f'<div class="wrap" id="app">{body_html}</div>', 1)
+    # 원고분석 맛보기는 소설 첫 화면에만 — 책 페이지·비소설 책장에서는 뺀다
+    t = re.sub(r'\n<section class="proof".*?</section>', "", t, count=1, flags=re.S)
     return t
 
 
