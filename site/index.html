@@ -57,6 +57,8 @@ button{font-family:var(--sans)}
 .sec a{font:700 13px var(--sans);text-decoration:none;color:var(--muted);padding:5px 12px;border-radius:999px}
 .sec a.on{background:var(--ink);color:var(--bg)}
 @media (max-width:520px){.navr .navlink{display:none}}
+.sec a{white-space:nowrap}
+@media (max-width:420px){.sec a{padding:5px 9px}.sec .lg{display:none}}
 /* 첫 화면 머리 */
 .hero{padding:56px 0 34px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 300px at 85% -40%,var(--accent-soft),transparent 70%)}
 .hero[hidden]{display:none}
@@ -401,7 +403,7 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
 <body>
 <header class="topbar"><div class="wrap">
   <a class="brand" href="/" aria-label="책장 처음으로"><span class="mark" aria-hidden="true">책</span><span class="wordmark">책호스터이프로 책장<small>@kkariboy42</small></span></a>
-  <nav class="navr"><div class="sec" role="navigation" aria-label="책장 구분"><a href="/" data-sec="fiction">소설</a><a href="/nonfiction/" data-sec="nonfiction">비소설</a></div>
+  <nav class="navr"><div class="sec" role="navigation" aria-label="책장 구분"><a href="/" data-sec="fiction">소설</a><a href="/nonfiction/" data-sec="nonfiction">비소설</a><a href="/ranking/" data-sec="ranking"><span class="lg">알라딘 </span>순위</a></div>
   <a class="navlink" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">Instagram <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></nav>
 </div></header>
 <section class="hero" id="hero"><div class="wrap">
@@ -423,6 +425,7 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
     <p>추리·미스터리·호러를 읽고 쓰는 인스타그램 @kkariboy42 의 서평 아카이브입니다. 게시물은 인스타그램 원본을 그대로 불러와 보여 줍니다.</p></div>
   <div><h2>둘러보기</h2>
     <p><a href="/">책장 처음으로</a></p>
+    <p><a href="/ranking/">알라딘 주간 순위</a></p>
     <p><a href="/about.html">책장 소개</a></p>
     <p><a href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">인스타그램 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></p>
     <p><a href="/privacy.html">개인정보처리방침</a></p></div>
@@ -454,7 +457,7 @@ if (SECTION === 'nonfiction') {
 const nShelfPosts = shelf.reduce((n, b) => n + b.posts.length, 0);
 document.getElementById('foot').textContent = `책 ${books.length}권 · 게시물 ${D.posts.length}개 · ${D.updated} 갱신`;
 const nPlus = shelf.filter(b => b.plus).length;
-document.getElementById('stats').innerHTML = [
+if (document.getElementById('stats')) document.getElementById('stats').innerHTML = [
   [shelf.length.toLocaleString('ko-KR'), '권의 책'], [nShelfPosts.toLocaleString('ko-KR'), '개의 게시물'], [nPlus, '권의 별 5+'],
   ['<span data-visit="today">–</span>', '오늘 방문', 'visit'], ['<span data-visit="total">–</span>', '전체 방문', 'visit'],
 ].map(([v, l, c]) => `<div class="stat ${c||''}"><b>${v}</b><span>${l}</span></div>`).join('');
@@ -597,6 +600,7 @@ function loadEmbed() {
 }
 
 function route() {
+  if (SECTION === 'ranking') return;  // 순위 탭은 정적 HTML 그대로
   const m = location.hash.match(/^#\/book\/(.+)$/);
   if (m) {
     const b = books.find(x => x.title === decodeURIComponent(m[1]));
@@ -607,7 +611,7 @@ function route() {
   document.getElementById('proof').hidden = !!window.BOOK || SECTION === 'nonfiction';
   if (window.BOOK) book(window.BOOK); else home();
 }
-q.addEventListener('input', () => home());
+if (SECTION !== 'ranking') q.addEventListener('input', () => home());
 // ?q=히가시노 처럼 주소로 검색어를 넘기면 바로 찾아 준다(공유용 링크)
 try { const q0 = new URLSearchParams(location.search).get('q'); if (q0) q.value = q0; } catch (e) {}
 route();

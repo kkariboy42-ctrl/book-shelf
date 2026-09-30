@@ -106,6 +106,10 @@ def build(data, site_dir):
     open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(page)
     urls.insert(1, (f"{SITE_URL}/nonfiction/", data["updated"]))
 
+    # 알라딘 주간 순위 탭(/ranking/) — aladin-weekly 가 매주 남기는 data.json 으로
+    import ranking_page
+    urls[2:2] = ranking_page.build(template, site_dir, books, _page)
+
     from urllib.parse import quote
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, lm in urls:
