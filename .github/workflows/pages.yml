@@ -1,10 +1,13 @@
 # site/ 폴더를 GitHub Pages 로 배포한다. main 에 올리면 자동으로 돈다.
+# 1시간마다도 돈다 — 책별 조회 수를 카운터에서 모아 site/views.json 으로 구워 싣는다(커밋은 안 한다).
 name: pages
 on:
   push:
     branches: [main]
     paths: ["site/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
 permissions:
   contents: read
   pages: write
@@ -20,6 +23,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: 책별 조회 수 모으기
+        continue-on-error: true   # 카운터가 죽어도 배포는 한다(views.json 없으면 사이트가 정렬 탭만 숨긴다)
+        run: python3 popular.py --json site/views.json
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -5,6 +5,7 @@
 
     py -3 popular.py            # 상위 20권
     py -3 popular.py --all      # 전부(0회 포함)
+    python3 popular.py --json site/views.json   # 배포 작업(pages.yml)이 1시간마다
 """
 import json, os, sys, time, unicodedata, urllib.request, urllib.error
 from concurrent.futures import ThreadPoolExecutor
@@ -48,6 +49,16 @@ def main():
     failed = sum(v is None for v in vals)
     opened = [r for r in rows if r[1]]
     show = rows if "--all" in sys.argv else opened[:20]
+    if "--json" in sys.argv:
+        # 배포 작업용: 사이트가 읽는 /views.json (조회 1 이상인 책만). 읽기 실패가 너무 많으면 굽지 않는다 — 옛 값보다 나쁜 값을 싣지 않게
+        out = sys.argv[sys.argv.index("--json") + 1]
+        if failed > len(titles) // 4:
+            print(f"읽기 실패 {failed}권 — views.json 을 만들지 않는다", file=sys.stderr)
+            sys.exit(1)
+        import datetime
+        now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
+        json.dump({"updated": now.strftime("%m.%d %H:%M"), "views": {t: v for t, v in opened}},
+                  open(out, "w", encoding="utf-8"), ensure_ascii=False)
     print(f"책 {len(titles)}권 중 한 번이라도 열린 책 {len(opened)}권" + (f" · 읽기 실패 {failed}권" if failed else ""))
     print("| 순위 | 책 | 조회 | 구분 |\n|---|---|---|---|")
     for i, (t, v) in enumerate(show, 1):

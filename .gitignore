@@ -5,3 +5,4 @@ __pycache__/
 .omc/
 classify/in_*.json
 design-ref/index_before_redesign.html
+site/views.json

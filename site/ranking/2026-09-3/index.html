@@ -396,6 +396,8 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
 .proof .pa{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:600;font-size:14px;color:var(--accent);text-decoration:none}
 .proof .pa:hover{text-decoration:underline}
 .proof[hidden]{display:none}
+.vnote{margin:-24px 0 28px;font-size:13px;color:var(--muted)}
+.bviews{font-variant-numeric:tabular-nums}
 .nw{white-space:nowrap}
 @media (max-width:640px){.proof .wrap{grid-template-columns:1fr;gap:10px;padding-top:32px;padding-bottom:32px}}
 </style>
@@ -527,11 +529,18 @@ const coverHtml = b => b.cover ? `<img src="/${esc(b.cover)}" alt="${esc(b.title
 const stars = (r, plus) => r == null ? '' : '★'.repeat(Math.round(r)) + '☆'.repeat(5 - Math.round(r)) + (plus ? '<b class="plus">+</b>' : '');
 const grade = b => b.rating == null ? null : (b.plus ? '5+' : Math.round(b.rating));
 let only = 'all', order = 'rating';
+// 책별 조회 수 모음 — 배포 작업이 1시간마다 카운터에서 모아 /views.json 으로 굽는다(방문자마다 161번 부르지 않으려고)
+let VIEWS = {}, viewsAt = '';
+fetch('/views.json', {cache: 'no-cache'}).then(r => r.ok ? r.json() : null).then(v => {
+  if (!v || !v.views) return;
+  VIEWS = v.views; viewsAt = v.updated || '';
+  if (!window.BOOK && SECTION !== 'ranking') home();
+}).catch(() => {});
 function cardHtml(b) {
   return `<a class="book" href="/book/${encodeURIComponent(b.slug)}/">
       <div class="cover">${coverHtml(b)}</div>
       <h3>${esc(b.title)}</h3>${b.rating != null ? `<div class="stars" aria-label="별점 ${grade(b)}">${stars(b.rating, b.plus)}</div>` : ''}${b.gajebon ? '<span class="deep gj">가제본</span>' : ''}${b.deep ? '<span class="deep">원고분석</span>' : ''}
-      <div class="meta">${esc(b.author||'')}${b.author?' · ':''}게시물 ${b.posts.length}</div>
+      <div class="meta">${esc(b.author||'')}${b.author?' · ':''}게시물 ${b.posts.length}${VIEWS[b.title] ? ` · 조회 ${VIEWS[b.title].toLocaleString('ko-KR')}` : ''}</div>
     </a>`;
 }
 function home() {
@@ -540,10 +549,12 @@ function home() {
   const list = shelf.filter(b => (only === 'all' || b.deep) && (!k || norm(b.title + (b.author||'')).includes(k)));
   const tab = (group, v, label, n) => `<button role="tab" aria-selected="${(group==='only'?only:order)===v}" data-g="${group}" data-v="${v}">${label}${n!=null?` <span>${n}</span>`:''}</button>`;
   const tabs = `<div class="bar"><div class="tabs" role="tablist">${tab('only','all','전체',shelf.length)}${nDeep ? tab('only','deep','원고분석한 책',nDeep) : ''}</div>
-    <div class="tabs sort" role="tablist" aria-label="정렬">${tab('order','rating','별점순')}${tab('order','recent','최근순')}</div></div>`;
+    <div class="tabs sort" role="tablist" aria-label="정렬">${tab('order','rating','별점순')}${Object.keys(VIEWS).length ? tab('order','views','많이 본 순') : ''}${tab('order','recent','최근순')}</div></div>`;
   let body;
   if (!list.length) body = `<p class="empty">「${esc(q.value)}」에 맞는 책이 없습니다.</p>`;
   else if (order === 'recent') body = `<div class="grid">${list.map(cardHtml).join('')}</div>`;
+  else if (order === 'views') body = `<p class="vnote">책 페이지 조회 수 순서입니다${viewsAt ? ` · ${esc(viewsAt)} 기준, 1시간마다 갱신` : ''}.</p>
+      <div class="grid">${[...list].sort((x, y) => (VIEWS[y.title] || 0) - (VIEWS[x.title] || 0) || y.last.localeCompare(x.last)).map(cardHtml).join('')}</div>`;
   else {
     // 별점 높은 순으로 묶고, 같은 별점 안에서는 최근 게시순
     const groups = ['5+', 5, 4, 3, 2, 1, null].map(r => ({r, items: list.filter(b => grade(b) === r)})).filter(g => g.items.length);
@@ -595,7 +606,7 @@ function book(title) {
   app.innerHTML = `<a class="back" href="${HOME}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>${SECTION === 'nonfiction' ? '비소설 ' : ''}책장으로</a>
     <div class="bookhead"><div class="cover">${coverHtml(b)}</div><div>
       <h2>${esc(b.title)}</h2>${b.rating != null ? `<div class="stars big" aria-label="별점 ${grade(b)}">${stars(b.rating, b.plus)} <span>별 ${grade(b)}${b.plus ? '' : '개'}</span></div>` : b.gajebon ? '<div class="stars big"><span>가제본으로 읽어 별점 없음</span></div>' : ''}
-      <div class="meta">${esc([b.author, b.publisher].filter(Boolean).join(' · '))}</div>
+      <div class="meta">${esc([b.author, b.publisher].filter(Boolean).join(' · '))}<span class="bviews" id="bviews" hidden></span></div>
       ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${b.link ? esc(b.store || '알라딘') + '에서 보기' : '알라딘에서 구매'} <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>${!b.link ? '<p class="disc">알라딘 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있습니다.</p>' : ''}</div>` : ''}
     </div></div>
     ${b.excerpt ? `<section class="excerpt"><p class="ex-label">서평 한 토막</p><blockquote>${esc(b.excerpt)}</blockquote><p class="ex-src">— 이프로의 인스타그램 서평에서</p></section>` : ''}
@@ -699,16 +710,24 @@ route();
   } catch (e) { /* 카운터가 안 되면 「–」로 둔다 */ }
 })();
 
-// 책 페이지별 조회 수 — 화면엔 안 보이고, 점검(popular.py)이 인기 책 순위를 읽는다.
-// 키는 b-<책 제목의 FNV-1a 32비트 16진수>(카운터 키에 한글을 못 쓴다). 같은 브라우저·같은 책은 하루 한 번.
-(function bookHit() {
-  if (!window.BOOK || !/(^|\.)bookhoster\.co\.kr$|github\.io$/.test(location.hostname)) return;
+// 책 페이지별 조회 수 — 책 머리에 실시간으로 보여 주고, 점검(popular.py)·views.json 이 같은 키를 읽는다.
+// 키는 b-<책 제목의 FNV-1a 32비트 16진수>(카운터 키에 한글을 못 쓴다). 같은 브라우저·같은 책은 하루 한 번만 올린다.
+(async function bookHit() {
+  if (!window.BOOK) return;
+  const live = /(^|\.)bookhoster\.co\.kr$|github\.io$/.test(location.hostname);  // 로컬 미리보기는 읽기만
   const day = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
   let h = 0x811c9dc5;
   for (const b of new TextEncoder().encode(window.BOOK.normalize('NFC'))) h = Math.imul(h ^ b, 0x01000193) >>> 0;
   const key = 'b-' + h.toString(16).padStart(8, '0'), mark = 'seen-' + key;
-  try { if (localStorage.getItem(mark) === day) return; localStorage.setItem(mark, day); } catch (e) {}
-  fetch(`https://abacus.jasoncameron.dev/hit/kkariboy42-bookshelf/${key}`).catch(() => {});
+  let seen = !live;
+  try { if (localStorage.getItem(mark) === day) seen = true; } catch (e) {}
+  try {
+    const r = await fetch(`https://abacus.jasoncameron.dev/${seen ? 'get' : 'hit'}/kkariboy42-bookshelf/${key}`);
+    if (!seen) try { localStorage.setItem(mark, day); } catch (e) {}
+    const v = r.ok ? (await r.json()).value : 0;
+    const el = document.getElementById('bviews');
+    if (el && v > 0) { el.textContent = ` · 조회 ${v.toLocaleString('ko-KR')}`; el.hidden = false; }
+  } catch (e) { /* 카운터가 안 되면 조용히 둔다 */ }
 })();
 </script>
 </body>
