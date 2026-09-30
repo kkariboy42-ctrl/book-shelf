@@ -1,6 +1,24 @@
 window.SHELF = {
- "updated": "2026-09-29",
+ "updated": "2026-09-30",
  "posts": [
+  {
+   "code": "Dd3w7b3CRl2",
+   "date": "2026-09-29",
+   "book": "입에 대한 앙케트",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "입에 대한 앙케트 / 세스지 / 반타 / 2025년 2월"
+  },
+  {
+   "code": "Dd3jLljiWRa",
+   "date": "2026-09-29",
+   "book": "폐놀이공원의 살인",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "『폐놀이공원의 살인』은 이렇게 생겼습니다."
+  },
   {
    "code": "DdyZkvROxwY",
    "date": "2026-09-26",
@@ -6118,7 +6136,7 @@ window.SHELF = {
    "genre": "소설",
    "deep": true,
    "slug": "입에-대한-앙케트",
-   "excerpt": ""
+   "excerpt": "그날 밤 묘지에 다녀온 대학생들의 녹음을 받아 적은 소설입니다."
   },
   "인버트": {
    "author": "아이자와 사코",
