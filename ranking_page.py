@@ -109,6 +109,13 @@ def _link(b, shelf):
     return f'https://www.aladin.co.kr/shop/wproduct.aspx?ItemId={e(str(b["item"]))}', False
 
 
+def _buy(b, cls="buy"):
+    """알라딘 구매 링크 — 서평이 있는 책도 제목은 책장으로, 이건 알라딘으로. TTB 는 리퍼러로 세므로 noreferrer 금지."""
+    url = f'https://www.aladin.co.kr/shop/wproduct.aspx?ItemId={e(str(b["item"]))}'
+    return (f'<a class="{cls}" href="{url}" target="_blank" rel="noopener" aria-label="『{e(b["short"])}』 알라딘에서 구매">'
+            '알라딘에서 구매 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>')
+
+
 def _week_html(d, weeks, shelf, cover_ok):
     books = d["books"]
     top = books[0]
@@ -145,6 +152,7 @@ def _week_html(d, weeks, shelf, cover_ok):
             f'<div class="rtop-body"><p class="rk-eyebrow">이번 주 1위</p>'
             f'<h2><a href="{href}">{e(top["short"])}</a></h2><p class="au">{e(top["who"])}</p>'
             f'<p class="crown">{e(crown)}</p>'
+            f'<p class="rbuy">{_buy(top, "buy big")}</p>'
             + (f'<dl class="rnotes">{note_html}</dl>' if note_html else "")
             + '</div></section>')
 
@@ -158,6 +166,7 @@ def _week_html(d, weeks, shelf, cover_ok):
             f'<div class="rt"><a href="{href}"{ext}>{e(b["short"])}</a>'
             f'<span class="au">{e(b["who"])}</span>'
             + ('<span class="deep">서평 있음</span>' if mine else '')
+            + _buy(b)
             + f'</div>{_spark(b.get("trail") or [])}'
             f'<div class="rchg">{_chg(b)}<span class="prev">{_prev_text(b)}</span></div></li>')
 
@@ -173,7 +182,8 @@ def _week_html(d, weeks, shelf, cover_ok):
               '위로 갈수록 높은 순위이고, 점선은 20위입니다.</p></div>'
             + f'<ol class="rlist">{"".join(rows)}</ol>'
             + '<p class="rsrc">출처: 알라딘 국내도서 베스트셀러 · 일본 추리/미스터리소설 주간 순위. '
-              '「서평 있음」은 이 책장에 서평이 있는 책이고, 나머지는 알라딘 상품 페이지로 이어집니다.</p>')
+              '「서평 있음」은 제목을 누르면 이 책장의 서평으로, 나머지는 알라딘 상품 페이지로 이어집니다. '
+              '「알라딘에서 구매」는 제휴 링크라, 그 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있습니다.</p>')
 
 
 CSS = """
@@ -216,6 +226,12 @@ CSS = """
 .chg.same{color:var(--muted);background:var(--surface-2)}.chg.new{color:#6b4b00;background:#f6e3b0}.chg.re{color:#1d4f86;background:#dde9f7}
 .rchg .prev{font-size:12px;color:var(--muted);white-space:nowrap}
 .rsrc{margin:28px 0 0;font-size:13px;color:var(--muted)}
+.buy{align-self:flex-start;display:inline-flex;align-items:center;gap:4px;margin-top:6px;font:600 12px/1 var(--sans);color:var(--accent);text-decoration:none;padding:5px 9px;border:1px solid currentColor;border-radius:999px}
+.buy:hover{background:var(--accent-soft)}
+.buy .ico{width:12px;height:12px}
+.rt .buy{font-size:12px}
+.rbuy{margin:0 0 20px}
+.buy.big{font-size:14px;padding:9px 14px}
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]) .chg.up{color:#8fe0b2;background:#173526}
   :root:not([data-theme="light"]) .chg.down{color:#f3a3b3;background:#3d1a22}

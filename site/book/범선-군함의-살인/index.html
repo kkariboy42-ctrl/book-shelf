@@ -531,7 +531,7 @@ function book(title) {
     <div class="bookhead"><div class="cover">${coverHtml(b)}</div><div>
       <h2>${esc(b.title)}</h2>${b.rating != null ? `<div class="stars big" aria-label="별점 ${grade(b)}">${stars(b.rating, b.plus)} <span>별 ${grade(b)}${b.plus ? '' : '개'}</span></div>` : b.gajebon ? '<div class="stars big"><span>가제본으로 읽어 별점 없음</span></div>' : ''}
       <div class="meta">${esc([b.author, b.publisher].filter(Boolean).join(' · '))}</div>
-      ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${esc(b.store || '알라딘')}에서 보기 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>${!b.link ? '<p class="disc">알라딘 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있습니다.</p>' : ''}</div>` : ''}
+      ${(b.link || b.aladin) ? `<div class="links"><a href="${esc(b.link || b.aladin)}" target="_blank" rel="noopener">${b.link ? esc(b.store || '알라딘') + '에서 보기' : '알라딘에서 구매'} <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>${!b.link ? '<p class="disc">알라딘 링크로 구매하시면 운영자가 소정의 수수료를 받을 수 있습니다.</p>' : ''}</div>` : ''}
     </div></div>
     ${b.excerpt ? `<section class="excerpt"><p class="ex-label">서평 한 토막</p><blockquote>${esc(b.excerpt)}</blockquote><p class="ex-src">— 이프로의 인스타그램 서평에서</p></section>` : ''}
     <div class="cols">
