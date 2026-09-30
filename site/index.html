@@ -608,7 +608,8 @@ function route() {
     return;
   }
   document.getElementById('hero').hidden = !!window.BOOK;
-  document.getElementById('proof').hidden = !!window.BOOK || SECTION === 'nonfiction';
+  const proof = document.getElementById('proof');  // 책 페이지·비소설 책장엔 맛보기 띠가 없다
+  if (proof) proof.hidden = !!window.BOOK || SECTION === 'nonfiction';
   if (window.BOOK) book(window.BOOK); else home();
 }
 if (SECTION !== 'ranking') q.addEventListener('input', () => home());
@@ -636,6 +637,18 @@ route();
     document.querySelectorAll('[data-visit="today"]').forEach(el => el.textContent = fmt(today));
     document.querySelectorAll('[data-visit="total"]').forEach(el => el.textContent = fmt(total));
   } catch (e) { /* 카운터가 안 되면 「–」로 둔다 */ }
+})();
+
+// 책 페이지별 조회 수 — 화면엔 안 보이고, 점검(popular.py)이 인기 책 순위를 읽는다.
+// 키는 b-<책 제목의 FNV-1a 32비트 16진수>(카운터 키에 한글을 못 쓴다). 같은 브라우저·같은 책은 하루 한 번.
+(function bookHit() {
+  if (!window.BOOK || !/(^|\.)bookhoster\.co\.kr$|github\.io$/.test(location.hostname)) return;
+  const day = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
+  let h = 0x811c9dc5;
+  for (const b of new TextEncoder().encode(window.BOOK.normalize('NFC'))) h = Math.imul(h ^ b, 0x01000193) >>> 0;
+  const key = 'b-' + h.toString(16).padStart(8, '0'), mark = 'seen-' + key;
+  try { if (localStorage.getItem(mark) === day) return; localStorage.setItem(mark, day); } catch (e) {}
+  fetch(`https://abacus.jasoncameron.dev/hit/kkariboy42-bookshelf/${key}`).catch(() => {});
 })();
 </script>
 </body>
