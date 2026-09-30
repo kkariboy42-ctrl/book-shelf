@@ -509,7 +509,7 @@ function home() {
       <div class="grid">${g.items.map(cardHtml).join('')}</div></section>`).join('');
   }
   const hot = shelf.filter(b => VIEWS[b.title] > 0).sort((x, y) => VIEWS[y.title] - VIEWS[x.title] || y.last.localeCompare(x.last)).slice(0, 5);
-  const top5 = !k && hot.length >= 3 ? `<section class="hot" aria-labelledby="hot-h"><div class="hot-h"><h2 id="hot-h">지금 많이 보는 책</h2><span>TOP ${hot.length} · 1시간마다 바뀝니다</span></div>
+  const top5 = !k && hot.length ? `<section class="hot" aria-labelledby="hot-h"><div class="hot-h"><h2 id="hot-h">지금 많이 보는 책</h2><span>TOP ${hot.length} · 1시간마다 바뀝니다</span></div>
       <ol class="hot-list">${hot.map((b, i) => `<li><a href="/book/${encodeURIComponent(b.slug)}/"><span class="hn">${i + 1}</span><span class="hc">${coverHtml(b)}</span><span class="ht">${esc(b.title)}</span></a></li>`).join('')}</ol></section>` : '';
   app.innerHTML = top5 + tabs + body;
   app.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { if (b.dataset.g === 'only') only = b.dataset.v; else order = b.dataset.v; home(); });
