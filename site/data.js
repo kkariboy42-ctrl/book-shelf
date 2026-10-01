@@ -1,6 +1,24 @@
 window.SHELF = {
- "updated": "2026-09-30",
+ "updated": "2026-10-01",
  "posts": [
+  {
+   "code": "Dd6H6gyCfY8",
+   "date": "2026-09-29",
+   "book": "인수세공",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "고바야시 야스미 『인수세공』"
+  },
+  {
+   "code": "Dd59q1yCUm_",
+   "date": "2026-09-29",
+   "book": "투명한 나선",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "「투명한」까지만 쳐도 나옵니다."
+  },
   {
    "code": "Dd3w7b3CRl2",
    "date": "2026-09-29",
