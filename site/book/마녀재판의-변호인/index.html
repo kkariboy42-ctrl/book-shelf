@@ -396,6 +396,17 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
 .proof .pa{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-weight:600;font-size:14px;color:var(--accent);text-decoration:none}
 .proof .pa:hover{text-decoration:underline}
 .proof[hidden]{display:none}
+.deepsec{margin:-32px calc(50% - 50vw) 56px;padding:44px calc(50vw - 50%) 48px;background:var(--surface-2);border-bottom:1px solid var(--line)}
+.deep-h{display:flex;align-items:baseline;gap:6px 14px;flex-wrap:wrap;margin:0 0 24px}
+.deep-h h2{font:500 30px/1.2 var(--serif);letter-spacing:-.03em;margin:0}
+.deep-h span{font-size:13px;color:var(--muted)}
+.deep-grid .deep:not(.gj){display:none}  /* 구역 제목이 이미 말한다 */
+@media (max-width:640px){
+  .deep-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:42%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;scrollbar-width:none;margin:0 -16px;padding:0 16px 6px;gap:16px}
+  .deep-grid::-webkit-scrollbar{display:none}
+  .deep-grid .book{scroll-snap-align:start}
+  .deepsec{padding-top:32px;padding-bottom:36px}
+}
 .hot{margin:0 0 48px}
 .hot-h{display:flex;align-items:baseline;gap:6px 14px;flex-wrap:wrap;margin:0 0 16px}
 .hot-h h2{font:500 26px/1.2 var(--serif);letter-spacing:-.025em;margin:0}
@@ -511,7 +522,12 @@ function home() {
   const hot = shelf.filter(b => VIEWS[b.title] > 0).sort((x, y) => VIEWS[y.title] - VIEWS[x.title] || y.last.localeCompare(x.last)).slice(0, 5);
   const top5 = !k && hot.length ? `<section class="hot" aria-labelledby="hot-h"><div class="hot-h"><h2 id="hot-h">지금 많이 보는 책</h2><span>TOP ${hot.length} · 1시간마다 바뀝니다</span></div>
       <ol class="hot-list">${hot.map((b, i) => `<li><a href="/book/${encodeURIComponent(b.slug)}/"><span class="hn">${i + 1}</span><span class="hc">${coverHtml(b)}</span><span class="ht">${esc(b.title)}</span></a></li>`).join('')}</ol></section>` : '';
-  app.innerHTML = top5 + tabs + body;
+  // 원고분석한 책 — 첫 화면 맨 앞, 별점 높은 순(별점 없는 가제본은 뒤), 같은 별점은 최근 게시순
+  const rank = b => b.rating == null ? -1 : (b.plus ? 6 : b.rating);
+  const deep = shelf.filter(b => b.deep).sort((x, y) => rank(y) - rank(x) || y.last.localeCompare(x.last));
+  const deepSec = !k && only === 'all' && deep.length ? `<section class="deepsec" aria-labelledby="deep-h"><div class="deep-h"><h2 id="deep-h">원고분석한 책</h2><span>원고 전문을 쪽수 단위로 읽고 인물·사건·복선을 정리한 책 · 별점순</span></div>
+      <div class="grid deep-grid">${deep.map(cardHtml).join('')}</div></section>` : '';
+  app.innerHTML = deepSec + top5 + tabs + body;
   app.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { if (b.dataset.g === 'only') only = b.dataset.v; else order = b.dataset.v; home(); });
 }
 
