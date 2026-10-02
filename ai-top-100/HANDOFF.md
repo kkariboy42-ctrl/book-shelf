@@ -109,8 +109,8 @@ $dir  = "ai-top-100\village-office\assets"; New-Item -ItemType Directory -Force 
 
 ## 6. 남은 할 일 (우선순위)
 
-1. [ ] **지난 대회 문제 분석** — `C:\Users\kkari\Downloads\AI 100` + 브런치 후기(`https://brunch.co.kr/@andkakao/323` 등) → `ai-top-100/problems/분석.md`
-2. [ ] 분석 결과로 README 함정 표·toolkit 보강, 마을 조합 테마의 **예상 문제 + 연습용 가짜 데이터 세트**(엑셀·영수증 이미지·PDF 숨은 글자) 제작
+1. [x] **지난 대회 문제 분석** (2026-10-02 PC 세션 완료 → `problems/분석.md`, 석판은 직접 풀어 `AITOP100` 확인) — `C:\Users\kkari\Downloads\AI 100` + 브런치 후기(`https://brunch.co.kr/@andkakao/323` 등) → `ai-top-100/problems/분석.md`
+2. [~] README 함정 표·toolkit 보강 **완료**(2026-10-02) / 남은 것: 마을 조합 테마의 **예상 문제 + 연습용 가짜 데이터 세트**(엑셀·영수증 이미지·PDF 숨은 글자) 제작
 3. [ ] **사내 대시보드 AI 오피스 참고**해 `village-office` 디자인 고도화
 4. [ ] 힉스필드 이미지 내려받기(§3) → 눈으로 확인 → 핫스팟 좌표 조정
 5. [ ] 10/23 안내 메일 수신 후 README §1 "모르는 것" 채우기 — 특히 **미리 만든 코드·템플릿 사용 가능 여부**
