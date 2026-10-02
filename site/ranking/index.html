@@ -407,22 +407,6 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
   .deep-grid .book{scroll-snap-align:start}
   .deepsec{padding-top:32px;padding-bottom:36px}
 }
-.hot{margin:0 0 48px}
-.hot-h{display:flex;align-items:baseline;gap:6px 14px;flex-wrap:wrap;margin:0 0 16px}
-.hot-h h2{font:500 26px/1.2 var(--serif);letter-spacing:-.025em;margin:0}
-.hot-h span{font-size:13px;color:var(--muted)}
-.hot-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
-.hot-list a{display:grid;grid-template-columns:auto 1fr;gap:6px 10px;text-decoration:none;color:inherit}
-.hot-list .hn{grid-row:1/3;font:500 34px/1 var(--serif);letter-spacing:-.04em;color:var(--gold);font-variant-numeric:tabular-nums}
-.hot-list .hc img,.hot-list .hc .ph{width:100%;aspect-ratio:500/734;object-fit:cover;border-radius:2px 4px 4px 2px;box-shadow:0 1px 2px rgba(0,0,0,.08),0 6px 14px -8px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;background:var(--surface-2);font:500 12px/1.3 var(--serif);text-align:center;transition:transform .7s var(--spring)}
-.hot-list a:hover .hc img{transform:translateY(-4px)}
-.hot-list .ht{font:600 14px/1.35 var(--sans);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-@media (max-width:640px){
-  .hot-list{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:38%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;scrollbar-width:none;margin:0 -16px;padding:0 16px 6px;gap:14px}
-  .hot-list::-webkit-scrollbar{display:none}
-  .hot-list li{scroll-snap-align:start}
-  .hot-list .hn{font-size:28px}
-}
 .nw{white-space:nowrap}
 @media (max-width:640px){.proof .wrap{grid-template-columns:1fr;gap:10px;padding-top:32px;padding-bottom:32px}}
 </style>
@@ -554,13 +538,6 @@ const coverHtml = b => b.cover ? `<img src="/${esc(b.cover)}" alt="${esc(b.title
 const stars = (r, plus) => r == null ? '' : '★'.repeat(Math.round(r)) + '☆'.repeat(5 - Math.round(r)) + (plus ? '<b class="plus">+</b>' : '');
 const grade = b => b.rating == null ? null : (b.plus ? '5+' : Math.round(b.rating));
 let only = 'all', order = 'rating';
-// 책별 조회 수 모음(첫 화면 TOP 5 용) — 배포 작업이 1시간마다 카운터에서 모아 /views.json 으로 굽는다(방문자마다 161번 부르지 않으려고)
-let VIEWS = {};
-fetch('/views.json', {cache: 'no-cache'}).then(r => r.ok ? r.json() : null).then(v => {
-  if (!v || !v.views) return;
-  VIEWS = v.views;
-  if (!window.BOOK && SECTION !== 'ranking') home();
-}).catch(() => {});
 function cardHtml(b) {
   return `<a class="book" href="/book/${encodeURIComponent(b.slug)}/">
       <div class="cover">${coverHtml(b)}</div>
@@ -584,15 +561,12 @@ function home() {
     body = groups.map(g => `<section class="rgroup${g.r === '5+' ? ' plus' : ''}"><h2 class="rh"><span class="num" aria-hidden="true">${g.r == null ? '–' : g.r}</span>${g.r == null ? '별점 없음 <span class="sub">가제본·별점을 안 준 책</span>' : g.r === '5+' ? `<span class="st">${stars(5, true)}</span> 별 5+ <span class="sub">5점을 넘은 책</span>` : `<span class="st">${stars(g.r)}</span> 별 ${g.r}개`} <span class="n">${g.items.length}권</span></h2>
       <div class="grid">${g.items.map(cardHtml).join('')}</div></section>`).join('');
   }
-  const hot = shelf.filter(b => VIEWS[b.title] > 0).sort((x, y) => VIEWS[y.title] - VIEWS[x.title] || y.last.localeCompare(x.last)).slice(0, 5);
-  const top5 = !k && hot.length ? `<section class="hot" aria-labelledby="hot-h"><div class="hot-h"><h2 id="hot-h">지금 많이 보는 책</h2><span>TOP ${hot.length} · 1시간마다 바뀝니다</span></div>
-      <ol class="hot-list">${hot.map((b, i) => `<li><a href="/book/${encodeURIComponent(b.slug)}/"><span class="hn">${i + 1}</span><span class="hc">${coverHtml(b)}</span><span class="ht">${esc(b.title)}</span></a></li>`).join('')}</ol></section>` : '';
   // 원고분석한 책 — 첫 화면 맨 앞, 별점 높은 순(별점 없는 가제본은 뒤), 같은 별점은 최근 게시순
   const rank = b => b.rating == null ? -1 : (b.plus ? 6 : b.rating);
   const deep = shelf.filter(b => b.deep).sort((x, y) => rank(y) - rank(x) || y.last.localeCompare(x.last));
   const deepSec = !k && only === 'all' && deep.length ? `<section class="deepsec" aria-labelledby="deep-h"><div class="deep-h"><h2 id="deep-h">원고분석한 책</h2><span>원고 전문을 쪽수 단위로 읽고 인물·사건·복선을 정리한 책 · 별점순</span></div>
       <div class="grid deep-grid">${deep.map(cardHtml).join('')}</div></section>` : '';
-  app.innerHTML = deepSec + top5 + tabs + body;
+  app.innerHTML = deepSec + tabs + body;
   app.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { if (b.dataset.g === 'only') only = b.dataset.v; else order = b.dataset.v; home(); });
 }
 
@@ -741,7 +715,7 @@ route();
   } catch (e) { /* 카운터가 안 되면 「–」로 둔다 */ }
 })();
 
-// 책 페이지별 조회 수 — 화면엔 숫자를 안 보이고, views.json(첫 화면 「지금 많이 보는 책」 TOP 5)·점검(popular.py)이 같은 키를 읽는다.
+// 책 페이지별 조회 수 — 화면엔 안 보이고, 점검(popular.py)이 인기 책 순위를 읽는다.
 // 키는 b-<책 제목의 FNV-1a 32비트 16진수>(카운터 키에 한글을 못 쓴다). 같은 브라우저·같은 책은 하루 한 번만 올린다.
 (async function bookHit() {
   if (!window.BOOK) return;
@@ -756,6 +730,42 @@ route();
     try { localStorage.setItem(mark, day); } catch (e) {}
   } catch (e) { /* 카운터가 안 되면 조용히 둔다 */ }
 })();
+</script>
+<script type="module">
+// 움직임 — anime.js v4(MIT). 숫자·선이 내용을 말하는 곳에만 쓴다: 맛보기 쪽수, 순위 탭 8주 선, 원고분석한 책 카드.
+// 동작 줄이기 설정이면 아무것도 안 하고, 라이브러리를 못 불러오면 정적인 화면 그대로 둔다.
+// 페이지마다 있는 요소가 다르다(책·순위·비소설) — 전부 있는지 먼저 본다.
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  try {
+    const { animate, stagger, createDrawable } = await import('https://cdn.jsdelivr.net/npm/animejs@4.5.0/+esm');
+    const once = (el, fn, threshold = .35) => {
+      if (!el) return;
+      const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); fn(); } }, {threshold});
+      io.observe(el);
+    };
+    // 맛보기: 화살표가 그어지고, 끝 쪽수가 36 에서 383 까지 넘어간다 — 「347쪽을 건너뛴다」를 눈으로
+    const pp = document.querySelector('.proof .pp');
+    once(pp, () => {
+      const to = pp.querySelector('.pn'), path = pp.querySelector('svg path');
+      if (!to || !path) return;
+      const n = {v: 36};
+      to.textContent = '36';
+      animate(createDrawable(path), {draw: ['0 0', '0 1'], duration: 500, ease: 'inOutQuad'});
+      animate(n, {v: 383, duration: 1700, delay: 300, ease: 'outExpo', onUpdate: () => { to.textContent = Math.round(n.v); }});
+    });
+    // 순위 탭: 8주 순위 선이 줄마다 차례로 그려지고, 오르내림 표시가 뒤따른다
+    const rl = document.querySelector('.rlist');
+    once(rl, () => {
+      const lines = rl.querySelectorAll('.spark polyline');
+      if (lines.length) animate(createDrawable(lines), {draw: ['0 0', '0 1'], duration: 900, delay: stagger(40), ease: 'inOutSine'});
+      animate(rl.querySelectorAll('.spark circle'), {opacity: [0, 1], duration: 300, delay: stagger(40, {start: 750})});
+      animate(rl.querySelectorAll('.chg'), {opacity: [0, 1], translateX: [8, 0], duration: 450, delay: stagger(40, {start: 250}), ease: 'outQuad'});
+    }, .05);
+    // 원고분석한 책: 첫 화면에 처음 보일 때 한 번, 카드가 차례로 올라온다
+    const dg = document.querySelector('.deep-grid');
+    once(dg, () => animate(dg.querySelectorAll('.book'), {opacity: [0, 1], translateY: [18, 0], duration: 650, delay: stagger(70), ease: 'outCubic'}), .15);
+  } catch (e) { /* 움직임 없이도 화면은 같다 */ }
+}
 </script>
 </body>
 </html>

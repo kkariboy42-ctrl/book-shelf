@@ -5,7 +5,7 @@
 
     py -3 popular.py            # 상위 20권
     py -3 popular.py --all      # 전부(0회 포함)
-    python3 popular.py --json site/views.json   # 배포 작업(pages.yml)이 1시간마다
+    py -3 popular.py --json site/views.json     # 표를 JSON 으로도(지금 사이트는 안 쓴다)
 """
 import json, os, sys, time, unicodedata, urllib.request, urllib.error
 from concurrent.futures import ThreadPoolExecutor
