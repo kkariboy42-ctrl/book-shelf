@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>교동·갯마을 AX 오피스</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --bg:#070b16; --bg2:#0d1424; --panel:rgba(18,26,46,.72); --line:rgba(148,163,184,.14);
+  --text:#e6ecf7; --muted:#8a96ad; --dim:#5b6780;
+  --cyan:#5eead4; --farm:#a3e635; --sea:#60a5fa; --warn:#fbbf24; --ok:#34d399; --hub:#c4b5fd;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:Pretendard,"Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;
+  background:radial-gradient(1200px 600px at 15% -10%,rgba(94,234,212,.08),transparent 60%),
+             radial-gradient(900px 500px at 100% 0%,rgba(96,165,250,.08),transparent 60%),var(--bg);
+  color:var(--text); letter-spacing:-.01em; overflow-x:hidden; min-height:100%; background-attachment:fixed;
+}
+.wrap{max-width:1680px;margin:0 auto;padding:20px 24px 28px;display:grid;gap:16px;
+  grid-template-columns:minmax(0,1fr) 400px;
+  grid-template-areas:"head head" "scene side" "pipe side" "bottom bottom";}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);position:relative;overflow:hidden}
+.panel h3{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;
+  display:flex;align-items:center;gap:8px;padding:14px 18px 0}
+.panel h3 .dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+
+/* 헤더 */
+header{grid-area:head;display:flex;align-items:center;gap:16px}
+.logo{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;
+  background:conic-gradient(from 210deg,var(--farm),var(--cyan),var(--sea),var(--farm));
+  box-shadow:0 0 24px rgba(94,234,212,.35)}
+.logo i{width:36px;height:36px;border-radius:11px;background:var(--bg);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:13px}
+header h1{font-size:22px;font-weight:800}
+header p{font-size:13px;color:var(--muted)}
+.live{margin-left:auto;display:flex;align-items:center;gap:10px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);
+  background:rgba(255,255,255,.03);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.pill b{color:var(--text);font-weight:600}
+.rec{width:8px;height:8px;border-radius:50%;background:#f43f5e;animation:blink 1.4s infinite}
+.paused .rec{background:var(--dim);animation:none}
+@keyframes blink{50%{opacity:.25}}
+button{font:inherit;cursor:pointer;color:var(--text);background:rgba(255,255,255,.05);border:1px solid var(--line);
+  border-radius:999px;padding:8px 14px;font-size:13px;transition:.2s}
+button:hover{background:rgba(94,234,212,.12);border-color:rgba(94,234,212,.4)}
+
+/* 장면 */
+.scene{grid-area:scene;aspect-ratio:21/9;min-height:360px}
+.scene .bg{position:absolute;inset:0;background:
+  radial-gradient(60% 80% at 25% 70%,rgba(163,230,53,.18),transparent 60%),
+  radial-gradient(60% 80% at 78% 70%,rgba(96,165,250,.2),transparent 60%),
+  linear-gradient(180deg,#0b1430,#122046 55%,#1b2b4f)}
+.scene img.bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s}
+.scene img.bgimg.on{opacity:1}
+.scene .vignette{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(7,11,22,.55),transparent 25%,transparent 70%,rgba(7,11,22,.8)),
+             radial-gradient(120% 100% at 50% 50%,transparent 60%,rgba(7,11,22,.6))}
+.scene svg.links{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.links path{fill:none;stroke:url(#lg);stroke-width:.35;stroke-dasharray:1.2 1.6;animation:flow 2.4s linear infinite;opacity:.55}
+.links path.hot{stroke-width:.6;opacity:1}
+@keyframes flow{to{stroke-dashoffset:-11}}
+.tag{position:absolute;left:18px;top:16px;display:flex;gap:8px}
+.tag span{font-size:12px;padding:6px 12px;border-radius:999px;background:rgba(7,11,22,.6);border:1px solid var(--line);backdrop-filter:blur(8px)}
+.tag .f{color:var(--farm)} .tag .s{color:var(--sea)}
+
+.spot{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:6px;
+  transition:left 1s cubic-bezier(.6,0,.2,1),top 1s cubic-bezier(.6,0,.2,1)}
+.spot .av{width:58px;height:58px;border-radius:50%;padding:3px;background:conic-gradient(var(--c),transparent 70%,var(--c));
+  box-shadow:0 0 0 4px rgba(7,11,22,.6),0 8px 30px rgba(0,0,0,.5)}
+.spot .av img,.spot .av .ph{width:100%;height:100%;border-radius:50%;object-fit:cover;background:#1c2742;display:grid;place-items:center;font-weight:700}
+.spot.agent .av{width:72px;height:72px;animation:spin 6s linear infinite}
+.spot.agent .av img,.spot.agent .av .ph{animation:spin 6s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spot .nm{font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:rgba(7,11,22,.75);border:1px solid var(--line);white-space:nowrap}
+.spot .pulse{position:absolute;top:29px;left:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;border:2px solid var(--c);opacity:0}
+.spot.agent .pulse{top:36px;width:72px;height:72px;margin:-36px 0 0 -36px}
+.spot.speaking .pulse{animation:ring 1.4s ease-out 2}
+@keyframes ring{0%{transform:scale(.9);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.bubble{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translate(-50%,6px) scale(.96);opacity:0;
+  width:max-content;max-width:280px;padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.45;
+  background:rgba(250,252,255,.96);color:#0b1020;box-shadow:0 12px 40px rgba(0,0,0,.45);transition:.35s;pointer-events:none}
+.bubble::after{content:"";position:absolute;top:100%;left:50%;margin-left:-7px;border:7px solid transparent;border-top-color:rgba(250,252,255,.96)}
+.spot.agent .bubble{background:rgba(13,20,36,.95);color:var(--text);border:1px solid rgba(94,234,212,.5)}
+.spot.agent .bubble::after{border-top-color:rgba(94,234,212,.5)}
+.spot.speaking .bubble{opacity:1;transform:translate(-50%,0) scale(1)}
+
+/* 오른쪽 */
+.side{grid-area:side;display:grid;gap:16px;grid-template-rows:auto minmax(0,1fr);min-height:0}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px}
+.kpi{padding:14px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+.kpi .l{font-size:12px;color:var(--muted)}
+.kpi .v{font-size:30px;font-weight:800;margin-top:6px;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.kpi .v small{font-size:12px;font-weight:500;color:var(--muted);margin-left:4px}
+.kpi.bump .v{animation:bump .6s}
+@keyframes bump{30%{color:var(--cyan);transform:translateY(-2px)}}
+.log{display:flex;flex-direction:column;min-height:0}
+.feed{list-style:none;padding:10px 14px 14px;overflow:auto;display:flex;flex-direction:column;gap:8px;flex:1;min-height:200px;
+  mask-image:linear-gradient(180deg,#000 85%,transparent)}
+.feed li{display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:start;padding:10px;border-radius:12px;
+  background:rgba(255,255,255,.025);border:1px solid transparent;animation:in .45s ease-out}
+.feed li.agent{border-color:rgba(94,234,212,.18)}
+.feed li.warn{border-color:rgba(251,191,36,.35)}
+.feed li.ok{border-color:rgba(52,211,153,.35)}
+@keyframes in{from{opacity:0;transform:translateY(-8px)}}
+.feed img,.feed .ph{width:32px;height:32px;border-radius:50%;object-fit:cover;background:#1c2742;display:grid;place-items:center;font-size:11px}
+.feed .meta{font-size:11px;color:var(--dim);display:flex;gap:6px;align-items:center}
+.feed .meta .st{padding:1px 7px;border-radius:999px;background:rgba(94,234,212,.12);color:var(--cyan)}
+.feed .tx{font-size:13px;line-height:1.45;margin-top:2px}
+.feed .talk .tx{color:#cbd5e1;font-style:italic}
+
+/* 파이프라인 */
+.pipe{grid-area:pipe;padding-bottom:18px}
+.stages{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:22px 18px 0;position:relative}
+.stage{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;z-index:1}
+.stage .node{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;font-size:22px;font-weight:800;
+  background:var(--bg2);border:1px solid var(--line);transition:.4s;font-variant-numeric:tabular-nums}
+.stage.active .node{border-color:var(--cyan);box-shadow:0 0 0 6px rgba(94,234,212,.08),0 0 32px rgba(94,234,212,.35);color:var(--cyan)}
+.stage.done .node{border-color:rgba(52,211,153,.5);color:var(--ok)}
+.stage b{font-size:15px}
+.stage small{font-size:12px;color:var(--muted)}
+.track{position:absolute;left:12.5%;right:12.5%;top:54px;height:2px;background:var(--line);z-index:0}
+.track i{position:absolute;inset:0;width:0;background:linear-gradient(90deg,var(--farm),var(--cyan),var(--sea));transition:width .8s;box-shadow:0 0 12px var(--cyan)}
+.track .pk{position:absolute;top:-3px;width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);animation:run 2.2s linear infinite}
+@keyframes run{from{left:0;opacity:0}10%{opacity:1}90%{opacity:1}to{left:100%;opacity:0}}
+
+/* 하단 */
+.bottom{grid-area:bottom;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px}
+.roster{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:14px}
+.card{padding:14px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;transition:.3s}
+.card.speaking{border-color:var(--c);box-shadow:0 0 24px -6px var(--c)}
+.card img,.card .ph{width:64px;height:64px;border-radius:50%;object-fit:cover;background:#1c2742;display:grid;place-items:center}
+.card b{font-size:14px} .card small{font-size:12px;color:var(--muted)}
+.card .badge{font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--c)}
+.chart{padding:6px 18px 14px}
+.chart svg{width:100%;height:190px;display:block}
+.legend{display:flex;gap:16px;font-size:12px;color:var(--muted);padding:12px 18px 0}
+.legend span::before{content:"";display:inline-block;width:10px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle;background:var(--k)}
+
+@media (max-width:1100px){
+  .wrap{grid-template-columns:1fr;grid-template-areas:"head" "scene" "side" "pipe" "bottom"}
+  .bottom{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .wrap{padding:16px}
+  header{flex-wrap:wrap} .live{margin-left:0}
+  .scene{aspect-ratio:auto;height:300px;min-height:0}
+  .spot .av{width:42px;height:42px} .spot.agent .av{width:52px;height:52px}
+  .bubble{max-width:180px;font-size:12px}
+  .spot .nm,.tag{display:none}
+  .stage small{display:none}
+  .roster{grid-template-columns:repeat(2,1fr)}
+  .stage .node{width:48px;height:48px;font-size:17px} .track{top:46px}
+}
+</style>
+</head>
+<body>
+<div class="wrap" id="app">
+  <header>
+    <div class="logo"><i>AX</i></div>
+    <div><h1 id="title"></h1><p id="subtitle"></p></div>
+    <div class="live">
+      <span class="pill"><span class="rec"></span><b id="clock">00:00</b> 경과</span>
+      <button id="play">일시정지</button>
+      <button id="reset">처음부터</button>
+    </div>
+  </header>
+
+  <section class="panel scene" id="scene">
+    <div class="bg"></div>
+    <img class="bgimg" id="bgimg" alt="">
+    <div class="vignette"></div>
+    <svg class="links" id="links" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#a3e635"/><stop offset=".5" stop-color="#5eead4"/><stop offset="1" stop-color="#60a5fa"/></linearGradient></defs>
+    </svg>
+    <div class="tag"><span class="f">● 교동마을 · 농산물</span><span class="s">● 갯마을 · 수산물</span></div>
+  </section>
+
+  <aside class="side">
+    <section class="panel"><h3><span class="dot"></span>성과 지표</h3><div class="kpis" id="kpis"></div></section>
+    <section class="panel log"><h3><span class="dot"></span>현장 로그</h3><ul class="feed" id="feed"></ul></section>
+  </aside>
+
+  <section class="panel pipe">
+    <h3><span class="dot"></span>데이터 파이프라인</h3>
+    <div class="stages" id="stages"><div class="track"><i id="trackFill"></i><span class="pk"></span></div></div>
+  </section>
+
+  <div class="bottom">
+    <section class="panel"><h3><span class="dot"></span>등장인물</h3><div class="roster" id="roster"></div></section>
+    <section class="panel">
+      <h3><span class="dot"></span><span id="chartLabel"></span></h3>
+      <div class="legend"><span style="--k:#5b6780">도입 전</span><span style="--k:#5eead4">에이전트 도입 후</span></div>
+      <div class="chart"><svg id="chart" viewBox="0 0 600 190" preserveAspectRatio="none"></svg></div>
+    </section>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script>
+(() => {
+  const D = window.OFFICE_DATA;
+  const $ = (s) => document.querySelector(s);
+  const COLOR = { "교동": "var(--farm)", "갯마을": "var(--sea)", "공동": "var(--warn)", "허브": "var(--cyan)" };
+  const byId = Object.fromEntries(D.people.map(p => [p.id, p]));
+  const stageIdx = Object.fromEntries(D.stages.map((s, i) => [s.id, i]));
+
+  // 이미지: 로컬 → CDN → 이니셜
+  function pic(src, alt, cls = "") {
+    const el = document.createElement("img");
+    el.alt = alt; el.className = cls; el.loading = "lazy";
+    let tried = 0;
+    el.onerror = () => {
+      tried++;
+      if (tried === 1 && src.cdn) el.src = src.cdn;
+      else { const ph = document.createElement("div"); ph.className = "ph " + cls; ph.textContent = /^[가-힣]{3}$/.test(alt) ? alt.slice(1) : alt.slice(0, 2); el.replaceWith(ph); }
+    };
+    el.src = src.local || src.cdn;
+    return el;
+  }
+
+  $("#title").textContent = D.title;
+  $("#subtitle").textContent = D.subtitle;
+  document.title = D.title;
+  $("#chartLabel").textContent = D.trend.label;
+
+  // 배경
+  const bg = $("#bgimg");
+  bg.onload = () => bg.classList.add("on");
+  bg.onerror = () => { if (bg.src !== D.scene.cdn) bg.src = D.scene.cdn; };
+  bg.src = D.scene.local;
+
+  // 장면 핫스팟 + 연결선
+  const scene = $("#scene"), links = $("#links");
+  const hub = D.people.find(p => p.isAgent);
+  const spots = {}, paths = {};
+  D.people.forEach(p => {
+    const s = document.createElement("div");
+    s.className = "spot" + (p.isAgent ? " agent" : "");
+    s.style.left = p.x + "%"; s.style.top = p.y + "%";
+    s.style.setProperty("--c", COLOR[p.village] || "var(--cyan)");
+    const av = document.createElement("div"); av.className = "av"; av.appendChild(pic(p.img, p.name));
+    s.innerHTML = `<div class="bubble"></div><span class="pulse"></span>`;
+    s.insertBefore(av, s.children[1]);
+    s.insertAdjacentHTML("beforeend", `<span class="nm">${p.name} · ${p.role}</span>`);
+    scene.appendChild(s); spots[p.id] = s;
+    if (!p.isAgent) {
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      const mx = (p.x + hub.x) / 2, my = Math.min(p.y, hub.y) - 12;
+      path.setAttribute("d", `M${hub.x} ${hub.y} Q${mx} ${my} ${p.x} ${p.y}`);
+      links.appendChild(path); paths[p.id] = path;
+    }
+  });
+
+  // KPI
+  const kpiEls = {};
+  const kpiVal = {};
+  D.kpis.forEach(k => {
+    kpiVal[k.id] = k.value;
+    const el = document.createElement("div"); el.className = "kpi";
+    el.innerHTML = `<div class="l">${k.label}</div><div class="v"><span>${k.value}</span><small>${k.unit}</small></div>`;
+    $("#kpis").appendChild(el); kpiEls[k.id] = el;
+  });
+  function animateNum(span, from, to) {
+    const t0 = performance.now(), dur = 700;
+    const step = (now) => {
+      const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      span.textContent = Math.round(from + (to - from) * e).toLocaleString("ko-KR");
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  function setKpi(id, v, overwrite) {
+    const el = kpiEls[id]; if (!el) return;
+    const from = kpiVal[id];
+    kpiVal[id] = overwrite ? v : from + v;
+    animateNum(el.querySelector("span"), from, kpiVal[id]);
+    el.classList.remove("bump"); void el.offsetWidth; el.classList.add("bump");
+  }
+
+  // 파이프라인
+  const stageEls = {}, stageCnt = {};
+  D.stages.forEach((s, i) => {
+    stageCnt[s.id] = 0;
+    const el = document.createElement("div"); el.className = "stage";
+    el.innerHTML = `<div class="node">0</div><b>${i + 1}. ${s.label}</b><small>${s.desc}</small>`;
+    $("#stages").appendChild(el); stageEls[s.id] = el;
+  });
+  function setStage(id) {
+    const n = stageIdx[id]; if (n == null) return;
+    stageCnt[id]++;
+    D.stages.forEach((s, i) => {
+      const el = stageEls[s.id];
+      el.classList.toggle("active", s.id === id);
+      el.classList.toggle("done", i < n || (stageCnt[s.id] > 0 && s.id !== id));
+      el.querySelector(".node").textContent = stageCnt[s.id];
+    });
+    $("#trackFill").style.width = (n / (D.stages.length - 1) * 100) + "%";
+  }
+
+  // 등장인물 카드
+  const cards = {};
+  D.people.forEach(p => {
+    const c = document.createElement("div"); c.className = "card";
+    c.style.setProperty("--c", COLOR[p.village] || "var(--cyan)");
+    c.appendChild(pic(p.img, p.name));
+    c.insertAdjacentHTML("beforeend", `<b>${p.name}</b><small>${p.role}</small><span class="badge">${p.village}</span>`);
+    $("#roster").appendChild(c); cards[p.id] = c;
+  });
+
+  // 로그
+  const feed = $("#feed");
+  function log(ev) {
+    const p = byId[ev.who] || hub;
+    const li = document.createElement("li");
+    li.className = [p.isAgent ? "agent" : "", ev.kind === "talk" ? "talk" : "", ev.level || ""].join(" ");
+    li.appendChild(pic(p.img, p.name));
+    const st = D.stages[stageIdx[ev.stage]];
+    li.insertAdjacentHTML("beforeend",
+      `<div><div class="meta">${p.name} · ${clockText()}${st ? `<span class="st">${st.label}</span>` : ""}</div><div class="tx"></div></div>`);
+    li.querySelector(".tx").textContent = ev.kind === "talk" ? `“${ev.text}”` : ev.text;
+    feed.prepend(li);
+    while (feed.children.length > 40) feed.lastChild.remove();
+  }
+
+  // 말풍선 + 에이전트가 말한 사람 쪽으로 다가감
+  const timers = {};
+  function speak(ev) {
+    const p = byId[ev.who] || hub, s = spots[p.id];
+    s.querySelector(".bubble").textContent = ev.text;
+    s.classList.remove("speaking"); void s.offsetWidth; s.classList.add("speaking");
+    cards[p.id].classList.add("speaking");
+    clearTimeout(timers[p.id]);
+    timers[p.id] = setTimeout(() => { s.classList.remove("speaking"); cards[p.id].classList.remove("speaking"); }, 3200);
+    Object.values(paths).forEach(x => x.classList.remove("hot"));
+    if (!p.isAgent && paths[p.id]) {
+      paths[p.id].classList.add("hot");
+      const a = spots[hub.id];
+      a.style.left = (hub.x + (p.x - hub.x) * .35) + "%";
+      a.style.top = (hub.y + (p.y - hub.y) * .35) + "%";
+    } else if (p.isAgent) {
+      const a = spots[hub.id];
+      a.style.left = hub.x + "%"; a.style.top = hub.y + "%";
+    }
+  }
+
+  function apply(ev) {
+    speak(ev); log(ev);
+    if (ev.stage) setStage(ev.stage);
+    if (ev.kpi) for (const [k, v] of Object.entries(ev.kpi)) setKpi(k, v, k === "acc");
+  }
+
+  // 재생 엔진
+  let elapsed = 0, last = performance.now(), playing = true, cursor = 0;
+  const script = [...D.SCRIPT].sort((a, b) => a.t - b.t);
+  function clockText() { const s = Math.floor(elapsed); return String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0"); }
+  function tick(now) {
+    if (playing) {
+      elapsed += (now - last) / 1000;
+      while (cursor < script.length && script[cursor].t <= elapsed) apply(script[cursor++]);
+      $("#clock").textContent = clockText();
+    }
+    last = now; requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  $("#play").onclick = () => {
+    playing = !playing;
+    $("#play").textContent = playing ? "일시정지" : "재생";
+    document.body.classList.toggle("paused", !playing);
+  };
+  $("#reset").onclick = () => location.reload();
+  addEventListener("keydown", e => { if (e.code === "Space" && e.target === document.body) { e.preventDefault(); $("#play").click(); } });
+
+  // 차트 (도입 전/후)
+  (function chart() {
+    const svg = $("#chart"), W = 600, H = 190, P = { l: 28, r: 10, t: 12, b: 26 };
+    const all = [...D.trend.before, ...D.trend.after], max = Math.ceil(Math.max(...all) / 2) * 2;
+    const n = D.trend.weeks.length;
+    const X = i => P.l + i * (W - P.l - P.r) / (n - 1), Y = v => P.t + (1 - v / max) * (H - P.t - P.b);
+    let g = "";
+    for (let v = 0; v <= max; v += max / 4) g += `<line x1="${P.l}" x2="${W - P.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="rgba(148,163,184,.12)"/><text x="${P.l - 6}" y="${Y(v) + 4}" fill="#5b6780" font-size="10" text-anchor="end">${v}</text>`;
+    D.trend.weeks.forEach((w, i) => g += `<text x="${X(i)}" y="${H - 8}" fill="#5b6780" font-size="10" text-anchor="middle">${w}</text>`);
+    const line = arr => arr.map((v, i) => `${i ? "L" : "M"}${X(i)} ${Y(v)}`).join(" ");
+    const area = line(D.trend.after) + ` L${X(n - 1)} ${Y(0)} L${X(0)} ${Y(0)} Z`;
+    svg.innerHTML = `<defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5eead4" stop-opacity=".35"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></linearGradient></defs>${g}
+      <path d="${line(D.trend.before)}" fill="none" stroke="#5b6780" stroke-width="2" stroke-dasharray="4 4"/>
+      <path d="${area}" fill="url(#ag)"/>
+      <path id="afterLine" d="${line(D.trend.after)}" fill="none" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      ${D.trend.after.map((v, i) => `<circle cx="${X(i)}" cy="${Y(v)}" r="3" fill="#070b16" stroke="#5eead4" stroke-width="2"/>`).join("")}`;
+    const p = svg.querySelector("#afterLine"), L = p.getTotalLength();
+    p.style.strokeDasharray = L; p.style.strokeDashoffset = L;
+    p.getBoundingClientRect(); p.style.transition = "stroke-dashoffset 2.4s ease"; p.style.strokeDashoffset = 0;
+  })();
+
+  // 외부에서 실제 이벤트를 흘려 넣는 입구: OFFICE.push({who:"agent", stage:"validate", text:"...", kpi:{fixed:3}})
+  window.OFFICE = { push: apply, setKpi, setStage };
+})();
+</script>
+</body>
+</html>
