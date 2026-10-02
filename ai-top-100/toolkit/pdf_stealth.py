@@ -6,6 +6,7 @@
   I  보이지 않게 그린 글자    (렌더 모드 3, 투명도 0)
   U  레이어 아래 글자         (나중에 그린 이미지·도형이 글자를 덮음)
   O  페이지 밖 글자
+  L  꺼진 레이어(선택 콘텐츠·OCG) 속 글자 — 기본 추출에 안 나온다. 레이어를 다 켠 판과 비교해 찾는다
   + 이미지 속 배경색과 비슷한 글자 → --enhance 로 페이지를 대비 극대화해 PNG 로 저장, 눈·OCR 로 읽는다
 
   python pdf_stealth.py 문서.pdf                 # 의심 구간 목록
@@ -70,6 +71,29 @@ def scan_page(page):
     return hits
 
 
+def hidden_layers(path):
+    """꺼진 레이어 목록과, 레이어를 모두 켰을 때만 나타나는 줄(쪽 번호와 함께)."""
+    doc = pymupdf.open(path)
+    ocgs = doc.get_ocgs() or {}
+    off = {x: v["name"] for x, v in ocgs.items() if not v.get("on", True)}
+    if not ocgs:
+        return off, []
+    base = [p.get_text().splitlines() for p in doc]
+    on = pymupdf.open(path)
+    for cfg in on.layer_ui_configs():
+        if not cfg.get("on"):
+            on.set_layer_ui_config(cfg["number"], 0)  # 0 = 켜기
+    extra = []
+    for n, page in enumerate(on):
+        seen = list(base[n])
+        for line in page.get_text().splitlines():
+            if line in seen:
+                seen.remove(line)
+            elif line.strip():
+                extra.append((n + 1, line.strip()))
+    return off, extra
+
+
 def merge_lines(hits):
     """같은 줄·같은 태그의 조각을 이어 붙인다."""
     out = []
@@ -116,7 +140,14 @@ def report(path, enhance_dir=None):
             print(f"p{n} [{''.join(h['tags'])}] {h['size']}pt {h['bbox']}  {h['text']}")
         if not page.get_text().strip() and page.get_images():
             print(f"p{n} [이미지 페이지] 글자층 없음 → --enhance 로 대비 강화본을 눈으로 확인")
-    print(f"\n의심 구간 {total}개  (W 흰색 · S 극소 · I 투명 · U 덮임 · O 페이지 밖)")
+    off, extra = hidden_layers(path)
+    if off:
+        print(f"꺼진 레이어 {len(off)}개: {list(off.values())}")
+    for n, line in extra:
+        total += 1
+        print(f"p{n} [L] 레이어를 켜야 보임  {line}")
+    print(f"\n의심 구간 {total}개  (W 흰색 · S 극소 · I 투명 · U 덮임 · O 페이지 밖 · L 꺼진 레이어)")
+    print("주의: 「없음」은 위 여섯 방식에 대해서만이다. 이미지 속 글자는 --enhance 로 눈으로 확인할 것.")
     if enhance_dir:
         for p in enhance(doc, enhance_dir):
             print("저장:", p)
@@ -136,6 +167,8 @@ def selftest(tmp):
     p.insert_text((72, 160), "covered secret sentence here", fontsize=10)
     p.draw_rect(pymupdf.Rect(60, 148, 400, 166), color=None, fill=(0.95, 0.95, 0.95))
     p.insert_text((700, 700), "offpage secret sentence here", fontsize=10)
+    draft = doc.add_ocg("draft (under review)", on=False)
+    p.insert_text((72, 180), "layer secret sentence here", fontsize=10, oc=draft)
     # 이미지 속 배경과 거의 같은 색 글자
     im = Image.new("RGB", (600, 120), (250, 250, 250))
     ImageDraw.Draw(im).text((20, 50), "LOW CONTRAST SECRET IN IMAGE", fill=(244, 244, 244))
@@ -146,9 +179,13 @@ def selftest(tmp):
 
     hits = merge_lines(scan_page(pymupdf.open(pdf)[0]))
     found = {t: any(t in h["tags"] for h in hits) for t in "WSIUO"}
-    normal_flagged = any("Visible" in h["text"] for h in hits)
+    off, extra = hidden_layers(pdf)
+    found["L"] = any("layer secret" in line for _, line in extra) and bool(off)
+    normal_flagged = any("Visible" in h["text"] for h in hits) or any("Visible" in l for _, l in extra)
     for h in hits:
         print(f"  [{''.join(h['tags'])}] {h['text']}")
+    for n, line in extra:
+        print(f"  [L] {line}")
     saved = enhance(pymupdf.open(pdf), os.path.join(tmp, "enh"))
     ok = all(found.values()) and not normal_flagged
     print("잡은 방식:", found, "| 정상 글자 오탐:", normal_flagged)

@@ -111,8 +111,8 @@ $dir  = "ai-top-100\village-office\assets"; New-Item -ItemType Directory -Force 
 
 1. [x] **지난 대회 문제 분석** (2026-10-02 PC 세션 완료 → `problems/분석.md`, 석판은 직접 풀어 `AITOP100` 확인) — `C:\Users\kkari\Downloads\AI 100` + 브런치 후기(`https://brunch.co.kr/@andkakao/323` 등) → `ai-top-100/problems/분석.md`
 2. [~] README 함정 표·toolkit 보강 **완료**(2026-10-02) / 남은 것: 마을 조합 테마의 **예상 문제 + 연습용 가짜 데이터 세트**(엑셀·영수증 이미지·PDF 숨은 글자) 제작
-3. [ ] **사내 대시보드 AI 오피스 참고**해 `village-office` 디자인 고도화
-4. [ ] 힉스필드 이미지 내려받기(§3) → 눈으로 확인 → 핫스팟 좌표 조정
+3. [—] ~~사내 대시보드 참고 디자인 고도화~~ — 사용자 판단(10-02): 문제 풀이가 핵심이라 보류
+4. [—] ~~힉스필드 이미지 내려받기~~ — 같은 이유로 보류
 5. [ ] 10/23 안내 메일 수신 후 README §1 "모르는 것" 채우기 — 특히 **미리 만든 코드·템플릿 사용 가능 여부**
 6. [ ] 10/24~25 5시간 모의고사, 10/30 장비 리허설
 
@@ -131,3 +131,16 @@ $dir  = "ai-top-100\village-office\assets"; New-Item -ItemType Directory -Force 
 7. **사용자**: 이전용 자료와 대화 정리 요청 → 이 문서(`HANDOFF.md`)와 `ai-top-100/CLAUDE.md` 작성.
 
 사용자 선호: **모든 답변 한국어**, 확실하지 않은 정보는 추측하지 말고 모른다고 말하기, 복잡한 건 단계별로 쉽게, 첨부 파일은 전부 읽고 답하기.
+
+---
+
+## 8. 2026-10-02 PC 세션에서 한 일 (방향 전환)
+
+사용자: 「같은 문제는 안 나온다. 처음 보는 문제를 쪼개는 기획력이 중요하다 → 여러 에이전트 + 오케스트레이터 스킬로.」
+
+- `problems/분석.md` — 2025 문제 8개 분석, 석판은 직접 풀어 `AITOP100`
+- `toolkit/` 보강 — check_format(answers 모드 포함)·csv_diff·pdf_stealth(꺼진 레이어 포함)·rule_engine·api_loop·set_battle·media_cheatsheet, 전부 자가 시험 통과
+- `claude/` — 오케스트레이터 스킬 `aitop-solve` + 에이전트 9종. `py -3 claude/install.py` 로 설치(이 PC 설치 완료)
+- `practice/결과.md` — 모의01(다른 에이전트가 출제한 처음 보는 문제) **6/6 정답, 18분**. 놓친 것(꺼진 PDF 레이어, 장부 「동일」 표기)은 도구·지침에 반영
+
+다음 후보: 다른 모델(Gemini·GPT)이 출제한 모의02, 흐린 사진·손글씨 판독, 문서형·대화형·에이전트 제작형 모의, 10/23 안내 메일로 「미리 만든 도구 사용 가능 여부」 확인.

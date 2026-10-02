@@ -10,12 +10,15 @@
 | `README.md` | 이 문서 — 준비 체크리스트·당일 운영 계획 |
 | `HANDOFF.md` | 인수인계 — 지금까지 한 일, 막힌 것, 남은 할 일, 대화 기록, PC 세션용 시작 프롬프트 |
 | `village-office/` | 시연용 "AI 마을 오피스" 관제 화면 (`index.html` 을 브라우저로 열면 바로 돈다) |
+| `claude/` | **문제풀이 멀티 에이전트** — 오케스트레이터 스킬 `aitop-solve` + 에이전트 9종(정찰·함정·기획·판독·계산·검증·문서·인터뷰·에이전트제작). `py -3 claude/install.py` 로 `~/.claude` 에 설치 |
+| `practice/` | 연습 문제와 결과(`결과.md`) — 모의01(처음 보는 문제, 6/6), 전투 시뮬레이션 |
+| `toolkit/set_battle.py` | 두 팀 배치 → 승패 데이터: 문항용 통계(상성·전방/후방 두 정의·진형) + K-fold 예측 |
 | `problems/분석.md` | **2025 공개 문제 8개 분석** — 유형·입력·답 형식·함정·전략, 2026 미션 대응표 |
 | `problems/석판_STOP_판독본.py` | 예선 2번 석판 이미지를 옮겨 적은 코드 (`STOP` 입력 → `AITOP100`) |
 | `toolkit/clean.py` | 단위·품목명 통일, 중복·이상치 검출용 정제 스크립트 뼈대 |
-| `toolkit/check_format.py` | **제출 직전 형식 검사** — JSON 필수 키·허용값·대소문자·id 누락/중복, 문자열 허용 문자·단어 수 |
+| `toolkit/check_format.py` | **제출 직전 형식 검사** — JSON 배열(필수 키·허용값·대소문자·id 누락/중복), 문자열(허용 문자·단어 수), 문항별 답 묶음(정수·소수 자리·복수선택·JSON 키 순서) |
 | `toolkit/csv_diff.py` | 두 모델이 옮긴 표를 칸 단위 비교 → 다른 칸만 원본 확인 (이미지 표 OCR 검증) |
-| `toolkit/pdf_stealth.py` | PDF 숨은 글자 탐지(흰색·극소·투명·덮임·페이지 밖) + 이미지 대비 강화 |
+| `toolkit/pdf_stealth.py` | PDF 숨은 글자 탐지(흰색·극소·투명·덮임·페이지 밖·꺼진 레이어) + 이미지 대비 강화 |
 | `toolkit/rule_engine.py` | 규칙 = 함수, 번호순 검사·첫 위반에서 멈춤 → 승인/거부 JSON |
 | `toolkit/api_loop.py` | 횟수 제한 API 반복 제출 틀 — 사전 검사·간격 유지·해시 중복 방지·점수 로그 (`submit()` 은 당일 작성) |
 | `toolkit/media_cheatsheet.md` | 영상 자막·프레임 추출, 이미지 속 글자·코드, 암호 zip 명령 모음 |

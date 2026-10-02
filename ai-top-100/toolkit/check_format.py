@@ -12,6 +12,11 @@ id 개수). 제출 버튼 누르기 전에 이걸 한 번 돌린다.
   python check_format.py text "AITOP100" --charset upper,digit
   python check_format.py text "The quick brown fox jumps" --charset alpha,space --words 5
 
+  # 문항별 답 묶음 — {"Q1": "7", "Q6": {...}} 같은 답안 파일을 문항마다 정규식/JSON 키 순서로 검사
+  python check_format.py answers 답.json --rule Q1=int --rule Q2=dec1 --rule Q5=multi --rule "Q6=json:교동,갯마을"
+  (규칙: int 정수 · dec1 소수 첫째 자리 · multi 「1,3,5」 오름차순·중복 없음 · upper 대문자만 ·
+   json:키1,키2 키 순서 그대로·값 정수·": " 공백 · 그 밖의 문자열은 정규식으로 본다)
+
 --ids 에는 id 목록이 든 파일(JSON 배열·각 원소에 id 키, 또는 한 줄에 하나) 을 준다. 빠진 id·남는 id 를 알려준다.
 """
 import argparse
@@ -100,6 +105,56 @@ def check_json(a):
     return errs, warns
 
 
+PRESETS = {"int": r"-?\d+", "dec1": r"-?\d+\.\d", "upper": r"[A-Z]+", "multi": None}
+
+
+def check_answers(a):
+    errs, warns = [], []
+    with open(a.file, encoding="utf-8-sig") as f:
+        ans = json.load(f)
+    rules = dict(r.split("=", 1) for r in a.rule or [])
+    for q in rules:
+        if q not in ans:
+            errs.append(f"{q}: 답이 없다")
+    for q, v in ans.items():
+        rule = rules.get(q)
+        if rule is None:
+            warns.append(f"{q}: 규칙 없음 — 형식 미검사")
+            continue
+        if rule.startswith("json:"):
+            keys = rule[5:].split(",")
+            s = v if isinstance(v, str) else json.dumps(v, ensure_ascii=False)
+            try:
+                obj = json.loads(s)
+            except json.JSONDecodeError as e:
+                errs.append(f"{q}: JSON 아님 ({e})")
+                continue
+            if list(obj) != keys:
+                errs.append(f"{q}: 키·순서 {list(obj)} ≠ {keys}")
+            bad = [k for k, x in obj.items() if not isinstance(x, int) or isinstance(x, bool)]
+            if bad:
+                errs.append(f"{q}: 정수가 아닌 값 {bad}")
+            if '":' in s and '": ' not in s:
+                warns.append(f"{q}: 콜론 뒤 공백 없음 — 예시와 같은지 확인")
+            continue
+        s = str(v)
+        if s != s.strip():
+            errs.append(f"{q}: 앞뒤 공백")
+        if rule == "multi":
+            if not re.fullmatch(r"\d+(,\d+)*", s):
+                errs.append(f"{q}: {s!r} 는 「1,3,5」 꼴이 아니다(공백·다른 구분자?)")
+            else:
+                nums = [int(x) for x in s.split(",")]
+                if nums != sorted(set(nums)):
+                    errs.append(f"{q}: 오름차순·중복 없음이 아니다 {nums}")
+            continue
+        pat = PRESETS.get(rule, rule)
+        if not re.fullmatch(pat, s):
+            errs.append(f"{q}: {s!r} 가 규칙 {rule} 에 안 맞음")
+    warns.insert(0, f"답 {len(ans)}개, 규칙 {len(rules)}개")
+    return errs, warns
+
+
 def check_text(a):
     errs, warns = [], []
     s = a.answer
@@ -134,9 +189,12 @@ def main():
     t.add_argument("answer")
     t.add_argument("--charset", help="upper,lower,alpha,digit,space,comma,dot 조합")
     t.add_argument("--words", type=int)
+    s = sub.add_parser("answers")
+    s.add_argument("file")
+    s.add_argument("--rule", action="append", help="문항=규칙 (int, dec1, multi, upper, json:키,키, 또는 정규식)")
     a = ap.parse_args()
 
-    errs, warns = check_json(a) if a.mode == "json" else check_text(a)
+    errs, warns = {"json": check_json, "text": check_text, "answers": check_answers}[a.mode](a)
     for w in warns:
         print("  ·", w)
     for e in errs:
