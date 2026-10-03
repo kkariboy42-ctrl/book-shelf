@@ -318,11 +318,13 @@ def main():
         except Exception as e:
             print("표지 실패", t, e)
 
-    # 별점: 가제본(별점 없음) > ratings.json 「직접」 > 독서일기(N열, P열 「+」=5+) > 서평 캡션 「#이프로별N개」
+    # 별점: 가제본(별점 없음, ratings.json 「정식출간」 제외) > ratings.json 「직접」 > 독서일기(N열, P열 「+」=5+) > 서평 캡션 「#이프로별N개」
     rp = os.path.join(HERE, "ratings.json")
     rcfg = json.load(open(rp, encoding="utf-8")) if os.path.exists(rp) else {}
     manual = {k: v for k, v in rcfg.get("직접", {}).items() if not k.startswith("_")}
     alias = {k: v for k, v in rcfg.get("_일기표기", {}).items() if not k.startswith("_")}
+    # 가제본으로 읽었다가 정식 출간된 책 — 옛 서평·독서일기에 「가제본」이 남아 있어도 가제본 표시·별점 잠금을 풀었다
+    published = {k for k in rcfg.get("정식출간", {}) if not k.startswith("_")}
     diary = read_diary()
     got = {}
     gajebon = set()
@@ -335,7 +337,7 @@ def main():
     src_count = {}
     for t in shelf_books:
         d = diary.get(dkey(alias.get(t, t)))
-        if t in gajebon or (d and d["gajebon"]):
+        if (t in gajebon or (d and d["gajebon"])) and t not in published:
             r, plus, src = None, False, "가제본"
         elif t in manual:
             v = manual[t]

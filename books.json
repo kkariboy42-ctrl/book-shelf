@@ -16,7 +16,7 @@
   "cover": "covers/157fb98cf7.jpg",
   "rating": null,
   "plus": false,
-  "gajebon": true,
+  "gajebon": false,
   "genre": "소설"
  },
  "미미소기": {
@@ -28,7 +28,8 @@
   "rating": null,
   "plus": false,
   "gajebon": true,
-  "genre": "소설"
+  "genre": "소설",
+  "country_fixed": "일본"
  },
  "한국사 이상현상 연구원": {
   "author": "최인서",
@@ -971,7 +972,8 @@
   "rating": 5,
   "plus": false,
   "gajebon": false,
-  "genre": "소설"
+  "genre": "소설",
+  "country_fixed": "일본"
  },
  "밀실 황금시대의 살인": {
   "author": "가모사키 단로",
@@ -1053,7 +1055,8 @@
   "cover": "covers/elephant_head_yes24.jpg",
   "publisher": "내친구의서재",
   "link": "https://www.yes24.com/product/goods/134857890",
-  "store": "예스24"
+  "store": "예스24",
+  "country_fixed": "일본"
  },
  "백설공주에게 죽음을": {
   "author": "넬레 노이하우스",
@@ -1095,7 +1098,8 @@
   "cover": "covers/senoe_yes24.jpg",
   "publisher": "북로드",
   "link": "https://www.yes24.com/product/goods/130535085",
-  "store": "예스24"
+  "store": "예스24",
+  "country_fixed": "일본"
  },
  "십계": {
   "author": "유키 하루오",
@@ -1265,7 +1269,8 @@
   "rating": 4,
   "plus": false,
   "gajebon": false,
-  "genre": "비소설"
+  "genre": "비소설",
+  "country_fixed": "유럽"
  },
  "악어의 눈물": {
   "author": "시즈쿠이 슈스케",
@@ -1555,7 +1560,8 @@
   "rating": 4,
   "plus": false,
   "gajebon": false,
-  "genre": "소설"
+  "genre": "소설",
+  "country_fixed": "일본"
  },
  "폭발물 처리반이 조우한 스핀": {
   "author": "사토 기와무",
