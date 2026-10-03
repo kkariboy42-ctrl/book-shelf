@@ -402,6 +402,28 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
   .deepsec{padding-top:32px;padding-bottom:36px}
 }
 .nw{white-space:nowrap}
+
+/* 필터 */
+.fbar{display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap;margin:-24px 0 18px}
+.ftoggle{display:inline-flex;align-items:center;gap:6px;font:600 14px var(--sans);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+.ftoggle[aria-expanded="true"]{border-color:var(--ink)}
+.ftoggle b{display:inline-grid;place-items:center;min-width:20px;height:20px;border-radius:999px;background:var(--accent);color:#fff;font-size:12px;padding:0 6px}
+.ftoggle .ico{width:16px;height:16px}
+.fclear{font:600 13px var(--sans);color:var(--muted);background:none;border:0;text-decoration:underline;cursor:pointer;padding:4px}
+.fcount{margin-left:auto;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.fpanel{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:6px 18px;margin:0 0 36px}
+.fpanel[hidden]{display:none}
+.fg{display:grid;grid-template-columns:7em 1fr;gap:6px 14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.fg:last-child{border-bottom:0}
+.fl{font-size:13px;font-weight:600;color:var(--muted);padding-top:6px}
+.fv{display:flex;flex-wrap:wrap;gap:6px}
+.fchip{font:500 13px/1 var(--sans);color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:7px 11px;cursor:pointer}
+.fchip span{color:var(--muted);font-size:12px;margin-left:2px;font-variant-numeric:tabular-nums}
+.fchip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.fchip.on span{color:inherit;opacity:.75}
+.fchip:disabled{opacity:.4;cursor:default}
+.fv select{font:500 13px var(--sans);color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 8px;max-width:100%}
+@media (max-width:640px){.fg{grid-template-columns:1fr;gap:6px}.fl{padding-top:0}.fpanel{padding:4px 14px}}
 </style>
 
 <style>
@@ -541,15 +563,87 @@ function cardHtml(b) {
       <div class="meta cnt">게시물 ${b.posts.length}${nSpoil(b) ? ` · <b>스포 콘텐츠 ${nSpoil(b)}</b>` : ''}</div>
     </a>`;
 }
+// 필터 — 묶음 안에서는 「또는」, 묶음끼리는 「그리고」. 고른 조건은 주소(?country=일본|한국)에 남아 그대로 공유된다.
+// 쪽수·출간일·옮긴이·나라·순위 진입은 enrich.py 가 알라딘 상품 페이지에서 모은 값(collect.py 가 data.js 에 합친다).
+const THIS_YEAR = new Date().getFullYear();
+const pageBand = n => n == null ? null : n < 250 ? '250쪽 미만' : n < 350 ? '250~349쪽' : n < 450 ? '350~449쪽' : '450쪽 이상';
+const yearBand = d => { if (!d) return null; const y = +d.slice(0, 4); return y > THIS_YEAR - 5 ? String(y) : y >= 2015 ? `2015~${THIS_YEAR - 5}` : '2014 이전'; };
+const rateBand = b => b.rating == null ? '별점 없음' : b.plus ? '별 5+' : Math.round(b.rating) >= 5 ? '별 5' : Math.round(b.rating) === 4 ? '별 4' : '별 3 이하';
+const FILTERS = [
+  {k: 'rate', label: '별점', of: b => [rateBand(b)], order: ['별 5+', '별 5', '별 4', '별 3 이하', '별점 없음']},
+  {k: 'mark', label: '이런 책', of: b => [b.deep && '원고분석', nSpoil(b) && '스포 콘텐츠 있음', b.rank_best && '알라딘 주간 순위 진입'].filter(Boolean),
+   order: ['원고분석', '스포 콘텐츠 있음', '알라딘 주간 순위 진입']},
+  {k: 'country', label: '나라', of: b => [b.country || '모름'], order: ['일본', '한국', '영미', '유럽', '중화권', '모름']},
+  {k: 'year', label: '출간 연도', of: b => [yearBand(b.pubdate) || '모름']},
+  {k: 'pages', label: '쪽수', of: b => [pageBand(b.pages) || '모름'], order: ['250쪽 미만', '250~349쪽', '350~449쪽', '450쪽 이상', '모름']},
+  {k: 'kind', label: '게시물 종류', of: b => [...new Set(b.posts.map(p => p.kind))].filter(x => x !== '게시물'),
+   order: ['서평', '카드뉴스', '영상', '관계도', '복선', '작법', '사건파일', '표지']},
+  {k: 'author', label: '작가', of: b => b.author ? [b.author] : [], pick: true},
+  {k: 'pub', label: '출판사', of: b => b.publisher ? [b.publisher] : [], pick: true},
+  {k: 'tr', label: '옮긴이', of: b => b.translators || [], pick: true},
+];
+const FSEL = {};
+try { const sp = new URLSearchParams(location.search); for (const f of FILTERS) { const v = sp.get(f.k); if (v) FSEL[f.k] = new Set(v.split('|')); } } catch (e) {}
+let fOpen = false;
+const fN = () => FILTERS.reduce((n, f) => n + (FSEL[f.k]?.size || 0), 0);
+const fHit = (f, b) => !FSEL[f.k]?.size || f.of(b).some(v => FSEL[f.k].has(v));
+const fPass = b => FILTERS.every(f => fHit(f, b));
+function fSync() {
+  try {
+    const sp = new URLSearchParams(location.search);
+    for (const f of FILTERS) { const v = FSEL[f.k]; v && v.size ? sp.set(f.k, [...v].join('|')) : sp.delete(f.k); }
+    const qs = sp.toString(); history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
+  } catch (e) {}
+}
+function filterHtml(base, n) {
+  // 값 옆 숫자 = 다른 묶음 조건은 그대로 두고 이 값을 고르면 남는 권수
+  const count = (f, v) => base.filter(b => f.of(b).includes(v) && FILTERS.every(g => g === f || fHit(g, b))).length;
+  const yearSort = (a, b) => (a === '모름') - (b === '모름') || b.localeCompare(a);
+  const groups = FILTERS.map(f => {
+    const vals = [...new Set(base.flatMap(f.of))];
+    if (!vals.length) return '';
+    const on = FSEL[f.k] || new Set();
+    if (f.pick) {
+      const opts = vals.map(v => [v, count(f, v)]).filter(([v, c]) => c || on.has(v)).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'ko'));
+      return `<div class="fg"><span class="fl">${f.label}</span><div class="fv">
+        <select data-f="${f.k}" aria-label="${f.label} 고르기"><option value="">${f.label} 고르기 (${opts.length})</option>${opts.map(([v, c]) => `<option value="${esc(v)}">${esc(v)} · ${c}</option>`).join('')}</select>
+        ${[...on].map(v => `<button type="button" class="fchip on" data-f="${f.k}" data-v="${esc(v)}" aria-pressed="true">${esc(v)} <span aria-hidden="true">×</span></button>`).join('')}</div></div>`;
+    }
+    const ordered = f.order ? f.order.filter(v => vals.includes(v)) : vals.sort(f.k === 'year' ? yearSort : undefined);
+    return `<div class="fg"><span class="fl">${f.label}</span><div class="fv">${ordered.map(v => { const c = count(f, v);
+      return `<button type="button" class="fchip${on.has(v) ? ' on' : ''}" data-f="${f.k}" data-v="${esc(v)}" aria-pressed="${on.has(v)}"${!c && !on.has(v) ? ' disabled' : ''}>${esc(v)} <span>${c}</span></button>`; }).join('')}</div></div>`;
+  }).join('');
+  const nOn = fN();
+  return `<div class="fbar"><button type="button" class="ftoggle" aria-expanded="${fOpen}" aria-controls="fpanel"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>필터${nOn ? ` <b>${nOn}</b>` : ''}</button>
+      ${nOn ? `<button type="button" class="fclear">조건 모두 지우기</button>` : ''}<span class="fcount">${n}권</span></div>
+    <div class="fpanel" id="fpanel"${fOpen ? '' : ' hidden'}>${groups}</div>`;
+}
+function wireFilters() {
+  const t = app.querySelector('.ftoggle');
+  if (!t) return;
+  t.onclick = () => { fOpen = !fOpen; home(); };
+  const clr = app.querySelector('.fclear');
+  if (clr) clr.onclick = () => { for (const k in FSEL) delete FSEL[k]; fSync(); home(); };
+  app.querySelectorAll('.fchip').forEach(c => c.onclick = () => {
+    const s = FSEL[c.dataset.f] ||= new Set();
+    s.has(c.dataset.v) ? s.delete(c.dataset.v) : s.add(c.dataset.v);
+    fSync(); home();
+  });
+  app.querySelectorAll('.fpanel select').forEach(sel => sel.onchange = () => {
+    if (sel.value) (FSEL[sel.dataset.f] ||= new Set()).add(sel.value);
+    fSync(); home();
+  });
+}
 function home() {
   const k = norm(q.value);
   const nDeep = shelf.filter(b => b.deep).length;
-  const list = shelf.filter(b => (only === 'all' || b.deep) && (!k || norm(b.title + (b.author||'')).includes(k)));
+  const base = shelf.filter(b => (only === 'all' || b.deep) && (!k || norm(b.title + (b.author||'')).includes(k)));
+  const list = base.filter(fPass);
   const tab = (group, v, label, n) => `<button role="tab" aria-selected="${(group==='only'?only:order)===v}" data-g="${group}" data-v="${v}">${label}${n!=null?` <span>${n}</span>`:''}</button>`;
   const tabs = `<div class="bar"><div class="tabs" role="tablist">${tab('only','all','전체',shelf.length)}${nDeep ? tab('only','deep','원고분석한 책',nDeep) : ''}</div>
     <div class="tabs sort" role="tablist" aria-label="정렬">${tab('order','rating','별점순')}${tab('order','recent','최근순')}</div></div>`;
   let body;
-  if (!list.length) body = `<p class="empty">「${esc(q.value)}」에 맞는 책이 없습니다.</p>`;
+  if (!list.length) body = `<p class="empty">${fN() ? '고른 조건에 맞는 책이 없습니다. 조건을 하나 빼 보십시오.' : `「${esc(q.value)}」에 맞는 책이 없습니다.`}</p>`;
   else if (order === 'recent') body = `<div class="grid">${list.map(cardHtml).join('')}</div>`;
   else {
     // 별점 높은 순으로 묶고, 같은 별점 안에서는 최근 게시순
@@ -560,9 +654,10 @@ function home() {
   // 원고분석한 책 — 첫 화면 맨 앞, 별점 높은 순(별점 없는 가제본은 뒤), 같은 별점은 최근 게시순
   const rank = b => b.rating == null ? -1 : (b.plus ? 6 : b.rating);
   const deep = shelf.filter(b => b.deep).sort((x, y) => rank(y) - rank(x) || y.last.localeCompare(x.last));
-  const deepSec = !k && only === 'all' && deep.length ? `<section class="deepsec" aria-labelledby="deep-h"><div class="deep-h"><h2 id="deep-h">원고분석한 책</h2><span>원고 전문을 쪽수 단위로 읽고 인물·사건·복선을 정리한 책 · 별점순</span></div>
+  const deepSec = !k && only === 'all' && !fN() && deep.length ? `<section class="deepsec" aria-labelledby="deep-h"><div class="deep-h"><h2 id="deep-h">원고분석한 책</h2><span>원고 전문을 쪽수 단위로 읽고 인물·사건·복선을 정리한 책 · 별점순</span></div>
       <div class="grid deep-grid">${deep.map(cardHtml).join('')}</div></section>` : '';
-  app.innerHTML = deepSec + tabs + body;
+  app.innerHTML = deepSec + tabs + filterHtml(base, list.length) + body;
+  wireFilters();
   app.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { if (b.dataset.g === 'only') only = b.dataset.v; else order = b.dataset.v; home(); });
 }
 

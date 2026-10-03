@@ -66,6 +66,16 @@ def main():
         if re.search(r"^(게시물 \d|별점 출처|책 페이지|표지 |표지 실패|표지 건너뜀)|갈림|다름|^실패", line.strip()):
             print(" ", line.strip())
 
+    # 필터용 책 정보(쪽수·출간일·옮긴이·나라·순위 진입) — 새 책만 알라딘에서 받고, data.js 에 합치려고 collect 를 한 번 더
+    r = subprocess.run([sys.executable, os.path.join(HERE, "enrich.py")], cwd=HERE, capture_output=True,
+                       text=True, encoding="utf-8", errors="replace", env=dict(os.environ, PYTHONIOENCODING="utf-8"))
+    for line in (r.stdout + r.stderr).splitlines():
+        if re.search(r"^(받음|실패|meta\.json|나라를 짐작)|→", line.strip()):
+            print(" ", line.strip())
+    if r.returncode == 0 and re.search(r"^받음", r.stdout, re.M):
+        subprocess.run([sys.executable, os.path.join(HERE, "collect.py")], cwd=HERE, capture_output=True,
+                       text=True, encoding="utf-8", errors="replace", env=dict(os.environ, PYTHONIOENCODING="utf-8"))
+
     data = load_data()
     added = [p for p in data["posts"] if p["code"] not in before]
     new_codes = {code_of(u) for u in new}

@@ -387,8 +387,13 @@ def main():
                     "excerpt": SP.excerpt_of(by_code[revs[0]["code"]]["caption"], t) if revs else ""}
     slugs = [x["slug"] for x in extra.values()]
     assert len(slugs) == len(set(slugs)), "책 주소가 겹친다: " + str([s for s in slugs if slugs.count(s) > 1])
+    # 필터용 책 정보(enrich.py 가 알라딘에서 모은 쪽수·출간일·옮긴이·나라·순위 진입)
+    mp = os.path.join(HERE, "meta.json")
+    meta = json.load(open(mp, encoding="utf-8")) if os.path.exists(mp) else {}
+    keep = ("pages", "pubdate", "translators", "country", "rank_best")
     data = {"updated": time.strftime("%Y-%m-%d"), "posts": out, "notes": notes,
-            "books": {t: dict(b, deep=norm(t) in DEEP, **extra[t]) for t, b in books.items() if t in used}}
+            "books": {t: dict(b, deep=norm(t) in DEEP, **extra[t], **{k: v for k, v in meta.get(t, {}).items() if k in keep})
+                      for t, b in books.items() if t in used}}
     with open(os.path.join(SITE, "data.js"), "w", encoding="utf-8") as fh:
         fh.write("window.SHELF = " + json.dumps(data, ensure_ascii=False, indent=1) + ";\n")
     print("  책 페이지", SP.build(data, SITE), "개 · sitemap.xml · robots.txt")
