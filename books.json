@@ -27,7 +27,7 @@
   "store": "예스24",
   "rating": null,
   "plus": false,
-  "gajebon": true,
+  "gajebon": false,
   "genre": "소설",
   "country_fixed": "일본"
  },

@@ -11,6 +11,15 @@ window.SHELF = {
    "hook": "인수세공 / 고바야시 야스미 / 김은모 옮김 / 시공사"
   },
   {
+   "code": "DeDrHUgk7mG",
+   "date": "2026-10-02",
+   "book": "이상한 지도",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "사람부터 먼저 보여드립니다."
+  },
+  {
    "code": "DeB2YGdExcf",
    "date": "2026-10-02",
    "book": "천 년의 후더닛",
@@ -7862,7 +7871,7 @@ window.SHELF = {
    "store": "예스24",
    "rating": null,
    "plus": false,
-   "gajebon": true,
+   "gajebon": false,
    "genre": "소설",
    "country_fixed": "일본",
    "deep": true,
