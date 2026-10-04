@@ -1623,5 +1623,15 @@
   "plus": false,
   "gajebon": false,
   "genre": "소설"
+ },
+ "영겁관 초연속 살인 사건": {
+  "author": "미나미 아소부",
+  "cover": "covers/e903fb8783.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=401311362",
+  "rating": null,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
  }
 }
