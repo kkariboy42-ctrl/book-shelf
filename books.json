@@ -14,7 +14,7 @@
   "publisher": "시공사",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=402781368&partner=openAPI&start=api",
   "cover": "covers/157fb98cf7.jpg",
-  "rating": null,
+  "rating": 4,
   "plus": false,
   "gajebon": false,
   "genre": "소설"
@@ -36,7 +36,7 @@
   "publisher": "다이브",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=400909759&partner=openAPI&start=api",
   "cover": "covers/4931ab91d2.jpg",
-  "rating": null,
+  "rating": 5,
   "plus": false,
   "gajebon": false,
   "genre": "소설"
@@ -1629,6 +1629,16 @@
   "cover": "covers/e903fb8783.jpg",
   "publisher": "블루홀식스(블루홀6)",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=401311362",
+  "rating": null,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "705": {
+  "author": "객실로 내놓습니다.",
+  "cover": "covers/4a47d2983c.jpg",
+  "publisher": "허밍북스",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=402772113",
   "rating": null,
   "plus": false,
   "gajebon": false,
