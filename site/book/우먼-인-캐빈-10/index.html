@@ -424,6 +424,103 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
 .fchip:disabled{opacity:.4;cursor:default}
 .fv select{font:500 13px var(--sans);color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 8px;max-width:100%}
 @media (max-width:640px){.fg{grid-template-columns:1fr;gap:6px}.fl{padding-top:0}.fpanel{padding:4px 14px}}
+
+/* 스포 칸 읽기 화면 */
+.cols.wide{grid-template-columns:1fr}
+.sec a{white-space:nowrap}  /* 「알라딘 순위」가 두 줄로 꺾이지 않게 */
+.cols.wide .col.spoil{order:-1}
+.reader{margin:0 0 28px}
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
+.seg button{font:600 14px var(--sans);padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer}
+.seg button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ktabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin:0 0 14px}
+.ktabs button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 4px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink-2);font:600 12px/1.2 var(--sans);cursor:pointer;word-break:keep-all;text-align:center}
+.ktabs button .ico{width:22px;height:22px;stroke-width:1.6}
+.ktabs button[aria-selected="true"]{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.rpanel{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:10px;padding:22px 22px 16px}
+.rk{display:flex;align-items:center;gap:6px;margin:0 0 6px;font:600 12px var(--sans);color:var(--accent);letter-spacing:.02em}
+.rpanel h4{font:500 clamp(22px,3.4vw,28px)/1.3 var(--serif);letter-spacing:-.025em;margin:0 0 8px}
+.rpanel .lead{margin:0 0 18px;color:var(--muted);font-size:15px}
+.rbody{font-size:16px;line-height:1.85;color:var(--ink-2)}
+.rbody>p{margin:0 0 16px}
+.rbody.k-0>p:first-child{font-size:17px;color:var(--ink)}
+.rnav{display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--line);margin-top:22px;padding-top:12px}
+.rnav button{font:600 14px var(--sans);color:var(--accent);background:none;border:0;cursor:pointer;padding:6px 0}
+.nl2{list-style:none;counter-reset:n;padding:0;margin:0 0 12px;display:grid;gap:10px}
+.nl2 li{counter-increment:n;position:relative;padding:14px 14px 14px 52px;background:var(--bg);border:1px solid var(--line);border-radius:10px;font-size:15px;line-height:1.75}
+.nl2 li::before{content:counter(n);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font:700 13px var(--sans)}
+.nl2.q li::before{content:"?";background:var(--surface-2);color:var(--muted)}
+.nl2 li b{display:block;color:var(--ink);font-weight:700;margin-bottom:2px}
+/* 구조 띠 */
+.strip{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px 8px;margin:0 0 10px}
+.srow{margin:0 0 10px}
+.sl{display:block;font-size:12px;color:var(--muted);margin:0 0 4px}
+.strk{position:relative;height:18px}
+.strk::before{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:var(--line);border-radius:2px}
+.strk i{position:absolute;top:3px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--c);border:2px solid var(--bg);transition:transform .2s}
+.strk i.on{transform:scale(1.7);z-index:2}
+.sax{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:2px}
+.lg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted);margin:0 0 14px}
+.lg i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--c);margin-right:5px}
+.tl2{list-style:none;padding:0;margin:0}
+.tl2 li{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
+.tl2 .pos{position:relative;width:44px;height:6px;border-radius:3px;background:var(--surface-2);flex:none}
+.tl2 .pos i{position:absolute;top:-2px;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--ink-2)}
+.tl2 .tg{font:700 11px var(--sans);color:#fff;background:var(--c);border-radius:4px;padding:2px 7px}
+.tl2 .ln{font-size:12px;color:var(--muted)}
+.tl2 .tx{flex-basis:100%;line-height:1.7}
+/* 복선 호 */
+.arcs{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px 6px;margin:0 0 14px}
+.arcs svg{display:block;width:100%;height:120px;overflow:visible}
+.arcs line{stroke:var(--line);stroke-width:2}
+.arcs path{fill:none;stroke:var(--accent);stroke-width:1.6;opacity:.45;transition:opacity .2s,stroke-width .2s}
+.arcs path.on{opacity:1;stroke-width:3}
+.am{position:relative;height:10px;margin-top:-6px}
+.am i{position:absolute;top:0;width:9px;height:9px;margin-left:-4.5px;border-radius:50%}
+.am i.pl,.k.pl{background:#3a8fb7}.am i.rv,.k.rv{background:var(--accent)}
+.am i.on{transform:scale(1.6)}
+.arcs .sax b.k{display:inline-block;width:8px;height:8px;border-radius:50%;margin:0 4px 0 8px;vertical-align:0}
+.pairs2{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.pairs2 li{display:grid;grid-template-columns:1fr 64px 1fr;gap:8px;align-items:stretch;font-size:14px;line-height:1.65;outline:none}
+.pairs2 .pp{background:var(--bg);border:1px solid var(--line);border-left:3px solid #3a8fb7;border-radius:8px;padding:10px 12px}
+.pairs2 .pp.rv{border-left-color:var(--accent)}
+.pairs2 li:hover .pp,.pairs2 li:focus .pp{border-color:var(--ink-2)}
+.pairs2 .pp p{margin:4px 0 0}
+.pairs2 .pg{font:700 12px var(--sans);color:var(--muted)}
+.pairs2 .pa{display:grid;place-items:center;position:relative}
+.pairs2 .pa::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px dashed var(--line)}
+.pairs2 .pa span{position:relative;background:var(--surface);font:700 11px var(--sans);color:var(--accent);padding:2px 4px;text-align:center}
+/* 관계도 */
+.graph{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px;margin:0 0 14px}
+.graph svg{display:block;width:100%;max-width:640px;margin:0 auto;height:auto}
+.graph line{stroke:var(--muted);stroke-width:1.4;opacity:.55;transition:opacity .2s}
+.graph line.hid{stroke:var(--accent);stroke-dasharray:5 4;opacity:.85}
+.graph .nd{cursor:pointer;outline:none}
+.graph .nd circle{fill:var(--surface);stroke:var(--ink-2);stroke-width:1.6}
+.graph .nd text{font:600 17px var(--sans);fill:var(--ink)}
+.graph .nd.on circle,.graph .nd:focus circle{fill:var(--accent);stroke:var(--accent)}
+.graph svg.focus line{opacity:.08}
+.graph svg.focus line.on{opacity:1;stroke-width:2.4}
+.gh{margin:4px 6px 2px;font-size:12px;color:var(--muted);text-align:center}
+.gh .k.hid{display:inline-block;width:18px;border-top:2px dashed var(--accent);vertical-align:middle;margin:0 2px}
+.rh5{font:700 13px var(--sans);color:var(--muted);margin:16px 0 6px}
+.rh5.hid{color:var(--accent)}
+.rel2{list-style:none;padding:0;margin:0}
+.rel2 li{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.rel2 .rl{color:var(--muted)}
+.rel2 .rl::before{content:"— "}.rel2 .rl::after{content:" →"}
+.rel2 li.hid{background:linear-gradient(90deg,var(--accent-soft),transparent);padding-left:8px;border-radius:6px}
+@media (max-width:640px){
+  .ktabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .rpanel{padding:18px 14px 12px}
+  .pairs2 li{grid-template-columns:1fr;gap:4px}
+  .pairs2 .pa{height:22px}
+  .pairs2 .pa::before{left:50%;right:auto;top:0;bottom:0;border-top:0;border-left:2px dashed var(--line)}
+  .arcs svg{height:90px}
+  .graph .nd text{font-size:24px}
+  .pairs2{gap:22px}
+  .pairs2 li{padding-bottom:22px;border-bottom:1px solid var(--line)}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "우먼 인 캐빈 10", "url": "https://bookhoster.co.kr/book/우먼-인-캐빈-10/", "author": {"@type": "Person", "name": "루스 웨어"}, "translator": [{"@type": "Person", "name": "유혜인"}], "publisher": {"@type": "Organization", "name": "필름(Feelm)"}, "numberOfPages": 464, "datePublished": "2025-09-17", "image": "https://bookhoster.co.kr/covers/42a57e20e7.jpg", "review": {"@type": "Review", "author": {"@type": "Person", "name": "책호스터이프로"}, "reviewRating": {"@type": "Rating", "ratingValue": 4, "bestRating": 5, "worstRating": 1}, "reviewBody": "🚢 우먼 인 캐빈 10 | 루스 웨어 | 필름 | 2025년 09월 “우먼 인 캐빈 시리즈 10권이 아니라 ‘10호 선실의 여자’였습니다—착각한 사람… 저 말고도 있죠? 😅” 📖 책 소개 • 분량: 약 460쪽 | 구성: 36개의 짧은 챕터 • 시점: 기자 로라(로) 블랙록 1인칭 중심 • 무대: 초호화 크루즈 오로라호 • 등장인물 가이드가 따로 있을 정도로 인물이 많지만, 챕터가 짧아 리듬감은 훌륭합니다. ⏱️ 🧩 줄거리 잡지사 벨로시티 기자 로는 상사 대타로 오로라호 취재에 탑승합니다. 문제는 출발 직전 자택 침입 강도 사건을 겪었다는 것. 그 트라우마와 수면제·항불안제에 의존하는 상태에서 배에 오릅니다."}}</script>
 </head>
@@ -606,33 +703,133 @@ function postHtml(p) {
   </article>`;
 }
 
-const TAG_COLOR = {'판':'var(--muted)','단서':'#3a8fb7','죽음':'#c0392b','밝혀짐':'#d4a017','뒤집힘':'#8e5cc4'};
-function block(b) {
+// ── 스포 칸 읽기 화면 ─────────────────────────────────────────
+// 글 하나씩 탭으로 넘겨 본다(단편집은 단편을 먼저 고른다). 구조·복선·관계는 그림으로 먼저 보여 주고 글로 받친다.
+// 쪽수는 복선 회수에서만 보인다 — 구조는 「이야기의 처음→끝」 위의 자리로, 숫자 없이.
+const TAG_COLOR = {'판':'#8a8378','단서':'#3a8fb7','죽음':'#c0392b','밝혀짐':'#d4a017','뒤집힘':'#8e5cc4'};
+const TAG_ORDER = ['판','단서','죽음','밝혀짐','뒤집힘'];
+const KINDS = ['결말 해설','구조','복선 회수','관계','작법','안 풀린 것'];
+const KIND_ICON = {
+  '결말 해설': 'M6 3h9l3 3v15H6zM9 9h6M9 13h6M9 17h4',
+  '구조': 'M4 6h10M4 12h16M4 18h7',
+  '복선 회수': 'M4 18c2-10 14-10 16 0M4 18h.01M20 18h.01',
+  '관계': 'M6 7a2 2 0 1 0 .01 0M18 7a2 2 0 1 0 .01 0M12 18a2 2 0 1 0 .01 0M8 7h8M7 9l4 7M17 9l-4 7',
+  '작법': 'M4 20l4-1 11-11-3-3L5 16zM14 7l3 3',
+  '안 풀린 것': 'M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.6M12 17h.01',
+};
+const kico = k => `<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="${KIND_ICON[k] || KIND_ICON['작법']}"/></svg>`;
+// 「제목 — 설명」 꼴 목록 항목은 제목을 굵게
+const splitHead = s => { const i = String(s).indexOf(' — '); return i > 0 && i < 70 ? [s.slice(0, i), s.slice(i + 3)] : [null, s]; };
+const listHtml = (items, cls) => `<ol class="${cls}">${items.map(it => { const [h, t] = splitHead(it);
+  return `<li>${h ? `<b>${esc(h)}</b>` : ''}<span>${esc(t)}</span></li>`; }).join('')}</ol>`;
+
+function legendHtml(tags) {
+  return `<div class="lg">${TAG_ORDER.filter(t => tags.has(t)).map(t => `<span><i style="--c:${TAG_COLOR[t]}"></i>${t}</span>`).join('')}</div>`;
+}
+// 구조: 줄(lane)마다 이야기의 처음→끝 띠 위에 점을 찍는다 — 숫자는 보이지 않는다
+function timelineHtml(b) {
+  const it = b.items, ps = it.map(i => +i.page), lo = Math.min(...ps), hi = Math.max(...ps), span = Math.max(hi - lo, 1);
+  const at = p => (3 + (p - lo) / span * 94).toFixed(1);
+  const lanes = b.lanes && b.lanes.length ? b.lanes : [''];
+  const tags = new Set(it.map(i => i.tag));
+  const strip = `<div class="strip">${lanes.map((ln, li) => `<div class="srow">${ln ? `<span class="sl">${esc(ln)}</span>` : ''}
+      <div class="strk">${it.map((i, k) => (i.lane ?? 0) === li ? `<i data-k="${k}" style="left:${at(+i.page)}%;--c:${TAG_COLOR[i.tag] || '#888'}" title="${esc(i.text)}"></i>` : '').join('')}</div></div>`).join('')}
+    <div class="sax"><span>이야기의 처음</span><span>끝</span></div></div>`;
+  const rows = it.map((i, k) => `<li data-k="${k}"><span class="pos" aria-hidden="true"><i style="left:${at(+i.page)}%"></i></span>
+      <span class="tg" style="--c:${TAG_COLOR[i.tag] || '#888'}">${esc(i.tag || '')}</span>${b.lanes && i.lane != null ? `<span class="ln">${esc(b.lanes[i.lane])}</span>` : ''}
+      <span class="tx">${esc(i.text)}</span></li>`).join('');
+  return strip + legendHtml(tags) + `<ol class="tl2">${rows}</ol>`;
+}
+// 복선: 책 한 줄 위에 심은 곳→드러난 곳을 호로 잇는다(여기만 쪽수를 쓴다)
+function pairsHtml(b) {
+  const items = [...b.items].sort((x, y) => (y.reveal - y.plant) - (x.reveal - x.plant));
+  const all = items.flatMap(i => [i.plant, i.reveal]), lo = Math.min(...all), hi = Math.max(...all), span = Math.max(hi - lo, 1);
+  const X = p => 2 + (p - lo) / span * 96;
+  const arcs = items.map((i, k) => { const a = X(i.plant), c = X(i.reveal), h = Math.max(6, (c - a) / 96 * 34);
+    return `<path data-k="${k}" d="M${a.toFixed(2)} 38 Q${((a + c) / 2).toFixed(2)} ${(38 - h * 2).toFixed(2)} ${c.toFixed(2)} 38" vector-effect="non-scaling-stroke"/>`; }).join('');
+  const marks = items.map((i, k) => `<i class="pl" data-k="${k}" style="left:${X(i.plant).toFixed(2)}%"></i><i class="rv" data-k="${k}" style="left:${X(i.reveal).toFixed(2)}%"></i>`).join('');
+  const viz = `<div class="arcs"><svg viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="38" x2="100" y2="38" vector-effect="non-scaling-stroke"/>${arcs}</svg>
+      <div class="am">${marks}</div><div class="sax"><span>p.${lo}</span><span><b class="k pl"></b>심은 곳 <b class="k rv"></b>드러난 곳</span><span>p.${hi}</span></div></div>`;
+  const rows = items.map((i, k) => `<li data-k="${k}" tabindex="0"><div class="pp"><span class="pg">p.${esc(i.plant)}</span><p>${esc(i.plant_text)}</p></div>
+      <div class="pa" aria-hidden="true"><span>${i.reveal - i.plant > 0 ? `${i.reveal - i.plant}쪽 뒤` : ''}</span></div>
+      <div class="pp rv"><span class="pg">p.${esc(i.reveal)}</span><p>${esc(i.reveal_text)}</p></div></li>`).join('');
+  return viz + `<ol class="pairs2">${rows}</ol>`;
+}
+// 관계: 원 둘레에 인물을 놓고 선으로 잇는다. 인물을 누르면 그 사람의 선만 남는다. 숨겨진 선은 점선·강조색
+function relationsHtml(b) {
+  const names = [...new Set(b.items.flatMap(i => [i.a, i.b]))];
+  const deg = n => b.items.filter(i => i.a === n || i.b === n).length;
+  names.sort((x, y) => deg(y) - deg(x));
+  const N = names.length, R = 128, C = 180, pos = {};
+  names.forEach((n, k) => { const t = -Math.PI / 2 + k / N * 2 * Math.PI; pos[n] = [C + R * Math.cos(t), C + R * Math.sin(t), Math.cos(t)]; });
+  const edges = b.items.map((i, k) => `<line data-k="${k}" class="${i.hidden ? 'hid' : ''}" x1="${pos[i.a][0].toFixed(1)}" y1="${pos[i.a][1].toFixed(1)}" x2="${pos[i.b][0].toFixed(1)}" y2="${pos[i.b][1].toFixed(1)}"/>`).join('');
+  const nodes = names.map(n => { const [x, y, c] = pos[n], r = 5 + Math.min(deg(n), 6);
+    const tx = x + (c > .25 ? r + 6 : c < -.25 ? -(r + 6) : 0), ty = y + (Math.abs(c) <= .25 ? (y < C ? -(r + 8) : r + 18) : 5);
+    return `<g class="nd" data-n="${esc(n)}" tabindex="0" role="button" aria-label="${esc(n)}의 관계만 보기"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r}"/>
+      <text x="${tx.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="${c > .25 ? 'start' : c < -.25 ? 'end' : 'middle'}">${esc(n)}</text></g>`; }).join('');
+  const row = (i, k) => `<li data-k="${k}" data-a="${esc(i.a)}" data-b="${esc(i.b)}" class="${i.hidden ? 'hid' : ''}"><b>${esc(i.a)}</b><span class="rl">${esc(i.label)}</span><b>${esc(i.b)}</b></li>`;
+  const open = b.items.map((i, k) => [i, k]).filter(([i]) => !i.hidden), hid = b.items.map((i, k) => [i, k]).filter(([i]) => i.hidden);
+  return `<div class="graph"><svg viewBox="-150 -14 660 400" role="img" aria-label="인물 관계도">${edges}${nodes}</svg>
+      <p class="gh">인물을 누르면 그 사람의 선만 남습니다. <span class="k hid"></span> 점선은 숨겨진 선입니다.</p></div>
+    ${open.length ? `<h5 class="rh5">드러난 관계</h5><ul class="rel2">${open.map(([i, k]) => row(i, k)).join('')}</ul>` : ''}
+    ${hid.length ? `<h5 class="rh5 hid">숨겨진 선</h5><ul class="rel2">${hid.map(([i, k]) => row(i, k)).join('')}</ul>` : ''}`;
+}
+function blockHtml(b, kind) {
   if (b.type === 'text') return `<p>${esc(b.text)}</p>`;
-  if (b.type === 'list') return `<ul class="nl">${b.items.map(i => `<li>${esc(i)}</li>`).join('')}</ul>`;
-  if (b.type === 'timeline') return `<ol class="tl">${b.items.map(i => `
-    <li><span class="pg">p.${esc(i.page)}</span><span class="tg" style="--c:${TAG_COLOR[i.tag]||'var(--muted)'}">${esc(i.tag||'')}</span>
-    ${b.lanes && i.lane != null ? `<span class="ln">${esc(b.lanes[i.lane])}</span>` : ''}<span class="tx">${esc(i.text)}</span></li>`).join('')}</ol>`;
-  if (b.type === 'pairs') return `<ol class="pairs">${[...b.items].sort((x, y) => (y.reveal - y.plant) - (x.reveal - x.plant)).map(i => `
-    <li><div><span class="pg">p.${esc(i.plant)}</span> 심은 곳<p>${esc(i.plant_text)}</p></div>
-    <div class="arrow" aria-hidden="true">→ ${i.reveal - i.plant > 0 ? `${i.reveal - i.plant}쪽 뒤` : ''}</div>
-    <div><span class="pg">p.${esc(i.reveal)}</span> 드러난 곳<p>${esc(i.reveal_text)}</p></div></li>`).join('')}</ol>`;
-  if (b.type === 'relations') return `<ul class="rel">${b.items.map(i => `
-    <li class="${i.hidden?'hid':''}"><b>${esc(i.a)}</b><span>${esc(i.label)}</span><b>${esc(i.b)}</b>${i.hidden?'<em>숨겨진 선</em>':''}</li>`).join('')}</ul>`;
+  if (b.type === 'list') return listHtml(b.items, kind === '안 풀린 것' ? 'nl2 q' : 'nl2');
+  if (b.type === 'timeline') return timelineHtml(b);
+  if (b.type === 'pairs') return pairsHtml(b);
+  if (b.type === 'relations') return relationsHtml(b);
   return '';
 }
-// 단편집은 글마다 story(단편 이름)가 있다 — 단편별 소제목 아래로 묶는다. 없으면 예전처럼 한 줄로.
-function notesHtml(notes) {
-  if (!notes.some(n => n.story)) return notes.map(noteHtml).join('');
-  const order = [...new Set(notes.map(n => n.story || ''))];
-  return order.map(st => `<h4 class="story-h">${st ? `단편 「${esc(st)}」` : '책 전체'}</h4>${notes.filter(n => (n.story || '') === st).map(noteHtml).join('')}`).join('');
+function mountReader(root, notes) {
+  const stories = [...new Set(notes.map(n => n.story || ''))];
+  let st = stories[0], cur = 0;
+  const forStory = () => notes.filter(n => (n.story || '') === st).sort((x, y) => KINDS.indexOf(x.kind) - KINDS.indexOf(y.kind));
+  function draw(scroll) {
+    const ns = forStory(), n = ns[cur] || ns[0];
+    root.innerHTML = `${stories.length > 1 ? `<div class="seg" role="tablist" aria-label="단편 고르기">${stories.map(x => `<button type="button" role="tab" aria-selected="${x === st}" data-st="${esc(x)}">${x ? `「${esc(x)}」` : '책 전체'}</button>`).join('')}</div>` : ''}
+      <nav class="ktabs" role="tablist" aria-label="스포 콘텐츠 고르기">${ns.map((x, k) => `<button type="button" role="tab" aria-selected="${k === cur}" data-k="${k}">${kico(x.kind)}<span>${esc(x.kind)}</span></button>`).join('')}</nav>
+      <article class="rpanel" role="tabpanel">
+        <p class="rk">${kico(n.kind)}${esc(n.kind)}${n.story ? ` · 「${esc(n.story)}」` : ''}</p>
+        <h4>${esc(n.title)}</h4>${n.lead ? `<p class="lead">${esc(n.lead)}</p>` : ''}
+        <div class="rbody k-${KINDS.indexOf(n.kind)}">${n.blocks.map(b => blockHtml(b, n.kind)).join('')}</div>
+        <div class="rnav">${cur > 0 ? `<button type="button" data-go="${cur - 1}">← ${esc(ns[cur - 1].kind)}</button>` : '<span></span>'}
+          ${cur < ns.length - 1 ? `<button type="button" data-go="${cur + 1}">${esc(ns[cur + 1].kind)} →</button>` : ''}</div>
+      </article>`;
+    root.querySelectorAll('.seg button').forEach(x => x.onclick = () => { st = x.dataset.st; cur = 0; draw(); });
+    root.querySelectorAll('.ktabs button').forEach(x => x.onclick = () => { cur = +x.dataset.k; draw(); });
+    root.querySelectorAll('.rnav button').forEach(x => x.onclick = () => { cur = +x.dataset.go; draw(true); });
+    wireViz(root);
+    if (scroll) root.scrollIntoView({block: 'start', behavior: 'smooth'});
+  }
+  draw();
 }
-function noteHtml(n) {
-  return `<article class="post note">
-    <div class="top"><span class="chip">${esc(n.kind)}</span><span class="own">사이트 전용</span></div>
-    <details><summary><h4>${esc(n.title)}</h4>${n.lead ? `<p class="lead">${esc(n.lead)}</p>` : ''}<span class="more">펼쳐 읽기</span></summary>
-      <div class="body">${n.blocks.map(block).join('')}</div></details>
-  </article>`;
+// 그림과 글을 잇는다: 목록 줄에 올리면 그림의 그 점·호가 켜지고, 관계도 인물을 누르면 그 사람 선만
+function wireViz(root) {
+  const link = (listSel, markSel) => root.querySelectorAll(listSel).forEach(li => {
+    const on = v => root.querySelectorAll(`${markSel}[data-k="${li.dataset.k}"]`).forEach(m => m.classList.toggle('on', v));
+    li.addEventListener('mouseenter', () => on(true)); li.addEventListener('mouseleave', () => on(false));
+    li.addEventListener('focus', () => on(true)); li.addEventListener('blur', () => on(false));
+  });
+  link('.tl2 li', '.strk i');
+  link('.pairs2 li', '.arcs path, .am i');
+  const g = root.querySelector('.graph svg');
+  if (!g) return;
+  let focus = null;
+  root.querySelectorAll('.nd').forEach(nd => {
+    const pick = () => {
+      focus = focus === nd.dataset.n ? null : nd.dataset.n;
+      g.classList.toggle('focus', !!focus);
+      root.querySelectorAll('.nd').forEach(x => x.classList.toggle('on', x.dataset.n === focus));
+      const rel = [...root.querySelectorAll('.rel2 li')];
+      rel.forEach(li => { const hit = !focus || li.dataset.a === focus || li.dataset.b === focus; li.hidden = !hit;
+        g.querySelector(`line[data-k="${li.dataset.k}"]`).classList.toggle('on', !!focus && hit); });
+      root.querySelectorAll('.rh5').forEach(h => { const ul = h.nextElementSibling; h.hidden = ul && [...ul.children].every(li => li.hidden); });
+    };
+    nd.addEventListener('click', pick);
+    nd.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
+  });
 }
 
 function book(title) {
@@ -654,15 +851,20 @@ function book(title) {
       <section class="col spoil"><h3><span class="dot"></span>스포 있음 <span class="n">${nSpoil}</span></h3>
         ${nSpoil ? `<div class="gate" id="gate"><p class="gt">결말·범인·트릭이 그대로 적혀 있습니다</p>
             <p>책을 다 읽은 뒤에 펼치시길 권합니다.</p><button type="button">펼치기</button></div>
-          <div id="spoilList" hidden>${notesHtml(notes)}${spoilPosts.map(postHtml).join('')}
+          <div id="spoilList" hidden>${notes.length ? '<div class="reader" id="reader"></div>' : ''}${spoilPosts.length ? `<h4 class="story-h">스포 있는 게시물</h4>${spoilPosts.map(postHtml).join('')}` : ''}
             <button type="button" class="fold" id="fold">다시 접기</button></div>`
           : '<p class="none">아직 없습니다.</p>'}</section>
     </div>`;
   const g = document.getElementById('gate');
   if (g) {
     const list = document.getElementById('spoilList');
-    g.querySelector('button').onclick = () => warn(b.title, () => { g.hidden = true; list.hidden = false; watch(list); });
-    document.getElementById('fold').onclick = () => { list.hidden = true; g.hidden = false; g.scrollIntoView({block:'center'}); };
+    const cols = app.querySelector('.cols');
+    g.querySelector('button').onclick = () => warn(b.title, () => {
+      g.hidden = true; list.hidden = false; cols.classList.add('wide');  // 그림이 들어가니 펼치면 화면 폭으로
+      const r = document.getElementById('reader'); if (r) mountReader(r, notes);
+      watch(list); list.closest('.col').scrollIntoView({block: 'start'});
+    });
+    document.getElementById('fold').onclick = () => { list.hidden = true; g.hidden = false; cols.classList.remove('wide'); g.scrollIntoView({block:'center'}); };
   }
   watch(app.querySelector('.col'));
   window.scrollTo(0, 0);
