@@ -2,6 +2,87 @@ window.SHELF = {
  "updated": "2026-10-10",
  "posts": [
   {
+   "code": "DeTQH42CWXX",
+   "date": "2026-10-09",
+   "book": "입에 대한 앙케트",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": true,
+   "hook": "반타에서의 이벤트에 당첨되어서 보고 온 입에 대한 앙케트 영화 후기입니다."
+  },
+  {
+   "code": "DeTtlYIkpAy",
+   "date": "2026-10-08",
+   "book": "천 년의 후더닛",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "천 년 뒤에 깨어나기로 하고 냉동 수면에 든 남자가 있습니다. 그는 무사히 깨어났습니다."
+  },
+  {
+   "code": "DeTcel9EqJr",
+   "date": "2026-10-08",
+   "book": "한국사 이상현상 연구원",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "무덤 안 벽화를 보지 마십시오."
+  },
+  {
+   "code": "DeTH00rEoqU",
+   "date": "2026-10-08",
+   "book": "인수세공",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "사람부터 먼저 보여드립니다."
+  },
+  {
+   "code": "DeRZ6uHCZow",
+   "date": "2026-10-08",
+   "book": "천 년의 후더닛",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "이 문은 안쪽에서만 열립니다."
+  },
+  {
+   "code": "DeRIw-BiY7U",
+   "date": "2026-10-08",
+   "book": "이상한 지도",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "세 사람이 같은 집에 대해 이야기합니다. 그런데 셋 다 한 문장씩 책과 다르게 말합니다."
+  },
+  {
+   "code": "DeQjCtcEu6r",
+   "date": "2026-10-08",
+   "book": "한국사 이상현상 연구원",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "한국 호러 소설 속 날짜와 장소 다섯 가지, 어디까지 진짜이겠습니까."
+  },
+  {
+   "code": "DeOvAt2pjx7",
+   "date": "2026-10-08",
+   "book": "인수세공",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "메운 우물에 꽂아 둔 대나무 한 대. 실제로 있는 풍습입니까, 소설이 지어낸 물건입니까?"
+  },
+  {
+   "code": "DeOSySyiVg4",
+   "date": "2026-10-05",
+   "book": "천 년의 후더닛",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "천 년을 자야 할 기계가 153년 전에 멈췄습니다."
+  },
+  {
    "code": "DeGcAgMiabC",
    "date": "2026-10-04",
    "book": "한국사 이상현상 연구원",

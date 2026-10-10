@@ -7,7 +7,7 @@
   ],
   "country": "일본",
   "rank_best": 2,
-  "rank_weeks": 2
+  "rank_weeks": 3
  },
  "인수세공": {
   "pages": 244,
@@ -19,7 +19,9 @@
   "country": "일본"
  },
  "미미소기": {
-  "country": "일본"
+  "country": "일본",
+  "rank_best": 2,
+  "rank_weeks": 1
  },
  "한국사 이상현상 연구원": {
   "pages": 500,
@@ -52,7 +54,7 @@
   ],
   "country": "일본",
   "rank_best": 1,
-  "rank_weeks": 2
+  "rank_weeks": 3
  },
  "십각관의 살인": {
   "pages": 346,
@@ -61,7 +63,9 @@
   "translators": [
    "양억관"
   ],
-  "country": "일본"
+  "country": "일본",
+  "rank_best": 19,
+  "rank_weeks": 1
  },
  "방주": {
   "pages": 356,
@@ -1277,7 +1281,7 @@
   ],
   "country": "일본",
   "rank_best": 3,
-  "rank_weeks": 2
+  "rank_weeks": 3
  },
  "캐릭터": {
   "pages": 224,
@@ -1346,7 +1350,7 @@
   ],
   "country": "일본",
   "rank_best": 10,
-  "rank_weeks": 1
+  "rank_weeks": 2
  },
  "705": {
   "pages": 400,
@@ -1355,7 +1359,7 @@
    "윤은혜"
   ],
   "country": "일본",
-  "rank_best": 10,
-  "rank_weeks": 1
+  "rank_best": 9,
+  "rank_weeks": 2
  }
 }
