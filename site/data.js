@@ -1,5 +1,5 @@
 window.SHELF = {
- "updated": "2026-10-09",
+ "updated": "2026-10-10",
  "posts": [
   {
    "code": "DeGcAgMiabC",
@@ -11441,7 +11441,7 @@ window.SHELF = {
    "plus": false,
    "gajebon": false,
    "genre": "소설",
-   "deep": false,
+   "deep": true,
    "slug": "영겁관-초연속-살인-사건",
    "excerpt": "",
    "pages": 392,

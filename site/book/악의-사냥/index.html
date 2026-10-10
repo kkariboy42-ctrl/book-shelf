@@ -58,6 +58,7 @@ button{font-family:var(--sans)}
 .sec a.on{background:var(--ink);color:var(--bg)}
 @media (max-width:520px){.navr .navlink{display:none}}
 .sec a{white-space:nowrap}
+.sec .lg{margin-right:.25em}
 @media (max-width:420px){.sec a{padding:5px 9px}.sec .lg{display:none}}
 /* 첫 화면 머리 */
 .hero{padding:56px 0 34px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 300px at 85% -40%,var(--accent-soft),transparent 70%)}
@@ -427,7 +428,6 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
 
 /* 스포 칸 읽기 화면 */
 .cols.wide{grid-template-columns:1fr}
-.sec a{white-space:nowrap}  /* 「알라딘 순위」가 두 줄로 꺾이지 않게 */
 .cols.wide .col.spoil{order:-1}
 .reader{margin:0 0 28px}
 .seg{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
@@ -460,8 +460,8 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
 .strk i{position:absolute;top:3px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--c);border:2px solid var(--bg);transition:transform .2s}
 .strk i.on{transform:scale(1.7);z-index:2}
 .sax{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:2px}
-.lg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted);margin:0 0 14px}
-.lg i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--c);margin-right:5px}
+.tlg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted);margin:0 0 14px}
+.tlg i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--c);margin-right:5px}
 .tl2{list-style:none;padding:0;margin:0}
 .tl2 li{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
 .tl2 .pos{position:relative;width:44px;height:6px;border-radius:3px;background:var(--surface-2);flex:none}
@@ -520,6 +520,18 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
   .graph .nd text{font-size:24px}
   .pairs2{gap:22px}
   .pairs2 li{padding-bottom:22px;border-bottom:1px solid var(--line)}
+}
+
+/* 그림 고정 — 구조 띠·복선 호·관계도는 위에 붙어 있고, 아래 목록만 스크롤된다(폰도 같음) */
+.vizpin{position:sticky;top:var(--pin-top,64px);z-index:4;background:var(--surface);padding:6px 0 4px;margin:0 0 6px;box-shadow:0 10px 12px -12px rgba(0,0,0,.35)}
+.vizpin>.strip,.vizpin>.arcs,.vizpin>.graph{margin-bottom:6px}
+.vizpin .tlg{margin-bottom:4px}
+.vizpin .graph svg{max-height:44vh}
+.vizpin .gh{margin-top:0}
+@media (max-width:640px){
+  .graph svg{max-height:38vh}
+  .arcs svg{height:72px}
+  .strip{padding:8px 10px 4px}.srow{margin-bottom:6px}
 }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "악의 사냥", "url": "https://bookhoster.co.kr/book/악의-사냥/", "author": {"@type": "Person", "name": "크리스 카터"}, "translator": [{"@type": "Person", "name": "서효령"}], "publisher": {"@type": "Organization", "name": "북로드"}, "numberOfPages": 528, "datePublished": "2023-08-11", "image": "https://bookhoster.co.kr/covers/dfca70a6dd.jpg", "review": {"@type": "Review", "author": {"@type": "Person", "name": "책호스터이프로"}, "reviewRating": {"@type": "Rating", "ratingValue": 4, "bestRating": 5, "worstRating": 1}, "reviewBody": "로버트 헌터와 루시엔 폴터가 돌아왔습니다 압도적인 악을 보여줬던 루시엔 폴터..과연 이번에도 그럴까요? 책은 약 520페이지 110개의 챕터로 구성되어 있습니다. 헌터와 루시엔의 시점이 번갈아가면서 진행되며, 이런 시점 변화로 인해 두 주인공의 생각과 행동을 때로는 이해하고 추측하게 됩니다. 이런 장치로 인해 책을 읽으면서 긴장감을 높였다가 줄였다를 반복하게 만들어줍니다. 그리고 110개의 챕터로 나누어져 있는 부분이 이 책의 엄청난 속도감을 만들어줍니다. 이 내용은 뒤에 가서 좀 더 말해보겠습니다. 사상 최악의 사이코 패스이자 범죄 백과사전의 기록자인 루시엔 폴터가 교도소를 탈출했다는 소식이 케네디에게 들려옵니다."}}</script>
@@ -724,7 +736,7 @@ const listHtml = (items, cls) => `<ol class="${cls}">${items.map(it => { const [
   return `<li>${h ? `<b>${esc(h)}</b>` : ''}<span>${esc(t)}</span></li>`; }).join('')}</ol>`;
 
 function legendHtml(tags) {
-  return `<div class="lg">${TAG_ORDER.filter(t => tags.has(t)).map(t => `<span><i style="--c:${TAG_COLOR[t]}"></i>${t}</span>`).join('')}</div>`;
+  return `<div class="tlg">${TAG_ORDER.filter(t => tags.has(t)).map(t => `<span><i style="--c:${TAG_COLOR[t]}"></i>${t}</span>`).join('')}</div>`;
 }
 // 구조: 줄(lane)마다 이야기의 처음→끝 띠 위에 점을 찍는다 — 숫자는 보이지 않는다
 function timelineHtml(b) {
@@ -738,7 +750,7 @@ function timelineHtml(b) {
   const rows = it.map((i, k) => `<li data-k="${k}"><span class="pos" aria-hidden="true"><i style="left:${at(+i.page)}%"></i></span>
       <span class="tg" style="--c:${TAG_COLOR[i.tag] || '#888'}">${esc(i.tag || '')}</span>${b.lanes && i.lane != null ? `<span class="ln">${esc(b.lanes[i.lane])}</span>` : ''}
       <span class="tx">${esc(i.text)}</span></li>`).join('');
-  return strip + legendHtml(tags) + `<ol class="tl2">${rows}</ol>`;
+  return `<div class="vizpin">${strip}${legendHtml(tags)}</div><ol class="tl2">${rows}</ol>`;
 }
 // 복선: 책 한 줄 위에 심은 곳→드러난 곳을 호로 잇는다(여기만 쪽수를 쓴다)
 function pairsHtml(b) {
@@ -748,8 +760,8 @@ function pairsHtml(b) {
   const arcs = items.map((i, k) => { const a = X(i.plant), c = X(i.reveal), h = Math.max(6, (c - a) / 96 * 34);
     return `<path data-k="${k}" d="M${a.toFixed(2)} 38 Q${((a + c) / 2).toFixed(2)} ${(38 - h * 2).toFixed(2)} ${c.toFixed(2)} 38" vector-effect="non-scaling-stroke"/>`; }).join('');
   const marks = items.map((i, k) => `<i class="pl" data-k="${k}" style="left:${X(i.plant).toFixed(2)}%"></i><i class="rv" data-k="${k}" style="left:${X(i.reveal).toFixed(2)}%"></i>`).join('');
-  const viz = `<div class="arcs"><svg viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="38" x2="100" y2="38" vector-effect="non-scaling-stroke"/>${arcs}</svg>
-      <div class="am">${marks}</div><div class="sax"><span>p.${lo}</span><span><b class="k pl"></b>심은 곳 <b class="k rv"></b>드러난 곳</span><span>p.${hi}</span></div></div>`;
+  const viz = `<div class="vizpin"><div class="arcs"><svg viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="38" x2="100" y2="38" vector-effect="non-scaling-stroke"/>${arcs}</svg>
+      <div class="am">${marks}</div><div class="sax"><span>p.${lo}</span><span><b class="k pl"></b>심은 곳 <b class="k rv"></b>드러난 곳</span><span>p.${hi}</span></div></div></div>`;
   const rows = items.map((i, k) => `<li data-k="${k}" tabindex="0"><div class="pp"><span class="pg">p.${esc(i.plant)}</span><p>${esc(i.plant_text)}</p></div>
       <div class="pa" aria-hidden="true"><span>${i.reveal - i.plant > 0 ? `${i.reveal - i.plant}쪽 뒤` : ''}</span></div>
       <div class="pp rv"><span class="pg">p.${esc(i.reveal)}</span><p>${esc(i.reveal_text)}</p></div></li>`).join('');
@@ -769,8 +781,8 @@ function relationsHtml(b) {
       <text x="${tx.toFixed(1)}" y="${ty.toFixed(1)}" text-anchor="${c > .25 ? 'start' : c < -.25 ? 'end' : 'middle'}">${esc(n)}</text></g>`; }).join('');
   const row = (i, k) => `<li data-k="${k}" data-a="${esc(i.a)}" data-b="${esc(i.b)}" class="${i.hidden ? 'hid' : ''}"><b>${esc(i.a)}</b><span class="rl">${esc(i.label)}</span><b>${esc(i.b)}</b></li>`;
   const open = b.items.map((i, k) => [i, k]).filter(([i]) => !i.hidden), hid = b.items.map((i, k) => [i, k]).filter(([i]) => i.hidden);
-  return `<div class="graph"><svg viewBox="-150 -14 660 400" role="img" aria-label="인물 관계도">${edges}${nodes}</svg>
-      <p class="gh">인물을 누르면 그 사람의 선만 남습니다. <span class="k hid"></span> 점선은 숨겨진 선입니다.</p></div>
+  return `<div class="vizpin"><div class="graph"><svg viewBox="-150 -14 660 400" role="img" aria-label="인물 관계도">${edges}${nodes}</svg>
+      <p class="gh">인물을 누르면 그 사람의 선만 남습니다. <span class="k hid"></span> 점선은 숨겨진 선입니다.</p></div></div>
     ${open.length ? `<h5 class="rh5">드러난 관계</h5><ul class="rel2">${open.map(([i, k]) => row(i, k)).join('')}</ul>` : ''}
     ${hid.length ? `<h5 class="rh5 hid">숨겨진 선</h5><ul class="rel2">${hid.map(([i, k]) => row(i, k)).join('')}</ul>` : ''}`;
 }
@@ -782,7 +794,13 @@ function blockHtml(b, kind) {
   if (b.type === 'relations') return relationsHtml(b);
   return '';
 }
+function pinTop() {
+  const t = document.querySelector('.topbar');
+  document.documentElement.style.setProperty('--pin-top', ((t ? t.getBoundingClientRect().height : 56) + 6) + 'px');
+}
+addEventListener('resize', pinTop);
 function mountReader(root, notes) {
+  pinTop();
   const stories = [...new Set(notes.map(n => n.story || ''))];
   let st = stories[0], cur = 0;
   const forStory = () => notes.filter(n => (n.story || '') === st).sort((x, y) => KINDS.indexOf(x.kind) - KINDS.indexOf(y.kind));
