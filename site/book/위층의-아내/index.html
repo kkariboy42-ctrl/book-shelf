@@ -523,7 +523,7 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
 }
 
 /* 그림 고정 — 구조 띠·복선 호·관계도는 위에 붙어 있고, 아래 목록만 스크롤된다(폰도 같음) */
-.vizpin{position:sticky;top:var(--pin-top,64px);z-index:4;background:var(--surface);padding:6px 0 4px;margin:0 0 6px;box-shadow:0 10px 12px -12px rgba(0,0,0,.35)}
+.vizpin{position:sticky;top:var(--pin-top,58px);z-index:4;background:var(--surface);padding:12px 0 4px;margin:0 0 6px;box-shadow:0 10px 12px -12px rgba(0,0,0,.35)}
 .vizpin>.strip,.vizpin>.arcs,.vizpin>.graph{margin-bottom:6px}
 .vizpin .tlg{margin-bottom:4px}
 .vizpin .graph svg{max-height:44vh}
@@ -796,7 +796,7 @@ function blockHtml(b, kind) {
 }
 function pinTop() {
   const t = document.querySelector('.topbar');
-  document.documentElement.style.setProperty('--pin-top', ((t ? t.getBoundingClientRect().height : 56) + 6) + 'px');
+  document.documentElement.style.setProperty('--pin-top', (t ? t.getBoundingClientRect().height : 56) + 'px');
 }
 addEventListener('resize', pinTop);
 function mountReader(root, notes) {
