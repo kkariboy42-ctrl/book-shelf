@@ -533,6 +533,53 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
   .arcs svg{height:72px}
   .strip{padding:8px 10px 4px}.srow{margin-bottom:6px}
 }
+
+/* 새 종류 — 진실 카드·서술과 실제·퀴즈 */
+.ktabs{grid-template-columns:repeat(auto-fill,minmax(104px,1fr))}
+.truths{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.tc{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.tc h5{margin:0 0 2px;font:500 19px/1.3 var(--serif);letter-spacing:-.02em;color:var(--ink)}
+.tc .tclab{display:block;font:700 11px var(--sans);letter-spacing:.02em;margin-bottom:2px}
+.tc p{margin:0;font-size:14.5px;line-height:1.7}
+.tcs{color:var(--muted)}.tcs .tclab{color:var(--muted)}
+.tcs p{text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--muted) 45%,transparent)}
+.tca{text-align:center;color:var(--accent);font-weight:700;line-height:1}
+.tcr{border-left:3px solid var(--accent);padding-left:10px;color:var(--ink)}.tcr .tclab{color:var(--accent)}
+.tct{font-size:12.5px!important;color:var(--muted);border-top:1px dashed var(--line);padding-top:6px;margin-top:2px!important}
+.ord{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px}
+.oh{display:grid;grid-template-columns:minmax(0,1fr) minmax(64px,34%) minmax(0,1fr);font:700 12px var(--sans);color:var(--muted);margin:0 0 6px}
+.oh span:last-child{text-align:right}
+.ob{display:grid;grid-template-columns:minmax(0,1fr) minmax(64px,34%) minmax(0,1fr);align-items:start}
+.ord{max-width:980px;margin:0 auto}
+.ob svg{width:100%;display:block}
+.ob path{fill:none;stroke:var(--line);stroke-width:2;transition:stroke .2s,stroke-width .2s}
+.ob path.mv{stroke:#3a8fb7}.ob path.far{stroke:var(--accent)}
+.ob path.on{stroke-width:4;stroke:var(--ink)}
+.oc{list-style:none;margin:0;padding:0}
+.oc li{height:var(--rh);display:flex;align-items:center;gap:8px;padding:0 6px;border-radius:6px;font-size:13.5px;line-height:1.35;outline:none;cursor:default}
+.oc.r li{flex-direction:row-reverse;text-align:right}
+.oc li b{flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);color:var(--muted);font:700 11px var(--sans)}
+.oc li span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.oc li.on{background:var(--accent-soft)}.oc li.on b{background:var(--accent);color:#fff}
+.quiz{display:grid;gap:14px}
+.qz{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px}
+.qz h5{margin:0 0 10px;font:600 16px/1.55 var(--sans);color:var(--ink);display:flex;gap:10px}
+.qz h5 span{flex:none;font:700 12px/1 var(--sans);color:#fff;background:var(--accent);border-radius:4px;padding:5px 6px;margin-top:3px}
+.qc{display:grid;gap:6px}
+.qc button{text-align:left;font:500 14.5px/1.5 var(--sans);color:var(--ink-2);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;cursor:pointer}
+.qc button:hover:not(:disabled){border-color:var(--ink-2)}
+.qc button:disabled{cursor:default}
+.qc button.ok{border-color:#2e7d4f;background:color-mix(in srgb,#2e7d4f 12%,var(--surface));color:var(--ink)}
+.qc button.ok::after{content:"  정답";font-weight:700;color:#2e7d4f;font-size:12px}
+.qc button.no{border-color:var(--accent);background:var(--accent-soft)}
+.qw{margin:10px 0 0;font-size:14px;line-height:1.7;color:var(--ink-2);border-left:3px solid var(--line);padding-left:10px}
+.qs{margin:4px 0 0;font:600 15px var(--sans);color:var(--accent);text-align:center}
+@media (max-width:640px){
+  .ktabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .truths{grid-template-columns:1fr}
+  .ob,.oh{grid-template-columns:1fr 34px 1fr}
+  .oc li{font-size:12.5px;gap:5px;padding:0 3px}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "폭발물 처리반이 조우한 스핀", "url": "https://bookhoster.co.kr/book/폭발물-처리반이-조우한-스핀/", "author": {"@type": "Person", "name": "사토 기와무"}, "translator": [{"@type": "Person", "name": "김은모"}], "publisher": {"@type": "Organization", "name": "블루홀식스(블루홀6)"}, "numberOfPages": 424, "datePublished": "2023-12-05", "image": "https://bookhoster.co.kr/covers/4b6652cf91.jpg", "review": {"@type": "Review", "author": {"@type": "Person", "name": "책호스터이프로"}, "reviewRating": {"@type": "Rating", "ratingValue": 3, "bestRating": 5, "worstRating": 1}, "reviewBody": "테스카틀리포카의 그 작가의 신작입니다 이 책 또한 놀랍군요 책은 약 420페이지 8개의 단편으로 구성되어 있습니다. 모든 단편들이 기괴하고 독특합니다. 그리고 상당한 양의 자료 수집 후 이야기를 쓰는 스타일이 신걸로 추정됩니다. (굉장히 전문적인 내용들도 많이 들어있습니다. 특히 양자 역학…) 1 폭발물 처리반이 조우한 스핀 -별3개- 교육청으로 가고시마 내 초등학교에 폭탄을 터트리겠다는 협박 전화가 걸려왔습니다 이에 우하라 경사 포함 폭발물처리반이 출동하였고 동상 뒤에 수상한 물건을 발견했습니다. 그리고 그 수상한 물건을 처리하면서 폭탄이 터졌습니다."}}</script>
 </head>
@@ -720,7 +767,7 @@ function postHtml(p) {
 // 쪽수는 복선 회수에서만 보인다 — 구조는 「이야기의 처음→끝」 위의 자리로, 숫자 없이.
 const TAG_COLOR = {'판':'#8a8378','단서':'#3a8fb7','죽음':'#c0392b','밝혀짐':'#d4a017','뒤집힘':'#8e5cc4'};
 const TAG_ORDER = ['판','단서','죽음','밝혀짐','뒤집힘'];
-const KINDS = ['결말 해설','구조','복선 회수','관계','작법','안 풀린 것'];
+const KINDS = ['결말 해설','구조','복선 회수','관계','작법','안 풀린 것','진실 카드','서술과 실제','퀴즈'];
 const KIND_ICON = {
   '결말 해설': 'M6 3h9l3 3v15H6zM9 9h6M9 13h6M9 17h4',
   '구조': 'M4 6h10M4 12h16M4 18h7',
@@ -728,6 +775,9 @@ const KIND_ICON = {
   '관계': 'M6 7a2 2 0 1 0 .01 0M18 7a2 2 0 1 0 .01 0M12 18a2 2 0 1 0 .01 0M8 7h8M7 9l4 7M17 9l-4 7',
   '작법': 'M4 20l4-1 11-11-3-3L5 16zM14 7l3 3',
   '안 풀린 것': 'M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.6M12 17h.01',
+  '진실 카드': 'M4 6h7v12H4zM13 6h7v12h-7zM11 12h2',
+  '서술과 실제': 'M5 5v14M19 5v14M5 7l14 10M5 17l14-10',
+  '퀴즈': 'M4 5h16v11H9l-5 4zM9.5 9a2.5 2 0 1 1 3 1.9c-.6.3-1 .7-1 1.3',
 };
 const kico = k => `<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="${KIND_ICON[k] || KIND_ICON['작법']}"/></svg>`;
 // 「제목 — 설명」 꼴 목록 항목은 제목을 굵게
@@ -786,12 +836,45 @@ function relationsHtml(b) {
     ${open.length ? `<h5 class="rh5">드러난 관계</h5><ul class="rel2">${open.map(([i, k]) => row(i, k)).join('')}</ul>` : ''}
     ${hid.length ? `<h5 class="rh5 hid">숨겨진 선</h5><ul class="rel2">${hid.map(([i, k]) => row(i, k)).join('')}</ul>` : ''}`;
 }
+// 진실 카드: 인물마다 「처음 보인 모습 → 실제」
+function truthsHtml(b) {
+  return `<div class="truths">${b.items.map(i => `<article class="tc"><h5>${esc(i.name)}</h5>
+      <div class="tcs"><span class="tclab">처음 보인 모습</span><p>${esc(i.seemed)}</p></div>
+      <div class="tca" aria-hidden="true">↓</div>
+      <div class="tcr"><span class="tclab">실제</span><p>${esc(i.actually)}</p></div>
+      ${i.turn ? `<p class="tct">뒤집히는 계기 · ${esc(i.turn)}</p>` : ''}</article>`).join('')}</div>`;
+}
+// 서술과 실제: 왼쪽 책이 보여 준 순서, 오른쪽 실제 순서 — 같은 사건을 선으로 잇는다(엇갈리는 선이 곧 비틀림)
+function orderHtml(b) {
+  const ev = Object.fromEntries(b.events.map(e => [e.id, e.label]));
+  const told = b.told.filter(id => ev[id] != null), act = b.actual.filter(id => ev[id] != null);
+  const n = Math.max(told.length, act.length), RH = 52;
+  const ai = Object.fromEntries(act.map((id, k) => [id, k]));
+  const lines = told.map((id, k) => { const j = ai[id]; if (j == null) return '';
+    const y1 = k * RH + RH / 2, y2 = j * RH + RH / 2, moved = Math.abs(j - k);
+    return `<path data-id="${esc(id)}" class="${moved >= 3 ? 'far' : moved ? 'mv' : ''}" d="M0 ${y1} C50 ${y1} 50 ${y2} 100 ${y2}" vector-effect="non-scaling-stroke"/>`; }).join('');
+  const col = (ids, side) => `<ol class="oc ${side}">${ids.map((id, k) => `<li data-id="${esc(id)}" tabindex="0"><b>${k + 1}</b><span>${esc(ev[id])}</span></li>`).join('')}</ol>`;
+  return `<div class="ord"><div class="oh"><span>책이 보여 준 순서</span><span></span><span>실제로 일어난 순서</span></div>
+    <div class="ob" style="--rh:${RH}px">${col(told, 'l')}<svg viewBox="0 0 100 ${n * RH}" preserveAspectRatio="none" style="height:${n * RH}px" aria-hidden="true">${lines}</svg>${col(act, 'r')}</div>
+    <p class="gh">사건에 손을 대면 두 순서에서 같은 사건이 함께 켜집니다. 선이 크게 엇갈릴수록 책이 순서를 많이 비튼 사건입니다.</p></div>`;
+}
+// 퀴즈: 보기를 누르면 정답과 근거가 열린다. 다 풀면 맞힌 수
+function quizHtml(b) {
+  return `<div class="quiz" data-n="${b.items.length}">${b.items.map((i, k) => `<section class="qz" data-ans="${+i.answer}">
+      <h5><span>Q${k + 1}</span>${esc(i.q)}</h5>
+      <div class="qc">${i.choices.map((c, x) => `<button type="button" data-x="${x}">${esc(c)}</button>`).join('')}</div>
+      <p class="qw" hidden>${esc(i.why || '')}</p></section>`).join('')}
+    <p class="qs" hidden></p></div>`;
+}
 function blockHtml(b, kind) {
   if (b.type === 'text') return `<p>${esc(b.text)}</p>`;
   if (b.type === 'list') return listHtml(b.items, kind === '안 풀린 것' ? 'nl2 q' : 'nl2');
   if (b.type === 'timeline') return timelineHtml(b);
   if (b.type === 'pairs') return pairsHtml(b);
   if (b.type === 'relations') return relationsHtml(b);
+  if (b.type === 'truths') return truthsHtml(b);
+  if (b.type === 'order') return orderHtml(b);
+  if (b.type === 'quiz') return quizHtml(b);
   return '';
 }
 function pinTop() {
@@ -799,10 +882,15 @@ function pinTop() {
   document.documentElement.style.setProperty('--pin-top', (t ? t.getBoundingClientRect().height : 56) + 'px');
 }
 addEventListener('resize', pinTop);
-function mountReader(root, notes) {
+let SPOIL_WANT = '';
+function mountReader(root, notes, want) {
   pinTop();
   const stories = [...new Set(notes.map(n => n.story || ''))];
   let st = stories[0], cur = 0;
+  // 게시물에서 넘어온 주소 #spoil-<글 id>[@단편] — 그 글 탭으로 바로 연다
+  if (want) { const [wid, wst] = want.split('@'); const idOk = n => n.id === wid || String(n.id).endsWith('-' + wid);  // 단편집은 「단편-quiz」 꼴
+    const hit = notes.find(n => idOk(n) && (!wst || n.story === wst));
+    if (hit) { st = hit.story || ''; cur = Math.max(0, notes.filter(n => (n.story || '') === st).sort((x, y) => KINDS.indexOf(x.kind) - KINDS.indexOf(y.kind)).indexOf(hit)); } }
   const forStory = () => notes.filter(n => (n.story || '') === st).sort((x, y) => KINDS.indexOf(x.kind) - KINDS.indexOf(y.kind));
   function draw(scroll) {
     const ns = forStory(), n = ns[cur] || ns[0];
@@ -832,6 +920,22 @@ function wireViz(root) {
   });
   link('.tl2 li', '.strk i');
   link('.pairs2 li', '.arcs path, .am i');
+  root.querySelectorAll('.ord li').forEach(li => {
+    const on = v => root.querySelectorAll(`.ord [data-id="${li.dataset.id}"]`).forEach(x => x.classList.toggle('on', v));
+    ['mouseenter', 'focus'].forEach(e => li.addEventListener(e, () => on(true)));
+    ['mouseleave', 'blur'].forEach(e => li.addEventListener(e, () => on(false)));
+  });
+  root.querySelectorAll('.qz').forEach(q => q.querySelectorAll('.qc button').forEach(btn => btn.onclick = () => {
+    if (q.classList.contains('done')) return;
+    q.classList.add('done');
+    const ans = +q.dataset.ans, x = +btn.dataset.x;
+    q.querySelectorAll('.qc button').forEach(b2 => { b2.disabled = true; if (+b2.dataset.x === ans) b2.classList.add('ok'); });
+    if (x !== ans) btn.classList.add('no'); else q.classList.add('right');
+    q.querySelector('.qw').hidden = false;
+    const quiz = q.closest('.quiz'), done = quiz.querySelectorAll('.qz.done').length;
+    if (done === +quiz.dataset.n) { const s = quiz.querySelector('.qs'); s.hidden = false;
+      s.textContent = `${quiz.dataset.n}문제 중 ${quiz.querySelectorAll('.qz.right').length}문제를 맞혔습니다.`; }
+  }));
   const g = root.querySelector('.graph svg');
   if (!g) return;
   let focus = null;
@@ -877,9 +981,13 @@ function book(title) {
   if (g) {
     const list = document.getElementById('spoilList');
     const cols = app.querySelector('.cols');
+    // 인스타 게시물에서 「#spoil-quiz」 같은 주소로 들어오면 스포 칸으로 내려 보낸다(경고 창은 그대로 거친다)
+    const hm = decodeURIComponent(location.hash).match(/^#spoil(?:-(.+))?$/);
+    SPOIL_WANT = hm ? (hm[1] || '') : '';
+    if (hm) setTimeout(() => g.scrollIntoView({block: 'center'}), 300);
     g.querySelector('button').onclick = () => warn(b.title, () => {
       g.hidden = true; list.hidden = false; cols.classList.add('wide');  // 그림이 들어가니 펼치면 화면 폭으로
-      const r = document.getElementById('reader'); if (r) mountReader(r, notes);
+      const r = document.getElementById('reader'); if (r) mountReader(r, notes, SPOIL_WANT);
       watch(list); list.closest('.col').scrollIntoView({block: 'start'});
     });
     document.getElementById('fold').onclick = () => { list.hidden = true; g.hidden = false; cols.classList.remove('wide'); g.scrollIntoView({block:'center'}); };
