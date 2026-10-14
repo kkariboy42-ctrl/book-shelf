@@ -30,6 +30,15 @@ def load_weeks(root=ALADIN):
         d["key"] = f"{y}-{m:02d}-{w}"
         d["label"] = f"{y}년 {m}월 {w}주"
         weeks.append(d)
+    # 연속 1위 정정 — 인스타에 나간 숫자(data.json)가 틀렸던 주는 사이트만 바로잡는다
+    try:
+        fix = json.load(open(os.path.join(root, "연속1위_정정.json"), encoding="utf-8"))
+    except (OSError, ValueError):
+        fix = {}
+    for d in weeks:
+        y, m, w = d["week"]
+        if f"{y}-{m:02d}-{w}" in fix:
+            d["books"][0]["streak"] = fix[f"{y}-{m:02d}-{w}"]
     weeks.sort(key=lambda d: d["key"], reverse=True)
     return weeks
 
