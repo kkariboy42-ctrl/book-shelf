@@ -1643,5 +1643,22 @@
   "plus": false,
   "gajebon": false,
   "genre": "소설"
+ },
+ "7인의 증인": {
+  "author": "니시무라 교타로",
+  "cover": "covers/7994024d29.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=403739964",
+  "rating": null,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "살육에 이르는 병": {
+  "author": "아비코 다케마루",
+  "rating": null,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
  }
 }
