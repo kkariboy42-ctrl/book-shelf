@@ -13809,6 +13809,7 @@ window.SHELF = {
    "plus": false,
    "gajebon": false,
    "genre": "소설",
+   "country_fixed": "일본",
    "deep": true,
    "slug": "살육에-이르는-병",
    "excerpt": "",

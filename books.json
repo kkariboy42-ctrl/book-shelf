@@ -1659,6 +1659,7 @@
   "rating": null,
   "plus": false,
   "gajebon": false,
-  "genre": "소설"
+  "genre": "소설",
+  "country_fixed": "일본"
  }
 }
