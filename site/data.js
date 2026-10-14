@@ -11,15 +11,6 @@ window.SHELF = {
    "hook": "줄거리는 한 줄도 말하지 않고, 작가가 쓴 방법만 셌습니다."
   },
   {
-   "code": "DebfhTQpC-1",
-   "date": "2026-10-13",
-   "book": "7인의 증인",
-   "video": false,
-   "kind": "게시물",
-   "spoiler": false,
-   "hook": "블루홀식스에서 니시무라 교타로의 7인의 증인 서평단 모집중입니다."
-  },
-  {
    "code": "DebtHaFCbU6",
    "date": "2026-10-12",
    "book": "한국사 이상현상 연구원",
@@ -13783,26 +13774,6 @@ window.SHELF = {
    "country": "일본",
    "rank_best": 9
   },
-  "7인의 증인": {
-   "author": "니시무라 교타로",
-   "cover": "covers/7994024d29.jpg",
-   "publisher": "블루홀식스(블루홀6)",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=403739964",
-   "rating": null,
-   "plus": false,
-   "gajebon": false,
-   "genre": "소설",
-   "deep": false,
-   "slug": "7인의-증인",
-   "excerpt": "",
-   "pages": 344,
-   "pubdate": "2026-10-12",
-   "translators": [
-    "이연승"
-   ],
-   "country": "일본",
-   "rank_best": 5
-  },
   "살육에 이르는 병": {
    "author": "아비코 다케마루",
    "rating": null,
@@ -13810,10 +13781,11 @@ window.SHELF = {
    "gajebon": false,
    "genre": "소설",
    "country_fixed": "일본",
+   "cover": "covers/3aea4500c7.jpg",
    "deep": true,
    "slug": "살육에-이르는-병",
    "excerpt": "",
-   "country": "한국",
+   "country": "일본",
    "rank_best": 11
   }
  }

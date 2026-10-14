@@ -1660,6 +1660,7 @@
   "plus": false,
   "gajebon": false,
   "genre": "소설",
-  "country_fixed": "일본"
+  "country_fixed": "일본",
+  "cover": "covers/3aea4500c7.jpg"
  }
 }
