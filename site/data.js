@@ -1,6 +1,78 @@
 window.SHELF = {
- "updated": "2026-10-14",
+ "updated": "2026-10-19",
  "posts": [
+  {
+   "code": "DeqS-hliSCB",
+   "date": "2026-10-15",
+   "book": "이상한 지도",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "설명이 아주 친절한 소설입니다. 그런데 친절은 공짜가 아닙니다."
+  },
+  {
+   "code": "Deor9mxCY44",
+   "date": "2026-10-15",
+   "book": "한국사 이상현상 연구원",
+   "video": true,
+   "kind": "작법",
+   "spoiler": false,
+   "hook": "이 소설에서는 사람보다 서류가 먼저 옵니다."
+  },
+  {
+   "code": "DeoCz1GidDh",
+   "date": "2026-10-15",
+   "book": "이상한 지도",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "같은 종이인데, 결과가 다릅니다."
+  },
+  {
+   "code": "DenuMQ3iZXp",
+   "date": "2026-10-15",
+   "book": "한국사 이상현상 연구원",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "소설 속 탐사 지침서에 적힌 한 노인의 기록입니다."
+  },
+  {
+   "code": "Del5bvFCRkA",
+   "date": "2026-10-15",
+   "book": "한국사 이상현상 연구원",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "탐사 지침서 #4 · 사덕헌"
+  },
+  {
+   "code": "DeleBoMiWlw",
+   "date": "2026-10-15",
+   "book": "살육에 이르는 병",
+   "video": true,
+   "kind": "표기",
+   "spoiler": false,
+   "hook": "카오루라고 적으셨다면, 책에는 가오루입니다."
+  },
+  {
+   "code": "DelJYUJCVKp",
+   "date": "2026-10-15",
+   "book": "이상한 지도",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "우케쓰 『이상한 지도』 뒤에 접어 넣은 큰 지도가 한 장 있습니다. 그 지도를 코드로 다시 그렸습니다."
+  },
+  {
+   "code": "DejUr6iiRuT",
+   "date": "2026-10-15",
+   "book": "천 년의 후더닛",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "사람을 얼렸다가 천 년 뒤에 깨운다. 지금 과학으로 가능합니까?"
+  },
   {
    "code": "DedbDWFCf12",
    "date": "2026-10-13",
