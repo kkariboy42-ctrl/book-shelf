@@ -20,6 +20,10 @@ def _norm(s):
 def load_weeks(root=ALADIN):
     weeks = []
     for p in glob.glob(os.path.join(root, "*", "*", "data.json")):
+        # 알라딘이 지난 주 순위를 나중에 고친 주는 사이트만 최신 값으로 — data.json 은 인스타에 나간 값 그대로 둔다
+        site_p = os.path.join(os.path.dirname(p), "data_사이트.json")
+        if os.path.exists(site_p):
+            p = site_p
         try:
             d = json.load(open(p, encoding="utf-8"))
         except (OSError, ValueError):
@@ -134,6 +138,8 @@ def _week_html(d, weeks, shelf, cover_ok):
     # 1위 한 줄
     if top.get("streak", 0) >= 2:
         crown = f"{top['streak']}주 연속 1위"
+    elif top.get("regain"):          # 게시 땐 지난주도 1위였는데 알라딘이 고쳐 연속이 끊긴 주 (aladin-weekly)
+        crown = "1위 탈환"
     elif top.get("kind") == "new":
         crown = "첫 진입 1위"
     elif top.get("prev"):
