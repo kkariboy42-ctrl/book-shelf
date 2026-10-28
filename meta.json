@@ -7,7 +7,7 @@
   ],
   "country": "일본",
   "rank_best": 2,
-  "rank_weeks": 4
+  "rank_weeks": 6
  },
  "인수세공": {
   "pages": 244,
@@ -20,8 +20,8 @@
  },
  "미미소기": {
   "country": "일본",
-  "rank_best": 2,
-  "rank_weeks": 2
+  "rank_best": 1,
+  "rank_weeks": 4
  },
  "한국사 이상현상 연구원": {
   "pages": 500,
@@ -54,7 +54,7 @@
   ],
   "country": "일본",
   "rank_best": 1,
-  "rank_weeks": 4
+  "rank_weeks": 6
  },
  "십각관의 살인": {
   "pages": 346,
@@ -1350,7 +1350,7 @@
   ],
   "country": "일본",
   "rank_best": 10,
-  "rank_weeks": 3
+  "rank_weeks": 4
  },
  "705": {
   "pages": 400,
@@ -1360,7 +1360,7 @@
   ],
   "country": "일본",
   "rank_best": 9,
-  "rank_weeks": 3
+  "rank_weeks": 5
  },
  "7인의 증인": {
   "pages": 344,
@@ -1369,12 +1369,15 @@
    "이연승"
   ],
   "country": "일본",
-  "rank_best": 5,
-  "rank_weeks": 1
+  "rank_best": 4,
+  "rank_weeks": 3
  },
  "살육에 이르는 병": {
   "country": "일본",
   "rank_best": 11,
   "rank_weeks": 3
+ },
+ "미네르바의 보복": {
+  "country": "한국"
  }
 }

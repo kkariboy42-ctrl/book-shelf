@@ -1,6 +1,96 @@
 window.SHELF = {
- "updated": "2026-10-19",
+ "updated": "2026-10-29",
  "posts": [
+  {
+   "code": "DfCHW9RCVWP",
+   "date": "2026-10-27",
+   "book": "인수세공",
+   "video": true,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "배달됐을 때인가, 펼쳤을 때인가, 다 읽었을 때인가. 레미코가 붙든 질문은 그것이었습니다."
+  },
+  {
+   "code": "DfBJkn0if1K",
+   "date": "2026-10-27",
+   "book": "영겁관 초연속 살인 사건",
+   "video": true,
+   "kind": "복선",
+   "spoiler": false,
+   "hook": "이 책의 복선은 대놓고 말합니다."
+  },
+  {
+   "code": "De_fEJ2iTPn",
+   "date": "2026-10-26",
+   "book": "미네르바의 보복",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "미키 아키코 『미네르바의 보복』"
+  },
+  {
+   "code": "De_R5mJiWRV",
+   "date": "2026-10-26",
+   "book": "영겁관 초연속 살인 사건",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "이 영상은 클로드(Claude)로, 힉스필드 없이 만들었습니다."
+  },
+  {
+   "code": "De_3F3YCVoH",
+   "date": "2026-10-23",
+   "book": "영겁관 초연속 살인 사건",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "목사, 숙부, 탐정. 장례식을 앞두고 절벽 위 저택에 모인 손님 셋이 그날을 이야기합니다."
+  },
+  {
+   "code": "De9Eo_CCT2o",
+   "date": "2026-10-23",
+   "book": "살육에 이르는 병",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "죽은 언니와 꼭 닮은 동생이 머리를 자르고, 언니의 옷을 입습니다."
+  },
+  {
+   "code": "De7_7kOidnw",
+   "date": "2026-10-23",
+   "book": "인수세공",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "1년 동안 아무도 들어가지 못한 방이 있습니다. 아버지가 죽은 뒤, 딸이 잠근 방입니다."
+  },
+  {
+   "code": "De6msNtiQEW",
+   "date": "2026-10-22",
+   "book": "천 년의 후더닛",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "일곱 명이 천 년을 잤고, 그중 여섯이 깨어났습니다."
+  },
+  {
+   "code": "De5bKU2iVfn",
+   "date": "2026-10-22",
+   "book": "영겁관 초연속 살인 사건",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "책에 없는 한 줄이, 섞여 있습니다."
+  },
+  {
+   "code": "DerLi-HCQ2q",
+   "date": "2026-10-19",
+   "book": "영겁관 초연속 살인 사건",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "영겁관 초연속 살인 사건 / 미나미 아소부 / 블루홀식스 / 2026년 09월"
+  },
   {
    "code": "DeqS-hliSCB",
    "date": "2026-10-15",
@@ -11674,7 +11764,7 @@ window.SHELF = {
    "publisher": "북로드",
    "link": "https://www.yes24.com/product/goods/196020372",
    "store": "예스24",
-   "rating": null,
+   "rating": 5,
    "plus": false,
    "gajebon": false,
    "genre": "소설",
@@ -14654,13 +14744,13 @@ window.SHELF = {
    "cover": "covers/e903fb8783.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=401311362",
-   "rating": null,
+   "rating": 4,
    "plus": false,
    "gajebon": false,
    "genre": "소설",
    "deep": true,
    "slug": "영겁관-초연속-살인-사건",
-   "excerpt": "",
+   "excerpt": "미나미 아소부 『영겁관 초연속 살인 사건』, 첫 문장부터 마녀에게 붙잡혀 버린 책을 가지고 왔습니다. “내 눈을, 마지막까지 바라봐 줘.” 개인적으로는….이 한 줄 때문에 표지 속 소녀의 눈이 한참 기억이 났습니다. 책은 약 390쪽, 서장과 다섯 개의 장으로 이루어져 있습니다. 장마다 “마녀는 X와 ~하기로 했다” 라는 제목이 붙어 있습니다. 책 앞에는 동반의 마녀에게 걸린 세 가지 저주가 적혀 있습니다. 회귀, 동반, 그리고 불로불사입니다. 주요 등장 인물은 이야기의 화자이자 주인공인 브래드버리가의 장남인 히스클리프. 휠체어를 타는 주인공의 눈먼 여동생인 코델리아.",
    "pages": 392,
    "pubdate": "2026-09-09",
    "translators": [
@@ -14702,6 +14792,16 @@ window.SHELF = {
    "excerpt": "",
    "country": "일본",
    "rank_best": 11
+  },
+  "미네르바의 보복": {
+   "author": "미키 아키코",
+   "rating": null,
+   "plus": false,
+   "gajebon": false,
+   "genre": "소설",
+   "deep": false,
+   "slug": "미네르바의-보복",
+   "excerpt": ""
   }
  }
 };
