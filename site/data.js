@@ -2,6 +2,15 @@ window.SHELF = {
  "updated": "2026-10-31",
  "posts": [
   {
+   "code": "DfJMiA3AXw3",
+   "date": "2026-10-28",
+   "book": "이상한 지도",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "현관에서 화장실까지, 먼저 길을 그어 보시길 바랍니다."
+  },
+  {
    "code": "DfCHW9RCVWP",
    "date": "2026-10-27",
    "book": "인수세공",
