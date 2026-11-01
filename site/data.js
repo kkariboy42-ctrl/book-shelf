@@ -1,6 +1,15 @@
 window.SHELF = {
- "updated": "2026-10-31",
+ "updated": "2026-11-01",
  "posts": [
+  {
+   "code": "DfJuzL9AaMn",
+   "date": "2026-10-28",
+   "book": "살육에 이르는 병",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "아비코 다케마루 『살육에 이르는 병』"
+  },
   {
    "code": "DfJMiA3AXw3",
    "date": "2026-10-28",
