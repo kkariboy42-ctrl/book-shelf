@@ -1669,6 +1669,19 @@
   "plus": false,
   "gajebon": false,
   "genre": "소설",
-  "country_fixed": "일본"
+  "country_fixed": "일본",
+  "cover": "covers/e1e40807d8.jpg",
+  "publisher": "블루홀식스(블루홀6)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=405947157"
+ },
+ "파라오의 밀실": {
+  "author": "시라카와 나오후미",
+  "cover": "covers/3c9fa155c4.jpg",
+  "publisher": "북다",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=405330528",
+  "rating": null,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
  }
 }

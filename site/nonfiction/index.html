@@ -402,6 +402,28 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
   .deep-grid .book{scroll-snap-align:start}
   .deepsec{padding-top:32px;padding-bottom:36px}
 }
+/* 새로 올라온 콘텐츠 — 최근 7일 게시물, 첫 화면 맨 위 */
+.newsec{margin:-32px calc(50% - 50vw) 0;padding:36px calc(50vw - 50%) 40px;background:var(--surface);border-bottom:1px solid var(--line)}
+.newsec + .deepsec{margin-top:0}
+.new-h{display:flex;align-items:baseline;gap:6px 14px;flex-wrap:wrap;margin:0 0 20px}
+.new-h h2{font:500 26px/1.2 var(--serif);letter-spacing:-.03em;margin:0}
+.new-h span{font-size:13px;color:var(--muted)}
+.new-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.npost{display:grid;grid-template-columns:58px 1fr;gap:14px;align-items:start;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);text-decoration:none;color:inherit}
+.npost:hover{border-color:var(--ink-2)}
+.npost .cover{box-shadow:none;border-radius:2px 4px 4px 2px}
+.npost .cover .ph{font-size:10px;padding:4px}
+.npost .top{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-bottom:4px}
+.npost .top .new{color:var(--accent);font-weight:700}
+.npost h3{font:700 14px/1.35 var(--sans);margin:0 0 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.npost p{margin:0;font-size:13px;line-height:1.5;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media (max-width:640px){
+  .new-list{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;scrollbar-width:none;margin:0 -16px;padding:0 16px 4px}
+  .new-list::-webkit-scrollbar{display:none}
+  .npost{scroll-snap-align:start}
+  .newsec{padding-top:28px;padding-bottom:30px}
+  .new-h h2{font-size:22px}
+}
 .nw{white-space:nowrap}
 
 /* 필터 */
@@ -725,6 +747,19 @@ function wireFilters() {
     fSync(); home();
   });
 }
+const ymd = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const TODAY = ymd(new Date()), NEW_SINCE = ymd(new Date(Date.now() - 7 * 864e5));
+const shelfSet = new Set(shelf.map(b => b.title));
+const bookOf = Object.fromEntries(books.map(b => [b.title, b]));
+function newPostHtml(p) {
+  const b = bookOf[p.book];
+  const today = p.date === TODAY;
+  return `<a class="npost" href="/book/${encodeURIComponent(b.slug)}/">
+      <div class="cover">${coverHtml(b)}</div>
+      <div><div class="top"><span class="chip">${esc(p.kind)}</span><time>${p.date.replaceAll('-','.')}</time>${today ? '<span class="new">오늘</span>' : ''}</div>
+      <h3>${esc(b.title)}</h3><p>${esc(p.hook)}</p></div>
+    </a>`;
+}
 function home() {
   const k = norm(q.value);
   const nDeep = shelf.filter(b => b.deep).length;
@@ -747,7 +782,11 @@ function home() {
   const deep = shelf.filter(b => b.deep).sort((x, y) => rank(y) - rank(x) || y.last.localeCompare(x.last));
   const deepSec = !k && only === 'all' && !fN() && deep.length ? `<section class="deepsec" aria-labelledby="deep-h"><div class="deep-h"><h2 id="deep-h">원고분석한 책</h2><span>원고 전문을 쪽수 단위로 읽고 인물·사건·복선을 정리한 책 · 별점순</span></div>
       <div class="grid deep-grid">${deep.map(cardHtml).join('')}</div></section>` : '';
-  app.innerHTML = deepSec + tabs + filterHtml(base, list.length) + body;
+  // 새로 올라온 콘텐츠 — 보는 사람의 오늘에서 7일 안, 이 책장(소설/비소설) 책만, 스포 게시물은 뺀다
+  const fresh = !k && only === 'all' && !fN() ? D.posts.filter(p => p.date >= NEW_SINCE && !p.spoiler && shelfSet.has(p.book)) : [];
+  const newSec = fresh.length ? `<section class="newsec" aria-labelledby="new-h"><div class="new-h"><h2 id="new-h">새로 올라온 콘텐츠</h2><span>최근 7일 · 최신순</span></div>
+      <div class="new-list">${fresh.map(newPostHtml).join('')}</div></section>` : '';
+  app.innerHTML = newSec + deepSec + tabs + filterHtml(base, list.length) + body;
   wireFilters();
   app.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { if (b.dataset.g === 'only') only = b.dataset.v; else order = b.dataset.v; home(); });
 }

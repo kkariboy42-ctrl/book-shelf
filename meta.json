@@ -7,7 +7,7 @@
   ],
   "country": "일본",
   "rank_best": 2,
-  "rank_weeks": 6
+  "rank_weeks": 7
  },
  "인수세공": {
   "pages": 244,
@@ -21,7 +21,7 @@
  "미미소기": {
   "country": "일본",
   "rank_best": 1,
-  "rank_weeks": 4
+  "rank_weeks": 5
  },
  "한국사 이상현상 연구원": {
   "pages": 500,
@@ -54,7 +54,7 @@
   ],
   "country": "일본",
   "rank_best": 1,
-  "rank_weeks": 6
+  "rank_weeks": 7
  },
  "십각관의 살인": {
   "pages": 346,
@@ -100,7 +100,9 @@
   "translators": [
    "김수지"
   ],
-  "country": "일본"
+  "country": "일본",
+  "rank_best": 18,
+  "rank_weeks": 1
  },
  "아이는 무서운 꿈을 꾼다": {
   "pages": 420,
@@ -1360,7 +1362,7 @@
   ],
   "country": "일본",
   "rank_best": 9,
-  "rank_weeks": 5
+  "rank_weeks": 6
  },
  "7인의 증인": {
   "pages": 344,
@@ -1370,7 +1372,7 @@
   ],
   "country": "일본",
   "rank_best": 4,
-  "rank_weeks": 3
+  "rank_weeks": 4
  },
  "살육에 이르는 병": {
   "country": "일본",
@@ -1378,6 +1380,25 @@
   "rank_weeks": 3
  },
  "미네르바의 보복": {
-  "country": "일본"
+  "pages": 396,
+  "pubdate": "2026-11-09",
+  "orig": "ミネルヴァの報復",
+  "translators": [
+   "문지원"
+  ],
+  "country": "일본",
+  "rank_best": 14,
+  "rank_weeks": 1
+ },
+ "파라오의 밀실": {
+  "pages": 372,
+  "pubdate": "2026-10-26",
+  "orig": "ファラオの密室",
+  "translators": [
+   "최고은"
+  ],
+  "country": "일본",
+  "rank_best": 2,
+  "rank_weeks": 2
  }
 }

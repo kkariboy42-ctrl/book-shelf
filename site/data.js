@@ -1,6 +1,51 @@
 window.SHELF = {
- "updated": "2026-11-01",
+ "updated": "2026-11-05",
  "posts": [
+  {
+   "code": "DfTfqgpu_vf",
+   "date": "2026-11-03",
+   "book": "인수세공",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "『인수세공』은 책 제목이자, 세 편 중 첫 편의 제목입니다."
+  },
+  {
+   "code": "DfPfnjpCU7Q",
+   "date": "2026-11-02",
+   "book": "미미소기",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "미미소기 / 미쓰다 신조 / 현정수 옮김 / 북로드 / 2026년 10월"
+  },
+  {
+   "code": "DfRx44yCVmT",
+   "date": "2026-11-02",
+   "book": "입에 대한 앙케트",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "『입에 대한 앙케트』 단편 영화 1/3 — 이 나무 밑은 밤에 지나가면 안 된다고 했습니다."
+  },
+  {
+   "code": "DfQ68_-CRWA",
+   "date": "2026-11-02",
+   "book": "영겁관 초연속 살인 사건",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "사람들의 약점을 하나씩 들추던 탐정 앞으로, 열네 살 여동생이 먼저 다가갑니다."
+  },
+  {
+   "code": "DfPcMEnTbOZ",
+   "date": "2026-11-02",
+   "book": "파라오의 밀실",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "시라카와 나오후미 『파라오의 밀실』"
+  },
   {
    "code": "DfJuzL9AaMn",
    "date": "2026-10-28",
@@ -12447,7 +12492,7 @@ window.SHELF = {
    "country_fixed": "일본",
    "deep": true,
    "slug": "미미소기",
-   "excerpt": "일전에 북로드에서 진행된 미쓰다 신조 팬모임에서 이 책의 존재를 알았습니다 그리고 지금 가제본으로 앞부분의 내용을 보았습니다 과연!!!!! 가제본은 약 75페이지 분량이고, 따로 장 구분 없이 '미마사카 만조의 노트에서'라는 기록 하나로 이야기가 이어집니다. 주요인물은 기록을 남긴 미마사카 만조와 괴담회에 등장하는 초로의 남자, 그리고 탕치장에서 만난 청년 이즈메입니다. 만조는 우리를 괴담회 자리에 함께 앉혀놓습니다. 초로의 남자는 시작이 되는 이야기의 문을 엽니다. 그리고 이즈메는 우리를 \"더 무서운 이야기가 있어.\"라고 말하며 한 겹 더 깊은 곳으로 끌고 내려갑니다. 이야기는 이렇습니다.",
+   "excerpt": "가제본으로 먼저 만났던 미미소기를 드디어 정식본으로 끝까지 읽었습니다. 가제본이 \"어째서요?\" 한마디에서 끊겨버려서 얼마나 기다렸는지 모릅니다… \"듣지 말았어야 했다.\" 책은 약 340페이지이고 서장, 기록, 막간, 체험, 종장의 다섯 부분으로 이루어져 있습니다. 가제본에서 읽었던 이야기는 두 번째 부분인 기록 '미마사카 만조의 노트'에서의 앞부분이었습니다. 정식본은 그 앞에 서장이 하나 더 있습니다. 그리고 이 서장의 화자는 바로 작가 미쓰다 신조 본인입니다. 주요인물은 작가 '나', 편집자 미마사카 슈조, 그리고 슈조의 할아버지 미마사카 만조입니다. 미쓰다 신조는 할아버지가 남긴 노트를 우리에게 그대로 옮겨주는 역할입니다.",
    "country": "일본",
    "rank_best": 1
   },
@@ -12619,7 +12664,8 @@ window.SHELF = {
    "translators": [
     "김수지"
    ],
-   "country": "일본"
+   "country": "일본",
+   "rank_best": 18
   },
   "아이는 무서운 꿈을 꾼다": {
    "author": "우사미 마코토",
@@ -15476,10 +15522,39 @@ window.SHELF = {
    "gajebon": false,
    "genre": "소설",
    "country_fixed": "일본",
+   "cover": "covers/e1e40807d8.jpg",
+   "publisher": "블루홀식스(블루홀6)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=405947157",
    "deep": false,
    "slug": "미네르바의-보복",
    "excerpt": "",
-   "country": "일본"
+   "pages": 396,
+   "pubdate": "2026-11-09",
+   "translators": [
+    "문지원"
+   ],
+   "country": "일본",
+   "rank_best": 14
+  },
+  "파라오의 밀실": {
+   "author": "시라카와 나오후미",
+   "cover": "covers/3c9fa155c4.jpg",
+   "publisher": "북다",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=405330528",
+   "rating": null,
+   "plus": false,
+   "gajebon": false,
+   "genre": "소설",
+   "deep": true,
+   "slug": "파라오의-밀실",
+   "excerpt": "",
+   "pages": 372,
+   "pubdate": "2026-10-26",
+   "translators": [
+    "최고은"
+   ],
+   "country": "일본",
+   "rank_best": 2
   }
  }
 };
