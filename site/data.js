@@ -1,6 +1,33 @@
 window.SHELF = {
- "updated": "2026-11-05",
+ "updated": "2026-11-07",
  "posts": [
+  {
+   "code": "DfZnDniunsy",
+   "date": "2026-11-03",
+   "book": "입에 대한 앙케트",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "『입에 대한 앙케트』 단편 영화 2/3 — 한밤중 공동묘지, 나무 뒤에서 맨손으로 땅을 파는 여자."
+  },
+  {
+   "code": "DfYpVIVui0s",
+   "date": "2026-11-03",
+   "book": "살육에 이르는 병",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "[다 읽은 분께] 『살육에 이르는 병』 다시 펼칠 자리 1/5 — 첫 장면의 시선"
+  },
+  {
+   "code": "DfW0nImuUaJ",
+   "date": "2026-11-03",
+   "book": "살육에 이르는 병",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "아비코 다케마루 『살육에 이르는 병』"
+  },
   {
    "code": "DfTfqgpu_vf",
    "date": "2026-11-03",
