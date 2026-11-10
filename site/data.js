@@ -1,6 +1,33 @@
 window.SHELF = {
- "updated": "2026-11-07",
+ "updated": "2026-11-10",
  "posts": [
+  {
+   "code": "DfhSan8z_DB",
+   "date": "2026-11-09",
+   "book": "영겁관 초연속 살인 사건",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "미나미 아소부 『영겁관 초연속 살인 사건』"
+  },
+  {
+   "code": "DfgXsvlu9US",
+   "date": "2026-11-05",
+   "book": "살육에 이르는 병",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "[다 읽은 분께] 『살육에 이르는 병』 다시 펼칠 자리 2/5 — 회상이 끝난 자리"
+  },
+  {
+   "code": "DfcE_Kquifo",
+   "date": "2026-11-05",
+   "book": "영겁관 초연속 살인 사건",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "미나미 아소부 『영겁관 초연속 살인 사건』"
+  },
   {
    "code": "DfZnDniunsy",
    "date": "2026-11-03",
