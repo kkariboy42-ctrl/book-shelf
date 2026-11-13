@@ -1,6 +1,33 @@
 window.SHELF = {
- "updated": "2026-11-10",
+ "updated": "2026-11-13",
  "posts": [
+  {
+   "code": "DfoGAfkucBp",
+   "date": "2026-11-10",
+   "book": "한국사 이상현상 연구원",
+   "video": true,
+   "kind": "사건파일",
+   "spoiler": false,
+   "hook": "진술 셋, 거짓도 셋입니다. 책을 읽은 분이라면 바로 보이는 거짓입니다."
+  },
+  {
+   "code": "DfmYJxUOhOV",
+   "date": "2026-11-10",
+   "book": "미미소기",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "『미미소기』 명장면 — 촛불"
+  },
+  {
+   "code": "Dfi8gs8uqzg",
+   "date": "2026-11-09",
+   "book": "인수세공",
+   "video": true,
+   "kind": "작법",
+   "spoiler": false,
+   "hook": "같은 작가가 세 편을, 세 가지 방법으로 씁니다."
+  },
   {
    "code": "DfhSan8z_DB",
    "date": "2026-11-09",
@@ -9,6 +36,15 @@ window.SHELF = {
    "kind": "영상",
    "spoiler": false,
    "hook": "미나미 아소부 『영겁관 초연속 살인 사건』"
+  },
+  {
+   "code": "DfjsjawOtd5",
+   "date": "2026-11-05",
+   "book": "입에 대한 앙케트",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "『입에 대한 앙케트』 단편 영화 3/3 — 텔레비전 속 나무판 하나에 온몸이 떨리던 아이가 있었습니다."
   },
   {
    "code": "DfgXsvlu9US",
