@@ -1679,7 +1679,27 @@
   "cover": "covers/3c9fa155c4.jpg",
   "publisher": "북다",
   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=405330528",
+  "rating": 2,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "축복하는 요메쿠비": {
+  "author": "미쓰다 신조",
+  "cover": "covers/2d2a03f76f.jpg",
+  "publisher": "리드비",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=404961343",
   "rating": null,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
+ },
+ "고백": {
+  "author": "미나토 가나에",
+  "cover": "covers/a75a882af0.jpg",
+  "publisher": "비채",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=163647209",
+  "rating": 5,
   "plus": false,
   "gajebon": false,
   "genre": "소설"

@@ -1,6 +1,42 @@
 window.SHELF = {
- "updated": "2026-11-13",
+ "updated": "2026-11-15",
  "posts": [
+  {
+   "code": "Dft89wBCZ_j",
+   "date": "2026-11-14",
+   "book": "파라오의 밀실",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "파라오의 밀실 / 시라카와 나오후미 / 북다 / 2026년 10월"
+  },
+  {
+   "code": "DftPpjsOjm_",
+   "date": "2026-11-12",
+   "book": "살육에 이르는 병",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "[다 읽은 분께] 『살육에 이르는 병』 다시 펼칠 자리 3/5 — 처음부터 있던 이름"
+  },
+  {
+   "code": "DfrhxAiOD0f",
+   "date": "2026-11-12",
+   "book": "축복하는 요메쿠비",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "미쓰다 신조 『축복하는 요메쿠비』"
+  },
+  {
+   "code": "DfrIjOCTaGf",
+   "date": "2026-11-12",
+   "book": "고백",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "『고백』을 덮고 나서 「이런 거 또 없나?」 하신 적 있으실 겁니다."
+  },
   {
    "code": "DfoGAfkucBp",
    "date": "2026-11-10",
@@ -3519,6 +3555,15 @@ window.SHELF = {
    "kind": "서평",
    "spoiler": false,
    "hook": "📚 세상 끝의 살인 / 아라키 아카네 / 북스피어 / 2023년 12월 📅"
+  },
+  {
+   "code": "C78zgo_Rgh4",
+   "date": "2024-06-08",
+   "book": "고백",
+   "video": false,
+   "kind": "게시물",
+   "spoiler": false,
+   "hook": "갑자기 생각나서 올리는 📚이프로의 미스터리 분야 인생책 TOP 10입니다!✨"
   },
   {
    "code": "C76OizLR59B",
@@ -16475,20 +16520,20 @@ window.SHELF = {
     "문지원"
    ],
    "country": "일본",
-   "rank_best": 14
+   "rank_best": 4
   },
   "파라오의 밀실": {
    "author": "시라카와 나오후미",
    "cover": "covers/3c9fa155c4.jpg",
    "publisher": "북다",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=405330528",
-   "rating": null,
+   "rating": 2,
    "plus": false,
    "gajebon": false,
    "genre": "소설",
    "deep": true,
    "slug": "파라오의-밀실",
-   "excerpt": "",
+   "excerpt": "특수 설정 미스터리 입니다. 미라가 직접 탐정이 됩니다. 굉장히 독특하죠?? 하지만… 책은 약 360쪽, 프롤로그와 네 개의 장, 그리고 에필로그로 이루어져 있습니다. 제1장 사자의 시련 제2장 석재를 운반하는 노예 소녀 제3장 드리우는 광신도의 그림자 제4장 사막의 밀실. 주요인물은 이렇습니다. 세티는 반년 전 왕묘 붕괴 사고로 목숨을 잃은 상급 신전 서기입니다. 미라가 된 몸으로 이승에 돌아와 자기 죽음을 직접 조사하는, 이 책의 탐정 역활입니다. 타렉은 세티의 둘도 없는 친구이자, 모두가 천재라 부르는 젊은 미라 장인입니다. 칼리는 하투샤에서 끌려와 왕묘 건설 현장에서 돌을 나르는 노예 소녀입니다. 이야기는 이렇습니다.",
    "pages": 372,
    "pubdate": "2026-10-26",
    "translators": [
@@ -16496,6 +16541,44 @@ window.SHELF = {
    ],
    "country": "일본",
    "rank_best": 2
+  },
+  "축복하는 요메쿠비": {
+   "author": "미쓰다 신조",
+   "cover": "covers/2d2a03f76f.jpg",
+   "publisher": "리드비",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=404961343",
+   "rating": null,
+   "plus": false,
+   "gajebon": false,
+   "genre": "소설",
+   "deep": true,
+   "slug": "축복하는-요메쿠비",
+   "excerpt": "",
+   "pages": 540,
+   "pubdate": "2026-10-29",
+   "translators": [
+    "김은모"
+   ],
+   "country": "일본"
+  },
+  "고백": {
+   "author": "미나토 가나에",
+   "cover": "covers/a75a882af0.jpg",
+   "publisher": "비채",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=163647209",
+   "rating": 5,
+   "plus": false,
+   "gajebon": false,
+   "genre": "소설",
+   "deep": false,
+   "slug": "고백",
+   "excerpt": "",
+   "pages": 296,
+   "pubdate": "2018-08-23",
+   "translators": [
+    "김선영"
+   ],
+   "country": "일본"
   }
  }
 };
