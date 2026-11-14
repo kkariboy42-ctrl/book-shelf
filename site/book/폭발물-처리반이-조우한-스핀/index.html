@@ -602,6 +602,20 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
   .ob,.oh{grid-template-columns:1fr 34px 1fr}
   .oc li{font-size:12.5px;gap:5px;padding:0 3px}
 }
+/* ─── 팔로우 동선 (2026-11-14) — 머리 단추 · 폰 상단 인스타 아이콘 · 첫 화면 방문 수 칸 뺌 ─── */
+.followrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0 0 24px}
+.followrow span{font:500 14px var(--sans);color:var(--band-muted)}
+.followbtn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:#e08a74;color:#fff;font:800 14px var(--sans);text-decoration:none;white-space:nowrap}
+.followbtn:hover{filter:brightness(1.08)}
+.followbtn .ico{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.2}
+.stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:860px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.stat{grid-column:auto}.stat:nth-child(4){border-left:1px solid var(--line)}}
+@media (max-width:520px){
+  .navr .navlink{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;font-size:0;gap:0;flex:none}
+  .navr .navlink .ico{display:none}
+  .navr .navlink::before{content:"";width:18px;height:18px;background:currentColor;-webkit-mask:var(--ig) center/contain no-repeat;mask:var(--ig) center/contain no-repeat}
+}
+:root{--ig:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'%3E%3Crect x='3' y='3' width='18' height='18' rx='5'/%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Ccircle cx='17.5' cy='6.5' r='1' fill='black'/%3E%3C/svg%3E")}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "폭발물 처리반이 조우한 스핀", "url": "https://bookhoster.co.kr/book/폭발물-처리반이-조우한-스핀/", "author": {"@type": "Person", "name": "사토 기와무"}, "translator": [{"@type": "Person", "name": "김은모"}], "publisher": {"@type": "Organization", "name": "블루홀식스(블루홀6)"}, "numberOfPages": 424, "datePublished": "2023-12-05", "image": "https://bookhoster.co.kr/covers/4b6652cf91.jpg", "review": {"@type": "Review", "author": {"@type": "Person", "name": "책호스터이프로"}, "reviewRating": {"@type": "Rating", "ratingValue": 3, "bestRating": 5, "worstRating": 1}, "reviewBody": "테스카틀리포카의 그 작가의 신작입니다 이 책 또한 놀랍군요 책은 약 420페이지 8개의 단편으로 구성되어 있습니다. 모든 단편들이 기괴하고 독특합니다. 그리고 상당한 양의 자료 수집 후 이야기를 쓰는 스타일이 신걸로 추정됩니다. (굉장히 전문적인 내용들도 많이 들어있습니다. 특히 양자 역학…) 1 폭발물 처리반이 조우한 스핀 -별3개- 교육청으로 가고시마 내 초등학교에 폭탄을 터트리겠다는 협박 전화가 걸려왔습니다 이에 우하라 경사 포함 폭발물처리반이 출동하였고 동상 뒤에 수상한 물건을 발견했습니다. 그리고 그 수상한 물건을 처리하면서 폭탄이 터졌습니다."}}</script>
 </head>
@@ -609,11 +623,12 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
 <header class="topbar"><div class="wrap">
   <a class="brand" href="/" aria-label="책장 처음으로"><span class="mark" aria-hidden="true">책</span><span class="wordmark">책호스터이프로 책장<small>@kkariboy42</small></span></a>
   <nav class="navr"><div class="sec" role="navigation" aria-label="책장 구분"><a href="/" data-sec="fiction">소설</a><a href="/nonfiction/" data-sec="nonfiction">비소설</a><a href="/ranking/" data-sec="ranking"><span class="lg">알라딘 </span>순위</a></div>
-  <a class="navlink" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">Instagram <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></nav>
+  <a class="navlink" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener" aria-label="인스타그램 @kkariboy42">Instagram <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></nav>
 </div></header>
 <section class="hero" id="hero"><div class="wrap">
   <h1 id="h-title"><span class="nw">고를 때는 별점,</span> <span class="nw">다 읽고 나면</span> <span class="nw">결말 해설</span></h1>
   <p class="sub" id="h-sub">인스타그램 @kkariboy42에 올린 <span class="nw">추리·미스터리·호러</span> 서평을 책별로 모았습니다. <span class="nw">결말 해설은</span> 접어 두었으니 안심하셔도 됩니다.</p>
+  <div class="followrow" id="followrow"><a class="followbtn" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">@kkariboy42 팔로우 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span>새 서평과 단편 영화는 인스타그램에 먼저 올립니다</span></div>
   <div class="searchbox"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
     <input class="search" id="q" type="search" placeholder="책 제목이나 작가로 찾기" aria-label="책 찾기"></div>
   <div class="stats" id="stats"></div>
@@ -659,7 +674,6 @@ document.getElementById('foot').textContent = `책 ${books.length}권 · 게시�
 const nPlus = shelf.filter(b => b.plus).length;
 if (document.getElementById('stats')) document.getElementById('stats').innerHTML = [
   [shelf.length.toLocaleString('ko-KR'), '권의 책'], [nShelfPosts.toLocaleString('ko-KR'), '개의 게시물'], [nPlus, '권의 별 5+'],
-  ['<span data-visit="today">–</span>', '오늘 방문', 'visit'], ['<span data-visit="total">–</span>', '전체 방문', 'visit'],
 ].map(([v, l, c]) => `<div class="stat ${c||''}"><b>${v}</b><span>${l}</span></div>`).join('');
 
 const coverHtml = b => b.cover ? `<img src="/${esc(b.cover)}" alt="${esc(b.title)} 표지" loading="lazy">` : `<span class="ph">${esc(b.title)}</span>`;

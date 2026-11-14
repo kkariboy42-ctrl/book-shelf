@@ -602,6 +602,20 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
   .ob,.oh{grid-template-columns:1fr 34px 1fr}
   .oc li{font-size:12.5px;gap:5px;padding:0 3px}
 }
+/* ─── 팔로우 동선 (2026-11-14) — 머리 단추 · 폰 상단 인스타 아이콘 · 첫 화면 방문 수 칸 뺌 ─── */
+.followrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0 0 24px}
+.followrow span{font:500 14px var(--sans);color:var(--band-muted)}
+.followbtn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:#e08a74;color:#fff;font:800 14px var(--sans);text-decoration:none;white-space:nowrap}
+.followbtn:hover{filter:brightness(1.08)}
+.followbtn .ico{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.2}
+.stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:860px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.stat{grid-column:auto}.stat:nth-child(4){border-left:1px solid var(--line)}}
+@media (max-width:520px){
+  .navr .navlink{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;padding:0;font-size:0;gap:0;flex:none}
+  .navr .navlink .ico{display:none}
+  .navr .navlink::before{content:"";width:18px;height:18px;background:currentColor;-webkit-mask:var(--ig) center/contain no-repeat;mask:var(--ig) center/contain no-repeat}
+}
+:root{--ig:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'%3E%3Crect x='3' y='3' width='18' height='18' rx='5'/%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Ccircle cx='17.5' cy='6.5' r='1' fill='black'/%3E%3C/svg%3E")}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "위층의 아내", "url": "https://bookhoster.co.kr/book/위층의-아내/", "author": {"@type": "Person", "name": "프리다 맥파든"}, "translator": [{"@type": "Person", "name": "박지현"}], "publisher": {"@type": "Organization", "name": "북플라자"}, "numberOfPages": 396, "datePublished": "2026-01-01", "image": "https://bookhoster.co.kr/covers/85ac8612dc.jpg", "review": {"@type": "Review", "author": {"@type": "Person", "name": "책호스터이프로"}, "reviewRating": {"@type": "Rating", "ratingValue": 4, "bestRating": 5, "worstRating": 1}, "reviewBody": "“북플라자, 물 들어올 때 제대로 노 젓는 건가요?” 🚣‍♂️ 한 달에 한 권씩 출간되는 '월간 프리다 맥파든' 이번에도 어김없이 우리의 수면 시간을 통째로 삭제하러 온 압도적인 몰입감의 스릴러입니다! 📚 책 정보 약 400쪽 / 에필로그를 제외하고 총 61개의 짧은 챕터로 쪼개져 있습니다. 프리다 맥파든 전매특허인 '미친 가독성'은 기본! 도파민이 활화산처럼 뿜어져 나오는, 소설계의 완벽한 '팝콘 책'(팝콘 무비 같은 느낌!) 그 자체입니다. 🍿🌋 🧩 이야기 (The Story) 베스트셀러 작가인 완벽한 고용주 아담. 그는 2층에 앓아 누운 아내 빅토리아를 돌보기 위해 주인공 실비아를 고용합니다."}}</script>
 </head>
@@ -609,11 +623,12 @@ a{text-underline-offset:.22em;text-decoration-thickness:1px}
 <header class="topbar"><div class="wrap">
   <a class="brand" href="/" aria-label="책장 처음으로"><span class="mark" aria-hidden="true">책</span><span class="wordmark">책호스터이프로 책장<small>@kkariboy42</small></span></a>
   <nav class="navr"><div class="sec" role="navigation" aria-label="책장 구분"><a href="/" data-sec="fiction">소설</a><a href="/nonfiction/" data-sec="nonfiction">비소설</a><a href="/ranking/" data-sec="ranking"><span class="lg">알라딘 </span>순위</a></div>
-  <a class="navlink" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">Instagram <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></nav>
+  <a class="navlink" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener" aria-label="인스타그램 @kkariboy42">Instagram <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a></nav>
 </div></header>
 <section class="hero" id="hero"><div class="wrap">
   <h1 id="h-title"><span class="nw">고를 때는 별점,</span> <span class="nw">다 읽고 나면</span> <span class="nw">결말 해설</span></h1>
   <p class="sub" id="h-sub">인스타그램 @kkariboy42에 올린 <span class="nw">추리·미스터리·호러</span> 서평을 책별로 모았습니다. <span class="nw">결말 해설은</span> 접어 두었으니 안심하셔도 됩니다.</p>
+  <div class="followrow" id="followrow"><a class="followbtn" href="https://www.instagram.com/kkariboy42/" target="_blank" rel="noopener">@kkariboy42 팔로우 <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a><span>새 서평과 단편 영화는 인스타그램에 먼저 올립니다</span></div>
   <div class="searchbox"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
     <input class="search" id="q" type="search" placeholder="책 제목이나 작가로 찾기" aria-label="책 찾기"></div>
   <div class="stats" id="stats"></div>
@@ -659,7 +674,6 @@ document.getElementById('foot').textContent = `책 ${books.length}권 · 게시�
 const nPlus = shelf.filter(b => b.plus).length;
 if (document.getElementById('stats')) document.getElementById('stats').innerHTML = [
   [shelf.length.toLocaleString('ko-KR'), '권의 책'], [nShelfPosts.toLocaleString('ko-KR'), '개의 게시물'], [nPlus, '권의 별 5+'],
-  ['<span data-visit="today">–</span>', '오늘 방문', 'visit'], ['<span data-visit="total">–</span>', '전체 방문', 'visit'],
 ].map(([v, l, c]) => `<div class="stat ${c||''}"><b>${v}</b><span>${l}</span></div>`).join('');
 
 const coverHtml = b => b.cover ? `<img src="/${esc(b.cover)}" alt="${esc(b.title)} 표지" loading="lazy">` : `<span class="ph">${esc(b.title)}</span>`;
