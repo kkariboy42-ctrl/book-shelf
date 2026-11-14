@@ -29,15 +29,6 @@ window.SHELF = {
    "hook": "미쓰다 신조 『축복하는 요메쿠비』"
   },
   {
-   "code": "DfrIjOCTaGf",
-   "date": "2026-11-12",
-   "book": "고백",
-   "video": true,
-   "kind": "영상",
-   "spoiler": false,
-   "hook": "『고백』을 덮고 나서 「이런 거 또 없나?」 하신 적 있으실 겁니다."
-  },
-  {
    "code": "DfoGAfkucBp",
    "date": "2026-11-10",
    "book": "한국사 이상현상 연구원",
@@ -3555,15 +3546,6 @@ window.SHELF = {
    "kind": "서평",
    "spoiler": false,
    "hook": "📚 세상 끝의 살인 / 아라키 아카네 / 북스피어 / 2023년 12월 📅"
-  },
-  {
-   "code": "C78zgo_Rgh4",
-   "date": "2024-06-08",
-   "book": "고백",
-   "video": false,
-   "kind": "게시물",
-   "spoiler": false,
-   "hook": "갑자기 생각나서 올리는 📚이프로의 미스터리 분야 인생책 TOP 10입니다!✨"
   },
   {
    "code": "C76OizLR59B",
@@ -16558,25 +16540,6 @@ window.SHELF = {
    "pubdate": "2026-10-29",
    "translators": [
     "김은모"
-   ],
-   "country": "일본"
-  },
-  "고백": {
-   "author": "미나토 가나에",
-   "cover": "covers/a75a882af0.jpg",
-   "publisher": "비채",
-   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=163647209",
-   "rating": 5,
-   "plus": false,
-   "gajebon": false,
-   "genre": "소설",
-   "deep": false,
-   "slug": "고백",
-   "excerpt": "",
-   "pages": 296,
-   "pubdate": "2018-08-23",
-   "translators": [
-    "김선영"
    ],
    "country": "일본"
   }
