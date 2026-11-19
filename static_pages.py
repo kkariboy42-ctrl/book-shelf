@@ -61,6 +61,11 @@ def _page(template, title, desc, canonical, body_html, book_title=None):
 def build(data, site_dir):
     tpl_path = os.path.join(site_dir, "index.html")
     template = open(tpl_path, encoding="utf-8").read()
+    # data.js 캐시 깨기(11-19): 구운 페이지는 /data.js?v=<내용 해시> 로 부른다 — 틀로 읽을 땐 원래 꼴로 되돌린다
+    template = re.sub(r'<script src="/data\.js\?v=[0-9a-f]+"></script>', '<script src="/data.js"></script>', template)
+    import hashlib
+    ver = hashlib.sha1(json.dumps(data, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()[:10]
+    vtag = f'<script src="/data.js?v={ver}"></script>'
     # 첫 화면에 지난번 구워 둔 정적 목록(<!--home-static-->)은 걷어 내고 빈 틀로 쓴다
     template = re.sub(r'<div class="wrap" id="app">.*?<!--/home-static--></div>', '<div class="wrap" id="app"></div>',
                       template, count=1, flags=re.S)
@@ -127,7 +132,7 @@ def build(data, site_dir):
             page = re.sub(r'<meta property="og:image" content="[^"]*">', f'<meta property="og:image" content="{SITE_URL}/{e(b["cover"])}">', page, count=1)
         d = os.path.join(root, slug)
         os.makedirs(d, exist_ok=True)
-        open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(page)
+        open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(page.replace('<script src="/data.js"></script>', vtag))
         last = max((p["date"] for p in ps), default=data["updated"])
         urls.append((f"{SITE_URL}/book/{slug}/", last))
 
@@ -142,7 +147,7 @@ def build(data, site_dir):
                         '<script>window.SECTION = "nonfiction";</script>\n<script src="/data.js"></script>', 1)
     d = os.path.join(site_dir, "nonfiction")
     os.makedirs(d, exist_ok=True)
-    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(page)
+    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(page.replace('<script src="/data.js"></script>', vtag))
     urls.insert(1, (f"{SITE_URL}/nonfiction/", data["updated"]))
 
     # 첫 화면: 소설 책장 링크를 정적으로 구워 둔다(검색 로봇용 — JS 가 그리는 화면이 덮는다). 다음 빌드 때 위에서 걷어 낸다
@@ -155,7 +160,7 @@ def build(data, site_dir):
     home_static = "".join(f"<h2>{h}</h2><ul>{''.join(li(x) for x in xs)}</ul>" for h, xs in secs if xs)
     home = template.replace('<div class="wrap" id="app"></div>',
                             f'<div class="wrap" id="app"><!--home-static--><nav aria-label="책 목록">{home_static}</nav><!--/home-static--></div>', 1)
-    open(tpl_path, "w", encoding="utf-8").write(home)
+    open(tpl_path, "w", encoding="utf-8").write(home.replace('<script src="/data.js"></script>', vtag))
 
     # 알라딘 주간 순위 탭(/ranking/) — aladin-weekly 가 매주 남기는 data.json 으로
     import ranking_page
