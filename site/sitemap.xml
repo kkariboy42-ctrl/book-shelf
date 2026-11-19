@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bookhoster.co.kr/</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://bookhoster.co.kr/nonfiction/</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://bookhoster.co.kr/</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://bookhoster.co.kr/nonfiction/</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://bookhoster.co.kr/ranking/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://bookhoster.co.kr/ranking/2026-11-2/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://bookhoster.co.kr/ranking/2026-11-1/</loc><lastmod>2026-11-07</lastmod></url>
@@ -11,8 +11,8 @@
   <url><loc>https://bookhoster.co.kr/ranking/2026-10-1/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://bookhoster.co.kr/ranking/2026-09-4/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://bookhoster.co.kr/ranking/2026-09-3/</loc><lastmod>2026-09-21</lastmod></url>
-  <url><loc>https://bookhoster.co.kr/about.html</loc><lastmod>2026-11-15</lastmod></url>
-  <url><loc>https://bookhoster.co.kr/privacy.html</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://bookhoster.co.kr/about.html</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://bookhoster.co.kr/privacy.html</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://bookhoster.co.kr/book/%EC%9D%B4%EC%83%81%ED%95%9C-%EC%A7%80%EB%8F%84/</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://bookhoster.co.kr/book/%EC%9D%B8%EC%88%98%EC%84%B8%EA%B3%B5/</loc><lastmod>2026-11-09</lastmod></url>
   <url><loc>https://bookhoster.co.kr/book/%EB%AF%B8%EB%AF%B8%EC%86%8C%EA%B8%B0/</loc><lastmod>2026-11-10</lastmod></url>
@@ -180,4 +180,5 @@
   <url><loc>https://bookhoster.co.kr/book/%EB%AF%B8%EB%84%A4%EB%A5%B4%EB%B0%94%EC%9D%98-%EB%B3%B4%EB%B3%B5/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://bookhoster.co.kr/book/%ED%8C%8C%EB%9D%BC%EC%98%A4%EC%9D%98-%EB%B0%80%EC%8B%A4/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://bookhoster.co.kr/book/%EC%B6%95%EB%B3%B5%ED%95%98%EB%8A%94-%EC%9A%94%EB%A9%94%EC%BF%A0%EB%B9%84/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://bookhoster.co.kr/book/%EB%B0%B1%EA%B4%91/</loc><lastmod>2026-03-29</lastmod></url>
 </urlset>

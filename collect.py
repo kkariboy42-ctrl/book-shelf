@@ -268,6 +268,10 @@ def main():
             if r.get("title") and r.get("type") in ("서평", "책"):
                 cls[r["code"]] = r
     canon = {norm(t): t for t in core_books}
+    # 서평 게시물이 수집 범위(2023-06) 밖이라 못 찾은 책 — books.json 「force」: true 로 싣는다(11-19 백광)
+    for t0, b0 in books.items():
+        if b0.get("force"):
+            canon.setdefault(norm(t0), t0)
     for r in cls.values():
         if r["type"] == "서평":
             canon.setdefault(norm(r["title"]), r["title"])

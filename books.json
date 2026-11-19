@@ -1703,5 +1703,16 @@
   "plus": false,
   "gajebon": false,
   "genre": "소설"
+ },
+ "백광": {
+  "author": "렌조 미키히코",
+  "publisher": "모모",
+  "force": true,
+  "cover": "covers/0f32286a39.jpg",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=288756034",
+  "rating": 5,
+  "plus": true,
+  "gajebon": false,
+  "genre": "소설"
  }
 }

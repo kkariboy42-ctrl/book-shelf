@@ -1,5 +1,5 @@
 window.SHELF = {
- "updated": "2026-11-15",
+ "updated": "2026-11-19",
  "posts": [
   {
    "code": "Dft89wBCZ_j",
@@ -1350,6 +1350,33 @@ window.SHELF = {
    "kind": "카드뉴스",
    "spoiler": false,
    "hook": "\"지하철역 압사 직전의 인파 속, 캐리어에 폭탄이 들었다고 소리친 남자! 💼💣"
+  },
+  {
+   "code": "DWipV8xCVW6",
+   "date": "2026-03-29",
+   "book": "백광",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "Part 1. 자백의 숲"
+  },
+  {
+   "code": "DWlOGc6ibPT",
+   "date": "2026-03-29",
+   "book": "백광",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "Part 2. 백색의 위선 "
+  },
+  {
+   "code": "DWny4laiYwY",
+   "date": "2026-03-29",
+   "book": "백광",
+   "video": false,
+   "kind": "카드뉴스",
+   "spoiler": false,
+   "hook": "Part 3. 빛의 살의 - 최종화"
   },
   {
    "code": "DWqXpipiWsa",
@@ -18042,7 +18069,7 @@ window.SHELF = {
    "cover": "covers/e1e40807d8.jpg",
    "publisher": "블루홀식스(블루홀6)",
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=405947157",
-   "deep": false,
+   "deep": true,
    "slug": "미네르바의-보복",
    "excerpt": "",
    "pages": 396,
@@ -18091,6 +18118,20 @@ window.SHELF = {
     "김은모"
    ],
    "country": "일본"
+  },
+  "백광": {
+   "author": "렌조 미키히코",
+   "publisher": "모모",
+   "force": true,
+   "cover": "covers/0f32286a39.jpg",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=288756034",
+   "rating": 5,
+   "plus": true,
+   "gajebon": false,
+   "genre": "소설",
+   "deep": false,
+   "slug": "백광",
+   "excerpt": ""
   }
  }
 };
