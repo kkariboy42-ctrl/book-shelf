@@ -7,7 +7,7 @@
   ],
   "country": "일본",
   "rank_best": 2,
-  "rank_weeks": 8
+  "rank_weeks": 9
  },
  "인수세공": {
   "pages": 244,
@@ -21,7 +21,7 @@
  "미미소기": {
   "country": "일본",
   "rank_best": 1,
-  "rank_weeks": 6
+  "rank_weeks": 7
  },
  "한국사 이상현상 연구원": {
   "pages": 500,
@@ -54,7 +54,7 @@
   ],
   "country": "일본",
   "rank_best": 1,
-  "rank_weeks": 8
+  "rank_weeks": 9
  },
  "십각관의 살인": {
   "pages": 346,
@@ -1362,7 +1362,7 @@
   ],
   "country": "일본",
   "rank_best": 9,
-  "rank_weeks": 7
+  "rank_weeks": 8
  },
  "7인의 증인": {
   "pages": 344,
@@ -1377,7 +1377,7 @@
  "살육에 이르는 병": {
   "country": "일본",
   "rank_best": 11,
-  "rank_weeks": 3
+  "rank_weeks": 4
  },
  "미네르바의 보복": {
   "pages": 396,
@@ -1387,8 +1387,8 @@
    "문지원"
   ],
   "country": "일본",
-  "rank_best": 4,
-  "rank_weeks": 2
+  "rank_best": 3,
+  "rank_weeks": 3
  },
  "파라오의 밀실": {
   "pages": 372,
@@ -1399,7 +1399,7 @@
   ],
   "country": "일본",
   "rank_best": 2,
-  "rank_weeks": 3
+  "rank_weeks": 4
  },
  "축복하는 요메쿠비": {
   "pages": 540,
@@ -1416,6 +1416,15 @@
   "orig": "告白 (2007년)",
   "translators": [
    "김선영"
+  ],
+  "country": "일본"
+ },
+ "백광": {
+  "pages": 320,
+  "pubdate": "2022-02-14",
+  "orig": "白光",
+  "translators": [
+   "양윤옥"
   ],
   "country": "일본"
  }

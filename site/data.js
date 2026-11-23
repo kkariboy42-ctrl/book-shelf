@@ -1,6 +1,105 @@
 window.SHELF = {
- "updated": "2026-11-19",
+ "updated": "2026-11-23",
  "posts": [
+  {
+   "code": "DgCn4RhiQmh",
+   "date": "2026-11-22",
+   "book": "미네르바의 보복",
+   "video": false,
+   "kind": "서평",
+   "spoiler": false,
+   "hook": "미네르바의 보복 / 미키 아키코 / 문지원 / 블루홀식스 / 2026년 11월"
+  },
+  {
+   "code": "DgGrB8huknB",
+   "date": "2026-11-21",
+   "book": "입에 대한 앙케트",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "묘지다."
+  },
+  {
+   "code": "DgG_n7uuiw8",
+   "date": "2026-11-21",
+   "book": "살육에 이르는 병",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "[다 읽은 분께] 『살육에 이르는 병』 다시 펼칠 자리 5/5 — 건너뛴 각주"
+  },
+  {
+   "code": "DgCmD2VuOOH",
+   "date": "2026-11-21",
+   "book": "한국사 이상현상 연구원",
+   "video": true,
+   "kind": "사건파일",
+   "spoiler": false,
+   "hook": "궁궐에서 사라진 사람을 구하러 들어가는 연구소가 있습니다. 겉으로는 평범한 역사 연구 시설입니다."
+  },
+  {
+   "code": "DgB1_ZROE2N",
+   "date": "2026-11-21",
+   "book": "인수세공",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "여덟 살 아이가 떠올린 방법은 거울, 마늘, 십자가였습니다."
+  },
+  {
+   "code": "DgBhW5ZOIYx",
+   "date": "2026-11-21",
+   "book": "미미소기",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "눈을 감아도 안전하지 않은 공포소설입니다."
+  },
+  {
+   "code": "DgAipYYhRJz",
+   "date": "2026-11-21",
+   "book": "살육에 이르는 병",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "[다 읽은 분께] 『살육에 이르는 병』 다시 펼칠 자리 4/5 — 범인이 묻고 지나간 질문"
+  },
+  {
+   "code": "Df9ccm4ORNJ",
+   "date": "2026-11-19",
+   "book": "영겁관 초연속 살인 사건",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "『영겁관 초연속 살인 사건』 단편 영화 2/3 — 장례식 전날, 보낸 이를 모르는 하얀 백합이 도착했습니다."
+  },
+  {
+   "code": "Df8sXskOWUQ",
+   "date": "2026-11-19",
+   "book": "천 년의 후더닛",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "읽다가 「이 사람 누구였더라?」 싶을 때 앞장을 뒤적일 필요가 없습니다."
+  },
+  {
+   "code": "Df7MTXHumIx",
+   "date": "2026-11-19",
+   "book": "천 년의 후더닛",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "숫자는 하나도 틀리지 않았습니다. 끝까지 읽어도, 다시 읽어도 그렇습니다."
+  },
+  {
+   "code": "Df7F-38CSqu",
+   "date": "2026-11-19",
+   "book": "파라오의 밀실",
+   "video": false,
+   "kind": "관계도",
+   "spoiler": false,
+   "hook": "시라카와 나오후미 『파라오의 밀실』(최고은 옮김 · 곽민수 감수 · 북다 · 2026년 10월)"
+  },
   {
    "code": "Dft89wBCZ_j",
    "date": "2026-11-14",
@@ -9,6 +108,15 @@ window.SHELF = {
    "kind": "서평",
    "spoiler": false,
    "hook": "파라오의 밀실 / 시라카와 나오후미 / 북다 / 2026년 10월"
+  },
+  {
+   "code": "Df1uIb5O4y5",
+   "date": "2026-11-13",
+   "book": "영겁관 초연속 살인 사건",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "『영겁관 초연속 살인 사건』 단편 영화 1/3 — 어젯밤 죽었어야 할 여동생이 휠체어 위에서 웃고 있습니다."
   },
   {
    "code": "DftPpjsOjm_",
@@ -18061,7 +18169,7 @@ window.SHELF = {
   },
   "미네르바의 보복": {
    "author": "미키 아키코",
-   "rating": null,
+   "rating": 4.0,
    "plus": false,
    "gajebon": false,
    "genre": "소설",
@@ -18071,14 +18179,14 @@ window.SHELF = {
    "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=405947157",
    "deep": true,
    "slug": "미네르바의-보복",
-   "excerpt": "",
+   "excerpt": "대담한 사건과 치밀한 전개, 그리고 생생한 현실감까지… 개인적으로는….변호사가 사건을 쫓는 이야기는 많이 읽었지만, 사무소 임대료와 인건비 걱정까지 이렇게 생생한 미스터리는 오랫만이었습니다. 책은 약 390쪽, 짧은 도입부와 4개의 장으로 이루어져 있습니다. 실종, 의혹, 혼돈, 결의. 주요인물은 이렇습니다. 요코테 사쓰키는 긴자에서 작은 개인 법률사무소를 운영하는 변호사입니다. 이야기는 그녀의 시점에서 진행됩니다. 무쓰기 레이는 요코테의 사법연수원 동기이자, 여자로서는 드물게 형사 사건 전문 변호사입니다. (이 책이 무쓰기 레이 시리즈입니다) 쓰지도 도시야는 요코테가 대학 시절부터 알고 지낸 사람입니다.",
    "pages": 396,
    "pubdate": "2026-11-09",
    "translators": [
     "문지원"
    ],
    "country": "일본",
-   "rank_best": 4
+   "rank_best": 3
   },
   "파라오의 밀실": {
    "author": "시라카와 나오후미",
@@ -18131,7 +18239,13 @@ window.SHELF = {
    "genre": "소설",
    "deep": false,
    "slug": "백광",
-   "excerpt": ""
+   "excerpt": "",
+   "pages": 320,
+   "pubdate": "2022-02-14",
+   "translators": [
+    "양윤옥"
+   ],
+   "country": "일본"
   }
  }
 };
