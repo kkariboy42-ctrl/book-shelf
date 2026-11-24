@@ -372,12 +372,16 @@ def main():
     out.sort(key=lambda x: x["date"], reverse=True)
     used = {p["book"] for p in out}
     # 사이트 전용 스포 게시물(spoilers/<책>.json) — 인스타엔 없고 여기에만 있다
+    # 공개 게이트(R7-19): 최상위 "status": "published" 인 파일만 싣는다. 다른 세션이 쓰던 미공개 글이
+    # 폴더에 있어도 data.js 에 안 들어가게(11-19 미네르바 사고). 공개 승인(사용자 「올려줘」) 뒤에 넣는다.
     notes = {}
     sp_dir = os.path.join(HERE, "spoilers")
     for fn in sorted(os.listdir(sp_dir)) if os.path.isdir(sp_dir) else []:
         if fn.endswith(".json"):
             sp = json.load(open(os.path.join(sp_dir, fn), encoding="utf-8"))
-            if sp["book"] in used:
+            if sp.get("status") != "published":
+                print(f"  ⚠ 스포 글 미공개(status={sp.get('status')!r}) — data.js 에서 뺌:", fn)
+            elif sp["book"] in used:
                 notes[sp["book"]] = sp["posts"]
             else:
                 print("  스포 글의 책이 책장에 없음:", sp["book"])

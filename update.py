@@ -4,6 +4,10 @@
     py -3 update.py            # 받고, 분류하고, 올린다
     py -3 update.py --no-push  # 올리기 전까지만(로컬에서 확인)
 
+- 끝에 로컬 헤드리스 스모크(smoke.py, 포트 8792 · 공개 주소는 안 엶)를 돈다. 실패면 푸시하지 않는다.
+- 푸시 때 올리는 것은 site·links.txt·books/meta/ratings/overrides/titles.json·점검 과
+  "status": "published" 인 spoilers/*.json 뿐이다(미공개 스포 글·코드 변경은 안 올림).
+
 - 로그인 없이 프로필에서 보이는 최근 12개만 받는다. 갱신 사이에 12개 넘게 올렸으면
   「빠진 게시물이 있을 수 있음」을 띄운다 — 그땐 브라우저에서 로그인하고 스크롤로 받아야 한다.
 - 새 게시물이 어느 책으로 갔는지, 책을 못 찾아 빠진 것은 무엇인지 끝에 보여 준다.
@@ -55,7 +59,8 @@ def main():
     if new:
         open(lp, "w", encoding="utf-8").write("\n".join(new + old) + "\n")
 
-    before = {p["code"] for p in load_data()["posts"]}
+    old_data = load_data()
+    before = {p["code"] for p in old_data["posts"]}
     r = subprocess.run([sys.executable, os.path.join(HERE, "collect.py")], cwd=HERE, capture_output=True,
                        text=True, encoding="utf-8", errors="replace", env=dict(os.environ, PYTHONIOENCODING="utf-8"))
     out = r.stdout + r.stderr
@@ -91,13 +96,33 @@ def main():
             cap = json.load(open(f, encoding="utf-8"))["caption"].strip().splitlines()[0][:60] if os.path.exists(f) else "(캡션 못 받음)"
             print(f"  {c} ← {cap}")
 
+    # 로컬 헤드리스 스모크(고도화 6) — 새 게시물·스포 칸이 바뀐 책 페이지 1장(없으면 최근 책)을 로컬 8792 에서 연다
+    changed = [p["book"] for p in added] + sorted(t for t in data["notes"] if data["notes"][t] != old_data.get("notes", {}).get(t))
+    target = next((t for t in changed if t in data["books"]), data["posts"][0]["book"])
+    print(flush=True)
+    smoke = subprocess.run([sys.executable, os.path.join(HERE, "smoke.py"), "/", f"/book/{data['books'][target]['slug']}/"],
+                           cwd=HERE, env=dict(os.environ, PYTHONIOENCODING="utf-8"))
+
     if not push:
-        print("\n--no-push: 올리지 않음")
+        print("\n--no-push: 올리지 않음" + ("" if smoke.returncode == 0 else " · ⚠ 로컬 스모크 실패 — 고치기 전에는 푸시하지 말 것"))
         return
-    subprocess.run(["git", "add", "-A"], cwd=HERE, check=True)
+    if smoke.returncode != 0:
+        raise SystemExit("로컬 스모크 실패 — 올리지 않음")
+    # 정해진 것만 올린다(R7-19) — 스포 글은 "status": "published" 인 파일만(미공개 글이 공개 저장소에 안 실리게)
+    pub = [os.path.join("spoilers", fn) for fn in sorted(os.listdir(os.path.join(HERE, "spoilers"))) if fn.endswith(".json")
+           and json.load(open(os.path.join(HERE, "spoilers", fn), encoding="utf-8")).get("status") == "published"]
+    add = [x for x in ("site", "links.txt", "books.json", "meta.json", "ratings.json", "overrides.json", "titles.json", "점검")
+           if os.path.exists(os.path.join(HERE, x))] + pub
+    subprocess.run(["git", "add", "-A", "--"] + add, cwd=HERE, check=True)
     if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=HERE).returncode == 0:
         print("\n바뀐 것 없음 — 올리지 않음")
         return
+    left = subprocess.run(["git", "status", "-s"], cwd=HERE, capture_output=True, text=True, encoding="utf-8").stdout
+    left = [l for l in left.splitlines() if l[:1] in (" ", "?")]
+    if left:
+        print(f"\n안 올린 변경 {len(left)}개(코드·미공개 스포 글 등 — 따로 확인):")
+        for l in left[:10]:
+            print("  ", l)
     msg = f"책장 갱신 {data['updated']}: 새 게시물 {len(added)}개 (책 {len(data['books'])}권 · 게시물 {len(data['posts'])}개)"
     subprocess.run(["git", "commit", "-q", "-m", msg + "\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"], cwd=HERE, check=True)
     subprocess.run(["git", "push", "-q", "origin", "main"], cwd=HERE, check=True)

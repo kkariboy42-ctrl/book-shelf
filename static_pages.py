@@ -16,12 +16,18 @@ def slugify(title):
     return re.sub(r"[\s-]+", "-", s) or "book"
 
 
+# 장르 표시 자체가 스포일러인 낱말(서술트릭 등) — 서평 토막은 메타 설명·og:description·JSON-LD 로
+# 접힌 스포 칸 밖에 그대로 나가므로, 이 낱말이 든 줄은 통째로 뺀다(11-25 봇 회귀 판정 P5, 『이상한 집 2』).
+GENRE_SPOILER = re.compile(r"서술\s*(형\s*)?트릭|叙述|(호칭|성별|시간|인물)\s*트릭")
+
+
 def excerpt_of(caption, title, limit=360):
-    """서평 캡션에서 계정 주인이 쓴 문장만 — 첫 줄 서지(「제목 / 작가 / 출판사」)·해시태그·점 줄을 뺀다."""
+    """서평 캡션에서 계정 주인이 쓴 문장만 — 첫 줄 서지(「제목 / 작가 / 출판사」)·해시태그·점 줄·
+    장르 스포 낱말(GENRE_SPOILER)이 든 줄을 뺀다."""
     keep = []
     for i, line in enumerate(caption.splitlines()):
         s = re.sub(r"#\S+", "", line).strip()
-        if not s or re.fullmatch(r"[.\s·…]+", s):
+        if not s or re.fullmatch(r"[.\s·…]+", s) or GENRE_SPOILER.search(s):
             continue
         if i < 2 and (" / " in s or "//" in s or (title.replace(" ", "") in s.replace(" ", "") and len(s) < len(title) + 20)):
             continue
