@@ -174,6 +174,10 @@ def build(data, site_dir):
     import ranking_page
     urls[2:2] = ranking_page.build(template, site_dir, books, _page)
 
+    # 월간 책호스터 탭(/zine/ · /zine/<호>/) — 저장소의 zine/<호>/ 폴더(issue.json + PDF)로. 다음 호는 폴더만 더한다
+    import zine_page
+    urls[2:2] = zine_page.build(template, site_dir, books, _page)
+
     from urllib.parse import quote
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, lm in urls:
