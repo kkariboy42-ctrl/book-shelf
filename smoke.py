@@ -78,6 +78,9 @@ def default_pages():
     return ["/", f"/book/{data['books'][newest]['slug']}/"]
 
 
+BLOCK_HOSTS = ("abacus.jasoncameron.dev",)
+
+
 class Tab:
     def __init__(self, ws_url):
         self.ws = websocket.create_connection(ws_url, timeout=15, suppress_origin=True)
@@ -125,6 +128,8 @@ def check(tab, path):
         elif m == "Runtime.consoleAPICalled" and p.get("type") == "error":
             cons.append(" ".join(str(a.get("value", a.get("description", ""))) for a in p.get("args", [])))
         elif m == "Log.entryAdded" and p.get("entry", {}).get("level") == "error":
+            if any(h in p["entry"].get("url", "") for h in BLOCK_HOSTS):
+                continue  # 일부러 막은 카운터 요청
             logs.append(p["entry"].get("text", "") + " " + p["entry"].get("url", ""))
     cover = None
     if path.startswith("/book/"):
@@ -178,8 +183,10 @@ def main():
             print("스모크 못 함: 헤드리스 크롬 연결 실패")
             return 2
         tab = Tab(ws_url)
-        for m in ("Page.enable", "Runtime.enable", "Log.enable"):
+        for m in ("Page.enable", "Runtime.enable", "Log.enable", "Network.enable"):
             tab.call(m)
+        # 방문자 카운터(abacus)는 스모크에서 아예 부르지 않는다 — 외부 호출·429 방지 (사용자 11-25)
+        tab.call("Network.setBlockedURLs", urls=[f"*{h}*" for h in BLOCK_HOSTS])
         print(f"로컬 스모크 ({BASE}, 공개 주소 안 엶)")
         ok = all([check(tab, p) for p in pages])
         try:
