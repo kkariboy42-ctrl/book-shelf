@@ -1714,5 +1714,15 @@
   "plus": true,
   "gajebon": false,
   "genre": "소설"
+ },
+ "에이전트 워크플로우": {
+  "author": "로사장",
+  "cover": "covers/8a142dcc6c.jpg",
+  "publisher": "필름(Feelm)",
+  "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=401733993",
+  "rating": null,
+  "plus": false,
+  "gajebon": false,
+  "genre": "소설"
  }
 }

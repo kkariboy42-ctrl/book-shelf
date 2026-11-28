@@ -1,6 +1,33 @@
 window.SHELF = {
- "updated": "2026-11-25",
+ "updated": "2026-11-28",
  "posts": [
+  {
+   "code": "DgPk5WeO46s",
+   "date": "2026-11-26",
+   "book": "미미소기",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "『미미소기』 단편 영화 1/3 — 잠긴 금고의 노트"
+  },
+  {
+   "code": "DgOvZvchCpw",
+   "date": "2026-11-26",
+   "book": "에이전트 워크플로우",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "이 도면에는 제가 그은 선이 없습니다."
+  },
+  {
+   "code": "DgJkb5KueDf",
+   "date": "2026-11-24",
+   "book": "이상한 지도",
+   "video": true,
+   "kind": "영상",
+   "spoiler": false,
+   "hook": "같은 집, 같은 화장실. 다른 길."
+  },
   {
    "code": "DgHvpcVu8Xh",
    "date": "2026-11-23",
@@ -18329,6 +18356,22 @@ window.SHELF = {
     "양윤옥"
    ],
    "country": "일본"
+  },
+  "에이전트 워크플로우": {
+   "author": "로사장",
+   "cover": "covers/8a142dcc6c.jpg",
+   "publisher": "필름(Feelm)",
+   "aladin": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=401733993",
+   "rating": null,
+   "plus": false,
+   "gajebon": false,
+   "genre": "소설",
+   "deep": true,
+   "slug": "에이전트-워크플로우",
+   "excerpt": "",
+   "pages": 364,
+   "pubdate": "2026-09-16",
+   "country": "한국"
   }
  }
 };
